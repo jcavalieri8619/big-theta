@@ -12,4 +12,4 @@ Site available at: https://pghant.github.io/big-theta/
 1. John Cavalieri
 2. Prasant Ghantasala - Plunker URL: https://plnkr.co/edit/AAF2SFliDiGSZSJW3HbX?p=preview
 3. Karthik Hubli - Plunker url:  https://plnkr.co/edit/ZV0weBprGgWOtW3wOnDu?p=preview
-4. Karansinh Thakor
+4. Karansinh Thakor - Plunker URL: https://plnkr.co/edit/8GfmTkw3nz70udvoaMcE?p=preview
