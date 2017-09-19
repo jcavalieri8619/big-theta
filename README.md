@@ -10,6 +10,6 @@ Site available at: https://pghant.github.io/big-theta/
 ## Members
 
 1. John Cavalieri
-2. Prasant Ghantasala
+2. Prasant Ghantasala - Plunker URL: https://plnkr.co/edit/AAF2SFliDiGSZSJW3HbX?p=preview
 3. Karthik Hubli
 4. Karansinh Thakor
