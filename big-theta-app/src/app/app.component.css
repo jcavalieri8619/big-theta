@@ -1,0 +1,15 @@
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+.app-content {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.alert-label {
+    color: red;
+    padding-top: 5px;
+}
