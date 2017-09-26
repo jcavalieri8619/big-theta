@@ -1,13 +1,20 @@
-<!--The whole content below can be removed with the new code.-->
-<nav class="navbar navbar-light bg-faded">
+<nav class="navbar navbar-expand navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
         <img src="../assets/images/theta_logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> Big Theta
     </a>
+    <div class="navbar-nav">
+      <a href="#" class="nav-item nav-link active">Home</a>
+      <a href="#" class="nav-item nav-link">About</a>
+    </div>
 </nav>
-<div class="app-content">
-    <h1>
-        Welcome to {{title}}
-    </h1>
-    <img width="300" src="../assets/images/theta_logo.png" />
-    <h2 class="alert-label">Coming soon</h2>
+<div class="content-container container-fluid">
+    <div id="welcomeMessage">
+      Welcome to Big Theta! This project allows you to enter an equation and find related equations. Equations are gathered from Wikipedia. Enter an equation below to try it out!
+    </div>
+    <div class="form-group">
+      <input class="form-control" [(ngModel)]="equationSearched" type="text" placeholder="Enter an equation">
+    </div>
+    <div *ngIf="equationSearched">
+        You entered {{equationSearched}}
+    </div>
 </div>
