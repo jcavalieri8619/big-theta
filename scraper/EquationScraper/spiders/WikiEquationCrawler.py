@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from scrapy.linkextractor import LinkExtractor
-import scraper.EquationScraper.spiders.URLs as URLs
-from scraper.EquationScraper.items import EquationscraperItem
-
-
+from scrapy.linkextractors import LinkExtractor
+from scrapy.link import Link
+from . import URLs
+from ..items import EquationscraperItem
 
 
 class WikiEquationSpider(scrapy.Spider):
@@ -21,59 +20,69 @@ class WikiEquationSpider(scrapy.Spider):
         pass
 
     def parse_portals(self, response):
+        self.log('INSIDE PARSE_PORTALS')
+
         for article_link in LinkExtractor(allow=r'https://en[.]wikipedia[.]org/wiki/',
                                           deny=URLs.global_deny).extract_links(response):
-            yield scrapy.Request(url=article_link, callback=self.parse_articles)
+            yield scrapy.Request(url=article_link.url, callback=self.parse_articles)
 
         for category_link in LinkExtractor(allow=r'https://en[.]wikipedia[.]org/wiki/Category:.*',
                                            deny=URLs.global_deny, ).extract_links(response):
-            request = scrapy.Request(url=category_link, callback=self.parse_categories)
+            request = scrapy.Request(url=category_link.url, callback=self.parse_categories)
             request.meta['category_depth'] = 0
             yield request
 
     def parse_wikiprojects(self, response):
+        self.log('INSIDE PARSE_WIKIPROJECTS')
         for article_link in LinkExtractor(allow=r'https://en[.]wikipedia[.]org/wiki/',
                                           deny=URLs.global_deny).extract_links(response):
-            yield scrapy.Request(url=article_link, callback=self.parse_articles)
+            yield scrapy.Request(url=article_link.url, callback=self.parse_articles)
 
     def parse_articles(self, response):
-
+        self.log('INSIDE PARSE_ARTICLES')
         latex_eqns = (set(response.css('img.mwe-math-fallback-image-inline').css('img::attr(alt)').extract())
                       .union(set(response.css('img.mwe-math-fallback-image-display').css('img::attr(alt)').extract()))
                       .union(set(response.css('img.mwe-math-mathml-a11y').css('img::attr(alt)').extract())))
 
-        item = EquationscraperItem()
-        item['url'] = response.url
-        item['title'] = response.css('#firstHeading::text').extract_first()
-        item['categories'] = response.css("#mw-normal-catlinks > ul > li > a").css("a::text").extract()
+        if latex_eqns:
 
-        item['equations'] = latex_eqns
+            item = EquationscraperItem()
+            item['url'] = response.url
+            item['title'] = response.css('#firstHeading::text').extract_first()
+            item['categories'] = response.css("#mw-normal-catlinks > ul > li > a").css("a::text").extract()
 
-        if 'last_item' in response.meta:
-            # using current item and last_item, we can yield
-            # the item into pipeline and construct relationship
-            # curr_item <LINKS_TO> last_item
+            item['equations'] = latex_eqns
 
-            # if no latex eqns on current article, then
-            # continue crawling links until finding article
-            # with eqns and maintain most recent last_item
-            # that contained eqns and increment link_dist
+            if 'last_item' in response.meta:
+                # using current item and last_item, we can yield
+                # the item into pipeline and construct relationship
+                # curr_item <LINKS_TO> last_item
 
-            # link_dist is measured between eqns so only increase
-            # dist if last_item exists then if current article
-            # has latex_eqns, list_dist==1 otherwise
-            # increment link_dist
+                # if no latex eqns on current article, then
+                # continue crawling links until finding article
+                # with eqns and maintain most recent last_item
+                # that contained eqns and increment link_dist
 
-            response.meta['link_dist'] += 1
+                # link_dist is measured between eqns so only increase
+                # dist if last_item exists then if current article
+                # has latex_eqns, list_dist==1 otherwise
+                # increment link_dist
 
-            if latex_eqns:
+                # last_item exists --> link_dist exists
+
+                response.meta['link_dist'] += 1
+
                 item['last_item'] = response.meta['last_item']
-                item['list_dist'] = response.meta['link_dist']
+                item['link_dist'] = response.meta['link_dist']
+
+                self.log(f'{item["last_item"]["url"]} LINKS TO {item["url"]}')
+
                 yield item
 
         for article_link in LinkExtractor(allow=r'https://en[.]wikipedia[.]org/wiki/',
                                           deny=URLs.global_deny).extract_links(response):
-            request = scrapy.Request(url=article_link, callback=self.parse_articles)
+
+            request = scrapy.Request(url=article_link.url, callback=self.parse_articles)
 
             # if current page contains no equations then hold onto item from
             # most recent page that did contain equations.
@@ -87,10 +96,18 @@ class WikiEquationSpider(scrapy.Spider):
             yield request
 
     def parse_categories(self, response):
+        self.log('INSIDE PARSE_CATEGORIES')
         for article_link in LinkExtractor(allow=r'https://en[.]wikipedia[.]org/wiki/',
                                           deny=URLs.global_deny).extract_links(response):
-            yield scrapy.Request(url=article_link, callback=self.parse_articles)
+            yield scrapy.Request(url=article_link.url, callback=self.parse_articles)
 
         for category_link in LinkExtractor(allow=r'https://en[.]wikipedia[.]org/wiki/Category:.*',
                                            deny=URLs.global_deny, ).extract_links(response):
-            pass
+
+            if response.meta.set_default('category_depth', 0) > self.settings.WIKI_CATEGORY_DEPTH:
+                self.log(f'maximum category depth reached on {response.url}')
+
+            else:
+                request = scrapy.Request(url=category_link.url, callback=self.parse_categories)
+                request.meta['category_depth'] = 0
+                yield request

@@ -1,0 +1,3306 @@
+{'categories': ['Measures (measure theory)'],
+ 'equations': {'(\\mathcal{L}f)(s) = \\int_{0^-}^\\infty e^{-st}f(t)\\,dt',
+               '(a,b]',
+               '({\\mathcal  {L}}\\mu )(s)=\\int _{{[0,\\infty '
+               ')}}e^{{-st}}\\,d\\mu (t).',
+               'B(X)\\times B(Y)',
+               'B(X\\times Y)',
+               'C',
+               'R^{k}',
+               'X',
+               '\\lambda ',
+               '\\lambda (E)=\\mu (E)',
+               '\\lim _{\\varepsilon \\downarrow 0}\\int _{-\\varepsilon '
+               '}^{\\infty }.',
+               '\\mathbb {R} ',
+               '\\mathbf{Bor}\\colon\\mathbf{Top}_{2CHaus}\\to\\mathbf{Meas}',
+               '\\mathfrak{B}(X)',
+               '\\mu ',
+               '\\mu (B(x,r))\\leq r^{s}',
+               '{\\displaystyle \\mu ((a,b])=b-a}',
+               '{\\displaystyle \\mu (C)<\\infty }',
+               '{\\mathfrak  {B}}({\\mathbb  R})'},
+ 'last_item': {'categories': ['Probability theorems', 'Theorems in measure theory'],
+ 'equations': {'S',
+               'X',
+               'Y',
+               'Y=g(X)',
+               'Y^{-1}(S)\\in \\sigma(X)',
+               '\\Omega ',
+               '\\sigma ',
+               '\\sigma (X)',
+               '\\sigma(Y)',
+               '\\sigma(Y) \\subset \\sigma(X)',
+               'f',
+               'f^{-1}(S)',
+               '{\\displaystyle X,Y:\\Omega \\rightarrow \\mathbf {R} ^{n}}',
+               '{\\displaystyle f:\\Omega \\rightarrow \\mathbf {R} ^{n}}',
+               '{\\displaystyle g:\\mathbf {R} ^{n}\\rightarrow \\mathbf {R} '
+               '^{n}}'},
+ 'title': 'Doob–Dynkin lemma',
+ 'url': "https://en.wikipedia.org/wiki/Dynkin's_lemma"},
+ 'link_dist': 1,
+ 'title': 'Borel measure',
+ 'url': 'https://en.wikipedia.org/wiki/Borel_measurable'}
+{'categories': ['Dynamical systems'],
+ 'equations': {'\\Phi (t,x)\\in S.',
+               '\\Phi _{x}:I(x)\\to M',
+               '\\scriptstyle \\phi ^{n}=\\phi \\circ \\phi \\circ \\ldots '
+               '\\circ \\phi ',
+               '\\scriptstyle {{\\dot  {{\\boldsymbol  {x}}}}}',
+               '{\\boldsymbol  {x}}|_{{{t=0}}}={\\boldsymbol  {x}}_{0}',
+               '{\\boldsymbol  {{x}}}(t)=\\Phi (t,{\\boldsymbol  {{x}}}_{0})',
+               '{\\displaystyle I(x)=T}',
+               '{\\displaystyle I(x)=\\{t\\in T:(t,x)\\in U\\}}',
+               '{\\displaystyle \\ t_{2}\\in I(\\Phi (t_{1},x))}',
+               '{\\displaystyle \\,t_{1},\\,t_{2}+t_{1}\\in I(x)}',
+               '{\\displaystyle \\Phi (0,x)=x}',
+               '{\\displaystyle \\Phi (t_{2},\\Phi (t_{1},x))=\\Phi '
+               '(t_{2}+t_{1},x),}',
+               '{\\displaystyle \\Phi :U\\subseteq T\\times M\\to M}',
+               '{\\displaystyle \\Phi ^{t}(x)\\equiv \\Phi (t,x)}',
+               '{\\displaystyle \\Phi _{x}(t)\\equiv \\Phi (t,x)}',
+               '{\\displaystyle \\gamma _{x}\\equiv \\{\\Phi (t,x):t\\in '
+               'I(x)\\}}',
+               '{\\displaystyle \\mathrm {proj} _{2}(U)=M}',
+               '{\\displaystyle \\mathrm {proj} _{2}}',
+               '{\\displaystyle {\\mathfrak {G}}:{{(T\\times M)}^{M}}\\to '
+               '\\mathbf {C} }',
+               '{\\dot  {{\\boldsymbol  {x}}}}-{\\boldsymbol  '
+               '{v}}(t,{\\boldsymbol  {x}})=0\\qquad \\Leftrightarrow \\qquad '
+               '{\\mathfrak  {{G}}}\\left(t,\\Phi (t,{\\boldsymbol  '
+               '{{x}}}_{0})\\right)=0',
+               '{\\dot  {{\\boldsymbol  {x}}}}={\\boldsymbol  '
+               '{v}}(t,{\\boldsymbol  {x}})'},
+ 'last_item': {'categories': ['Dynamical systems',
+                'Systems',
+                'Systems theory',
+                'Mathematical and quantitative methods (economics)'],
+ 'equations': {'\\langle {\\mathcal {M}},f,{\\mathcal {T}}\\rangle ',
+               '\\mu (\\tau ^{-1}\\sigma )=\\mu (\\sigma )',
+               '\\tau ^{-1}\\sigma \\in \\Sigma ',
+               '\\tau ^{n}=\\tau \\circ \\tau \\circ \\cdots \\circ \\tau ',
+               't\\in {\\mathcal {T}}',
+               '{\\displaystyle (U^{t}a)(x)=a(\\Phi ^{-t}(x)).}',
+               '{\\displaystyle G(x,{\\dot {x}})=0}',
+               '{\\displaystyle \\Phi ^{t}(x_{0})=e^{tA}x_{0}.}',
+               '{\\displaystyle \\Phi ^{t}(x_{1})=x_{1}+bt.}',
+               '{\\displaystyle \\mathrm {vol} (A)=\\mathrm {vol} (\\Phi '
+               '^{t}(A)).}',
+               '{\\displaystyle h^{-1}\\circ F\\circ h(x)=J\\cdot x.}',
+               '{\\displaystyle x_{n+1}=Ax_{n}+b,}',
+               '{\\displaystyle {\\dot {x}}=\\phi (x)=Ax+b,}',
+               '{\\displaystyle {\\dot {x}}=v(x).}',
+               '{\\mathcal {M}}',
+               '{\\mathcal {T}}'},
+ 'title': 'Dynamical system',
+ 'url': 'https://en.wikipedia.org/wiki/Dynamical_system'},
+ 'link_dist': 1,
+ 'title': 'Dynamical system (definition)',
+ 'url': 'https://en.wikipedia.org/wiki/Discrete_dynamical_system'}
+{'categories': ['Theorems in dynamical systems', 'Ukrainian inventions'],
+ 'equations': {'I\\subset \\mathbb{R}',
+               '\\begin{array}{cccccccc}\n'
+               '3 & 5 & 7 & 9 & 11 & \\ldots & (2n+1)\\cdot2^{0} & '
+               '\\ldots\\\\\n'
+               '3\\cdot2 & 5\\cdot2 & 7\\cdot2 & 9\\cdot2 & 11\\cdot2 & '
+               '\\ldots & (2n+1)\\cdot2^{1} & \\ldots\\\\\n'
+               '3\\cdot2^{2} & 5\\cdot2^{2} & 7\\cdot2^{2} & 9\\cdot2^{2} & '
+               '11\\cdot2^{2} & \\ldots & (2n+1)\\cdot2^{2} & \\ldots\\\\\n'
+               '3\\cdot2^{3} & 5\\cdot2^{3} & 7\\cdot2^{3} & 9\\cdot2^{3} & '
+               '11\\cdot2^{3} & \\ldots & (2n+1)\\cdot2^{3} & \\ldots\\\\\n'
+               ' & \\vdots\\\\\n'
+               '\\ldots & 2^{n} & \\ldots & 2^{4} & 2^{3} & 2^{2} & 2 & '
+               '1\\end{array}',
+               'f : I \\to I',
+               'f : x \\mapsto (1-x)^{-1}'},
+ 'last_item': {'categories': ['Dynamical systems',
+                'Systems',
+                'Systems theory',
+                'Mathematical and quantitative methods (economics)'],
+ 'equations': {'\\langle {\\mathcal {M}},f,{\\mathcal {T}}\\rangle ',
+               '\\mu (\\tau ^{-1}\\sigma )=\\mu (\\sigma )',
+               '\\tau ^{-1}\\sigma \\in \\Sigma ',
+               '\\tau ^{n}=\\tau \\circ \\tau \\circ \\cdots \\circ \\tau ',
+               't\\in {\\mathcal {T}}',
+               '{\\displaystyle (U^{t}a)(x)=a(\\Phi ^{-t}(x)).}',
+               '{\\displaystyle G(x,{\\dot {x}})=0}',
+               '{\\displaystyle \\Phi ^{t}(x_{0})=e^{tA}x_{0}.}',
+               '{\\displaystyle \\Phi ^{t}(x_{1})=x_{1}+bt.}',
+               '{\\displaystyle \\mathrm {vol} (A)=\\mathrm {vol} (\\Phi '
+               '^{t}(A)).}',
+               '{\\displaystyle h^{-1}\\circ F\\circ h(x)=J\\cdot x.}',
+               '{\\displaystyle x_{n+1}=Ax_{n}+b,}',
+               '{\\displaystyle {\\dot {x}}=\\phi (x)=Ax+b,}',
+               '{\\displaystyle {\\dot {x}}=v(x).}',
+               '{\\mathcal {M}}',
+               '{\\mathcal {T}}'},
+ 'title': 'Dynamical system',
+ 'url': 'https://en.wikipedia.org/wiki/Dynamical_system'},
+ 'link_dist': 1,
+ 'title': "Sharkovskii's theorem",
+ 'url': "https://en.wikipedia.org/wiki/Sharkovsky's_theorem"}
+{'categories': ['Digital imaging',
+                'Partial differential equations',
+                'Stability theory',
+                'Multidimensional signal processing'],
+ 'equations': {'(i,j)',
+               '1',
+               'A_{1}',
+               'A_{1},A_{2},A_{3},A_{4},B_{1},B_{2},C_{1},C_{2}',
+               'A_{1}={\\begin{bmatrix}0&0&0&\\cdots &0&0\\\\1&0&0&\\cdots '
+               '&0&0\\\\0&1&0&\\cdots &0&0\\\\\\vdots &\\vdots &\\vdots '
+               '&\\ddots &\\vdots &\\vdots \\\\0&0&0&\\cdots '
+               '&0&0\\\\0&0&0&\\cdots &1&0\\end{bmatrix}}',
+               'A_{2}',
+               'A_{2}={\\begin{bmatrix}0&0&0&\\cdots &0&0\\\\0&0&0&\\cdots '
+               '&0&0\\\\0&0&0&\\cdots &0&0\\\\\\vdots &\\vdots &\\vdots '
+               '&\\ddots &\\vdots &\\vdots \\\\0&0&0&\\cdots '
+               '&0&0\\\\0&0&0&\\cdots &0&0\\end{bmatrix}}',
+               'A_{3}={\\begin{bmatrix}b_{{1,n}}&b_{{2,n}}&b_{{3,n}}&\\cdots '
+               '&b_{{m-1,n}}&b_{{m,n}}\\\\b_{{1,n-1}}&b_{{2,n-1}}&b_{{3,n-1}}&\\cdots '
+               '&b_{{m-1,n-1}}&b_{{m,n-1}}\\\\b_{{1,n-2}}&b_{{2,n-2}}&b_{{3,n-2}}&\\cdots '
+               '&b_{{m-1,n-2}}&b_{{m,n-2}}\\\\\\vdots &\\vdots &\\vdots '
+               '&\\ddots &\\vdots &\\vdots '
+               '\\\\b_{{1,2}}&b_{{2,2}}&b_{{3,2}}&\\cdots '
+               '&b_{{m-1,2}}&b_{{m,2}}\\\\b_{{1,1}}&b_{{2,1}}&b_{{3,1}}&\\cdots '
+               '&b_{{m-1,1}}&b_{{m,1}}\\end{bmatrix}}',
+               'A_{4}',
+               'A_{4}={\\begin{bmatrix}0&0&0&\\cdots &0&0\\\\1&0&0&\\cdots '
+               '&0&0\\\\0&1&0&\\cdots &0&0\\\\\\vdots &\\vdots &\\vdots '
+               '&\\ddots &\\vdots &\\vdots \\\\0&0&0&\\cdots '
+               '&0&0\\\\0&0&0&\\cdots &1&0\\end{bmatrix}}',
+               'B_{1}',
+               'B_{1}={\\begin{bmatrix}1\\\\0\\\\0\\\\0\\\\\\vdots '
+               '\\\\0\\\\0\\end{bmatrix}}',
+               'B_{2}={\\begin{bmatrix}b_{{0,n}}\\\\b_{{0,n-1}}\\\\b_{{0,n-2}}\\\\\\vdots '
+               '\\\\b_{{0,2}}\\\\b_{{0,1}}\\end{bmatrix}}',
+               'C_{1}={\\begin{bmatrix}b_{{1,0}}&b_{{2,0}}&b_{{3,0}}&\\cdots '
+               '&b_{{m-1,0}}&b_{{m,0}}\\\\\\end{bmatrix}}',
+               'C_{2}={\\begin{bmatrix}0&0&0&\\cdots &0&1\\\\\\end{bmatrix}}',
+               'D',
+               'D={\\begin{bmatrix}b_{{0,0}}\\end{bmatrix}}',
+               'R(1\\times m),\\quad S(1\\times n),\\quad x(1\\times 1)',
+               'R(i,j)',
+               'R_{{i,j}}',
+               'S(i,j)',
+               'T(z_{1},z_{2})',
+               'T(z_{1},z_{2})={Y(z_{1},z_{2}) \\over X(z_{1},z_{2})}={\\sum '
+               '_{{p,q=0,0}}^{{m,n}}b_{{p,q}}z_{1}^{{-p}}z_{2}^{{-q}} \\over '
+               '\\sum _{{p,q=0,0}}^{{m,n}}a_{{p,q}}z_{1}^{{-p}}z_{2}^{{-q}}}',
+               'Y(z_1,z_2) = {\\sum_{p,q=0,0}^{m,n}b_{p,q}z_1^{-p}z_2^{-q} '
+               '\\over \\sum_{p,q=0,0}^{m,n}a_{p,q}z_1^{-p}z_2^{-q}}X(z_1,z_2)',
+               'Y(z_{1},z_{2})=\\sum '
+               '_{{p,q=0,0}}^{{m,n}}b_{{p,q}}z_{1}^{{-p}}z_{2}^{{-q}}X(z_{1},z_{2})',
+               '\\sum _{{p,q=0,0}}^{{m,n}}a_{{p,q}}y(i-p,j-q)=\\sum '
+               '_{{p,q=0,0}}^{{m,n}}b_{{p,q}}x(i-p,j-q)',
+               '\\sum '
+               '_{{p,q=0,0}}^{{m,n}}a_{{p,q}}z_{1}^{{-p}}z_{2}^{{-q}}Y(z_{1},z_{2})=\\sum '
+               '_{{p,q=0,0}}^{{m,n}}b_{{p,q}}z_{1}^{{-p}}z_{2}^{{-q}}X(z_{1},z_{2})',
+               'a_{{p,q}}',
+               'b_{i,j}',
+               'b_{{0,0}}',
+               'b_{{p,q}}',
+               'k',
+               'u(i,j)',
+               'x(i,j)',
+               'y',
+               'y(1\\times 1)',
+               'y(i,j)',
+               'z_{1}',
+               'z_{2}',
+               '{\\begin{aligned}R(i+1,j)&=A_{1}R(i,j)+A_{2}S(i,j)+B_{1}u(i,j)\\\\S(i,j+1)&=A_{3}R(i,j)+A_{4}S(i,j)+B_{2}u(i,j)\\\\y(i,j)&=C_{1}R(i,j)+C_{2}S(i,j)+Du(i,j)\\end{aligned}}',
+               '{\\begin{bmatrix}R(i+1,j)\\\\S(i,j+1)\\\\y(i,j)\\end{bmatrix}}={\\begin{bmatrix}A_{1}&A_{2}&B_{1}\\\\A_{3}&A_{4}&B_{2}\\\\C_{1}&C_{2}&D\\end{bmatrix}}{\\begin{bmatrix}R(i,j)\\\\S(i,j)\\\\u(i,j)\\end{bmatrix}}'},
+ 'last_item': {'categories': ['Dynamical systems',
+                'Systems',
+                'Systems theory',
+                'Mathematical and quantitative methods (economics)'],
+ 'equations': {'\\langle {\\mathcal {M}},f,{\\mathcal {T}}\\rangle ',
+               '\\mu (\\tau ^{-1}\\sigma )=\\mu (\\sigma )',
+               '\\tau ^{-1}\\sigma \\in \\Sigma ',
+               '\\tau ^{n}=\\tau \\circ \\tau \\circ \\cdots \\circ \\tau ',
+               't\\in {\\mathcal {T}}',
+               '{\\displaystyle (U^{t}a)(x)=a(\\Phi ^{-t}(x)).}',
+               '{\\displaystyle G(x,{\\dot {x}})=0}',
+               '{\\displaystyle \\Phi ^{t}(x_{0})=e^{tA}x_{0}.}',
+               '{\\displaystyle \\Phi ^{t}(x_{1})=x_{1}+bt.}',
+               '{\\displaystyle \\mathrm {vol} (A)=\\mathrm {vol} (\\Phi '
+               '^{t}(A)).}',
+               '{\\displaystyle h^{-1}\\circ F\\circ h(x)=J\\cdot x.}',
+               '{\\displaystyle x_{n+1}=Ax_{n}+b,}',
+               '{\\displaystyle {\\dot {x}}=\\phi (x)=Ax+b,}',
+               '{\\displaystyle {\\dot {x}}=v(x).}',
+               '{\\mathcal {M}}',
+               '{\\mathcal {T}}'},
+ 'title': 'Dynamical system',
+ 'url': 'https://en.wikipedia.org/wiki/Dynamical_system'},
+ 'link_dist': 1,
+ 'title': 'Multidimensional system',
+ 'url': 'https://en.wikipedia.org/wiki/Multidimensional_systems'}
+{'categories': ['1924 births',
+                '2002 deaths',
+                'University of Florida faculty',
+                'American ecologists',
+                'Systems ecologists',
+                'American systems scientists',
+                'University of North Carolina at Chapel Hill alumni',
+                'Yale University alumni',
+                'United States Army Air Forces soldiers',
+                'American military personnel of World War II',
+                'Ecological economists',
+                'People from Chapel Hill, North Carolina',
+                'Phi Beta Kappa members'],
+ 'equations': {'C', 'X', 'J = CX', 'J'},
+ 'last_item': {'categories': ['Dynamical systems',
+                'Systems',
+                'Systems theory',
+                'Mathematical and quantitative methods (economics)'],
+ 'equations': {'\\langle {\\mathcal {M}},f,{\\mathcal {T}}\\rangle ',
+               '\\mu (\\tau ^{-1}\\sigma )=\\mu (\\sigma )',
+               '\\tau ^{-1}\\sigma \\in \\Sigma ',
+               '\\tau ^{n}=\\tau \\circ \\tau \\circ \\cdots \\circ \\tau ',
+               't\\in {\\mathcal {T}}',
+               '{\\displaystyle (U^{t}a)(x)=a(\\Phi ^{-t}(x)).}',
+               '{\\displaystyle G(x,{\\dot {x}})=0}',
+               '{\\displaystyle \\Phi ^{t}(x_{0})=e^{tA}x_{0}.}',
+               '{\\displaystyle \\Phi ^{t}(x_{1})=x_{1}+bt.}',
+               '{\\displaystyle \\mathrm {vol} (A)=\\mathrm {vol} (\\Phi '
+               '^{t}(A)).}',
+               '{\\displaystyle h^{-1}\\circ F\\circ h(x)=J\\cdot x.}',
+               '{\\displaystyle x_{n+1}=Ax_{n}+b,}',
+               '{\\displaystyle {\\dot {x}}=\\phi (x)=Ax+b,}',
+               '{\\displaystyle {\\dot {x}}=v(x).}',
+               '{\\mathcal {M}}',
+               '{\\mathcal {T}}'},
+ 'title': 'Dynamical system',
+ 'url': 'https://en.wikipedia.org/wiki/Dynamical_system'},
+ 'link_dist': 1,
+ 'title': 'Howard T. Odum',
+ 'url': 'https://en.wikipedia.org/wiki/Howard_T._Odum'}
+{'categories': ['Ergodic theory'],
+ 'equations': {'E(f|{\\mathcal  {C}})',
+               'N',
+               'Uf(x)=f(Tx)\\,',
+               '\\int {\\hat  f}\\,d\\mu =\\int f\\,d\\mu .',
+               '\\ker(I-U)',
+               '\\lim _{{N\\to \\infty }}{1 \\over N}\\sum '
+               '_{{n=0}}^{{N-1}}U^{{n}}x=Px,',
+               'x\\in H',
+               '{\\bar  f}={\\frac  1{\\mu (X)}}\\int f\\,d\\mu .\\quad '
+               '{\\text{ (For a probability space, }}\\mu (X)=1.)',
+               '{\\bar  f}={\\hat  f}\\,',
+               '{\\displaystyle \\lim _{N\\to \\infty }{1 \\over N}\\sum '
+               '_{n=0}^{N-1}U^{n}(I-U)=\\lim _{N\\to \\infty }{1 \\over '
+               'N}(I-U^{N})=0}',
+               '{\\displaystyle \\lim _{n\\rightarrow \\infty }\\;{\\frac '
+               '{1}{n}}\\sum _{k=0}^{n-1}f(T^{k}x)=E(f).}',
+               '{\\displaystyle \\lim _{n\\rightarrow \\infty }\\;{\\frac '
+               '{1}{n}}\\sum _{k=0}^{n-1}f(T^{k}x)=E(f\\mid {\\mathcal '
+               '{C}})(x),}',
+               '{\\displaystyle \\lim _{n\\rightarrow \\infty }\\;{\\frac '
+               '{1}{n}}\\sum _{k=0}^{n-1}f(T^{k}x)={\\frac {1}{\\mu (X)}}\\int '
+               'f\\,d\\mu }',
+               '{\\displaystyle {\\frac {1}{N}}\\sum _{n=0}^{N-1}U^{n}}',
+               '{\\displaystyle {\\frac {R_{1}+\\cdots +R_{n}}{n}}\\rightarrow '
+               '{\\frac {\\mu (X)}{\\mu (A)}}\\quad {\\text{(almost surely)}}}',
+               '{\\displaystyle {\\frac {\\mu (A)}{\\mu (X)}}={\\frac {1}{\\mu '
+               '(X)}}\\int \\chi _{A}\\,d\\mu =\\lim _{n\\rightarrow \\infty '
+               '}\\;{\\frac {1}{n}}\\sum _{k=0}^{n-1}\\chi _{A}(T^{k}x)}',
+               '{\\displaystyle {\\hat {f}}(x)=\\lim _{n\\rightarrow \\infty '
+               '}\\;{\\frac {1}{n}}\\sum _{k=0}^{n-1}f(T^{k}x).}',
+               '{\\displaystyle {\\overline {\\operatorname {ran} (I-U)}}}',
+               '{\\frac  {1}{T}}\\int _{0}^{T}U_{t}\\,dt',
+               '{\\hat  f}\\circ T={\\hat  f}\\,',
+               '{\\hat  f}\\in L^{1}(\\mu ).\\,',
+               '{\\mathcal {C}}'},
+ 'last_item': {'categories': ['Dynamical systems',
+                'Systems',
+                'Systems theory',
+                'Mathematical and quantitative methods (economics)'],
+ 'equations': {'\\langle {\\mathcal {M}},f,{\\mathcal {T}}\\rangle ',
+               '\\mu (\\tau ^{-1}\\sigma )=\\mu (\\sigma )',
+               '\\tau ^{-1}\\sigma \\in \\Sigma ',
+               '\\tau ^{n}=\\tau \\circ \\tau \\circ \\cdots \\circ \\tau ',
+               't\\in {\\mathcal {T}}',
+               '{\\displaystyle (U^{t}a)(x)=a(\\Phi ^{-t}(x)).}',
+               '{\\displaystyle G(x,{\\dot {x}})=0}',
+               '{\\displaystyle \\Phi ^{t}(x_{0})=e^{tA}x_{0}.}',
+               '{\\displaystyle \\Phi ^{t}(x_{1})=x_{1}+bt.}',
+               '{\\displaystyle \\mathrm {vol} (A)=\\mathrm {vol} (\\Phi '
+               '^{t}(A)).}',
+               '{\\displaystyle h^{-1}\\circ F\\circ h(x)=J\\cdot x.}',
+               '{\\displaystyle x_{n+1}=Ax_{n}+b,}',
+               '{\\displaystyle {\\dot {x}}=\\phi (x)=Ax+b,}',
+               '{\\displaystyle {\\dot {x}}=v(x).}',
+               '{\\mathcal {M}}',
+               '{\\mathcal {T}}'},
+ 'title': 'Dynamical system',
+ 'url': 'https://en.wikipedia.org/wiki/Dynamical_system'},
+ 'link_dist': 1,
+ 'title': 'Ergodic theory',
+ 'url': 'https://en.wikipedia.org/wiki/Ergodic_theorem'}
+{'categories': ['Integral calculus', 'Surfaces'],
+ 'equations': {'A_y =2\\pi\\int_a^b x '
+               '\\sqrt{1+\\left(\\frac{dx}{dy}\\right)^2} \\, dy',
+               '\\begin{align}\n'
+               'A\n'
+               ' &{}= 2 \\pi \\int_{-r}^{r} \\sqrt{r^2 - x^2}\\,\\sqrt{1 + '
+               '\\frac{x^2}{r^2 - x^2}}\\,dx \\\\\n'
+               ' &{}= 2 \\pi r\\int_{-r}^{r} \\,\\sqrt{r^2 - '
+               'x^2}\\,\\sqrt{\\frac{1}{r^2 - x^2}}\\,dx \\\\\n'
+               ' &{}= 2 \\pi r\\int_{-r}^{r} \\,dx \\\\\n'
+               ' &{}= 4 \\pi r^2\\,\n'
+               '\\end{align}',
+               '\\sqrt{ \\left({dx \\over dt}\\right)^2 + \\left({dy \\over '
+               'dt}\\right)^2 }',
+               '\\vec r(u,v)=\\langle u,f(u)\\sin v,f(u)\\cos v\\rangle',
+               '{\\displaystyle A_{x}=2\\pi \\int _{a}^{b}y(t)\\,{\\sqrt '
+               '{\\left({dx \\over dt}\\right)^{2}+\\left({dy \\over '
+               'dt}\\right)^{2}}}\\,dt.}',
+               '{\\displaystyle A_{x}=2\\pi \\int _{a}^{b}y{\\sqrt '
+               '{1+\\left({\\frac {dy}{dx}}\\right)^{2}}}\\,dx=2\\pi \\int '
+               "_{a}^{b}f(x){\\sqrt {1+{\\big (}f'(x){\\big )}^{2}}}\\,dx}",
+               '{\\displaystyle A_{y}=2\\pi \\int _{a}^{b}x(t)\\,{\\sqrt '
+               '{\\left({dx \\over dt}\\right)^{2}+\\left({dy \\over '
+               'dt}\\right)^{2}}}\\,dt,}',
+               '{\\displaystyle {\\begin{aligned}A&{}=2\\pi \\int _{0}^{\\pi '
+               '}\\sin(t){\\sqrt {{\\big (}\\cos(t){\\big )}^{2}+{\\big '
+               '(}\\sin(t){\\big )}^{2}}}\\,dt\\\\&{}=2\\pi \\int _{0}^{\\pi '
+               '}\\sin(t)\\,dt\\\\&{}=4\\pi .\\end{aligned}}}'},
+ 'last_item': {'categories': ['Surfaces',
+                'Geometric topology',
+                'Differential geometry of surfaces',
+                'Analytic geometry'],
+ 'equations': {' \\mathbb{R}^3 ',
+               'ABAB',
+               'ABAB^{-1}',
+               'ABA^{-1}B^{-1}',
+               'ABB^{-1}A^{-1}',
+               '\\Sigma _{{g,k}},',
+               '\\chi ',
+               '\\int _{S}K\\;dA=2\\pi \\chi (S).',
+               'g\\geq 1',
+               'k\\geq 1',
+               '{\\displaystyle \\chi (M{\\mathbin {\\#}}N)=\\chi (M)+\\chi '
+               '(N)-2.\\,}'},
+ 'title': 'Surface (topology)',
+ 'url': "https://en.wikipedia.org/wiki/Dyck's_theorem"},
+ 'link_dist': 1,
+ 'title': 'Surface of revolution',
+ 'url': 'https://en.wikipedia.org/wiki/Surface_of_revolution'}
+{'categories': ['Functions and mappings',
+                'Basic concepts in set theory',
+                'Types of functions'],
+ 'equations': {'{\\displaystyle \\forall a,b\\in X,\\;\\;a\\neq b\\Rightarrow '
+               'f(a)\\neq f(b)}',
+               '{\\displaystyle \\forall a,b\\in X,\\;\\;f(a)=f(b)\\Rightarrow '
+               'a=b}'},
+ 'last_item': {'categories': ['Surfaces',
+                'Geometric topology',
+                'Differential geometry of surfaces',
+                'Analytic geometry'],
+ 'equations': {' \\mathbb{R}^3 ',
+               'ABAB',
+               'ABAB^{-1}',
+               'ABA^{-1}B^{-1}',
+               'ABB^{-1}A^{-1}',
+               '\\Sigma _{{g,k}},',
+               '\\chi ',
+               '\\int _{S}K\\;dA=2\\pi \\chi (S).',
+               'g\\geq 1',
+               'k\\geq 1',
+               '{\\displaystyle \\chi (M{\\mathbin {\\#}}N)=\\chi (M)+\\chi '
+               '(N)-2.\\,}'},
+ 'title': 'Surface (topology)',
+ 'url': "https://en.wikipedia.org/wiki/Dyck's_theorem"},
+ 'link_dist': 1,
+ 'title': 'Injective function',
+ 'url': 'https://en.wikipedia.org/wiki/Injection_(mathematics)'}
+{'categories': ['Metric geometry'],
+ 'equations': {'\\bigcap_\\alpha \\overline{B}(x_\\alpha, \\mu r_\\alpha)',
+               '\\scriptstyle \\left\\{ \\overline{B}(x_\\alpha,\\, r_\\alpha) '
+               '\\right\\}',
+               '\\scriptstyle \\mu ',
+               'd(f, g) \\equiv \\sup\\left\\{d[f(x), g(x)]: x \\in X '
+               '\\right\\}',
+               'd(x, y) = \\lim_n d\\left(x_n, y_n\\right)',
+               '{\\displaystyle x_{1}\\;=\\;1}',
+               '{\\displaystyle x_{n+1}\\;=\\;{\\frac '
+               '{x_{n}}{2}}\\,+\\,{\\frac {1}{x_{n}}}}'},
+ 'last_item': {'categories': ['Operator theory', 'Theorems in functional analysis'],
+ 'equations': {'T:c_{0}\\to c_{0}',
+               'Tx=\\left(x_{{1}},{\\frac  {x_{{2}}}{2}},{\\frac  '
+               '{x_{{3}}}{3}},\\dots \\right)',
+               'c_{0}',
+               'x=\\left(1,{\\frac  12},{\\frac  13},\\dots \\right),',
+               'x^{{(\\infty )}}=\\left(1,{\\frac  1{2}},\\dots ,{\\frac  '
+               '1{n}},\\dots \\right),',
+               'x^{{(n)}}=\\left(1,{\\frac  1{2}},\\dots ,{\\frac  '
+               '1{n}},0,0,\\dots \\right)'},
+ 'title': 'Bounded inverse theorem',
+ 'url': 'https://en.wikipedia.org/wiki/Bounded_inverse_theorem'},
+ 'link_dist': 1,
+ 'title': 'Complete metric space',
+ 'url': 'https://en.wikipedia.org/wiki/Completeness_(topology)'}
+{'categories': ['Functional analysis', 'Norms (mathematics)'],
+ 'equations': {'[a,b]',
+               '\\lim _{n\\rightarrow \\infty }\\|f_{n}-f\\|_{\\infty }=0.\\,',
+               '\\lim _{p\\rightarrow \\infty }\\|f\\|_{p}=\\|f\\|_{\\infty },',
+               '\\{f_{n}\\}',
+               '\\|f\\|_{\\infty }=\\|f\\|_{\\infty ,S}=\\sup '
+               '\\left\\{\\,\\left|f(x)\\right|:x\\in S\\,\\right\\}.',
+               '\\|f\\|_{p}=\\left(\\int _{D}\\left|f\\right|^{p}\\,d\\mu '
+               '\\right)^{1/p}',
+               '\\|x\\|_{\\infty }=\\max\\{|x_{1}|,\\dots ,|x_{n}|\\}.',
+               'd(f,g)=\\|f-g\\|_{\\infty }',
+               'f',
+               'f_{n}',
+               'x=(x_{1},\\dots ,x_{n})'},
+ 'last_item': {'categories': ['Operator theory', 'Theorems in functional analysis'],
+ 'equations': {'T:c_{0}\\to c_{0}',
+               'Tx=\\left(x_{{1}},{\\frac  {x_{{2}}}{2}},{\\frac  '
+               '{x_{{3}}}{3}},\\dots \\right)',
+               'c_{0}',
+               'x=\\left(1,{\\frac  12},{\\frac  13},\\dots \\right),',
+               'x^{{(\\infty )}}=\\left(1,{\\frac  1{2}},\\dots ,{\\frac  '
+               '1{n}},\\dots \\right),',
+               'x^{{(n)}}=\\left(1,{\\frac  1{2}},\\dots ,{\\frac  '
+               '1{n}},0,0,\\dots \\right)'},
+ 'title': 'Bounded inverse theorem',
+ 'url': 'https://en.wikipedia.org/wiki/Bounded_inverse_theorem'},
+ 'link_dist': 1,
+ 'title': 'Uniform norm',
+ 'url': 'https://en.wikipedia.org/wiki/Supremum_norm'}
+{'categories': ['Physical quantities', 'Thermodynamic properties'],
+ 'equations': {'1',
+               'A(T,V)=U-TS',
+               'A_{j}',
+               'F',
+               'F(\\{a_{i}\\},\\{A_{j}\\})',
+               'F(\\{a_{i}\\},\\{A_{j}\\})=\\sum _{j}A_{j}\\left({\\frac '
+               '{\\partial F}{\\partial A_{j}}}\\right),',
+               'F(\\{a_{i}\\},\\{\\alpha '
+               'A_{j}\\})=F(\\{a_{i}\\},\\{A_{j}\\}).\\,',
+               'F(\\{a_{i}\\},\\{\\alpha A_{j}\\})=\\alpha '
+               'F(\\{a_{i}\\},\\{A_{j}\\}).\\,',
+               'G(T,p)=H-TS',
+               'H(S,p)=U+pV',
+               'N',
+               'T',
+               'U(S,V)',
+               'V',
+               '\\alpha ',
+               '\\alpha =',
+               '\\beta =-',
+               '\\partial S',
+               '\\partial T',
+               '\\partial V',
+               '\\partial p',
+               '\\rho ',
+               '\\{A_{j}\\}',
+               '\\{a_{i}\\}',
+               'c=',
+               'm',
+               '{\\displaystyle F(\\{a_{i}\\},\\{\\alpha A_{j}\\})}',
+               '{\\displaystyle \\alpha V}',
+               '{\\displaystyle \\alpha m}',
+               '{\\displaystyle \\rho (\\alpha m,\\alpha V)=\\rho (m,V)}',
+               '{\\displaystyle \\rho ={\\frac {\\alpha m}{\\alpha V}}}',
+               '{\\displaystyle \\rho ={\\frac {m}{V}}}'},
+ 'last_item': {'categories': ['Dynamical systems',
+                'Systems',
+                'Systems theory',
+                'Mathematical and quantitative methods (economics)'],
+ 'equations': {'\\langle {\\mathcal {M}},f,{\\mathcal {T}}\\rangle ',
+               '\\mu (\\tau ^{-1}\\sigma )=\\mu (\\sigma )',
+               '\\tau ^{-1}\\sigma \\in \\Sigma ',
+               '\\tau ^{n}=\\tau \\circ \\tau \\circ \\cdots \\circ \\tau ',
+               't\\in {\\mathcal {T}}',
+               '{\\displaystyle (U^{t}a)(x)=a(\\Phi ^{-t}(x)).}',
+               '{\\displaystyle G(x,{\\dot {x}})=0}',
+               '{\\displaystyle \\Phi ^{t}(x_{0})=e^{tA}x_{0}.}',
+               '{\\displaystyle \\Phi ^{t}(x_{1})=x_{1}+bt.}',
+               '{\\displaystyle \\mathrm {vol} (A)=\\mathrm {vol} (\\Phi '
+               '^{t}(A)).}',
+               '{\\displaystyle h^{-1}\\circ F\\circ h(x)=J\\cdot x.}',
+               '{\\displaystyle x_{n+1}=Ax_{n}+b,}',
+               '{\\displaystyle {\\dot {x}}=\\phi (x)=Ax+b,}',
+               '{\\displaystyle {\\dot {x}}=v(x).}',
+               '{\\mathcal {M}}',
+               '{\\mathcal {T}}'},
+ 'title': 'Dynamical system',
+ 'url': 'https://en.wikipedia.org/wiki/Dynamical_system'},
+ 'link_dist': 1,
+ 'title': 'Intensive and extensive properties',
+ 'url': 'https://en.wikipedia.org/wiki/Intensive_and_extensive_properties'}
+{'categories': ['Wind power', 'Renewable energy'],
+ 'equations': {'E={\\frac {1}{2}}mv^{2}={\\frac {1}{2}}(Avt\\rho '
+               ')v^{2}={\\frac {1}{2}}At\\rho v^{3},',
+               'P={\\frac {E}{t}}={\\frac {1}{2}}A\\rho v^{3}.'},
+ 'last_item': {'categories': ['Dynamical systems',
+                'Systems',
+                'Systems theory',
+                'Mathematical and quantitative methods (economics)'],
+ 'equations': {'\\langle {\\mathcal {M}},f,{\\mathcal {T}}\\rangle ',
+               '\\mu (\\tau ^{-1}\\sigma )=\\mu (\\sigma )',
+               '\\tau ^{-1}\\sigma \\in \\Sigma ',
+               '\\tau ^{n}=\\tau \\circ \\tau \\circ \\cdots \\circ \\tau ',
+               't\\in {\\mathcal {T}}',
+               '{\\displaystyle (U^{t}a)(x)=a(\\Phi ^{-t}(x)).}',
+               '{\\displaystyle G(x,{\\dot {x}})=0}',
+               '{\\displaystyle \\Phi ^{t}(x_{0})=e^{tA}x_{0}.}',
+               '{\\displaystyle \\Phi ^{t}(x_{1})=x_{1}+bt.}',
+               '{\\displaystyle \\mathrm {vol} (A)=\\mathrm {vol} (\\Phi '
+               '^{t}(A)).}',
+               '{\\displaystyle h^{-1}\\circ F\\circ h(x)=J\\cdot x.}',
+               '{\\displaystyle x_{n+1}=Ax_{n}+b,}',
+               '{\\displaystyle {\\dot {x}}=\\phi (x)=Ax+b,}',
+               '{\\displaystyle {\\dot {x}}=v(x).}',
+               '{\\mathcal {M}}',
+               '{\\mathcal {T}}'},
+ 'title': 'Dynamical system',
+ 'url': 'https://en.wikipedia.org/wiki/Dynamical_system'},
+ 'link_dist': 1,
+ 'title': 'Wind power',
+ 'url': 'https://en.wikipedia.org/wiki/Wind_power'}
+{'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'}
+{'categories': ['Soil',
+                'Land management',
+                'Horticulture and gardening',
+                'Granularity of materials',
+                'Natural materials',
+                'Natural resources'],
+ 'equations': {'\\delta T',
+               '\\delta x',
+               'k',
+               'q',
+               'q_{x}=-k{\\frac {\\delta T}{\\delta x}}'},
+ 'last_item': {'categories': ['Wind power', 'Renewable energy'],
+ 'equations': {'E={\\frac {1}{2}}mv^{2}={\\frac {1}{2}}(Avt\\rho '
+               ')v^{2}={\\frac {1}{2}}At\\rho v^{3},',
+               'P={\\frac {E}{t}}={\\frac {1}{2}}A\\rho v^{3}.'},
+ 'last_item': {'categories': ['Dynamical systems',
+                'Systems',
+                'Systems theory',
+                'Mathematical and quantitative methods (economics)'],
+ 'equations': {'\\langle {\\mathcal {M}},f,{\\mathcal {T}}\\rangle ',
+               '\\mu (\\tau ^{-1}\\sigma )=\\mu (\\sigma )',
+               '\\tau ^{-1}\\sigma \\in \\Sigma ',
+               '\\tau ^{n}=\\tau \\circ \\tau \\circ \\cdots \\circ \\tau ',
+               't\\in {\\mathcal {T}}',
+               '{\\displaystyle (U^{t}a)(x)=a(\\Phi ^{-t}(x)).}',
+               '{\\displaystyle G(x,{\\dot {x}})=0}',
+               '{\\displaystyle \\Phi ^{t}(x_{0})=e^{tA}x_{0}.}',
+               '{\\displaystyle \\Phi ^{t}(x_{1})=x_{1}+bt.}',
+               '{\\displaystyle \\mathrm {vol} (A)=\\mathrm {vol} (\\Phi '
+               '^{t}(A)).}',
+               '{\\displaystyle h^{-1}\\circ F\\circ h(x)=J\\cdot x.}',
+               '{\\displaystyle x_{n+1}=Ax_{n}+b,}',
+               '{\\displaystyle {\\dot {x}}=\\phi (x)=Ax+b,}',
+               '{\\displaystyle {\\dot {x}}=v(x).}',
+               '{\\mathcal {M}}',
+               '{\\mathcal {T}}'},
+ 'title': 'Dynamical system',
+ 'url': 'https://en.wikipedia.org/wiki/Dynamical_system'},
+ 'link_dist': 1,
+ 'title': 'Wind power',
+ 'url': 'https://en.wikipedia.org/wiki/Wind_power'},
+ 'link_dist': 1,
+ 'title': 'Soil',
+ 'url': 'https://en.wikipedia.org/wiki/Soil'}
+{'categories': ['Queueing theory', 'Markov processes', 'Probability stubs'],
+ 'equations': {'{\\displaystyle P={\\begin{pmatrix}A_{1}^{\\ast }&A_{2}^{\\ast '
+               '}\\\\A_{0}^{\\ast '
+               '}&A_{1}&A_{2}\\\\&A_{0}&A_{1}&A_{2}\\\\&&A_{0}&A_{1}&A_{2}\\\\&&&\\ddots '
+               '&\\ddots &\\ddots \\end{pmatrix}}}',
+               '{\\displaystyle '
+               'Q={\\begin{pmatrix}B_{00}&B_{01}\\\\B_{10}&A_{1}&A_{2}\\\\&A_{0}&A_{1}&A_{2}\\\\&&A_{0}&A_{1}&A_{2}\\\\&&&A_{0}&A_{1}&A_{2}\\\\&&&&\\ddots '
+               '&\\ddots &\\ddots \\end{pmatrix}}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'Quasi-birth–death process',
+ 'url': 'https://en.wikipedia.org/wiki/Quasi-birth-death_process'}
+{'categories': ['Survival analysis',
+                'Semi-parametric models',
+                'Poisson point processes'],
+ 'equations': {'L(\\beta )=\\prod _{i:C_{i}=1}{\\frac {\\theta _{i}}{\\sum '
+               '_{j:Y_{j}\\geq Y_{i}}\\theta _{j}}},',
+               'L(\\beta )=\\prod _{j}{\\frac {\\prod _{i\\in H_{j}}\\theta '
+               '_{i}}{\\prod _{\\ell =0}^{m-1}[\\sum _{i:Y_{i}\\geq '
+               't_{j}}\\theta _{i}-{\\frac {\\ell }{m}}\\sum _{i\\in '
+               'H_{j}}\\theta _{i}]}}.',
+               'Z_{j,\\ell ,m}=\\sum _{i:Y_{i}\\geq t_{j}}\\theta '
+               '_{i}X_{i}-{\\frac {\\ell }{m}}\\sum _{i\\in H_{j}}\\theta '
+               '_{i}X_{i}.',
+               '\\ell ^{\\prime }(\\beta )=\\sum '
+               '_{i:C_{i}=1}\\left(X_{i}-{\\frac {\\sum _{j:Y_{j}\\geq '
+               'Y_{i}}\\theta _{j}X_{j}}{\\sum _{j:Y_{j}\\geq Y_{i}}\\theta '
+               '_{j}}}\\right),',
+               '\\ell ^{\\prime }(\\beta )=\\sum _{j}\\left(\\sum _{i\\in '
+               'H_{j}}X_{i}-\\sum _{\\ell =0}^{m-1}{\\frac {\\sum '
+               '_{i:Y_{i}\\geq t_{j}}\\theta _{i}X_{i}-{\\frac {\\ell '
+               '}{m}}\\sum _{i\\in H_{j}}\\theta _{i}X_{i}}{\\sum '
+               '_{i:Y_{i}\\geq t_{j}}\\theta _{i}-{\\frac {\\ell }{m}}\\sum '
+               '_{i\\in H_{j}}\\theta _{i}}}\\right),',
+               '\\lambda _{0}(t)',
+               '\\phi _{j,\\ell ,m}=\\sum _{i:Y_{i}\\geq t_{j}}\\theta '
+               '_{i}-{\\frac {\\ell }{m}}\\sum _{i\\in H_{j}}\\theta _{i}',
+               't',
+               'x',
+               '{\\displaystyle L_{i}(\\beta )={\\frac {\\theta _{i}}{\\sum '
+               '_{j:Y_{j}\\geq Y_{i}}\\theta _{j}}},}',
+               '{\\displaystyle \\ell (\\beta )=\\sum '
+               '_{i:C_{i}=1}\\left(X_{i}\\cdot \\beta -\\log \\sum '
+               '_{j:Y_{j}\\geq Y_{i}}\\theta _{j}\\right).}',
+               '{\\displaystyle \\ell (\\beta )=\\sum _{j}\\left(\\sum _{i\\in '
+               'H_{j}}X_{i}\\cdot \\beta -\\sum _{\\ell =0}^{m-1}\\log '
+               '\\left(\\sum _{i:Y_{i}\\geq t_{j}}\\theta _{i}-{\\frac {\\ell '
+               '}{m}}\\sum _{i\\in H_{j}}\\theta _{i}\\right)\\right)+\\lambda '
+               '\\|\\beta \\|_{1},}',
+               '{\\displaystyle \\ell (\\beta )=\\sum _{j}\\left(\\sum _{i\\in '
+               'H_{j}}X_{i}\\cdot \\beta -\\sum _{\\ell =0}^{m-1}\\log '
+               '\\left(\\sum _{i:Y_{i}\\geq t_{j}}\\theta _{i}-{\\frac {\\ell '
+               '}{m}}\\sum _{i\\in H_{j}}\\theta _{i}\\right)\\right),}',
+               '{\\displaystyle \\ell ^{\\prime \\prime }(\\beta )=-\\sum '
+               '_{i:C_{i}=1}\\left({\\frac {\\sum _{j:Y_{j}\\geq Y_{i}}\\theta '
+               '_{j}X_{j}X_{j}^{\\prime }}{\\sum _{j:Y_{j}\\geq Y_{i}}\\theta '
+               '_{j}}}-{\\frac {\\left[\\sum _{j:Y_{j}\\geq Y_{i}}\\theta '
+               '_{j}X_{j}\\right]\\left[\\sum _{j:Y_{j}\\geq Y_{i}}\\theta '
+               '_{j}X_{j}^{\\prime }\\right]}{\\left[\\sum _{j:Y_{j}\\geq '
+               'Y_{i}}\\theta _{j}\\right]^{2}}}\\right).}',
+               '{\\displaystyle \\ell ^{\\prime \\prime }(\\beta )=-\\sum '
+               '_{j}\\sum _{\\ell =0}^{m-1}\\left({\\frac {\\sum '
+               '_{i:Y_{i}\\geq t_{j}}\\theta _{i}X_{i}X_{i}^{\\prime }-{\\frac '
+               '{\\ell }{m}}\\sum _{i\\in H_{j}}\\theta '
+               '_{i}X_{i}X_{i}^{\\prime }}{\\phi _{j,\\ell ,m}}}-{\\frac '
+               '{Z_{j,\\ell ,m}Z_{j,\\ell ,m}^{\\prime }}{\\phi _{j,\\ell '
+               ',m}^{2}}}\\right),}',
+               '{\\displaystyle \\lambda (t|X_{i})=\\lambda _{0}(t)+\\beta '
+               '_{1}X_{i1}+\\cdots +\\beta _{p}X_{ip}=\\lambda '
+               '_{0}(t)+X_{i}\\cdot \\beta .}',
+               '{\\displaystyle \\lambda (t|X_{i})=\\lambda '
+               '_{0}(t)\\exp(\\beta _{1}X_{i1}+\\cdots +\\beta '
+               '_{p}X_{ip})=\\lambda _{0}(t)\\exp(X_{i}\\cdot \\beta ).}',
+               '{\\displaystyle \\lambda (t|X_{i})}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'Proportional hazards model',
+ 'url': 'https://en.wikipedia.org/wiki/Proportional_hazards_models'}
+{'categories': ['Markov processes'],
+ 'equations': {'(K_{ij})_{1\\leq i,j\\leq n}',
+               '(S,Y)',
+               '(X,{\\mathcal {A}})',
+               '(X,{\\mathcal {A}},P)',
+               '(X\\times Y,{\\mathcal {A}}\\otimes {\\mathcal {B}})',
+               '(Y,{\\mathcal {B}})',
+               '(\\Omega ,{\\mathcal {F}},P)',
+               '(\\Omega ,{\\mathcal {G}})',
+               'B\\in Y',
+               'B\\in {\\mathcal {B}}',
+               'B\\mapsto \\kappa (x,B)',
+               'Q',
+               'X',
+               '\\kappa ',
+               '\\mathbb {Z} ',
+               '\\mathbf {1} ',
+               '\\nu ',
+               '\\sigma ',
+               '\\xi _{i}',
+               'x\\in X',
+               'x\\mapsto \\kappa (x,B)',
+               '{\\displaystyle (X,{\\mathcal {A}}),(Y,{\\mathcal {B}})}',
+               '{\\displaystyle B\\in {\\mathcal {B}}.}',
+               '{\\displaystyle P(X\\in B|{\\mathcal {G}})=\\mathbb {E} '
+               '\\left[\\mathbf {1} _{\\{X\\in B\\}}|{\\mathcal '
+               '{G}}\\right]=\\kappa (\\omega ,B),\\qquad P-a.s.\\forall B\\in '
+               '{\\mathcal {G}}.}',
+               '{\\displaystyle Q(A\\times B)=\\int _{A}\\kappa '
+               '(x,B)dP(x),\\quad \\forall A\\in {\\mathcal {A}},\\quad '
+               '\\forall B\\in {\\mathcal {B}}}',
+               '{\\displaystyle X=Y,{\\mathcal {A}}={\\mathcal {B}}={\\mathcal '
+               '{P}}(X)={\\mathcal {P}}(Y)}',
+               '{\\displaystyle X=Y=\\mathbb {N} ,{\\mathcal {A}}={\\mathcal '
+               '{B}}={\\mathcal {P}}(\\mathbb {N} ),}',
+               '{\\displaystyle X=Y=\\mathbb {Z} ,{\\mathcal {A}}={\\mathcal '
+               '{B}}={\\mathcal {P}}(\\mathbb {Z} )}',
+               '{\\displaystyle \\forall i\\in X:\\qquad \\sum _{j\\in '
+               'Y}K_{ij}=1.}',
+               '{\\displaystyle \\forall x\\in X\\qquad \\int _{Y}k(x,y)\\nu '
+               '(\\mathrm {d} y)=1,}',
+               '{\\displaystyle \\kappa (\\cdot ,B)}',
+               '{\\displaystyle \\kappa (i,B)=\\sum _{j\\in B}K_{ij},\\qquad '
+               '\\forall i\\in X,\\quad \\forall B\\in {\\mathcal {B}}}',
+               '{\\displaystyle \\kappa (x,B)={\\begin{cases}\\mathbf {1} '
+               '_{B}(0)&x=0\\\\\\Pr(\\xi _{1}+\\cdots +\\xi _{x}\\in B)&x\\neq '
+               '0\\\\\\end{cases}}}',
+               '{\\displaystyle \\kappa (x,B)={\\frac {1}{2}}\\mathbf {1} '
+               '_{B}(x-1)+{\\frac {1}{2}}\\mathbf {1} _{B}(x+1),\\quad '
+               '\\forall x\\in \\mathbb {Z} ,\\quad \\forall B\\in {\\mathcal '
+               '{P}}(\\mathbb {Z} ),}',
+               '{\\displaystyle \\kappa (x,\\cdot )}',
+               '{\\displaystyle \\kappa :X\\times {\\mathcal {B}}\\to [0,1]}',
+               '{\\displaystyle \\mathbb {E} [\\mathbf {1} _{\\{X\\in '
+               'B\\}}|{\\mathcal {G}}]}',
+               '{\\displaystyle \\mathbb {Z} .}',
+               '{\\displaystyle k:X\\times Y\\to \\mathbb {R} _{+}}',
+               '{\\displaystyle {\\begin{cases}\\kappa :X\\times {\\mathcal '
+               '{B}}\\to [0,1]\\\\\\kappa (x,B)=\\int _{B}k(x,y)\\nu (\\mathrm '
+               '{d} y)\\end{cases}}}',
+               '{\\displaystyle |X|=|Y|=n,}',
+               '{\\mathcal  A}.',
+               '{\\mathcal {A}}',
+               '{\\mathcal {A}}\\otimes {\\mathcal {B}}',
+               '{\\mathcal {G}}',
+               '{\\mathcal {G}}\\subseteq {\\mathcal {F}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'Markov kernel',
+ 'url': 'https://en.wikipedia.org/wiki/Stochastic_kernel_estimation'}
+{'categories': ['Stochastic processes',
+                'Stochastic models',
+                'Statistical data types'],
+ 'equations': {'(S,\\Sigma )',
+               '(\\Omega ,{\\mathcal {F}},P)',
+               '1-p',
+               'B',
+               'C',
+               'D',
+               'P',
+               'R^{2}',
+               'R^{n}',
+               'S',
+               'T',
+               'X',
+               'X(t)',
+               'X_{1},X_{2},X_{3},\\dots ',
+               'X_{t}',
+               'Y',
+               '[0,1]',
+               '[0,\\infty )',
+               '\\Omega ',
+               '\\Omega _{0}',
+               '\\Sigma ',
+               '\\circ ',
+               '\\leq ',
+               '\\mu ',
+               '\\omega \\in \\Omega ',
+               '\\sigma ',
+               'h',
+               'n',
+               'n-1',
+               'n\\geq 1',
+               'p',
+               'p=0.5',
+               's\\leq t',
+               't',
+               't\\in T',
+               't_{i}',
+               '{\\displaystyle (P,{\\mathcal {F}},\\Omega )}',
+               '{\\displaystyle (X_{t},t\\geq 0)}',
+               '{\\displaystyle 0\\leq t_{1}\\leq \\dots \\leq t_{n}}',
+               '{\\displaystyle D[0,1]}',
+               '{\\displaystyle F\\subset \\textstyle R=(-\\infty ,\\infty )}',
+               '{\\displaystyle G\\subset T}',
+               '{\\displaystyle I=[0,\\infty )}',
+               '{\\displaystyle P(X_{t}=Y_{t})=1,}',
+               '{\\displaystyle P(X_{t}=Y_{t}{\\text{ for all }}t\\in T)=1,}',
+               '{\\displaystyle P(\\Omega _{0})=0}',
+               '{\\displaystyle S^{T}}',
+               '{\\displaystyle S^{n}=S\\times \\dots \\times S}',
+               '{\\displaystyle T=[0,\\infty )}',
+               '{\\displaystyle U\\subset T}',
+               '{\\displaystyle X(\\cdot ,\\omega ):T\\rightarrow S,}',
+               '{\\displaystyle X\\colon \\Omega \\rightarrow S^{T}}',
+               '{\\displaystyle X^{-1}(B)=\\{\\omega \\in \\Omega :X(\\omega '
+               ')\\in B\\},}',
+               '{\\displaystyle X^{-1}}',
+               '{\\displaystyle X_{1},X_{1}+X_{2},X_{1}+X_{2}+X_{3},\\dots }',
+               '{\\displaystyle X_{t+h}}',
+               '{\\displaystyle X_{t_{1}},\\dots X_{t_{n}},}',
+               '{\\displaystyle X_{t_{2}}-X_{t_{1}},\\dots '
+               ',X_{t_{n-1}}-X_{t_{n}},}',
+               '{\\displaystyle X_{t_{2}}-X_{t_{1}}}',
+               '{\\displaystyle \\Omega _{0}\\subset \\Omega }',
+               '{\\displaystyle \\mu (B)=P(\\{\\omega \\in \\Omega :X(\\omega '
+               ')\\in B\\}).}',
+               '{\\displaystyle \\mu =P\\circ X^{-1},}',
+               '{\\displaystyle \\mu _{t_{1},\\dots ,t_{n}}(C)=P{\\Big '
+               '(}{\\big \\{}\\omega \\in \\Omega :{\\big (}X_{t_{1}}(\\omega '
+               '),\\dots ,X_{t_{n}}(\\omega ){\\big )}\\in C{\\big \\}}{\\Big '
+               ')}.}',
+               '{\\displaystyle \\mu _{t_{1},\\dots ,t_{n}}=P\\circ '
+               '(X({t_{1}}),\\dots ,X({t_{n}}))^{-1},}',
+               '{\\displaystyle \\omega \\in \\Omega }',
+               '{\\displaystyle \\{X(t):t\\in T\\}.}',
+               '{\\displaystyle \\{X(t):t\\in T\\}}',
+               '{\\displaystyle \\{X(t)\\}_{t\\in T}}',
+               '{\\displaystyle \\{X(t)\\}}',
+               '{\\displaystyle \\{X(t,\\omega ):t\\in T\\}}',
+               '{\\displaystyle \\{X_{t}\\in F{\\text{ for all }}t\\in G\\cap '
+               'U\\}}',
+               '{\\displaystyle \\{X_{t}\\in F{\\text{ for all }}t\\in G\\}}',
+               '{\\displaystyle \\{X_{t}\\}_{t\\in T}}',
+               '{\\displaystyle \\{X_{t}\\}}',
+               '{\\displaystyle \\{{\\mathcal {F}}_{t}\\}_{t\\in T}}',
+               '{\\displaystyle t,s\\in T}',
+               '{\\displaystyle t_{1},\\dots ,t_{n}}',
+               '{\\displaystyle t_{1}\\in [0,\\infty )}',
+               '{\\displaystyle t_{1}\\leq t_{2}}',
+               '{\\displaystyle t_{2}\\in [0,\\infty )}',
+               '{\\displaystyle t_{i}\\subset T}',
+               '{\\displaystyle {\\mathcal {F}}_{s}\\subseteq {\\mathcal '
+               '{F}}_{t}\\subseteq {\\mathcal {F}}}',
+               '{\\mathcal {F}}',
+               '{\\mathcal {F}}_{t}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'Stochastic process',
+ 'url': 'https://en.wikipedia.org/wiki/Random_function'}
+{'categories': ['Dynamical systems', 'Time series', 'Symmetry'],
+ 'equations': {'U_{{-t}}=\\pi \\,U_{{t}}\\,\\pi ',
+               'p(x_{t}=i,x_{{t+1}}=j)=\\,p(x_{t}=j,x_{{t+1}}=i)',
+               '{\\displaystyle \\mathbf {p} \\rightarrow \\mathbf {-p} }',
+               '{\\displaystyle p(x_{t},x_{t+\\tau _{1}},x_{t+\\tau '
+               "_{2}},\\ldots ,x_{t+\\tau _{k}})=p(x_{t'},x_{t'-\\tau "
+               "_{1}},x_{t'-\\tau _{2}},\\ldots ,x_{t'-\\tau _{k}})}"},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'Time reversibility',
+ 'url': 'https://en.wikipedia.org/wiki/Reversible_dynamics'}
+{'categories': ['Stochastic processes',
+                'Equations',
+                'Parabolic partial differential equations',
+                'Max Planck'],
+ 'equations': {'(\\mathbf {v} ,\\mathbf {v} +d\\mathbf {v} )',
+               'D_{0}',
+               'D_{ij}(\\mathbf {x} ,t)=\\sum _{k=1}^{M}\\sigma _{ik}(\\mathbf '
+               '{x} ,t)\\sigma _{jk}(\\mathbf {x} ,t).',
+               'D_{j}',
+               'W_{t}',
+               'X_{t}',
+               '\\Delta v',
+               '\\Delta x',
+               '\\delta ',
+               '\\delta \\left(x^{\\prime }-x\\right)=\\int _{-i\\infty '
+               '}^{i\\infty }{\\frac {d{\\tilde {x}}}{2\\pi i}}e^{{\\tilde '
+               '{x}}\\left(x-x^{\\prime }\\right)}',
+               '\\langle \\Delta v_{i}\\Delta v_{j}\\rangle ',
+               '\\langle \\Delta v_{i}\\rangle ',
+               '\\left(t^{\\prime }-t\\right)/\\varepsilon ',
+               '\\mathbf {W} _{t}',
+               '\\mathbf {X} _{t}',
+               '\\mathbf {v} _{0}',
+               '\\partial _{t}p=0',
+               '\\times ',
+               '\\varepsilon ',
+               '\\varepsilon \\rightarrow 0',
+               'a>0',
+               'dW_{t}',
+               'dX_{t}=-aX_{t}dt+\\sigma dW_{t}',
+               'dX_{t}=dW_{t}.',
+               'd\\mathbf {X} _{t}={\\boldsymbol {\\mu }}(\\mathbf {X} '
+               '_{t},t)\\,dt+{\\boldsymbol {\\sigma }}(\\mathbf {X} '
+               '_{t},t)\\,d\\mathbf {W} _{t},',
+               'd\\mathbf {X} _{t}={\\boldsymbol {\\mu }}(\\mathbf {X} '
+               '_{t},t)\\,dt+{\\boldsymbol {\\sigma }}(\\mathbf {X} '
+               '_{t},t)\\circ d\\mathbf {W} _{t},',
+               'dx',
+               'f(\\mathbf {v} ,t)d\\mathbf {v} ',
+               'f_{0}(x)',
+               'p(\\mathbf {x} ,t)',
+               'p(x,0)=\\delta (x)',
+               'p(x,t)',
+               'p(x,t)={\\frac {1}{\\sqrt {2\\pi t}}}e^{-{x^{2}}/({2t})}.',
+               'p(x,t)={\\sqrt {\\frac {a}{\\pi \\sigma ^{2}}}}e^{-{\\frac '
+               '{ax^{2}}{\\sigma ^{2}}}}.',
+               'p\\!\\left(x,t\\right)',
+               'p\\!\\left(x^{\\prime },t+\\varepsilon \\right)',
+               'p\\!\\left(x^{\\prime },t+\\varepsilon \\right)=\\int '
+               '_{-\\infty }^{\\infty }\\,dx\\left(\\left(1+\\varepsilon '
+               '\\left[D_{1}\\left(x,t\\right){\\frac {\\partial }{\\partial '
+               'x}}+D_{2}\\left(x,t\\right){\\frac {\\partial ^{2}}{\\partial '
+               'x^{2}}}\\right]\\right)\\delta \\left(x^{\\prime '
+               '}-x\\right)\\right)p\\!\\left(x,t\\right)+O\\left(\\varepsilon '
+               '^{2}\\right).',
+               'p_{s}\\left({\\vec {x}},{\\vec {v}},t\\right)',
+               's',
+               'x',
+               'y',
+               '{\\begin{aligned}p\\!\\left(x^{\\prime },t+\\varepsilon '
+               '\\right)&=\\int _{-\\infty }^{\\infty }dx\\int _{-i\\infty '
+               '}^{i\\infty }{\\frac {d{\\tilde {x}}}{2\\pi '
+               'i}}\\left(1+\\varepsilon \\left[{\\tilde '
+               '{x}}D_{1}\\left(x,t\\right)+{\\tilde '
+               '{x}}^{2}D_{2}\\left(x,t\\right)\\right]\\right)e^{{\\tilde '
+               '{x}}\\left(x-x^{\\prime '
+               '}\\right)}p\\!\\left(x,t\\right)+O\\left(\\varepsilon '
+               '^{2}\\right)\\\\&=\\int _{-\\infty }^{\\infty }dx\\int '
+               '_{-i\\infty }^{i\\infty }{\\frac {d{\\tilde {x}}}{2\\pi '
+               'i}}\\exp \\left(\\varepsilon \\left[-{\\tilde {x}}{\\frac '
+               '{\\left(x^{\\prime }-x\\right)}{\\varepsilon }}+{\\tilde '
+               '{x}}D_{1}\\left(x,t\\right)+{\\tilde '
+               '{x}}^{2}D_{2}\\left(x,t\\right)\\right]\\right)p\\!\\left(x,t\\right)+O\\left(\\varepsilon '
+               '^{2}\\right).\\end{aligned}}',
+               '{\\boldsymbol {\\mu }}(\\mathbf {X} _{t},t)',
+               '{\\boldsymbol {\\mu }}=(\\mu _{1},\\ldots ,\\mu _{N})',
+               '{\\boldsymbol {\\sigma }}(\\mathbf {X} _{t},t)',
+               "{\\displaystyle (t',x')}",
+               '{\\displaystyle (t,x)}',
+               '{\\displaystyle D(X_{t},t)=\\sigma ^{2}(X_{t},t)/2}',
+               '{\\displaystyle S=\\int dt\\left[{\\tilde '
+               '{x}}D_{1}\\left(x,t\\right)+{\\tilde '
+               '{x}}^{2}D_{2}\\left(x,t\\right)-{\\tilde {x}}{\\frac '
+               '{\\partial x}{\\partial t}}\\right].}',
+               '{\\displaystyle \\Delta x\\Delta v\\geqslant D_{0}.}',
+               '{\\displaystyle \\int [{\\mathcal {L}}p(x)]\\mathbb {P} '
+               "_{t,t'}(x\\mid x')\\,dx=\\int p(x)[{\\mathcal {L}}^{\\dagger "
+               "}\\mathbb {P} _{t,t'}(x\\mid x')]\\,dx,}",
+               '{\\displaystyle \\int [{\\mathcal {L}}p(x)]\\mathbb {P} '
+               "_{t,t'}(x\\mid x')\\,dx=\\int p(x)\\,\\partial _{t}\\mathbb "
+               "{P} _{t,t'}(x\\mid x')\\,dx.}",
+               '{\\displaystyle \\int \\mathbb {P} _{t+\\Delta t,t}(y\\mid '
+               "x)\\,\\mathbb {P} _{t,t'}(x\\mid x')\\,dx=\\mathbb {P} "
+               "_{t+\\Delta t,t'}(y\\mid x'),}",
+               '{\\displaystyle \\int p(y)\\int \\mathbb {P} _{t+\\Delta '
+               "t,t}(y\\mid x)\\,\\mathbb {P} _{t,t'}(x\\mid "
+               "x')\\,dx\\,dy-\\int p(x)\\,\\mathbb {P} _{t,t'}(x\\mid "
+               "x')\\,dx.}",
+               '{\\displaystyle \\mathbb {E} (p(X_{t+\\Delta t})\\mid '
+               'X_{t}=x)=\\int p(y)\\,\\mathbb {P} _{t+\\Delta t}(y\\mid '
+               'x)\\,dy.}',
+               '{\\displaystyle \\mathbb {E} {\\big (}p(X_{t}){\\big '
+               ')}=p(X_{0})+\\mathbb {E} \\left(\\int _{0}^{t}\\left(\\partial '
+               '_{t}+\\mu \\partial _{x}+{\\frac {\\sigma ^{2}}{2}}\\partial '
+               "_{x}^{2}\\right)p(X_{t'})\\,dt'\\right).}",
+               "{\\displaystyle \\mathbb {P} _{t,t'}(x\\mid x')}",
+               '{\\displaystyle \\mu (X_{t},t)}',
+               '{\\displaystyle \\partial _{t}p(x,t)=-\\partial _{x}{\\big '
+               '(}\\mu (x,t)\\cdot p(x,t){\\big )}+\\partial '
+               '_{x}^{2}\\left({\\frac {\\sigma '
+               '(x,t)^{2}}{2}}\\,p(x,t)\\right).}',
+               '{\\displaystyle \\sigma ={\\sqrt {2D}}}',
+               '{\\displaystyle \\{0\\leqslant x\\leqslant L\\}}',
+               '{\\displaystyle dX_{t}=\\left[\\mu (X_{t},t)-{\\frac '
+               '{1}{2}}{\\frac {\\partial }{\\partial '
+               'X_{t}}}D(X_{t},t)\\right]\\,dt+{\\sqrt {2D(X_{t},t)}}\\circ '
+               'dW_{t}.}',
+               '{\\displaystyle dX_{t}=\\mu (X_{t},t)\\,dt+\\sigma '
+               '(X_{t},t)\\,dW_{t}}',
+               '{\\displaystyle p(0,t)=p(L,t)=0,}',
+               '{\\displaystyle p(x,0)=p_{0}(x).}',
+               "{\\displaystyle p(x,t)=\\mathbb {P} _{t,t'}(x\\mid x')}",
+               '{\\displaystyle p(x,t)}',
+               '{\\displaystyle {\\begin{aligned}\\int p(x)\\lim _{\\Delta '
+               't\\to 0}{\\frac {1}{\\Delta t}}\\left(\\mathbb {P} _{t+\\Delta '
+               "t,t'}(x\\mid x')-\\mathbb {P} _{t,t'}(x\\mid "
+               "x')\\right)\\,dx,\\end{aligned}}}",
+               '{\\displaystyle {\\frac {\\partial }{\\partial '
+               't}}p(x,t)=-{\\frac {\\partial }{\\partial x}}\\left[\\mu '
+               '(x,t)p(x,t)\\right]+{\\frac {\\partial ^{2}}{\\partial '
+               'x^{2}}}\\left[D(x,t)p(x,t)\\right].}',
+               '{\\displaystyle {\\frac {\\partial }{\\partial '
+               't}}p(x,t)=D_{0}{\\frac {\\partial ^{2}}{\\partial '
+               'x^{2}}}\\left[p(x,t)\\right].}',
+               '{\\displaystyle {\\mathcal {L}}=\\mu \\partial _{x}+{\\frac '
+               '{\\sigma ^{2}}{2}}\\partial _{x}^{2},}',
+               '{\\displaystyle {\\mathcal {L}}^{\\dagger }=-\\partial '
+               '_{x}(\\mu \\cdot )+{\\frac {1}{2}}\\partial _{x}^{2}(\\sigma '
+               '^{2}\\cdot ),}',
+               '{\\displaystyle {\\mathcal {L}}^{\\dagger }p(x,t)=\\partial '
+               '_{t}p(x,t).}',
+               '{\\displaystyle {\\mathcal {L}}^{\\dagger }}',
+               '{\\displaystyle {\\mathcal {L}}p(X_{t})=\\lim _{\\Delta t\\to '
+               '0}{\\frac {1}{\\Delta t}}\\left(\\mathbb {E} {\\big '
+               '[}p(X_{t+\\Delta t})\\mid X_{t}=x{\\big ]}-p(x)\\right).}',
+               '{\\dot {f}}_{0}(x)=0',
+               '{\\frac {\\partial p(\\mathbf {x} ,t)}{\\partial t}}=-\\sum '
+               '_{i=1}^{N}{\\frac {\\partial }{\\partial x_{i}}}\\left[\\mu '
+               '_{i}(\\mathbf {x} ,t)\\,p(\\mathbf {x} ,t)\\right]+{\\frac '
+               '{1}{2}}\\sum _{k=1}^{M}\\sum _{i=1}^{N}{\\frac {\\partial '
+               '}{\\partial x_{i}}}\\left\\{\\sigma _{ik}(\\mathbf {x} '
+               ',t)\\sum _{j=1}^{N}{\\frac {\\partial }{\\partial '
+               'x_{j}}}\\left[\\sigma _{jk}(\\mathbf {x} ,t)\\,p(\\mathbf {x} '
+               ',t)\\right]\\right\\}',
+               '{\\frac {\\partial p(\\mathbf {x} ,t)}{\\partial t}}=-\\sum '
+               '_{i=1}^{N}{\\frac {\\partial }{\\partial x_{i}}}\\left[\\mu '
+               '_{i}(\\mathbf {x} ,t)p(\\mathbf {x} ,t)\\right]+{\\frac '
+               '{1}{2}}\\sum _{i=1}^{N}\\sum _{j=1}^{N}{\\frac {\\partial '
+               '^{2}}{\\partial x_{i}\\,\\partial '
+               'x_{j}}}\\left[D_{ij}(\\mathbf {x} ,t)p(\\mathbf {x} '
+               ',t)\\right],',
+               '{\\frac {\\partial p(x,t)}{\\partial t}}=a{\\frac {\\partial '
+               '}{\\partial x}}\\left(x\\,p(x,t)\\right)+{\\frac {\\sigma '
+               '^{2}}{2}}{\\frac {\\partial ^{2}p(x,t)}{\\partial x^{2}}},',
+               '{\\frac {\\partial p(x,t)}{\\partial t}}={\\frac '
+               '{1}{2}}{\\frac {\\partial ^{2}p(x,t)}{\\partial x^{2}}},',
+               '{\\frac {\\partial p_{s}}{\\partial t}}+{\\vec {v}}\\cdot '
+               '{\\vec {\\nabla }}p_{s}+{\\frac {Z_{s}e}{m_{s}}}\\left({\\vec '
+               '{E}}+{\\vec {v}}\\times {\\vec {B}}\\right)\\cdot {\\vec '
+               '{\\nabla }}_{v}p_{s}=-{\\frac {\\partial }{\\partial '
+               'v_{i}}}\\left(p_{s}\\langle \\Delta v_{i}\\rangle '
+               '\\right)+{\\frac {1}{2}}{\\frac {\\partial ^{2}}{\\partial '
+               'v_{i}\\partial v_{j}}}\\left(p_{s}\\langle \\Delta '
+               'v_{i}\\Delta v_{j}\\rangle \\right)',
+               '{\\frac {\\partial }{\\partial t}}p\\!\\left(x^{\\prime '
+               '},t\\right)=\\int _{-\\infty }^{\\infty '
+               '}dx\\left(\\left[D_{1}\\left(x,t\\right){\\frac {\\partial '
+               '}{\\partial x}}+D_{2}\\left(x,t\\right){\\frac {\\partial '
+               '^{2}}{\\partial x^{2}}}\\right]\\delta \\left(x^{\\prime '
+               '}-x\\right)\\right)p\\!\\left(x,t\\right).',
+               '{\\mathcal {L}}',
+               '{\\sigma }(\\mathbf {X} _{t},t)',
+               '{\\tilde {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'Fokker–Planck equation',
+ 'url': 'https://en.wikipedia.org/wiki/Smoluchowski_equation'}
+{'categories': ['Actuarial science',
+                'Engineering failures',
+                'Reliability engineering',
+                'Survival analysis',
+                'Maintenance',
+                'Statistical ratios',
+                'Error measures',
+                'Rates'],
+ 'equations': {'(t_{2}-t_{1})',
+               'F(t)=\\int _{0}^{t}\\lambda e^{-\\lambda \\tau }\\,d\\tau '
+               '=1-e^{-\\lambda t},\\!',
+               'F(t)=\\int _{0}^{t}f(\\tau )\\,d\\tau .\\!',
+               'R(t)',
+               'R(t)=1-F(t)',
+               '\\Delta t',
+               '\\lambda (t)',
+               '\\operatorname {Pr} (T\\leq t)=F(t)=1-R(t),\\quad t\\geq 0.\\!',
+               '\\scriptstyle F(t)',
+               '\\scriptstyle \\Delta t',
+               'f(t)',
+               'h(t)',
+               'h(t)=\\lim _{\\Delta t\\to 0}{\\frac {R(t)-R(t+\\Delta '
+               't)}{\\Delta t\\cdot R(t)}}.',
+               'h(t)={\\frac {f(t)}{1-F(t)}}={\\frac {f(t)}{R(t)}}.',
+               'h(t)={\\frac {f(t)}{R(t)}}={\\frac {\\lambda e^{-\\lambda '
+               't}}{e^{-\\lambda t}}}=\\lambda .',
+               't',
+               't_{1}',
+               't_{2}',
+               '{T}',
+               '{\\displaystyle h(t)={\\frac '
+               '{R(t_{1})-R(t_{2})}{(t_{2}-t_{1})\\cdot R(t_{1})}}={\\frac '
+               '{R(t)-R(t+\\Delta t)}{\\Delta t\\cdot R(t)}}\\!}',
+               '{\\displaystyle h(t)={\\frac {f(t)}{R(t)}}}',
+               '{\\displaystyle {\\frac {6{\\text{ failures}}}{7502{\\text{ '
+               'hours}}}}=0.0007998\\,{\\frac '
+               '{\\text{failures}}{\\text{hour}}}=799.8\\times '
+               '10^{-6}\\,{\\frac {\\text{failures}}{\\text{hour}}},}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Failure rate',
+ 'url': 'https://en.wikipedia.org/wiki/Failure_rate'}
+{'categories': ['Statistical natural language processing',
+                'Evaluation of machine translation',
+                'Statistical ratios',
+                'Summary statistics for contingency tables',
+                'Clustering criteria'],
+ 'equations': {'F_\\beta = (1 + \\beta^2) \\cdot \\frac{\\mathrm{precision} '
+               '\\cdot \\mathrm{recall}}{(\\beta^2 \\cdot \\mathrm{precision}) '
+               '+ \\mathrm{recall}}',
+               'F_\\beta = \\frac {(1 + \\beta^2) \\cdot \\mathrm{true\\ '
+               'positive} }{(1 + \\beta^2) \\cdot \\mathrm{true\\ positive} + '
+               '\\beta^2 \\cdot \\mathrm{false\\ negative} + \\mathrm{false\\ '
+               'positive}}\\,',
+               'F_{0.5}',
+               'F_{2}',
+               'F_{\\beta }',
+               'F_{\\beta }=1-E',
+               'G =  \\sqrt{\\mathrm{precision} \\cdot \\mathrm{recall}}',
+               '\\alpha ={\\frac {1}{1+\\beta ^{2}}}',
+               '{\\displaystyle E=1-\\left({\\frac {\\alpha }{p}}+{\\frac '
+               '{1-\\alpha }{r}}\\right)^{-1}}',
+               '{\\displaystyle F_{1}=2\\cdot {\\frac {1}{{\\tfrac '
+               '{1}{\\mathrm {recall} }}+{\\tfrac {1}{\\mathrm {precision} '
+               '}}}}=2\\cdot {\\frac {\\mathrm {precision} \\cdot \\mathrm '
+               '{recall} }{\\mathrm {precision} +\\mathrm {recall} }}}',
+               '{\\displaystyle G={\\sqrt {\\mathrm {PPV} \\cdot \\mathrm '
+               '{TPR} }}}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'F1 score',
+ 'url': 'https://en.wikipedia.org/wiki/F1_score'}
+{'categories': ['Estimator'],
+ 'equations': {'\n'
+               '    \\hat{Q}_n(\\theta) = - \\Bigg(\\frac1n\\sum_{i=1}^n '
+               "g(x_i,\\theta)\\Bigg)' \\hat{W}_n \\Bigg(\\frac1n\\sum_{i=1}^n "
+               'g(x_i,\\theta)\\Bigg),\n'
+               '  ',
+               '\n'
+               '    \\hat{Q}_n(\\theta) = \\frac1n \\sum_{i=1}^n \\ln '
+               'f(x_i|\\theta),\n'
+               '  ',
+               '\n'
+               '    \\sup_{\\theta\\in\\Theta} \\big| \\hat{Q}_n(\\theta) - '
+               'Q_0(\\theta) \\big| \\ \\xrightarrow{p}\\ 0.\n'
+               '  ',
+               '\n'
+               '    \\widehat Q_n(\\hat\\theta) \\geq  '
+               '\\max_{\\theta\\in\\Theta}\\,\\widehat Q_n(\\theta) - o_p(1),\n'
+               '  ',
+               'Q_{{n}}',
+               '\\scriptscriptstyle\\hat\\theta',
+               '\\scriptstyle {\\hat {\\theta }}',
+               '\\scriptstyle\\hat{Q}_n',
+               '\\scriptstyle\\hat{Q}_n(\\theta)',
+               '{\\displaystyle {\\hat {\\theta }}={\\underset {\\theta \\in '
+               '\\Theta }{\\operatorname {arg\\;max} }}\\ {\\widehat '
+               '{Q}}_{n}(\\theta ),}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Extremum estimator',
+ 'url': 'https://en.wikipedia.org/wiki/Extremum_estimator'}
+{'categories': ['Clustering criteria'],
+ 'equations': {'0\\leq B_{k}\\leq 1',
+               '1',
+               'A_{1}',
+               'A_{2}',
+               'B_{k}',
+               'B_{k}={\\frac  {T_{k}}{{\\sqrt  {P_{k}Q_{k}}}}}',
+               'FM={\\sqrt {{\\frac {TP}{TP+FP}}\\cdot {\\frac {TP}{TP+FN}}}}',
+               'FN',
+               'FP',
+               'M=[m_{{i,j}}]\\qquad (i=1,\\ldots ,k{\\text{ and }}j=1,\\ldots '
+               ',k)',
+               'P_{k}=\\sum _{{i=1}}^{{k}}(\\sum '
+               '_{{j=1}}^{{k}}m_{{i,j}})^{2}-n',
+               'Q_{k}=\\sum _{{j=1}}^{{k}}(\\sum '
+               '_{{i=1}}^{{k}}m_{{i,j}})^{2}-n',
+               'TN',
+               'TP',
+               'TP+FP+FN+TN=n(n-1)/2',
+               'T_{k}=\\sum _{{i=1}}^{{k}}\\sum _{{j=1}}^{{k}}m_{{i,j}}^{2}-n',
+               'i',
+               'j',
+               'k',
+               'k=2,\\ldots,n-1',
+               'm_{{i,j}}',
+               'n'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Fowlkes–Mallows index',
+ 'url': 'https://en.wikipedia.org/wiki/Fowlkes%E2%80%93Mallows_index'}
+{'categories': ['Statistical forecasting',
+                'Climate and weather statistics',
+                'Weather forecasting'],
+ 'equations': {'\\ {\\mathit  {MSE}}={\\frac  {\\sum '
+               '_{{t=1}}^{N}{E_{t}^{2}}}{N}}',
+               '\\ {\\mathit  {SS}}=1-{\\frac  {{\\mathit  '
+               '{MSE}}_{{\\text{forecast}}}}{{\\mathit  '
+               '{MSE}}_{{\\text{ref}}}}}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Forecast skill',
+ 'url': 'https://en.wikipedia.org/wiki/Forecast_skill'}
+{'categories': ['Continuous distributions', 'Normal distribution'],
+ 'equations': {' \\Phi(y) ',
+               ' \\beta \\,',
+               ' \\frac{\\phi(y)}{\\alpha-\\kappa(x-\\xi)}',
+               ' \\kappa \\,',
+               ' \\mu \\,',
+               ' \\xi \\,',
+               ' y = \\begin{cases} - \\frac{1}{\\kappa} \\log \\left[ 1- '
+               '\\frac{\\kappa(x-\\xi)}{\\alpha} \\right] & \\text{if } '
+               '\\kappa \\neq 0 \\\\ \\frac{x-\\xi}{\\alpha} & \\text{if } '
+               '\\kappa=0 \\end{cases} ',
+               '\\Gamma ',
+               '\\Phi ',
+               '\\alpha ',
+               '\\alpha \\,',
+               '\\beta ',
+               '\\beta _0 = \\frac{m_1}{\\sqrt{m_2}},',
+               "\\beta _{i+1} = \\beta _{i} - \\frac{g(\\beta _{i})}{g'(\\beta "
+               '_{i})} ,',
+               '\\beta<2',
+               '\\beta>2',
+               '\\frac{1}{2} + \\sgn(x-\\mu)\\frac{\\gamma\\left[1/\\beta, '
+               '\\left( \\frac{|x-\\mu|}{\\alpha} '
+               '\\right)^\\beta\\right]}{2\\Gamma(1/\\beta)}  ',
+               '\\frac{1}{\\beta}-\\log\\left[\\frac{\\beta}{2\\alpha\\Gamma(1/\\beta)}\\right]',
+               '\\frac{3 e^{\\kappa^2} - e^{3 \\kappa^2} - 2}{(e^{\\kappa^2} - '
+               '1)^{3/2}} \\text{ sign}(\\kappa) ',
+               '\\frac{\\Gamma(5/\\beta)\\Gamma(1/\\beta)}{\\Gamma(3/\\beta)^2}-3',
+               '\\frac{\\alpha^2\\Gamma(3/\\beta)}{\\Gamma(1/\\beta)}',
+               '\\frac{\\alpha^2}{\\kappa^2} e^{\\kappa^2} \\left( '
+               'e^{\\kappa^2} - 1 \\right)',
+               '\\frac{\\beta}{2\\alpha\\Gamma(1/\\beta)} \\; '
+               'e^{-(|x-\\mu|/\\alpha)^\\beta}',
+               '\\gamma ',
+               '\\mu ',
+               '\\phi ',
+               '\\psi ',
+               "\\psi '",
+               '\\textstyle (\\mu-\\alpha,\\mu+\\alpha)',
+               '\\textstyle \\frac{\\alpha^2}{2}',
+               '\\textstyle\\alpha',
+               '\\textstyle\\beta',
+               '\\textstyle\\beta=1',
+               '\\textstyle\\beta=2',
+               '\\textstyle\\beta=\\infty',
+               '\\textstyle\\beta=\\textstyle\\beta_0',
+               '\\textstyle\\beta\\ge 2',
+               '\\textstyle\\beta\\rightarrow\\infty',
+               '\\textstyle\\lfloor \\beta \\rfloor',
+               '\\textstyle\\mu',
+               '\\xi  \\,',
+               '\\xi - \\frac{\\alpha}{\\kappa} \\left( e^{\\kappa^2/2} - 1 '
+               '\\right)',
+               'e^{4 \\kappa^2} + 2 e^{3 \\kappa^2} + 3 e^{2 \\kappa^2} - 6 ',
+               'm_1={1 \\over N} \\sum_{i=1}^N |x_i|,',
+               'm_{1}',
+               'm_{2}',
+               'n',
+               'p(\\mathbf x)=g(\\|\\mathbf x\\|_\\beta)',
+               'x \\in (-\\infty,\\infty) \\text{ if } \\kappa=0',
+               'x \\in (-\\infty,\\xi+\\alpha/\\kappa) \\text{ if } \\kappa>0',
+               'x \\in (\\xi+\\alpha/\\kappa; +\\infty) \\text{ if } \\kappa<0',
+               'x\\in (-\\infty ;+\\infty )\\!',
+               'y = \\begin{cases} - \\frac{1}{\\kappa} \\log \\left[ 1- '
+               '\\frac{\\kappa(x-\\xi)}{\\alpha} \\right] & \\text{if } '
+               '\\kappa \\neq 0 \\\\ \\frac{x-\\xi}{\\alpha} & \\text{if } '
+               '\\kappa=0 \\end{cases} ',
+               '{\\displaystyle \\alpha =\\left({\\frac {\\beta }{N}}\\sum '
+               '_{i=1}^{N}|x_{i}-\\mu |^{\\beta }\\right)^{1/\\beta }.}',
+               '{\\displaystyle \\min _{\\mu }=\\sum _{i=1}^{N}|x_{i}-\\mu '
+               '|^{\\beta }}',
+               '{\\displaystyle g(\\beta )=1+{\\frac {\\psi (1/\\beta '
+               ')}{\\beta }}-{\\frac {\\sum _{i=1}^{N}|x_{i}-\\mu |^{\\beta '
+               '}\\log |x_{i}-\\mu |}{\\sum _{i=1}^{N}|x_{i}-\\mu |^{\\beta '
+               '}}}+{\\frac {\\log({\\frac {\\beta }{N}}\\sum '
+               '_{i=1}^{N}|x_{i}-\\mu |^{\\beta })}{\\beta }},}',
+               "{\\displaystyle {\\begin{aligned}g'(\\beta )={}&-{\\frac "
+               "{\\psi (1/\\beta )}{\\beta ^{2}}}-{\\frac {\\psi '(1/\\beta "
+               ')}{\\beta ^{3}}}+{\\frac {1}{\\beta ^{2}}}-{\\frac {\\sum '
+               '_{i=1}^{N}|x_{i}-\\mu |^{\\beta }(\\log |x_{i}-\\mu '
+               '|)^{2}}{\\sum _{i=1}^{N}|x_{i}-\\mu |^{\\beta '
+               '}}}\\\\[6pt]&{}+{\\frac {\\left(\\sum _{i=1}^{N}|x_{i}-\\mu '
+               '|^{\\beta }\\log |x_{i}-\\mu |\\right)^{2}}{\\left(\\sum '
+               '_{i=1}^{N}|x_{i}-\\mu |^{\\beta }\\right)^{2}}}+{\\frac {\\sum '
+               '_{i=1}^{N}|x_{i}-\\mu |^{\\beta }\\log |x_{i}-\\mu |}{\\beta '
+               '\\sum _{i=1}^{N}|x_{i}-\\mu |^{\\beta }}}\\\\[6pt]&{}-{\\frac '
+               '{\\log \\left({\\frac {\\beta }{N}}\\sum _{i=1}^{N}|x_{i}-\\mu '
+               '|^{\\beta }\\right)}{\\beta ^{2}}},\\end{aligned}}}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Generalized normal distribution',
+ 'url': 'https://en.wikipedia.org/wiki/Generalized_Gaussian_distribution'}
+{'categories': ['Single queueing nodes'],
+ 'equations': {'(n,k)',
+               '\\lambda ',
+               '\\mu ',
+               '\\rho =\\lambda /\\mu ',
+               'k',
+               'n',
+               '{\\displaystyle k=n}',
+               '{\\displaystyle {\\frac {12-\\rho }{8\\mu (1-\\rho )}}}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Fork–join queue',
+ 'url': 'https://en.wikipedia.org/wiki/Fork-join_queue'}
+{'categories': ['Multivariate time series'],
+ 'equations': {'A_{i}',
+               'B={\\begin{bmatrix}c&A_{{1}}&A_{{2}}&\\cdots '
+               '&A_{{p}}\\end{bmatrix}}={\\begin{bmatrix}c_{{1}}&a_{{1,1}}^{1}&a_{{1,2}}^{1}&\\cdots '
+               '&a_{{1,k}}^{1}&\\cdots &a_{{1,1}}^{p}&a_{{1,2}}^{p}&\\cdots '
+               '&a_{{1,k}}^{p}\\\\c_{{2}}&a_{{2,1}}^{1}&a_{{2,2}}^{1}&\\cdots '
+               '&a_{{2,k}}^{1}&\\cdots &a_{{2,1}}^{p}&a_{{2,2}}^{p}&\\cdots '
+               '&a_{{2,k}}^{p}\\\\\\vdots &\\vdots &\\vdots &\\ddots &\\vdots '
+               '&\\cdots &\\vdots &\\vdots &\\ddots &\\vdots '
+               '\\\\c_{{k}}&a_{{k,1}}^{1}&a_{{k,2}}^{1}&\\cdots '
+               '&a_{{k,k}}^{1}&\\cdots &a_{{k,1}}^{p}&a_{{k,2}}^{p}&\\cdots '
+               '&a_{{k,k}}^{p}\\end{bmatrix}}',
+               'U={\\begin{bmatrix}e_{{p}}&e_{{p+1}}&\\cdots '
+               '&e_{{T}}\\end{bmatrix}}={\\begin{bmatrix}e_{{1,p}}&e_{{1,p+1}}&\\cdots '
+               '&e_{{1,T}}\\\\e_{{2,p}}&e_{{2,p+1}}&\\cdots '
+               '&e_{{2,T}}\\\\\\vdots &\\vdots &\\ddots &\\vdots '
+               '\\\\e_{{k,p}}&e_{{k,p+1}}&\\cdots &e_{{k,T}}\\end{bmatrix}}.',
+               'Y=BZ+U\\,',
+               'Y={\\begin{bmatrix}y_{{p}}&y_{{p+1}}&\\cdots '
+               '&y_{{T}}\\end{bmatrix}}={\\begin{bmatrix}y_{{1,p}}&y_{{1,p+1}}&\\cdots '
+               '&y_{{1,T}}\\\\y_{{2,p}}&y_{{2,p+1}}&\\cdots '
+               '&y_{{2,T}}\\\\\\vdots &\\vdots &\\vdots &\\vdots '
+               '\\\\y_{{k,p}}&y_{{k,p+1}}&\\cdots &y_{{k,T}}\\end{bmatrix}}',
+               'Y\\approx BZ',
+               'Z={\\begin{bmatrix}1&1&\\cdots &1\\\\y_{{p-1}}&y_{{p}}&\\cdots '
+               '&y_{{T-1}}\\\\y_{{p-2}}&y_{{p-1}}&\\cdots '
+               '&y_{{T-2}}\\\\\\vdots &\\vdots &\\ddots &\\vdots '
+               '\\\\y_{{0}}&y_{{1}}&\\cdots '
+               '&y_{{T-p}}\\end{bmatrix}}={\\begin{bmatrix}1&1&\\cdots '
+               '&1\\\\y_{{1,p-1}}&y_{{1,p}}&\\cdots '
+               '&y_{{1,T-1}}\\\\y_{{2,p-1}}&y_{{2,p}}&\\cdots '
+               '&y_{{2,T-1}}\\\\\\vdots &\\vdots &\\ddots &\\vdots '
+               '\\\\y_{{k,p-1}}&y_{{k,p}}&\\cdots '
+               '&y_{{k,T-1}}\\\\y_{{1,p-2}}&y_{{1,p-1}}&\\cdots '
+               '&y_{{1,T-2}}\\\\y_{{2,p-2}}&y_{{2,p-1}}&\\cdots '
+               '&y_{{2,T-2}}\\\\\\vdots &\\vdots &\\ddots &\\vdots '
+               '\\\\y_{{k,p-2}}&y_{{k,p-1}}&\\cdots &y_{{k,T-2}}\\\\\\vdots '
+               '&\\vdots &\\ddots &\\vdots \\\\y_{{1,0}}&y_{{1,1}}&\\cdots '
+               '&y_{{1,T-p}}\\\\y_{{2,0}}&y_{{2,1}}&\\cdots '
+               '&y_{{2,T-p}}\\\\\\vdots &\\vdots &\\ddots &\\vdots '
+               '\\\\y_{{k,0}}&y_{{k,1}}&\\cdots &y_{{k,T-p}}\\end{bmatrix}}',
+               '\\qquad \\vdots ',
+               'y_{0}',
+               'y_{T}',
+               'y_{t}=c+A_{1}y_{{t-1}}+A_{2}y_{{t-2}}+\\cdots '
+               '+A_{p}y_{{t-p}}+e_{t},\\,',
+               'y_{{1,t}}=c_{{1}}+a_{{1,1}}^{1}y_{{1,t-1}}+a_{{1,2}}^{1}y_{{2,t-1}}+\\cdots '
+               '+a_{{1,k}}^{1}y_{{k,t-1}}+\\cdots '
+               '+a_{{1,1}}^{p}y_{{1,t-p}}+a_{{1,2}}^{p}y_{{2,t-p}}+\\cdots '
+               '+a_{{1,k}}^{p}y_{{k,t-p}}+e_{{1,t}}\\,',
+               'y_{{2,t}}=c_{{2}}+a_{{2,1}}^{1}y_{{1,t-1}}+a_{{2,2}}^{1}y_{{2,t-1}}+\\cdots '
+               '+a_{{2,k}}^{1}y_{{k,t-1}}+\\cdots '
+               '+a_{{2,1}}^{p}y_{{1,t-p}}+a_{{2,2}}^{p}y_{{2,t-p}}+\\cdots '
+               '+a_{{2,k}}^{p}y_{{k,t-p}}+e_{{2,t}}\\,',
+               'y_{{i}}',
+               'y_{{k,t}}=c_{{k}}+a_{{k,1}}^{1}y_{{1,t-1}}+a_{{k,2}}^{1}y_{{2,t-1}}+\\cdots '
+               '+a_{{k,k}}^{1}y_{{k,t-1}}+\\cdots '
+               '+a_{{k,1}}^{p}y_{{1,t-p}}+a_{{k,2}}^{p}y_{{2,t-p}}+\\cdots '
+               '+a_{{k,k}}^{p}y_{{k,t-p}}+e_{{k,t}}\\,',
+               '{\\begin{bmatrix}y_{{1,t}}\\\\y_{{2,t}}\\\\\\vdots '
+               '\\\\y_{{k,t}}\\end{bmatrix}}={\\begin{bmatrix}c_{{1}}\\\\c_{{2}}\\\\\\vdots '
+               '\\\\c_{{k}}\\end{bmatrix}}+{\\begin{bmatrix}a_{{1,1}}^{1}&a_{{1,2}}^{1}&\\cdots '
+               '&a_{{1,k}}^{1}\\\\a_{{2,1}}^{1}&a_{{2,2}}^{1}&\\cdots '
+               '&a_{{2,k}}^{1}\\\\\\vdots &\\vdots &\\ddots &\\vdots '
+               '\\\\a_{{k,1}}^{1}&a_{{k,2}}^{1}&\\cdots '
+               '&a_{{k,k}}^{1}\\end{bmatrix}}{\\begin{bmatrix}y_{{1,t-1}}\\\\y_{{2,t-1}}\\\\\\vdots '
+               '\\\\y_{{k,t-1}}\\end{bmatrix}}+\\cdots '
+               '+{\\begin{bmatrix}a_{{1,1}}^{p}&a_{{1,2}}^{p}&\\cdots '
+               '&a_{{1,k}}^{p}\\\\a_{{2,1}}^{p}&a_{{2,2}}^{p}&\\cdots '
+               '&a_{{2,k}}^{p}\\\\\\vdots &\\vdots &\\ddots &\\vdots '
+               '\\\\a_{{k,1}}^{p}&a_{{k,2}}^{p}&\\cdots '
+               '&a_{{k,k}}^{p}\\end{bmatrix}}{\\begin{bmatrix}y_{{1,t-p}}\\\\y_{{2,t-p}}\\\\\\vdots '
+               '\\\\y_{{k,t-p}}\\end{bmatrix}}+{\\begin{bmatrix}e_{{1,t}}\\\\e_{{2,t}}\\\\\\vdots '
+               '\\\\e_{{k,t}}\\end{bmatrix}}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'General matrix notation of a VAR(p)',
+ 'url': 'https://en.wikipedia.org/wiki/General_matrix_notation_of_a_VAR(p)'}
+{'categories': ['Descriptive statistics'],
+ 'equations': {'{\\bar  {x}}={\\frac  {\\sum {f\\,x}}{\\sum {f}}}.',
+               '{\\bar  {x}}={\\frac  {\\sum {f\\,x}}{\\sum {f}}}={\\frac  '
+               '{405}{20}}=20.25',
+               '{\\bar {x}}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Grouped data',
+ 'url': 'https://en.wikipedia.org/wiki/Grouped_data'}
+{'categories': ['Document forgery',
+                'Forensic statistics',
+                '1868 in United States case law'],
+ 'equations': {'\\textstyle\\frac{1}{2.666 \\times 10^{21}}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Howland will forgery trial',
+ 'url': 'https://en.wikipedia.org/wiki/Howland_will_forgery_trial'}
+{'categories': ['Estimator'],
+ 'equations': {'\n'
+               '    \\hat\\theta_n^H = \\begin{cases}\\hat\\theta_n, & '
+               '\\text{if } |\\hat\\theta_n| \\geq n^{-1/4}, \\text{ and} \\\\ '
+               '0, & \\text{if } |\\hat\\theta_n| < n^{-1/4}.\\end{cases}\n'
+               '  ',
+               '\n'
+               '    \\sqrt{n}(\\hat\\theta_n - \\theta)\\ \\xrightarrow{d}\\ '
+               'L_\\theta\\ .\n'
+               '  ',
+               '\\begin{align}\n'
+               '    & n^\\alpha(\\hat\\theta_n^H - \\theta) \\ '
+               '\\xrightarrow{d}\\ 0, \\qquad\\text{when } \\theta = 0, \\\\\n'
+               '    &\\sqrt{n}(\\hat\\theta_n^H - \\theta)\\ '
+               '\\xrightarrow{d}\\ L_\\theta, \\quad \\text{when } '
+               '\\theta\\neq 0,\n'
+               '  \\end{align}',
+               '\\scriptstyle\\bar{x}',
+               '\\scriptstyle\\hat\\theta^H_n',
+               '\\scriptstyle\\hat\\theta^H_n \\;=\\; '
+               '\\bar{x}\\cdot\\mathbf{1}\\{|\\bar x|\\,\\geq\\,n^{-1/4}\\}',
+               '\\scriptstyle\\hat\\theta_n',
+               '\\scriptstyle\\hat\\theta_n^H'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': "Hodges' estimator",
+ 'url': "https://en.wikipedia.org/wiki/Hodges'_estimator"}
+{'categories': ['Nonlinear filters', 'Signal estimation'],
+ 'equations': {'G',
+               'e',
+               'g\\in G',
+               '{\\displaystyle (X,U,Y)=(\\varphi _{g}(x),\\psi _{g}(u),\\rho '
+               '_{g}(y))}',
+               '{\\displaystyle ({\\hat {x}},u)}',
+               '{\\displaystyle A,C}',
+               '{\\displaystyle E({\\hat {x}},u,y),W({\\hat {x}}),I({\\hat '
+               '{x}},u),\\eta ({\\hat {x}},x)}',
+               '{\\displaystyle E({\\hat {x}},u,y)}',
+               '{\\displaystyle I({\\hat {x}},u)}',
+               '{\\displaystyle L(I,E)}',
+               '{\\displaystyle L{=}PC^{T}{\\bigl (}N(e)N^{T}(e){\\bigr '
+               ')}^{-1}}',
+               '{\\displaystyle W({\\hat {x}})={\\bigl (}w_{1}({\\hat '
+               '{x}}),..,w_{n}({\\hat {x}}){\\bigr )}}',
+               '{\\displaystyle Y{=}h(X,U)+N(X)v}',
+               '{\\displaystyle \\eta ({\\hat {x}},x)}',
+               '{\\displaystyle \\varphi _{g},\\psi _{g},\\rho _{g}}',
+               '{\\displaystyle w,v}',
+               '{\\displaystyle y{=}h(x,u)+N(x)v}',
+               '{\\displaystyle {\\dot '
+               '{P}}{=}AP+PA^{T}+M(e)M^{T}(e)-PC^{T}{\\bigl '
+               '(}N(e)N^{T}(e){\\bigr )}^{-1}CP}',
+               '{\\displaystyle {\\dot {X}}{=}f(X,U)+M(X)w}',
+               '{\\displaystyle {\\dot {\\hat {x}}}=f({\\hat {x}},u)+W({\\hat '
+               '{x}})L{\\Bigl (}I({\\hat {x}},u),E({\\hat {x}},u,y){\\Bigr '
+               ')}E({\\hat {x}},u,y)}',
+               '{\\displaystyle {\\dot {x}}{=}f(x,u)+M(x)w}',
+               '{\\displaystyle {\\hat {q}}q^{-1}}',
+               '{\\displaystyle {\\hat {x}}-x}',
+               '{\\displaystyle {\\hat {y}}-y}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Invariant extended Kalman filter',
+ 'url': 'https://en.wikipedia.org/wiki/Invariant_extended_Kalman_filter'}
+{'categories': ['Behavioural sciences',
+                'Ethology',
+                'Sociobiology',
+                'Behavioral ecology',
+                'Group processes',
+                'Herding',
+                'Psychometrics'],
+ 'equations': {'{\\displaystyle (1+2+2+6+6+6+6+6+6)/9=4.555}',
+               '{\\displaystyle (1+2+6)/3=3}',
+               '{\\displaystyle \\sum _{i=1}^{G}n_{i}^{2}/\\sum '
+               '_{i=1}^{G}n_{i}}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Group size measures',
+ 'url': 'https://en.wikipedia.org/wiki/Group_size_measures'}
+{'categories': ['Statistical models',
+                'Independence (probability theory)',
+                'Psychometrics'],
+ 'equations': {' NIE = E [Y(0,M(1)) - Y(0,M(0))] ',
+               '(TE-c_{1})/TE',
+               'CDE(m)=E[Y(1,m)-Y(0,m)]',
+               'Me=\\beta _{{20}}+\\beta _{{21}}X+\\varepsilon _{2}',
+               'Me=\\beta _{{50}}+\\beta _{{51}}X+\\beta _{{52}}Mo+\\beta '
+               '_{{53}}XMo+\\varepsilon _{5}',
+               'NDE=E[Y(1,M(0))-Y(0,M(0))]',
+               'TE',
+               'TE=E[Y(1)-Y(0)]',
+               'TE=NDE-NIE_{r}',
+               'Y=\\beta _{{10}}+\\beta _{{11}}X+\\varepsilon _{1}',
+               'Y=\\beta _{{30}}+\\beta _{{31}}X+\\beta _{{32}}Me+\\varepsilon '
+               '_{3}',
+               'Y=\\beta _{{40}}+\\beta _{{41}}X+\\beta _{{42}}Mo+\\beta '
+               '_{{43}}XMo+\\varepsilon _{4}',
+               'Y=\\beta _{{60}}+\\beta _{{61}}X+\\beta _{{62}}Mo+\\beta '
+               '_{{63}}XMo+\\beta _{{64}}Me+\\beta _{{65}}MeMo+\\varepsilon '
+               '_{6}',
+               '\\to ',
+               'b_{1}c_{2}/TE',
+               'c_{1}',
+               'c_{3}',
+               '{\\begin{aligned}NDE&=c_{1}+b_{0}c_{3}\\\\NIE&=b_{1}c_{2}\\\\TE&=c_{1}+b_{0}c_{3}+b_{1}(c_{2}+c_{3})\\\\&=NDE+NIE+b_{1}c_{3}.\\end{aligned}}',
+               '{\\displaystyle 1-{\\frac {NDE}{TE}}={\\frac '
+               '{b_{1}(c_{2}+c_{3})}{c_{1}+b_{0}c_{3}+b_{1}(c_{2}+c_{3})}}.}',
+               '{\\displaystyle X=f(\\varepsilon _{1}),~~M=g(X,\\varepsilon '
+               '_{2}),~~Y=h(X,M,\\varepsilon _{3}),}',
+               '{\\displaystyle X=f(\\varepsilon '
+               '_{1}),~~M=m,~~Y=h(X,m,\\varepsilon _{3})}',
+               '{\\displaystyle X=x,M=g(x,\\varepsilon '
+               '_{2}),Y=f(x,M,\\varepsilon _{3})}',
+               '{\\displaystyle '
+               '{\\begin{aligned}TE&=C+AB\\\\CDE(m)&=NDE=C,{\\text{ '
+               'independent of }}m\\\\NIE&=AB.\\end{aligned}}}',
+               '{\\displaystyle {\\begin{aligned}TE&=E(Y\\mid X=1)-E(Y\\mid '
+               'X=0)\\\\CDE(m)&=E(Y\\mid X=1,M=m)-E(Y\\mid '
+               'X=0,M=m)\\\\NDE&=\\sum _{m}[E(Y|X=1,M=m)-E(Y\\mid '
+               'X=0,M=m)]P(M=m\\mid X=0)\\\\NIE&=\\sum _{m}[P(M=m\\mid '
+               'X=1)-P(M=m\\mid X=0)]E(Y\\mid X=0,M=m).\\end{aligned}}}',
+               '{\\displaystyle {\\begin{aligned}X&=\\varepsilon '
+               '_{1}\\\\M&=b_{0}+b_{1}X+\\varepsilon '
+               '_{2}\\\\Y&=c_{0}+c_{1}X+c_{2}M+c_{3}XM+\\varepsilon '
+               '_{3}\\end{aligned}}}',
+               '{\\displaystyle {\\frac {NIE}{TE}}={\\frac '
+               '{b_{1}c_{2}}{c_{1}+b_{0}c_{3}+b_{1}(c_{2}+c_{3})}},}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Mediation (statistics)',
+ 'url': 'https://en.wikipedia.org/wiki/Intervening_variable'}
+{'categories': ['Kernel methods for machine learning',
+                'Geostatistics',
+                'Classification algorithms'],
+ 'equations': {'(\\mathbf {x} _{1},\\dotsc ,\\mathbf {x} _{n})',
+               '(\\mathbf {x} _{i},y_{i})',
+               '(c_{1},\\dots ,c_{n})',
+               'T',
+               'T\\subset X',
+               '\\langle \\cdot ,\\cdot \\rangle _{\\mathcal {V}}',
+               '\\mathbf {K} ',
+               '\\mathbf {K} \\in \\mathbb {R} ^{n\\times n}',
+               '\\mathbf {K} ^{\\mathrm {T} }\\mathbf {K} ',
+               "\\mathbf {x'} ",
+               '\\mathbf {x} ',
+               "\\mathbf {x} ,\\mathbf {x'} \\in {\\mathcal {X}}",
+               '\\mathbf {x} _{i}',
+               '\\mu (T)=|T|',
+               '\\operatorname {sgn} ',
+               '\\sum _{i=1}^{n}\\sum _{j=1}^{n}k(\\mathbf {x} _{i},\\mathbf '
+               '{x} _{j})c_{i}c_{j}\\geq 0.',
+               '\\varphi ',
+               '\\varphi \\colon {\\mathcal {X}}\\to {\\mathcal {V}}',
+               '\\{(\\mathbf {x} _{i},y_{i})\\}_{i=1}^{n}',
+               '\\{\\mathbf {x} _{1},\\dotsc ,\\mathbf {x} _{n}\\}',
+               'i',
+               'k',
+               "k(\\mathbf {x} ,\\mathbf {x'} )",
+               "k(\\mathbf {x} ,\\mathbf {x'} )=\\langle \\varphi (\\mathbf "
+               "{x} ),\\varphi (\\mathbf {x'} )\\rangle _{\\mathcal {V}}.",
+               'k\\colon {\\mathcal {X}}\\times {\\mathcal {X}}\\to \\mathbb '
+               '{R} ',
+               'n',
+               'w_{i}',
+               'w_{i}\\in \\mathbb {R} ',
+               'y',
+               'y_{i}\\in \\{-1,+1\\}',
+               '{\\displaystyle K_{ij}=k(\\mathbf {x} _{i},\\mathbf {x} _{j})}',
+               '{\\hat {y}}',
+               '{\\hat {y}}=\\operatorname {sgn} \\sum '
+               "_{i=1}^{n}w_{i}y_{i}k(\\mathbf {x} _{i},\\mathbf {x'} )",
+               '{\\hat {y}}\\in \\{-1,+1\\}',
+               '{\\mathcal {V}}',
+               '{\\mathcal {X}}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Kernel method',
+ 'url': 'https://en.wikipedia.org/wiki/Kernel_methods'}
+{'categories': ['Covariance and correlation',
+                'Nonparametric statistics',
+                'Statistical tests',
+                'Independence (probability theory)'],
+ 'equations': {'-|z_{A}|',
+               'M(\\cdot ,\\cdot )',
+               'O(n\\cdot \\log {n})',
+               'O(n\\log n)',
+               'O(n^{2})',
+               'S(y)',
+               'S(y)=S(y_{\\mathrm {left} })+S(y_{\\mathrm {right} '
+               '})+M(Y_{\\mathrm {left} },Y_{\\mathrm {right} })',
+               'Y_{\\mathrm {left} }',
+               'Y_{\\mathrm {right} }',
+               '\\rho ',
+               '\\tau ',
+               '\\tau _{A}',
+               '\\tau _{A}={\\frac {n_{c}-n_{d}}{n_{0}}}',
+               '\\tau _{B}',
+               '\\tau _{B}={\\frac {n_{c}-n_{d}}{\\sqrt '
+               '{(n_{0}-n_{1})(n_{0}-n_{2})}}}',
+               'c',
+               'i\\not =j',
+               'n_{1}',
+               'n_{2}',
+               'n_{3}',
+               'n_{c}-n_{d}',
+               'n_{c}-n_{d}=n_{0}-n_{1}-n_{2}+n_{3}-2S(y),',
+               'r',
+               't_{i}',
+               'u_{j}',
+               'x',
+               'x_{i}',
+               'x_{i}=x_{j}',
+               'y',
+               'y_{\\mathrm {left} }',
+               'y_{\\mathrm {right} }',
+               'y_{i}',
+               'z_{A}',
+               'z_{A}={3(n_{c}-n_{d}) \\over {\\sqrt {n(n-1)(2n+5)/2}}}',
+               'z_{B}',
+               'z_{B}={n_{c}-n_{d} \\over {\\sqrt {v}}}',
+               '{\\begin{aligned}n_{0}&=n(n-1)/2\\\\n_{1}&=\\sum '
+               '_{i}t_{i}(t_{i}-1)/2\\\\n_{2}&=\\sum '
+               '_{j}u_{j}(u_{j}-1)/2\\\\n_{c}&={\\text{Number of concordant '
+               'pairs}}\\\\n_{d}&={\\text{Number of discordant '
+               'pairs}}\\\\t_{i}&={\\text{Number of tied values in the '
+               '}}i^{\\text{th}}{\\text{ group of ties for the first '
+               'quantity}}\\\\u_{j}&={\\text{Number of tied values in the '
+               '}}j^{\\text{th}}{\\text{ group of ties for the second '
+               'quantity}}\\end{aligned}}',
+               '{\\begin{array}{ccl}v&=&(v_{0}-v_{t}-v_{u})/18+v_{1}+v_{2}\\\\v_{0}&=&n(n-1)(2n+5)\\\\v_{t}&=&\\sum '
+               '_{i}t_{i}(t_{i}-1)(2t_{i}+5)\\\\v_{u}&=&\\sum '
+               '_{j}u_{j}(u_{j}-1)(2u_{j}+5)\\\\v_{1}&=&\\sum '
+               '_{i}t_{i}(t_{i}-1)\\sum '
+               '_{j}u_{j}(u_{j}-1)/(2n(n-1))\\\\v_{2}&=&\\sum '
+               '_{i}t_{i}(t_{i}-1)(t_{i}-2)\\sum '
+               '_{j}u_{j}(u_{j}-1)(u_{j}-2)/(9n(n-1)(n-2))\\end{array}}',
+               '{\\displaystyle (x_{i},y_{i})}',
+               '{\\displaystyle (x_{j},y_{j})}',
+               '{\\displaystyle \\tau ={\\frac {({\\text{number of concordant '
+               'pairs}})-({\\text{number of discordant pairs}})}{n(n-1)/2}}.}',
+               '{\\displaystyle \\tau _{C}={\\frac '
+               '{2(n_{c}-n_{d})}{n^{2}{\\frac {(m-1)}{m}}}}}',
+               '{\\displaystyle \\{(x_{i},y_{i}),(x_{j},y_{j})\\}}',
+               '{\\displaystyle x_{i}<x_{j}}',
+               '{\\displaystyle x_{i}>x_{j}}',
+               '{\\displaystyle y_{i}<y_{j}}',
+               '{\\displaystyle y_{i}=y_{j}}',
+               '{\\displaystyle y_{i}>y_{j}}',
+               '{\\displaystyle {\\begin{aligned}n_{c}&={\\text{Number of '
+               'concordant pairs}}\\\\n_{d}&={\\text{Number of discordant '
+               'pairs}}\\\\r&={\\text{Number of rows}}\\\\c&={\\text{Number of '
+               'columns}}\\\\m&=\\min(r,c)\\end{aligned}}}',
+               '{\\frac {2(2n+5)}{9n(n-1)}}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Kendall rank correlation coefficient',
+ 'url': 'https://en.wikipedia.org/wiki/Kendall_tau_rank_correlation_coefficient'}
+{'categories': ['Categorical variable interactions',
+                'Nonparametric statistics',
+                'Inter-rater reliability'],
+ 'equations': {'P_{{+i}}',
+               'P_{{\\exp }}=\\sum _{{i=1}}^{k}P_{{i+}}P_{{+i}}',
+               'P_{{\\max }}=\\sum _{{i=1}}^{k}\\min(P_{{i+}},P_{{+i}})',
+               'P_{{i+}}',
+               '\\kappa = 1- \\frac{\\sum_{i=1}^{k} '
+               '\\sum_{j=1}^{k}w_{ij}x_{ij}} {\\sum_{i=1}^{k} '
+               '\\sum_{j=1}^{k}w_{ij}m_{ij}}',
+               '\\kappa ={\\frac  {0.60-0.46}{1-0.46}}=0.2593',
+               '\\kappa ={\\frac  {0.60-0.54}{1-0.54}}=0.1304',
+               '\\kappa _{{\\max }}={\\frac  {P_{{\\max }}-P_{{\\exp '
+               '}}}{1-P_{{\\exp }}}}',
+               'm_{ij}',
+               'w_{ij}',
+               'x_{ij}',
+               '{\\displaystyle \\kappa ={\\frac '
+               '{p_{o}-p_{e}}{1-p_{e}}}={\\frac {0.7-0.5}{1-0.5}}=0.4\\!}',
+               '{\\displaystyle \\kappa \\equiv {\\frac '
+               '{p_{o}-p_{e}}{1-p_{e}}}=1-{\\frac {1-p_{o}}{1-p_{e}}},\\!}',
+               '{\\displaystyle n_{ki}}',
+               '{\\displaystyle p_{\\text{No}}={\\frac {c+d}{a+b+c+d}}\\cdot '
+               '{\\frac {b+d}{a+b+c+d}}=0.5*0.4=0.2}',
+               '{\\displaystyle p_{\\text{Yes}}={\\frac {a+b}{a+b+c+d}}\\cdot '
+               '{\\frac {a+c}{a+b+c+d}}=0.5*0.6=0.3}',
+               '{\\displaystyle '
+               'p_{e}=p_{\\text{Yes}}+p_{\\text{No}}=0.3+0.2=0.5}',
+               '{\\displaystyle p_{e}={\\frac {1}{N^{2}}}\\sum '
+               '_{k}n_{k1}n_{k2}}',
+               '{\\displaystyle p_{o}={\\frac {a+d}{a+b+c+d}}={\\frac '
+               '{20+15}{50}}=0.7}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': "Cohen's kappa",
+ 'url': 'https://en.wikipedia.org/wiki/Kappa_coefficient'}
+{'categories': ['Psychometrics'],
+ 'equations': {'P_{ij}',
+               'P_{{ij}}=0.84',
+               'R_{i}',
+               'S_{i}',
+               'S_{i}-S_{j}=x_{{ij}}{\\sqrt  {\\sigma _{i}^{2}+\\sigma '
+               '_{j}^{2}-2r_{{ij}}\\sigma _{i}\\sigma _{j}}},',
+               'S_{i}-S_{j}\\cong 1',
+               '\\sigma =1',
+               '\\sigma _{i}',
+               'r_{ij}',
+               'x_{ij}',
+               'x_{{ij}}={\\frac  {S_{i}-S_{j}}{\\sigma }}\\,',
+               '{S_{i}-S_{j}}',
+               '{\\sigma }={\\sqrt  {\\sigma _{i}^{2}+\\sigma _{j}^{2}}}.\\,'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Law of comparative judgment',
+ 'url': 'https://en.wikipedia.org/wiki/Law_of_comparative_judgment'}
+{'categories': ['Bayesian estimation', 'Logic and statistics'],
+ 'equations': {'(x_{1},\\dots ,x_{n})',
+               'N(\\mu ,\\sigma _{v}^{2})',
+               'N(\\mu _{0},\\sigma _{m}^{2})',
+               '\\Theta ',
+               '\\mu ',
+               '\\sigma _{m}\\to \\infty ',
+               '\\sum _{j=1}^{n}\\left({\\frac {x_{j}-\\mu }{\\sigma '
+               '_{v}}}\\right)^{2}+\\left({\\frac {\\mu -\\mu _{0}}{\\sigma '
+               '_{m}}}\\right)^{2}.',
+               '\\theta ',
+               'c',
+               'f',
+               'g',
+               'h_{1}',
+               'h_{2}',
+               'h_{3}',
+               'x',
+               '{\\displaystyle L(\\theta ,a)={\\begin{cases}0,&{\\text{if '
+               '}}|a-\\theta |<c\\\\1,&{\\text{otherwise}}\\\\\\end{cases}}\\ '
+               ',}',
+               '{\\displaystyle \\theta \\mapsto f(\\theta \\mid x)={\\frac '
+               '{f(x\\mid \\theta )\\,g(\\theta )}{\\displaystyle \\int '
+               '_{\\vartheta \\in \\Theta }f(x\\mid \\vartheta '
+               ')\\,g(\\vartheta )\\,d\\vartheta }}\\!}',
+               '{\\displaystyle \\theta \\mapsto f(x\\mid \\theta )\\!}',
+               '{\\displaystyle f(\\mu )f(x\\mid \\mu )=\\pi (\\mu )L(\\mu '
+               ')={\\frac {1}{{\\sqrt {2\\pi }}\\sigma _{m}}}\\exp '
+               '\\left(-{\\frac {1}{2}}\\left({\\frac {\\mu -\\mu '
+               '_{0}}{\\sigma _{m}}}\\right)^{2}\\right)\\prod '
+               '_{j=1}^{n}{\\frac {1}{{\\sqrt {2\\pi }}\\sigma _{v}}}\\exp '
+               '\\left(-{\\frac {1}{2}}\\left({\\frac {x_{j}-\\mu }{\\sigma '
+               '_{v}}}\\right)^{2}\\right),}',
+               '{\\displaystyle f(x\\mid \\theta )}',
+               '{\\displaystyle {\\hat {\\mu }}_{\\mathrm {MAP} }={\\frac '
+               '{n\\sigma _{m}^{2}}{n\\sigma _{m}^{2}+\\sigma '
+               '_{v}^{2}}}\\left({\\frac {1}{n}}\\sum '
+               '_{j=1}^{n}x_{j}\\right)+{\\frac {\\sigma _{v}^{2}}{n\\sigma '
+               '_{m}^{2}+\\sigma _{v}^{2}}}\\mu _{0}.}',
+               '{\\displaystyle {\\hat {\\mu }}_{\\mathrm {MAP} }\\to {\\hat '
+               '{\\mu }}_{ML}.}',
+               '{\\displaystyle {\\hat {\\theta }}_{\\mathrm {MAP} '
+               '}(x)={\\underset {\\theta }{\\operatorname {arg\\,max} }}\\ '
+               'f(\\theta \\mid x)={\\underset {\\theta }{\\operatorname '
+               '{arg\\,max} }}\\ {\\frac {f(x\\mid \\theta )\\,g(\\theta '
+               ')}{\\displaystyle \\int _{\\vartheta }f(x\\mid \\vartheta '
+               ')\\,g(\\vartheta )\\,d\\vartheta }}={\\underset {\\theta '
+               '}{\\operatorname {arg\\,max} }}\\ f(x\\mid \\theta '
+               ')\\,g(\\theta ).\\!}',
+               '{\\displaystyle {\\hat {\\theta }}_{\\mathrm {ML} '
+               '}(x)={\\underset {\\theta }{\\operatorname {arg\\,max} }}\\ '
+               'f(x\\mid \\theta )\\!}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Maximum a posteriori estimation',
+ 'url': 'https://en.wikipedia.org/wiki/MAP_estimator'}
+{'categories': ['Information retrieval techniques',
+                'Natural language processing',
+                'Latent variable models'],
+ 'equations': {'(i,j)',
+               '(i,p)',
+               '(p,i)',
+               '={\\textbf {t}}_{p}^{T}{\\textbf {t}}_{i}',
+               'A',
+               'A\\approx TSD^{T}',
+               'D',
+               'S',
+               'S_{{1,1}}\\geq S_{{2,2}}\\geq \\ldots \\geq S_{{r,r}}>0\\quad '
+               'S_{{i,j}}=0\\;{\\text{where}}\\;i\\neq j',
+               'T',
+               'T^{T}T=I_{r}\\quad D^{T}D=I_{r}',
+               'U',
+               'V',
+               'V^{T}',
+               'X',
+               'XX^{T}',
+               'X^{T}X',
+               'X_{k}=U_{k}\\Sigma _{k}V_{k}^{T}',
+               '\\Sigma ',
+               '\\Sigma \\Sigma ^{T}',
+               '\\Sigma ^{T}\\Sigma ',
+               '\\Sigma _{k}',
+               '\\Sigma _{k}{\\hat {\\textbf {d}}}_{j}',
+               '\\Sigma _{k}{\\hat {\\textbf {d}}}_{q}',
+               '\\Sigma _{k}{\\hat {\\textbf {t}}}_{i}',
+               '\\Sigma _{k}{\\hat {\\textbf {t}}}_{p}',
+               '\\sigma _{1},\\dots ,\\sigma _{l}',
+               'a_{ij}',
+               'a_{{ij}}=g_{i}\\ \\log({\\mathrm  {tf}}_{{ij}}+1)',
+               'g_{i}',
+               'g_{i}=1',
+               'g_{i}=1+\\sum _{j}{\\frac  {p_{{ij}}\\log p_{{ij}}}{\\log n}}',
+               'g_{i}=\\log _{2}{\\frac  {n}{1+{\\mathrm  {df}}_{i}}}',
+               'g_{i}={\\frac  {1}{{\\sqrt  {\\sum _{j}{\\mathrm  '
+               '{tf}}_{{ij}}^{2}}}}}',
+               'g_{i}={\\mathrm  {gf}}_{i}/{\\mathrm  {df}}_{i}',
+               'i',
+               "i{\\textrm {'th}}",
+               'j',
+               "j{\\textrm {'th}}",
+               'k',
+               'l_{ij}',
+               'l_{{ij}}=1',
+               'l_{{ij}}=\\log({\\mathrm  {tf}}_{{ij}}+1)',
+               'l_{{ij}}={\\frac  {{\\Big (}{\\frac  {{\\mathrm  '
+               '{tf}}_{{ij}}}{\\max _{i}({\\mathrm  {tf}}_{{ij}})}}{\\Big '
+               ')}+1}{2}}',
+               'l_{{ij}}={\\mathrm  {tf}}_{{ij}}',
+               'm',
+               'n',
+               'p',
+               'p_{{ij}}={\\frac  {{\\mathrm  {tf}}_{{ij}}}{{\\mathrm  '
+               '{gf}}_{i}}}',
+               'q',
+               'u_{1},\\dots ,u_{l}',
+               'v_{1},\\dots ,v_{l}',
+               '{\\begin{matrix}&X&&&U&&\\Sigma &&V^{T}\\\\&({\\textbf '
+               '{d}}_{j})&&&&&&&({\\hat {\\textbf {d}}}_{j})\\\\&\\downarrow '
+               '&&&&&&&\\downarrow \\\\({\\textbf {t}}_{i}^{T})\\rightarrow '
+               '&{\\begin{bmatrix}x_{1,1}&\\dots &x_{1,n}\\\\\\\\\\vdots '
+               '&\\ddots &\\vdots \\\\\\\\x_{m,1}&\\dots '
+               '&x_{m,n}\\\\\\end{bmatrix}}&=&({\\hat {\\textbf '
+               '{t}}}_{i}^{T})\\rightarrow '
+               '&{\\begin{bmatrix}{\\begin{bmatrix}\\,\\\\\\,\\\\{\\textbf '
+               '{u}}_{1}\\\\\\,\\\\\\,\\end{bmatrix}}\\dots '
+               '{\\begin{bmatrix}\\,\\\\\\,\\\\{\\textbf '
+               '{u}}_{l}\\\\\\,\\\\\\,\\end{bmatrix}}\\end{bmatrix}}&\\cdot '
+               '&{\\begin{bmatrix}\\sigma _{1}&\\dots &0\\\\\\vdots &\\ddots '
+               '&\\vdots \\\\0&\\dots &\\sigma _{l}\\\\\\end{bmatrix}}&\\cdot '
+               '&{\\begin{bmatrix}{\\begin{bmatrix}&&{\\textbf '
+               '{v}}_{1}&&\\end{bmatrix}}\\\\\\vdots '
+               '\\\\{\\begin{bmatrix}&&{\\textbf '
+               '{v}}_{l}&&\\end{bmatrix}}\\end{bmatrix}}\\end{matrix}}',
+               '{\\begin{matrix}&{\\textbf {d}}_{j}\\\\&\\downarrow '
+               '\\\\{\\textbf {t}}_{i}^{T}\\rightarrow '
+               '&{\\begin{bmatrix}x_{1,1}&\\dots &x_{1,n}\\\\\\vdots &\\ddots '
+               '&\\vdots \\\\x_{m,1}&\\dots '
+               '&x_{m,n}\\\\\\end{bmatrix}}\\end{matrix}}',
+               '{\\begin{matrix}X=U\\Sigma V^{T}\\end{matrix}}',
+               '{\\displaystyle 0}',
+               '{\\displaystyle {\\begin{matrix}XX^{T}&=&(U\\Sigma '
+               'V^{T})(U\\Sigma V^{T})^{T}=(U\\Sigma V^{T})(V^{T^{T}}\\Sigma '
+               '^{T}U^{T})=U\\Sigma V^{T}V\\Sigma ^{T}U^{T}=U\\Sigma \\Sigma '
+               '^{T}U^{T}=U\\Sigma ^{2}U^{T}\\\\X^{T}X&=&(U\\Sigma '
+               'V^{T})^{T}(U\\Sigma V^{T})=(V^{T^{T}}\\Sigma '
+               '^{T}U^{T})(U\\Sigma V^{T})=V\\Sigma ^{T}U^{T}U\\Sigma '
+               'V^{T}=V\\Sigma ^{T}\\Sigma V^{T}=V\\Sigma '
+               '^{2}V^{T}\\end{matrix}}}',
+               '{\\displaystyle {\\hat {\\textbf {d}}}_{j}=\\Sigma _{k}^{-1}}',
+               '{\\displaystyle {\\hat {\\textbf {t}}}_{i}^{T}}',
+               '{\\displaystyle {\\hat {\\textbf {t}}}}',
+               '{\\displaystyle {\\hat {\\textrm {t}}}_{i}^{T}}',
+               '{\\hat {\\textbf {d}}}_{j}',
+               '{\\hat {\\textbf {q}}}=\\Sigma _{k}^{-1}U_{k}^{T}{\\textbf '
+               '{q}}',
+               '{\\hat {\\textbf {t}}}_{i}=\\Sigma _{k}^{-1}V_{k}^{T}{\\textbf '
+               '{t}}_{i}',
+               '{\\hat {\\textbf {t}}}_{i}^{T}={\\textbf '
+               '{t}}_{i}^{T}V_{k}^{-T}\\Sigma _{k}^{-1}={\\textbf '
+               '{t}}_{i}^{T}V_{k}\\Sigma _{k}^{-1}',
+               '{\\hat {\\textrm {d}}}_{j}',
+               '{\\mathrm  {df}}_{i}',
+               '{\\mathrm  {gf}}_{i}',
+               '{\\mathrm  {tf_{{ij}}}}',
+               '{\\textbf {d}}_{j}',
+               '{\\textbf {d}}_{j}={\\begin{bmatrix}x_{1,j}\\\\\\vdots '
+               '\\\\x_{m,j}\\end{bmatrix}}',
+               '{\\textbf {d}}_{j}^{T}{\\textbf {d}}_{q}={\\textbf '
+               '{d}}_{q}^{T}{\\textbf {d}}_{j}',
+               '{\\textbf {t}}_{i}',
+               '{\\textbf {t}}_{i}^{T}={\\begin{bmatrix}x_{i,1}&\\dots '
+               '&x_{i,n}\\end{bmatrix}}',
+               '{\\textbf {t}}_{i}^{T}={\\hat {\\textbf {t}}}_{i}^{T}\\Sigma '
+               '_{k}V_{k}^{T}',
+               '{\\textbf {t}}_{i}^{T}{\\textbf {t}}_{p}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Latent semantic analysis',
+ 'url': 'https://en.wikipedia.org/wiki/Latent_semantic_analysis'}
+{'categories': ['Analysis of variance', 'Design of experiments'],
+ 'equations': {'A',
+               'A \\sim I',
+               'A=\\Sigma_{model} \\times \\Sigma_{res}^{-1}',
+               '\\Lambda _{{Pillai}}=\\sum _{{1...p}}(\\lambda '
+               '_{{p}}/(1+\\lambda _{{p}}))={\\mathrm  {tr}}((I+A)^{{-1}})',
+               '\\Lambda_{LH} = \\sum _{1...p}(\\lambda_{p}) = \\mathrm{tr}(A)',
+               '\\Lambda_{Roy} = max_p(\\lambda_p) = \\|A\\|_{\\infty}',
+               '\\Lambda_{Wilks} = \\prod _{1...p}(1/(1 + \\lambda_{p})) = '
+               '\\det(I + A)^{-1} = \\det(\\Sigma_{res})/\\det(\\Sigma_{res} + '
+               '\\Sigma_{model})',
+               '\\Sigma_{model}',
+               '\\Sigma_{model} = \\Sigma_{residual}',
+               '\\Sigma_{res}^{-1}',
+               '\\lambda_p'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Multivariate analysis of variance',
+ 'url': 'https://en.wikipedia.org/wiki/MANOVA'}
+{'categories': ['Statistical tests',
+                'Nonparametric statistics',
+                'U-statistics'],
+ 'equations': {'U_{1}+U_{2}=R_{1}-{n_{1}(n_{1}+1) \\over '
+               '2}+R_{2}-{n_{2}(n_{2}+1) \\over 2}.\\,\\!',
+               '\\sigma _{U}={\\sqrt {n_{1}n_{2}(n_{1}+n_{2}+1) \\over '
+               '12}}.\\,',
+               'r=f-u',
+               'z={\\frac {U-m_{U}}{\\sigma _{U}}},\\,',
+               '{\\displaystyle M={1 \\over c(c-1)}\\sum \\mathrm {AUC} '
+               '_{k,l}}',
+               '{\\displaystyle U_{1}=R_{1}-{n_{1}(n_{1}+1) \\over 2}\\,\\!}',
+               '{\\displaystyle U_{2}=R_{2}-{n_{2}(n_{2}+1) \\over 2}\\,\\!}',
+               '{\\displaystyle \\mathrm {AUC} _{1}={U_{1} \\over n_{1}n_{2}}}',
+               '{\\displaystyle \\sigma _{\\text{corr}}={\\sqrt {{n_{1}n_{2} '
+               '\\over 12}\\left((n+1)-\\sum _{i=1}^{k}{{t_{i}}^{3}-t_{i} '
+               '\\over n(n-1)}\\right)}}\\,}',
+               '{\\displaystyle m_{U}={\\frac {n_{1}n_{2}}{2}},\\,}',
+               '{\\displaystyle r=1-{2U \\over n_{1}n_{2}}\\,}'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Mann–Whitney ',
+ 'url': 'https://en.wikipedia.org/wiki/Mann%E2%80%93Whitney_U'}
+{'categories': ['Maximum likelihood estimation',
+                'M-estimators',
+                'Probability distribution fitting'],
+ 'equations': {'(\\mu _{1},\\ldots ,\\mu _{n})\\,',
+               '(x_{1},\\ldots ,x_{n})\\,',
+               '0={\\frac {1}{n}}\\sum _{i=1}^{n}\\nabla _{\\!\\theta }\\ln '
+               'f(x_{i}\\mid \\theta _{0})+{\\Bigg [}\\,{\\frac {1}{n}}\\sum '
+               '_{i=1}^{n}\\nabla _{\\!\\theta \\theta }\\ln f(x_{i}\\mid '
+               '{\\tilde {\\theta }})\\,{\\Bigg ]}({\\hat {\\theta }}-\\theta '
+               '_{0}),',
+               ';',
+               'E[\\delta _{i}^{2}]=\\sigma ^{2}',
+               'E\\left[\\delta _{i}\\right]=0',
+               'E\\left[{\\widehat {\\mu }}\\right]=\\mu ,\\,',
+               'E\\left[{\\widehat {\\sigma }}^{2}\\right]={\\frac '
+               '{n-1}{n}}\\sigma ^{2}.',
+               'H',
+               'H^{{-1}}',
+               'I',
+               'I_{jk}=\\operatorname {E} _{X}{\\bigg [}\\;{-{\\frac '
+               '{\\partial ^{2}\\ln f_{\\theta _{0}}(X_{t})}{\\partial \\theta '
+               '_{j}\\,\\partial \\theta _{k}}}}\\;{\\bigg ]}.',
+               'L(p)=f_{D}(\\mathrm {H} =49\\mid p)={\\binom '
+               '{80}{49}}p^{49}(1-p)^{31},',
+               'P(\\theta )',
+               'P(\\theta \\mid x_{1},x_{2},\\ldots ,x_{n})={\\frac '
+               '{f(x_{1},x_{2},\\ldots ,x_{n}\\mid \\theta )P(\\theta '
+               ')}{P(x_{1},x_{2},\\ldots ,x_{n})}}',
+               'P(x_{1},x_{2},\\ldots ,x_{n})',
+               '\\Pr \\!{\\big [}\\;\\ln f(x\\mid \\theta )\\;\\in \\;\\mathbb '
+               '{C} ^{0}(\\Theta )\\;{\\big ]}=1.',
+               '\\Sigma ',
+               '\\Theta ',
+               '\\delta _{i}\\equiv \\mu -x_{i}',
+               '\\ell (\\theta )=\\operatorname {E} [\\,\\ln f(x_{i}\\mid '
+               '\\theta )\\,]',
+               '\\hat{\\theta}',
+               '\\ln {\\mathcal {L}}(\\theta \\,;\\,x_{1},\\ldots '
+               ',x_{n})=\\sum _{i=1}^{n}\\ln f(x_{i}\\mid \\theta ),',
+               '\\log({\\mathcal {L}}(\\mu ,\\sigma ))=(-n/2)\\log(2\\pi '
+               '\\sigma ^{2})-{\\frac {1}{2\\sigma ^{2}}}\\sum '
+               '_{i=1}^{n}(x_{i}-\\mu )^{2}',
+               '\\log({\\mathcal {L}}({\\hat {\\mu }},{\\hat {\\sigma '
+               '}}))={\\frac {-n}{2}}(\\log(2\\pi {\\hat {\\sigma }}^{2})+1)',
+               '\\mu ={\\widehat {\\mu }}',
+               '\\nabla _{\\!\\theta }\\,{\\hat {\\ell }}({\\hat {\\theta '
+               '}}\\mid x)={\\frac {1}{n}}\\sum _{i=1}^{n}\\nabla _{\\!\\theta '
+               '}\\ln f(x_{i}\\mid {\\hat {\\theta }})=0.',
+               '\\scriptstyle {\\hat {\\ell }}',
+               '\\scriptstyle {\\hat {\\ell }}(\\theta \\mid x)',
+               '\\scriptstyle {\\hat {\\theta }}',
+               '\\sigma ^{2}',
+               '\\sup _{\\theta \\in \\Theta }{\\big \\|}\\;{\\hat {\\ell '
+               '}}(x\\mid \\theta )-\\ell (\\theta )\\;{\\big \\|}\\ '
+               '{\\xrightarrow {\\text{a.s.}}}\\ 0.',
+               '\\sup _{\\theta \\in \\Theta }{\\big |}{\\hat {\\ell '
+               '}}(\\theta \\mid x)-\\ell (\\theta )\\,{\\big |}\\ '
+               '{\\xrightarrow {p}}\\ 0.',
+               '\\theta ',
+               '\\theta =(\\mu ,\\sigma ^{2})',
+               '\\theta \\neq \\theta _{0}\\quad \\Leftrightarrow \\quad '
+               'f(\\cdot \\mid \\theta )\\neq f(\\cdot \\mid \\theta _{0}).',
+               '\\theta _{0}',
+               '\\{{\\hat {\\theta }}_{\\mathrm {mle} }\\}\\subseteq '
+               '\\{{\\underset {\\theta \\in \\Theta }{\\operatorname '
+               '{arg\\,max} }}\\ {\\hat {\\ell }}(\\theta \\,;\\,x_{1},\\ldots '
+               ',x_{n})\\},',
+               'b_{s}\\equiv \\operatorname {E} [({\\hat {\\theta }}_{\\mathrm '
+               '{mle} }-\\theta _{0})_{s}]={\\frac {1}{n}}\\cdot '
+               'I^{si}I^{jk}{\\big (}{\\tfrac {1}{2}}K_{ijk}+J_{j,ik}{\\big )}',
+               'f(\\cdot \\mid \\theta _{0})',
+               'f(x,y)=f(x)f(y)\\,',
+               'f(x,y)={\\frac {1}{2\\pi \\sigma _{x}\\sigma _{y}{\\sqrt '
+               '{1-\\rho ^{2}}}}}\\exp \\left[-{\\frac {1}{2(1-\\rho '
+               '^{2})}}\\left({\\frac {(x-\\mu _{x})^{2}}{\\sigma '
+               '_{x}^{2}}}-{\\frac {2\\rho (x-\\mu _{x})(y-\\mu _{y})}{\\sigma '
+               '_{x}\\sigma _{y}}}+{\\frac {(y-\\mu _{y})^{2}}{\\sigma '
+               '_{y}^{2}}}\\right)\\right]',
+               'f(x\\mid \\mu ,\\sigma ^{2})={\\frac {1}{{\\sqrt {2\\pi '
+               '\\sigma ^{2}}}\\ }}\\exp {\\left(-{\\frac {(x-\\mu '
+               ')^{2}}{2\\sigma ^{2}}}\\right)},',
+               'f(x_{1},\\ldots ,x_{n})={\\frac {1}{(2\\pi )^{n/2}{\\sqrt '
+               '{{\\text{det}}(\\Sigma )}}}}\\exp \\left(-{\\frac '
+               '{1}{2}}\\left[x_{1}-\\mu _{1},\\ldots ,x_{n}-\\mu '
+               '_{n}\\right]\\Sigma ^{-1}\\left[x_{1}-\\mu _{1},\\ldots '
+               ',x_{n}-\\mu _{n}\\right]^{T}\\right)',
+               'f(x_{1},\\ldots ,x_{n}\\mid \\mu ,\\sigma ^{2})=\\left({\\frac '
+               '{1}{2\\pi \\sigma ^{2}}}\\right)^{n/2}\\exp \\left(-{\\frac '
+               '{\\sum _{i=1}^{n}(x_{i}-{\\bar {x}})^{2}+n({\\bar {x}}-\\mu '
+               ')^{2}}{2\\sigma ^{2}}}\\right),',
+               'f(x_{1},\\ldots ,x_{n}\\mid \\mu ,\\sigma ^{2})=\\prod '
+               '_{i=1}^{n}f(x_{i}\\mid \\mu ,\\sigma ^{2})=\\left({\\frac '
+               '{1}{2\\pi \\sigma ^{2}}}\\right)^{n/2}\\exp \\left(-{\\frac '
+               '{\\sum _{i=1}^{n}(x_{i}-\\mu )^{2}}{2\\sigma ^{2}}}\\right),',
+               'f(x_{1},x_{2},\\ldots ,x_{n}\\mid \\theta )',
+               'f(x_{1},x_{2},\\ldots ,x_{n}\\mid \\theta )P(\\theta )',
+               "f_{Y}(y)={\\frac {f_{X}(x)}{|g'(x)|}}",
+               'x_{1},\\ldots ,x_{n}',
+               'x_{i}',
+               '{\\bar {L}}(\\alpha )=\\sup _{\\theta :\\alpha =g(\\theta '
+               ')}L(\\theta ).\\,',
+               '{\\bar {x}}',
+               '{\\begin{aligned}0&={\\frac {\\partial }{\\partial \\mu '
+               '}}\\log({\\mathcal {L}}(\\mu ,\\sigma ))=0-{\\frac {-2n({\\bar '
+               '{x}}-\\mu )}{2\\sigma ^{2}}}.\\end{aligned}}',
+               '{\\begin{aligned}0&={\\frac {\\partial }{\\partial \\sigma '
+               '}}\\log \\left(\\left({\\frac {1}{2\\pi \\sigma '
+               '^{2}}}\\right)^{n/2}\\exp \\left(-{\\frac {\\sum '
+               '_{i=1}^{n}(x_{i}-{\\bar {x}})^{2}+n({\\bar {x}}-\\mu '
+               ')^{2}}{2\\sigma ^{2}}}\\right)\\right)\\\\[6pt]&={\\frac '
+               '{\\partial }{\\partial \\sigma }}\\left({\\frac {n}{2}}\\log '
+               '\\left({\\frac {1}{2\\pi \\sigma ^{2}}}\\right)-{\\frac {\\sum '
+               '_{i=1}^{n}(x_{i}-{\\bar {x}})^{2}+n({\\bar {x}}-\\mu '
+               ')^{2}}{2\\sigma ^{2}}}\\right)\\\\[6pt]&=-{\\frac {n}{\\sigma '
+               '}}+{\\frac {\\sum _{i=1}^{n}(x_{i}-{\\bar {x}})^{2}+n({\\bar '
+               '{x}}-\\mu )^{2}}{\\sigma ^{3}}}\\end{aligned}}',
+               '{\\begin{aligned}\\Pr(\\mathrm {H} =49\\mid p=1/3)&={\\binom '
+               '{80}{49}}(1/3)^{49}(1-1/3)^{31}\\approx '
+               '0.000,\\\\[6pt]\\Pr(\\mathrm {H} =49\\mid p=1/2)&={\\binom '
+               '{80}{49}}(1/2)^{49}(1-1/2)^{31}\\approx '
+               '0.012,\\\\[6pt]\\Pr(\\mathrm {H} =49\\mid p=2/3)&={\\binom '
+               '{80}{49}}(2/3)^{49}(1-2/3)^{31}\\approx 0.054.\\end{aligned}}',
+               '{\\big |}\\ln f(x\\mid \\theta ){\\big |}<D(x)\\quad {\\text{ '
+               'for all }}\\theta \\in \\Theta .',
+               '{\\displaystyle H=\\mathbb {E} \\left[-\\nabla _{\\theta '
+               '\\theta }\\ln f(x|\\theta _{0})\\right]}',
+               '{\\displaystyle I^{-1}}',
+               '{\\displaystyle \\theta =\\theta _{0}}',
+               '{\\displaystyle f(x_{1},x_{2},\\ldots ,x_{n}\\mid \\theta '
+               ')=f(x_{1}\\mid \\theta )\\times f(x_{2}\\mid \\theta )\\times '
+               '\\cdots \\times f(x_{n}\\mid \\theta ).}',
+               '{\\displaystyle {\\begin{aligned}{0}&{}={\\frac {\\partial '
+               '}{\\partial p}}\\left({\\binom '
+               '{80}{49}}p^{49}(1-p)^{31}\\right),\\\\[8pt]{0}&{}=49p^{48}(1-p)^{31}-31p^{49}(1-p)^{30}\\\\[8pt]&{}=p^{48}(1-p)^{30}\\left[49(1-p)-31p\\right]\\\\[8pt]&{}=p^{48}(1-p)^{30}\\left[49-80p\\right]\\end{aligned}}}',
+               '{\\displaystyle {\\begin{matrix}{}\\\\{\\hat {\\theta '
+               '}}_{\\mathrm {mle} }\\ {\\xrightarrow {\\text{a.s.}}}\\ '
+               '\\theta _{0}.\\\\{}\\end{matrix}}}',
+               '{\\displaystyle {\\begin{matrix}{}\\\\{\\hat {\\theta '
+               '}}_{\\mathrm {mle} }\\ {\\xrightarrow {p}}\\ \\theta '
+               '_{0}.\\\\{}\\end{matrix}}}',
+               '{\\displaystyle {\\hat {\\ell }}(\\theta ;x)}',
+               '{\\displaystyle {\\hat {\\ell }}(\\theta \\,;\\,x)={\\frac '
+               '{1}{n}}\\sum _{i=1}^{n}\\ln f(x_{i}\\mid \\theta ),}',
+               '{\\displaystyle {\\tfrac '
+               '{1}{2}}K_{ijk}+J_{j,ik}=\\operatorname {E} _{X}{\\bigg '
+               '[}\\;{\\frac {1}{2}}{\\frac {\\partial ^{3}\\ln f_{\\theta '
+               '_{0}}(X_{t})}{\\partial \\theta _{i}\\,\\partial \\theta '
+               '_{j}\\,\\partial \\theta _{k}}}+{\\frac {\\partial \\ln '
+               'f_{\\theta _{0}}(X_{t})}{\\partial \\theta _{j}}}{\\frac '
+               '{\\partial ^{2}\\ln f_{\\theta _{0}}(X_{t})}{\\partial \\theta '
+               '_{i}\\,\\partial \\theta _{k}}}\\;{\\bigg ]}.}',
+               '{\\displaystyle {\\widehat {\\sigma }}^{2}={\\frac '
+               '{1}{n}}\\sum _{i=1}^{n}(\\mu -\\delta _{i})^{2}-{\\frac '
+               '{1}{n^{2}}}\\sum _{i=1}^{n}\\sum _{j=1}^{n}(\\mu -\\delta '
+               '_{i})(\\mu -\\delta _{j}).}',
+               '{\\displaystyle {\\widehat {\\sigma }}^{2}={\\frac '
+               '{1}{n}}\\sum _{i=1}^{n}(x_{i}-{\\bar {x}})^{2}={\\frac '
+               '{1}{n}}\\sum _{i=1}^{n}x_{i}^{2}-{\\frac {1}{n^{2}}}\\sum '
+               '_{i=1}^{n}\\sum _{j=1}^{n}x_{i}x_{j}.}',
+               '{\\displaystyle {\\widehat {\\sigma }}^{2}={\\frac '
+               '{1}{n}}\\sum _{i=1}^{n}({\\hat {x}}_{i}-{\\bar {x}})^{2}.}',
+               '{\\hat {\\ell }}={\\frac {1}{n}}\\ln {\\mathcal {L}}.',
+               '{\\hat {\\mu }}={\\bar {x}}=\\sum _{i=1}^{n}{\\frac '
+               '{x_{i}}{n}}.',
+               '{\\hat {\\theta }}_{\\mathrm {mle} }^{*}={\\hat {\\theta '
+               '}}_{\\mathrm {mle} }-{\\hat {b}}.',
+               '{\\hat {n}}',
+               '{\\hat {x}}_{i}',
+               '{\\mathcal {L}}(\\mu ,\\sigma )=f(x_{1},\\ldots ,x_{n}\\mid '
+               '\\mu ,\\sigma )',
+               '{\\mathcal {L}}(\\theta \\,;\\,x_{1},\\ldots '
+               ',x_{n})=f(x_{1},x_{2},\\ldots ,x_{n}\\mid \\theta )=\\prod '
+               '_{i=1}^{n}f(x_{i}\\mid \\theta ).',
+               '{\\mathcal {N}}(\\mu ,\\sigma ^{2})',
+               '{\\sqrt {n}}({\\hat {\\theta }}-\\theta _{0})={\\Bigg '
+               '[}\\,{-{\\frac {1}{n}}\\sum _{i=1}^{n}\\nabla _{\\!\\theta '
+               '\\theta }\\ln f(x_{i}\\mid {\\tilde {\\theta }})}\\,{\\Bigg '
+               ']}^{-1}{\\frac {1}{\\sqrt {n}}}\\sum _{i=1}^{n}\\nabla '
+               '_{\\!\\theta }\\ln f(x_{i}\\mid \\theta _{0})',
+               '{\\sqrt {n}}({\\hat {\\theta }}-\\theta _{0})\\ \\ '
+               '{\\xrightarrow {d}}\\ \\ {\\mathcal {N}}{\\big (}0,\\ '
+               'H^{-1}IH^{-1}{\\big )}.',
+               '{\\sqrt {n}}({\\hat {\\theta }}_{\\text{mle}}-\\theta _{0})\\ '
+               '\\ {\\xrightarrow {d}}\\ \\ {\\mathcal {N}}(0,\\ I^{-1}),',
+               '{\\sqrt {n}}{\\big (}{\\hat {\\theta }}_{\\mathrm {mle} '
+               '}-\\theta _{0}{\\big )}\\ {\\xrightarrow {d}}\\ {\\mathcal '
+               '{N}}(0,\\,I^{-1}).',
+               '{\\tilde  {\\theta }}',
+               '{\\widehat {\\alpha }}=g(\\,{\\widehat {\\theta }}\\,).\\,',
+               '{\\widehat {\\mu }}',
+               '{\\widehat {\\sigma }}',
+               '{\\widehat {\\sigma }}^{2}',
+               '{\\widehat {\\sigma }}^{2}={\\frac {1}{n}}\\sum '
+               '_{i=1}^{n}(x_{i}-\\mu )^{2}.',
+               '{\\widehat {\\theta }}',
+               '{\\widehat {\\theta }}=\\left({\\widehat {\\mu }},{\\widehat '
+               '{\\sigma }}^{2}\\right).'},
+ 'last_item': {'categories': ['Psychometrics'],
+ 'equations': {'P_{ij}',
+               'P_{{ij}}=0.84',
+               'R_{i}',
+               'S_{i}',
+               'S_{i}-S_{j}=x_{{ij}}{\\sqrt  {\\sigma _{i}^{2}+\\sigma '
+               '_{j}^{2}-2r_{{ij}}\\sigma _{i}\\sigma _{j}}},',
+               'S_{i}-S_{j}\\cong 1',
+               '\\sigma =1',
+               '\\sigma _{i}',
+               'r_{ij}',
+               'x_{ij}',
+               'x_{{ij}}={\\frac  {S_{i}-S_{j}}{\\sigma }}\\,',
+               '{S_{i}-S_{j}}',
+               '{\\sigma }={\\sqrt  {\\sigma _{i}^{2}+\\sigma _{j}^{2}}}.\\,'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Law of comparative judgment',
+ 'url': 'https://en.wikipedia.org/wiki/Law_of_comparative_judgment'},
+ 'link_dist': 1,
+ 'title': 'Maximum likelihood estimation',
+ 'url': 'https://en.wikipedia.org/wiki/Maximum_Likelihood'}
+{'categories': ['Psychometrics'],
+ 'equations': {'\\Pr\\{X_{ji}=1\\}={\\frac {e^{{\\delta _{j}}-{\\delta '
+               '_{i}}}}{1+e^{{\\delta _{j}}-{\\delta _{i}}}}}=\\sigma (\\delta '
+               '_{j}-\\delta _{i}),',
+               '\\delta _{i}',
+               '\\sigma ',
+               '\\sum _{k=1}^{n}k!S_{2}(n,k),',
+               'a=b=c',
+               'a=b>c',
+               'a=c>b',
+               'a>b=c',
+               'a>b>c',
+               'a>c>b',
+               'b=c>a',
+               'b>a=c',
+               'b>a>c',
+               'b>c>a',
+               'c>a=b',
+               'c>a>b',
+               'c>b>a',
+               'i'},
+ 'last_item': {'categories': ['Psychometrics'],
+ 'equations': {'P_{ij}',
+               'P_{{ij}}=0.84',
+               'R_{i}',
+               'S_{i}',
+               'S_{i}-S_{j}=x_{{ij}}{\\sqrt  {\\sigma _{i}^{2}+\\sigma '
+               '_{j}^{2}-2r_{{ij}}\\sigma _{i}\\sigma _{j}}},',
+               'S_{i}-S_{j}\\cong 1',
+               '\\sigma =1',
+               '\\sigma _{i}',
+               'r_{ij}',
+               'x_{ij}',
+               'x_{{ij}}={\\frac  {S_{i}-S_{j}}{\\sigma }}\\,',
+               '{S_{i}-S_{j}}',
+               '{\\sigma }={\\sqrt  {\\sigma _{i}^{2}+\\sigma _{j}^{2}}}.\\,'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Law of comparative judgment',
+ 'url': 'https://en.wikipedia.org/wiki/Law_of_comparative_judgment'},
+ 'link_dist': 1,
+ 'title': 'Pairwise comparison',
+ 'url': 'https://en.wikipedia.org/wiki/Pairwise_comparisons'}
+{'categories': ['Machine learning',
+                'Statistical models',
+                'Logistic regression',
+                'Regression models'],
+ 'equations': {'L({\\mathbf  {p}})=\\sum _{i}^{n}\\sum _{j}^{n}w_{{ij}}\\ln '
+               'p_{i}-w_{{ij}}\\ln(p_{i}+p_{j}).',
+               'P(i>j)',
+               'P(i>j)={\\frac  {e^{{\\beta _{i}}}}{e^{{\\beta '
+               '_{i}}}+e^{{\\beta _{j}}}}}',
+               'P(i>j)={\\frac  {p_{i}}{p_{i}+p_{j}}}',
+               "p'_{i}=W_{i}\\left(\\sum _{{j\\neq i}}{\\frac  "
+               '{N_{{ij}}}{p_{i}+p_{j}}}\\right)^{{-1}}',
+               'p_{i}=e^{{\\beta _{i}}}',
+               "p_{i}\\leftarrow {\\frac  {p'_{i}}{\\sum _{j}^{n}p'_{j}}}.",
+               '{\\displaystyle \\operatorname {logit} (P(i>j))=\\log '
+               '\\left({\\frac {P(i>j)}{1-P(i>j)}}\\right)=\\log '
+               '\\left({\\frac {P(i>j)}{P(j>i)}}\\right)=\\beta _{i}-\\beta '
+               '_{j}}'},
+ 'last_item': {'categories': ['Psychometrics'],
+ 'equations': {'P_{ij}',
+               'P_{{ij}}=0.84',
+               'R_{i}',
+               'S_{i}',
+               'S_{i}-S_{j}=x_{{ij}}{\\sqrt  {\\sigma _{i}^{2}+\\sigma '
+               '_{j}^{2}-2r_{{ij}}\\sigma _{i}\\sigma _{j}}},',
+               'S_{i}-S_{j}\\cong 1',
+               '\\sigma =1',
+               '\\sigma _{i}',
+               'r_{ij}',
+               'x_{ij}',
+               'x_{{ij}}={\\frac  {S_{i}-S_{j}}{\\sigma }}\\,',
+               '{S_{i}-S_{j}}',
+               '{\\sigma }={\\sqrt  {\\sigma _{i}^{2}+\\sigma _{j}^{2}}}.\\,'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Law of comparative judgment',
+ 'url': 'https://en.wikipedia.org/wiki/Law_of_comparative_judgment'},
+ 'link_dist': 1,
+ 'title': 'Bradley–Terry model',
+ 'url': 'https://en.wikipedia.org/wiki/Bradley-Terry-Luce_model'}
+{'categories': ['Perception', 'Psychophysics'],
+ 'equations': {'\\Delta I\\!', '{\\frac  {\\Delta I}{I}}=k,', 'I\\!'},
+ 'last_item': {'categories': ['Psychometrics'],
+ 'equations': {'P_{ij}',
+               'P_{{ij}}=0.84',
+               'R_{i}',
+               'S_{i}',
+               'S_{i}-S_{j}=x_{{ij}}{\\sqrt  {\\sigma _{i}^{2}+\\sigma '
+               '_{j}^{2}-2r_{{ij}}\\sigma _{i}\\sigma _{j}}},',
+               'S_{i}-S_{j}\\cong 1',
+               '\\sigma =1',
+               '\\sigma _{i}',
+               'r_{ij}',
+               'x_{ij}',
+               'x_{{ij}}={\\frac  {S_{i}-S_{j}}{\\sigma }}\\,',
+               '{S_{i}-S_{j}}',
+               '{\\sigma }={\\sqrt  {\\sigma _{i}^{2}+\\sigma _{j}^{2}}}.\\,'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Law of comparative judgment',
+ 'url': 'https://en.wikipedia.org/wiki/Law_of_comparative_judgment'},
+ 'link_dist': 1,
+ 'title': 'Just-noticeable difference',
+ 'url': 'https://en.wikipedia.org/wiki/Just_noticeable_difference'}
+{'categories': ['Perception',
+                'Behavioral concepts',
+                'Psychophysics',
+                'Mathematical psychology'],
+ 'equations': {'C',
+               'S_{0}',
+               'p=0',
+               '{\\displaystyle C=-k\\ln {S_{0}}\\,\\!}',
+               '{\\displaystyle S=S_{0}}',
+               '{\\displaystyle dp=k{\\frac {dS}{S}}\\,\\!}',
+               '{\\displaystyle dp={\\frac {dS}{S}}\\,\\!}',
+               '{\\displaystyle p=k\\ln {S}+C\\,\\!}',
+               '{\\displaystyle p=k\\ln {\\frac {S}{S_{0}}}\\,\\!}',
+               '{\\displaystyle {\\frac {(JND)dS}{S}}=constant\\,\\!}'},
+ 'last_item': {'categories': ['Psychometrics'],
+ 'equations': {'P_{ij}',
+               'P_{{ij}}=0.84',
+               'R_{i}',
+               'S_{i}',
+               'S_{i}-S_{j}=x_{{ij}}{\\sqrt  {\\sigma _{i}^{2}+\\sigma '
+               '_{j}^{2}-2r_{{ij}}\\sigma _{i}\\sigma _{j}}},',
+               'S_{i}-S_{j}\\cong 1',
+               '\\sigma =1',
+               '\\sigma _{i}',
+               'r_{ij}',
+               'x_{ij}',
+               'x_{{ij}}={\\frac  {S_{i}-S_{j}}{\\sigma }}\\,',
+               '{S_{i}-S_{j}}',
+               '{\\sigma }={\\sqrt  {\\sigma _{i}^{2}+\\sigma _{j}^{2}}}.\\,'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Law of comparative judgment',
+ 'url': 'https://en.wikipedia.org/wiki/Law_of_comparative_judgment'},
+ 'link_dist': 1,
+ 'title': 'Weber–Fechner law',
+ 'url': 'https://en.wikipedia.org/wiki/Weber-Fechner_law'}
+{'categories': ['Human weight',
+                'Auxology',
+                'Anthropometry',
+                'Mathematics in medicine'],
+ 'equations': {'m = 2a_y + 10',
+               'm = \\tfrac{1}{2}a_m + 4',
+               'm = e^{0.175571a_y + 2.197099}'},
+ 'last_item': {'categories': ['Psychometrics'],
+ 'equations': {'P_{ij}',
+               'P_{{ij}}=0.84',
+               'R_{i}',
+               'S_{i}',
+               'S_{i}-S_{j}=x_{{ij}}{\\sqrt  {\\sigma _{i}^{2}+\\sigma '
+               '_{j}^{2}-2r_{{ij}}\\sigma _{i}\\sigma _{j}}},',
+               'S_{i}-S_{j}\\cong 1',
+               '\\sigma =1',
+               '\\sigma _{i}',
+               'r_{ij}',
+               'x_{ij}',
+               'x_{{ij}}={\\frac  {S_{i}-S_{j}}{\\sigma }}\\,',
+               '{S_{i}-S_{j}}',
+               '{\\sigma }={\\sqrt  {\\sigma _{i}^{2}+\\sigma _{j}^{2}}}.\\,'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Law of comparative judgment',
+ 'url': 'https://en.wikipedia.org/wiki/Law_of_comparative_judgment'},
+ 'link_dist': 1,
+ 'title': 'Human body weight',
+ 'url': 'https://en.wikipedia.org/wiki/Body_weight'}
+{'categories': ['Perception',
+                'Behavioral concepts',
+                'Power laws',
+                'Psychophysics',
+                'Mathematical psychology',
+                'Psychoacoustics'],
+ 'equations': {'a', '{\\displaystyle \\psi (I)=kI^{a},}'},
+ 'last_item': {'categories': ['Psychometrics'],
+ 'equations': {'P_{ij}',
+               'P_{{ij}}=0.84',
+               'R_{i}',
+               'S_{i}',
+               'S_{i}-S_{j}=x_{{ij}}{\\sqrt  {\\sigma _{i}^{2}+\\sigma '
+               '_{j}^{2}-2r_{{ij}}\\sigma _{i}\\sigma _{j}}},',
+               'S_{i}-S_{j}\\cong 1',
+               '\\sigma =1',
+               '\\sigma _{i}',
+               'r_{ij}',
+               'x_{ij}',
+               'x_{{ij}}={\\frac  {S_{i}-S_{j}}{\\sigma }}\\,',
+               '{S_{i}-S_{j}}',
+               '{\\sigma }={\\sqrt  {\\sigma _{i}^{2}+\\sigma _{j}^{2}}}.\\,'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Law of comparative judgment',
+ 'url': 'https://en.wikipedia.org/wiki/Law_of_comparative_judgment'},
+ 'link_dist': 1,
+ 'title': "Stevens's power law",
+ 'url': "https://en.wikipedia.org/wiki/Stevens'_power_law"}
+{'categories': ['Units of measurement',
+                'Customary units of measurement',
+                'Human-based units of measurement',
+                'Measurement',
+                'Obsolete units of measurement',
+                'Systems of units'],
+ 'equations': {'1={\\frac {1\\,\\mathrm {mi} }{5280\\,\\mathrm {ft} }}\\quad '
+               '\\mathrm {and} \\quad 1={\\frac {3600\\,\\mathrm {s} '
+               '}{1\\,\\mathrm {h} }}',
+               '52.8\\,{\\frac {\\mathrm {ft} }{\\mathrm {s} }}=52.8\\,{\\frac '
+               '{\\mathrm {ft} }{\\mathrm {s} }}{\\frac {1\\,\\mathrm {mi} '
+               '}{5280\\,\\mathrm {ft} }}{\\frac {3600\\,\\mathrm {s} '
+               '}{1\\,\\mathrm {h} }}={\\frac {52.8\\times '
+               '3600}{5280}}\\,\\mathrm {mi/h} =36\\,\\mathrm {mi/h} ',
+               'Z',
+               'Z=n\\times [Z]=n[Z].',
+               'Z=n_{i}\\times (c_{ij}\\times [Z]_{j})=(n_{i}\\times '
+               'c_{ij})\\times [Z]_{j}',
+               'Z=n_{i}\\times [Z]_{i}',
+               'Z=n_{i}\\times [Z]_{i}\\times (c_{ij}\\times [Z]_{j}/[Z]_{i})',
+               'Z_{1}',
+               'Z_{2}',
+               '[Z]_{i}',
+               '[Z]_{i}=c_{ij}\\times [Z]_{j}',
+               '[Z]_{j}',
+               '\\times ',
+               'c_{ij}',
+               'n_{i}',
+               '{\\displaystyle =6[Z_{1}][Z_{2}]=6}',
+               '{\\displaystyle Z=2[Z]=2}',
+               '{\\displaystyle \\mathrm {\\frac {9\\,{\\rm {L}}}{100\\,{\\rm '
+               '{km}}}} =\\mathrm {\\frac {9\\,{\\rm {L}}}{100\\,{\\rm {km}}}} '
+               '\\mathrm {\\frac {1000000\\,{\\rm {\\mu L}}}{1\\,{\\rm {L}}}} '
+               '\\mathrm {\\frac {1\\,{\\rm {km}}}{1000\\,{\\rm {m}}}} '
+               '={\\frac {9\\times 1000000}{100\\times 1000}}\\,\\mathrm {\\mu '
+               'L/m} =90\\,\\mathrm {\\mu L/m} }'},
+ 'last_item': {'categories': ['Psychometrics'],
+ 'equations': {'P_{ij}',
+               'P_{{ij}}=0.84',
+               'R_{i}',
+               'S_{i}',
+               'S_{i}-S_{j}=x_{{ij}}{\\sqrt  {\\sigma _{i}^{2}+\\sigma '
+               '_{j}^{2}-2r_{{ij}}\\sigma _{i}\\sigma _{j}}},',
+               'S_{i}-S_{j}\\cong 1',
+               '\\sigma =1',
+               '\\sigma _{i}',
+               'r_{ij}',
+               'x_{ij}',
+               'x_{{ij}}={\\frac  {S_{i}-S_{j}}{\\sigma }}\\,',
+               '{S_{i}-S_{j}}',
+               '{\\sigma }={\\sqrt  {\\sigma _{i}^{2}+\\sigma _{j}^{2}}}.\\,'},
+ 'last_item': {'categories': [],
+ 'equations': {'{\\bar {x}}'},
+ 'last_item': {'categories': ['Queueing theory', 'Statistical algorithms'],
+ 'equations': {'{\\displaystyle \\mathbb {E} (n_{i})=\\sum '
+               '_{k=1}^{N}X_{i}^{k}{\\frac {G(N-k)}{G(N)}}.}',
+               '{\\displaystyle \\mathbb {P} (n_{1},n_{2},\\cdots '
+               ',n_{M})={\\frac {1}{{\\text{G}}(N)}}\\prod '
+               '_{i=1}^{M}\\left(X_{i}\\right)^{n_{i}}}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=N)={\\frac '
+               '{X_{i}^{N}}{G(N)}}[G(0)].}',
+               '{\\displaystyle \\mathbb {P} (n_{i}=k)={\\frac '
+               '{X_{i}^{k}}{G(N)}}[G(N-k)-X_{i}G(N-k-1)]\\quad {\\text{ for '
+               '}}k=0,1,\\ldots ,N-1,}',
+               '{\\displaystyle \\mu _{j}X_{j}=\\sum _{i=1}^{M}\\mu '
+               '_{i}X_{i}p_{ij}\\quad {\\text{ for }}j=1,\\ldots ,M.}',
+               '{\\displaystyle \\scriptstyle \\sum _{i=1}^{M}n_{i}=N}',
+               '{\\displaystyle g(0,m)=1{\\text{ for }}m=1,2,\\cdots ,M}',
+               '{\\displaystyle g(n,1)=(X_{1})^{n}{\\text{ for }}n=0,1,\\cdots '
+               ',N.}',
+               '{\\displaystyle g(n,m)=g(n,m-1)+X_{m}g(n-1,m).}',
+               '{\\displaystyle {\\tbinom {N+M-1}{M-1}}}'},
+ 'title': "Buzen's algorithm",
+ 'url': "https://en.wikipedia.org/wiki/Buzen's_algorithm"},
+ 'link_dist': 1,
+ 'title': 'User:Talgalili/sandbox',
+ 'url': 'https://en.wikipedia.org/wiki/User:Talgalili/sandbox'},
+ 'link_dist': 1,
+ 'title': 'Law of comparative judgment',
+ 'url': 'https://en.wikipedia.org/wiki/Law_of_comparative_judgment'},
+ 'link_dist': 1,
+ 'title': 'Units of measurement',
+ 'url': 'https://en.wikipedia.org/wiki/Units_of_measurement'}
