@@ -1,0 +1,6 @@
+<div class="form-group">
+    <input class="form-control" [(ngModel)]="equationSearched" type="text" placeholder="Enter an equation">
+  </div>
+<div *ngIf="equationSearched">
+      You entered {{equationSearched}}
+</div>

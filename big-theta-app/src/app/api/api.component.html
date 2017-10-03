@@ -1,0 +1,41 @@
+<div style="margin-top: 50px;">
+  <h3>Big Theta API</h3>
+  <div>The Big Theta API is hosted on AWS. The base url is <a href="https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/">https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/</a>. All endpoints are relative to this path</div>
+  
+  <div class="api-endpoint-block">
+      <div class="api-method">GET /equationtree</div>
+      <div class="api-method-description">
+          Params:
+          <ul>
+              <li>equation (required): Root equation to search for</li>
+              <li>format (required): Format of equation either ascii or latex</li>
+          </ul>
+          Returns: A tree of related equations with the searched for equation at the root
+      </div>
+  </div>
+
+  <div class="api-endpoint-block">
+      <div class="api-method">GET /equations</div>
+      <div class="api-method-description">
+          Params:
+          <ul>
+              <li>topic (optional): Topic of the equations to retrieve</li>
+          </ul>
+          Returns: A list of all equations in the database filtered by topic if requested
+      </div>
+  </div>
+
+  <div class="api-endpoint-block">
+      <div class="api-method">POST /equations</div>
+      <div class="api-method-description">
+          Body:
+          <ul>
+              <li>equation (required): Equation to add</li>
+              <li>topic (required): Topic of the equation</li>
+              <li>format (required): Format of equation either ascii or latex</li>
+          </ul>
+          Returns: The equation itself if addition is successful
+      </div>
+  </div>
+  
+</div>
