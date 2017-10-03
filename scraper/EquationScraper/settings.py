@@ -11,7 +11,7 @@
 
 # FEED_URI = '/home/jcavalie/PycharmProjects/big-theta_team/scraper/items.jl'
 # FEED_FORMAT = 'jsonlines'
-# FEED_EXPORT_INDENT = 1
+# FEED_EXPORT_INDENT = 2
 
 BOT_NAME = 'EquationScraper'
 

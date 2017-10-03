@@ -29,6 +29,7 @@ class EquationscraperPipeline(object):
         file = open('%s_items' % spider.name, 'w+b', )
         self.files[spider] = file
         self.exporter = PprintItemExporter(file)
+        self.exporter.indent = 2
         self.exporter.start_exporting()
 
     def spider_closed(self, spider):

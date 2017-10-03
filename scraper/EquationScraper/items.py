@@ -16,4 +16,5 @@ class EquationscraperItem(scrapy.Item):
     equations = scrapy.Field()
     last_item = scrapy.Field()
     link_dist = scrapy.Field()
+    link_relationship=scrapy.Field()
 

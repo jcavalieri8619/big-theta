@@ -19,6 +19,9 @@ class WikiEquationSpider(scrapy.Spider):
     def parser_dispatch(self, response):
         pass
 
+    def parse(self, response):
+        pass
+
     def parse_portals(self, response):
         self.log('INSIDE PARSE_PORTALS')
 
@@ -70,12 +73,9 @@ class WikiEquationSpider(scrapy.Spider):
 
                 # last_item exists --> link_dist exists
 
-                response.meta['link_dist'] += 1
-
-                item['last_item'] = response.meta['last_item']
+                item['last_item'] = response.meta['last_item'].copy()
                 item['link_dist'] = response.meta['link_dist']
-
-                self.log(f'{item["last_item"]["url"]} LINKS TO {item["url"]}')
+                item['link_relationship'] = f'{item["last_item"]["url"]} LINKS TO {item["url"]}'
 
                 yield item
 
@@ -87,11 +87,15 @@ class WikiEquationSpider(scrapy.Spider):
             # if current page contains no equations then hold onto item from
             # most recent page that did contain equations.
             if latex_eqns:
-                request.meta['last_item'] = item
+                request.meta['last_item'] = item.copy()
                 request.meta['link_dist'] = 0
             else:
-                request.meta['last_item'] = response.meta.get('last_item', None)
-                request.meta['link_dist'] = response.meta.get('link_dist', 0)
+                if 'last_item' in response.meta:
+                    request.meta['last_item'] = response.meta['last_item'].copy()
+                    response.meta['link_dist'] += 1
+
+                else:
+                    request.meta['link_dist'] = response.meta.get('link_dist', 0)
 
             yield request
 
