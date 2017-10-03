@@ -9,9 +9,9 @@
 #     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
 #     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-FEED_URI = 'file://item-feed/items.jl'
-FEED_FORMAT = 'jsonlines'
-FEED_EXPORT_INDENT = 1
+# FEED_URI = '/home/jcavalie/PycharmProjects/big-theta_team/scraper/items.jl'
+# FEED_FORMAT = 'jsonlines'
+# FEED_EXPORT_INDENT = 1
 
 BOT_NAME = 'EquationScraper'
 
