@@ -41,7 +41,7 @@ CONCURRENT_REQUESTS = 60
 # Disable cookies (enabled by default)
 # COOKIES_ENABLED = False
 
-DEPTH_LIMIT = 113
+DEPTH_LIMIT = 23
 # Disable Telnet Console (enabled by default)
 # TELNETCONSOLE_ENABLED = False
 
