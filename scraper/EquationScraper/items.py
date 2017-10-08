@@ -13,7 +13,7 @@ class EquationscraperItem(scrapy.Item):
     url = scrapy.Field()
     title = scrapy.Field()
     categories = scrapy.Field()
-    equations = scrapy.Field()
+    maths = scrapy.Field()
     last_item = scrapy.Field()
     link_dist = scrapy.Field()
     link_relationship=scrapy.Field()
