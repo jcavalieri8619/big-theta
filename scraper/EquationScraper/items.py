@@ -8,7 +8,6 @@
 import scrapy
 
 
-
 class EquationscraperItem(scrapy.Item):
     url = scrapy.Field()
     title = scrapy.Field()
@@ -16,5 +15,4 @@ class EquationscraperItem(scrapy.Item):
     maths = scrapy.Field()
     last_item = scrapy.Field()
     link_dist = scrapy.Field()
-    link_relationship=scrapy.Field()
-
+    link_relationship = scrapy.Field()
