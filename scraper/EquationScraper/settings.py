@@ -18,9 +18,6 @@ BOT_NAME = 'EquationScraper'
 SPIDER_MODULES = ['EquationScraper.spiders']
 NEWSPIDER_MODULE = 'EquationScraper.spiders'
 
-# Configure maximum number of successive category links to follow
-WIKI_CATEGORY_DEPTH = 7
-
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'EquationScraper (+http://www.yourdomain.com)'
 
@@ -41,7 +38,11 @@ CONCURRENT_REQUESTS = 60
 # Disable cookies (enabled by default)
 # COOKIES_ENABLED = False
 
-DEPTH_LIMIT = 23
+DEPTH_LIMIT = 17
+
+# Configure maximum number of successive category links to follow
+WIKI_CATEGORY_DEPTH = 10
+
 # Disable Telnet Console (enabled by default)
 # TELNETCONSOLE_ENABLED = False
 
@@ -72,7 +73,7 @@ DEPTH_LIMIT = 23
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'EquationScraper.pipelines.EquationscraperPipeline': 300,
+    'EquationScraper.pipelines.EquationscraperPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
