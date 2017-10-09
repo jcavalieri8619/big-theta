@@ -54,14 +54,14 @@ class WikiEquationSpider(scrapy.Spider):
             curr_item['title'] = response.css('#firstHeading::text').extract_first()
             curr_item['categories'] = response.css("#mw-normal-catlinks > ul > li > a").css("a::text").extract()
 
-            curr_item['maths'] = latex_math
+            curr_item['maths'] = list(latex_math)
 
             if response.meta.get('last_item', None):
                 # using current curr_item and last_item, we can yield
                 # the curr_item into pipeline and construct relationship
                 # last_item <LINKS_TO> curr_item
 
-                # if no latex maths on current article, then
+                # if no equation maths on current article, then
                 # continue crawling links until finding article
                 # with maths and maintain most recent last_item
                 # that contained math and increment link_dist
@@ -117,9 +117,9 @@ class WikiEquationSpider(scrapy.Spider):
 
             if response.meta['category_depth'] > self.settings.WIKI_CATEGORY_DEPTH:
                 self.log(f'maximum category depth reached on {response.url}')
-                break
+                # break
 
-            else:
-                request = scrapy.Request(url=category_link.url, callback=self.parse_categories)
-                request.meta['category_depth'] += 1
-                yield request
+            # else:
+            request = scrapy.Request(url=category_link.url, callback=self.parse_categories)
+            request.meta['category_depth'] += 1
+            yield request
