@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
 
-from itertools import permutations, product
+
+import logging
+from itertools import product, combinations
 
 from py2neo import authenticate, Graph, Node, Relationship
 from scrapy import signals
 from scrapy.exporters import JsonLinesItemExporter, PprintItemExporter
 
-
-# recall that to unescape latex commands, just half the number of backslashes
-# so that if 8 backslashes then replace with 4. If 2 then replace with 1 and so on.
+from .latex import utils as latexutils
 
 
 class EquationscraperPipeline(object):
@@ -48,38 +48,66 @@ class EquationscraperPipeline(object):
 
     def process_item(self, item, spider):
         self.pprnt_exporter.export_item(item)
-        self.jsl_exporter.export_item(item)
+        # self.jsl_exporter.export_item(item)
 
-        LABEL = 'EQUATION'
-        RELATION_TYPE = 'LINKS_TO'
+        node_label = 'EQUATION'
+        link_relation = 'LINKS_TO'
+        page_relation = 'SAME_PAGE_AS'
 
-        item_array = [item.last_item, item]
+        item_array = [item['last_item'].copy(), item.copy()]
 
         for idx, elem in enumerate(item_array):
 
-            for x, y in permutations(elem.maths, 2):
+            for expr_x, expr_y in combinations(elem['maths'], 2):
 
-                node_pair = []
-                for latex_item in [x, y]:
-                    node_pair.append(Node(LABEL,
-                                          latex=latex_item,
-                                          on_page=item_array[idx].title,
-                                          url=item_array[idx].url,
-                                          categories=item_array[idx].categories))
+                expr_x = latexutils.strip_styles(expr_x)
+                expr_y = latexutils.strip_styles(expr_y)
 
-                self.graph.merge(Relationship(node_pair[0], RELATION_TYPE, node_pair[1], distance=0))
+                logging.log(logging.INFO, "JPCLOG SAMELINK:" + str((expr_x, expr_y)))
 
-        # last is equation from last_item and curr is equation from curr_item
+                if (latexutils.contains_equality_command(expr_x) and
+                        latexutils.contains_equality_command(expr_y)):
+                    # we are not interested in math expressions without
+                    # some form of equality. The expression sin(x)/x is meaningless
+                    # but the expression lim_{x->0} sin(x)/x = 1 contains meaningful
+                    # information i.e. that the LHS and RHS are related in some way--
+                    # in this case they are equal.
+
+                    node_pair = []
+                    for latex_item in [expr_x, expr_y]:
+                        node_pair.append(Node(node_label,
+                                              equation=latex_item,
+                                              title=item_array[idx]['title'],
+                                              url=item_array[idx]['url'],
+                                              categories=item_array[idx]['categories']))
+
+                    R = Relationship(node_pair[0], page_relation, node_pair[1], distance=0)
+                    logging.log(logging.INFO, "JPCLOG SAMELINK:" + str(R))
+                    self.graph.merge(R)
+
+        # expr_in_last is equation from last_item and expr_in_curr is equation from curr_item
         curr_item = 1
         last_item = 0
-        for last, curr in product(*item_array):
-            node_last = Node(LABEL, latex=last, on_page=item_array[last_item].title,
-                             url=item_array[last_item].url, categories=item_array[last_item].categories)
+        # *[x['maths'] for x in item_array]
+        for expr_in_last, expr_in_curr in product(item_array[last_item]['maths'],
+                                                  item_array[curr_item]['maths']):
 
-            node_curr = Node(LABEL, latex=curr, on_page=item_array[curr_item].title,
-                             url=item_array[curr_item].url, categories=item_array[curr_item].categories)
+            expr_in_curr = latexutils.strip_styles(expr_in_curr)
+            expr_in_last = latexutils.strip_styles(expr_in_last)
 
-            self.graph.merge(Relationship(node_last, RELATION_TYPE, node_curr,
-                                          distance=item_array[last_item].link_dist))
+            logging.log(logging.INFO, "JPCLOG CROSSLINK:" + str((expr_in_last, expr_in_curr)))
+
+            if latexutils.contains_equality_command(expr_in_last) and \
+                    latexutils.contains_equality_command(expr_in_curr):
+                node_last_expr = Node(node_label, equation=expr_in_last, title=item_array[last_item]['title'],
+                                      url=item_array[last_item]['url'], categories=item_array[last_item]['categories'])
+
+                node_curr_expr = Node(node_label, equation=expr_in_curr, title=item_array[curr_item]['title'],
+                                      url=item_array[curr_item]['url'], categories=item_array[curr_item]['categories'])
+
+                R = Relationship(node_last_expr, link_relation, node_curr_expr,
+                                 distance=item_array[curr_item]['link_dist'])
+                logging.log(logging.INFO, "JPCLOG CROSSLINK:" + str(R))
+                self.graph.merge(R)
 
         return item
