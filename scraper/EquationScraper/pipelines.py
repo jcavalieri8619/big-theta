@@ -11,6 +11,7 @@ from scrapy.exporters import JsonLinesItemExporter, PprintItemExporter
 from .latex import utils as latexutils
 
 
+
 class EquationscraperPipeline(object):
     def __init__(self):
         self.jsl_exporter = None
@@ -47,8 +48,11 @@ class EquationscraperPipeline(object):
             f.close()
 
     def process_item(self, item, spider):
+
         self.pprnt_exporter.export_item(item)
-        # self.jsl_exporter.export_item(item)
+
+        if spider.settings.getbool("EXPORT_JSON"):
+            self.jsl_exporter.export_item(item)
 
         node_label = 'EQUATION'
         link_relation = 'LINKS_TO'
