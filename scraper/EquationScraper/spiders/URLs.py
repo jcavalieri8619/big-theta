@@ -71,6 +71,7 @@ global_deny = [
     r"https://en[.]wikipedia[.]org/wiki/Category_talk.*",
     r"https://en[.]wikipedia[.]org/wiki/wikipedia_talk.*",
     r"https://en[.]wikipedia[.]org/wiki/User:.*",
+    "https://en[.]wikipedia[.]org/wiki/Template:.*",
 
 
 ]
