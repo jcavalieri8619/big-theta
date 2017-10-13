@@ -115,7 +115,7 @@ class WikiEquationSpider(scrapy.Spider):
         for category_link in LinkExtractor(allow=r'https://en[.]wikipedia[.]org/wiki/Category:.*',
                                            deny=URLs.global_deny, ).extract_links(response):
 
-            if response.meta['category_depth'] > self.settings.WIKI_CATEGORY_DEPTH:
+            if response.meta['category_depth'] > self.settings.getint('WIKI_CATEGORY_DEPTH'):
                 self.log(f'maximum category depth reached on {response.url}')
                 # break
 
