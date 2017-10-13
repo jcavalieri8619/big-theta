@@ -17,7 +17,7 @@ class EquationscraperPipeline(object):
         self.pprnt_exporter = None
         self.files = {}
 
-        authenticate('localhost:7474', 'neo4j', 'Redzone1515')
+        authenticate('localhost:7474', 'neo4j', 'big-theta-team')
         self.graph = Graph('localhost:7474/db/data')
 
     @classmethod
@@ -88,9 +88,10 @@ class EquationscraperPipeline(object):
         # expr_in_last is equation from last_item and expr_in_curr is equation from curr_item
         curr_item = 1
         last_item = 0
-        # *[x['maths'] for x in item_array]
-        for expr_in_last, expr_in_curr in product(item_array[last_item]['maths'],
-                                                  item_array[curr_item]['maths']):
+
+        # item_array[last_item]['maths'],
+        # item_array[curr_item]['maths']
+        for expr_in_last, expr_in_curr in product(*[x['maths'] for x in item_array]):
 
             expr_in_curr = latexutils.strip_styles(expr_in_curr)
             expr_in_last = latexutils.strip_styles(expr_in_last)
