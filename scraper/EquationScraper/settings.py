@@ -38,10 +38,9 @@ CONCURRENT_REQUESTS = 60
 # Disable cookies (enabled by default)
 # COOKIES_ENABLED = False
 
-DEPTH_LIMIT = 17
-
+DEPTH_LIMIT = 133
 # Configure maximum number of successive category links to follow
-WIKI_CATEGORY_DEPTH = 10
+WIKI_CATEGORY_DEPTH = 33
 
 # Disable Telnet Console (enabled by default)
 # TELNETCONSOLE_ENABLED = False
