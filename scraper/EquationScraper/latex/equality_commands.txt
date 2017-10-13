@@ -73,16 +73,5 @@
 \Leftrightarrow
 \top
 \bot
-\rightarrow
 \mapsto
-\leftarrow
-\to
-\gets
-\Rightarrow
-\Leftarrow
-\longrightarrow
 \longmapsto
-\longleftarrow
-\Longrightarrow
-\Longleftarrow
-\implies
