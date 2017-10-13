@@ -42,6 +42,9 @@ DEPTH_LIMIT = 133
 # Configure maximum number of successive category links to follow
 WIKI_CATEGORY_DEPTH = 33
 
+# Export JSON item feed during crawl
+EXPORT_JSON = False
+
 # Disable Telnet Console (enabled by default)
 # TELNETCONSOLE_ENABLED = False
 
