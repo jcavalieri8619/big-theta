@@ -1,7 +1,12 @@
-.api-endpoint-block {
-    margin: 1em;
+.api-endpoint-card .card-text {
+    margin-bottom: 1em;
 }
 
-.api-method-description ul {
-    margin: 0;
+.api-endpoint-card .card-text pre {
+    margin-left: -65px;
+    margin-top: -15px;
+}
+
+.api-endpoint-card .card-text > code {
+    margin-left: 15px;
 }
