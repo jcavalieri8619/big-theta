@@ -1,10 +1,13 @@
+.api-endpoint-card .card-body:not(:first-of-type) {
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+
 .api-endpoint-card .card-text {
     margin-bottom: 1em;
 }
 
 .api-endpoint-card .card-text pre {
-    margin-left: -65px;
-    margin-top: -15px;
+    margin-top: 5px;
 }
 
 .api-endpoint-card .card-text > code {
