@@ -68,18 +68,10 @@ global_deny = [
     re.escape("https://en.wikipedia.org/wiki/Special:MyTalk"),
     re.escape("https://en.wikipedia.org/wiki/Special:MyContributions"),
     re.escape("https://en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard"),
-    # re.escape(""),
-    # re.escape(""),
-    # re.escape(""),
-    # re.escape(""),
-    # re.escape(""),
-    # re.escape(""),
-    # re.escape(""),
-    # re.escape(""),
-    # re.escape(""),
-    # re.escape(""),
-    # re.escape(""),
-    # re.escape(""),
-    # re.escape(""),
+    r"https://en[.]wikipedia[.]org/wiki/Category_talk.*",
+    r"https://en[.]wikipedia[.]org/wiki/wikipedia_talk.*",
+    r"https://en[.]wikipedia[.]org/wiki/User:.*",
+    "https://en[.]wikipedia[.]org/wiki/Template:.*",
+
 
 ]

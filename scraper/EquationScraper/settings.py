@@ -11,15 +11,12 @@
 
 # FEED_URI = '/home/jcavalie/PycharmProjects/big-theta_team/scraper/items.jl'
 # FEED_FORMAT = 'jsonlines'
-# FEED_EXPORT_INDENT = 1
+# FEED_EXPORT_INDENT = 2
 
 BOT_NAME = 'EquationScraper'
 
 SPIDER_MODULES = ['EquationScraper.spiders']
 NEWSPIDER_MODULE = 'EquationScraper.spiders'
-
-# Configure maximum number of successive category links to follow
-WIKI_CATEGORY_DEPTH = 7
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 # USER_AGENT = 'EquationScraper (+http://www.yourdomain.com)'
@@ -41,7 +38,13 @@ CONCURRENT_REQUESTS = 60
 # Disable cookies (enabled by default)
 # COOKIES_ENABLED = False
 
-DEPTH_LIMIT = 113
+DEPTH_LIMIT = 133
+# Configure maximum number of successive category links to follow
+WIKI_CATEGORY_DEPTH = 33
+
+# Export JSON item feed during crawl
+EXPORT_JSON = False
+
 # Disable Telnet Console (enabled by default)
 # TELNETCONSOLE_ENABLED = False
 
@@ -72,7 +75,7 @@ DEPTH_LIMIT = 113
 # Configure item pipelines
 # See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'EquationScraper.pipelines.EquationscraperPipeline': 300,
+    'EquationScraper.pipelines.EquationscraperPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
