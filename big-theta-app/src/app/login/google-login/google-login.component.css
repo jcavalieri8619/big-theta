@@ -1,0 +1,17 @@
+.social-login-btn {
+    margin: 5px;
+    width: 100%;
+    font-size: 200%;
+    padding: 0;
+    cursor: pointer;
+}
+
+.social-google {
+    background-color: #da573b;
+    border-color: #be5238;
+}
+
+.social-google:hover{
+    background-color: #be5238;
+    border-color: #9b4631;
+}

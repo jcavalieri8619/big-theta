@@ -1,6 +1,9 @@
-<div class="form-group">
+<app-home></app-home>
+<div class="content-container container-fluid">
+  <div class="form-group">
     <input class="form-control" [(ngModel)]="equationSearched" type="text" placeholder="Enter an equation">
   </div>
-<div *ngIf="equationSearched">
-      You entered {{equationSearched}}
+  <div *ngIf="equationSearched">
+    You entered {{equationSearched}}
+  </div>
 </div>

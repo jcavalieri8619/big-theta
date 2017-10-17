@@ -1,14 +1,14 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">
-      <img src="../assets/images/theta_logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> Big Theta
-  </a>
-  <div class="navbar-nav">
-    <a routerLink="/" routerLinkActive="active" class="nav-item nav-link">Home</a>
-    <a routerLink="info" routerLinkActive="active" class="nav-item nav-link">About</a>
-    <a routerLink="api" routerLinkActive="active" class="nav-item nav-link">API</a>
-    <a routerLink="/" routerLinkActive="active" class="nav-item nav-link">Logout</a>
-  </div>
+    <a class="navbar-brand" href="#">
+        <img src="../assets/images/theta_logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> Big Theta
+    </a>
+    <div class="navbar-nav">
+        <a routerLink="/home" routerLinkActive="active" class="nav-item nav-link">Home</a>
+        <a routerLink="/info" routerLinkActive="active" class="nav-item nav-link">About</a>
+        <a routerLink="/api" routerLinkActive="active" class="nav-item nav-link">API</a>
+    </div>
+    <div class="pull-right logout-div">
+        <button class="btn btn-sm btn-danger pull-right" (click)="logout()">Logout</button>
+        <span class="pull-right user-name-div">Welcome {{ appUser.name }}</span>
+    </div>
 </nav>
-<div class="content-container container-fluid">
-  <router-outlet></router-outlet>
-</div>

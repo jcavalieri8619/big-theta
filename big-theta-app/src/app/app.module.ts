@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { SearchComponent } from './search/search.component';
 import { InfoComponent } from './info/info.component';
 import { ApiComponent } from './api/api.component';
+import { GoogleLoginComponent } from './login/google-login/google-login.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ApiComponent } from './api/api.component';
     LoginComponent,
     SearchComponent,
     InfoComponent,
-    ApiComponent
+    ApiComponent,
+    GoogleLoginComponent
   ],
   imports: [
     BrowserModule,

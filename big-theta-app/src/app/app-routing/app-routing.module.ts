@@ -9,32 +9,31 @@ import { SearchComponent } from '../search/search.component';
 import { InfoComponent } from '../info/info.component';
 import { ApiComponent } from '../api/api.component';
 
+import { UserService } from '../services/user.service';
+import { AuthService } from '../services/auth.service';
+
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    children: [
-      {
-        path: '',
-        component: SearchComponent,
-        pathMatch: 'full'
-      },
-      {
-        path: 'info',
-        component: InfoComponent,
-        pathMatch: 'full'
-      },
-      {
-        path: 'api',
-        component: ApiComponent,
-        pathMatch: 'full'
-      }
-    ]
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: SearchComponent
   },
   {
     path: 'login',
     component: LoginComponent
   },
+  {
+    path: 'info',
+    component: InfoComponent
+  },
+  {
+    path: 'api',
+    component: ApiComponent
+  }
 ];
 
 @NgModule({
@@ -44,7 +43,10 @@ const routes: Routes = [
     RouterModule.forRoot(routes)
   ],
   declarations: [],
-  providers: [],
+  providers: [
+    UserService,
+    AuthService
+  ],
   exports: [
     RouterModule
   ]
