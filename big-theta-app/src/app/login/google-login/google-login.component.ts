@@ -13,29 +13,24 @@ export class GoogleLoginComponent implements AfterViewInit {
   private clientId:string ='363247795181-teko9e6qg8sih971tkl1b68smonb1j79.apps.googleusercontent.com';
   private scope = [
     'profile',
-    'email',
-    'https://www.googleapis.com/auth/plus.me',
-    'https://www.googleapis.com/auth/contacts.readonly',
-    'https://www.googleapis.com/auth/admin.directory.user.readonly'
+    'email'
   ].join(' ');
   
   public auth2: any;
   public googleInit() {
-    let that = this;
-    gapi.load('auth2', function () {
-      that.auth2 = gapi.auth2.init({
-        client_id: that.clientId,
+    gapi.load('auth2', () => {
+      this.auth2 = gapi.auth2.init({
+        client_id: this.clientId,
         cookiepolicy: 'single_host_origin',
-        scope: that.scope
+        scope: this.scope
       });
-      that.attachSignin(that.element.nativeElement.firstChild);
+      this.attachSignin(this.element.nativeElement.firstChild);
     });
   }
   
   public attachSignin(element) {
-    let that = this;
     this.auth2.attachClickHandler(element, {},
-      function (googleUser) {
+      googleUser => {
 
         let profile = googleUser.getBasicProfile();
 
@@ -46,10 +41,10 @@ export class GoogleLoginComponent implements AfterViewInit {
         userCredentials.image = profile.getImageUrl();
         userCredentials.email = profile.getEmail();
 
-        that._userService.setUser(JSON.stringify(userCredentials));
-        that.router.navigateByUrl('/home');
+        this._userService.setUser(JSON.stringify(userCredentials));
+        this.router.navigateByUrl('/home');
 
-      }, function (error) {
+      }, error => {
         console.log(JSON.stringify(error, undefined, 2));
       });
   }
