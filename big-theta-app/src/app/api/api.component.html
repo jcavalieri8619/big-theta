@@ -1,45 +1,36 @@
 <app-home></app-home>
 <div class="content-container container-fluid">
     <div style="margin-top: 20px;">
-        <h3>Big Theta API</h3>
-        <div>The Big Theta API is hosted on AWS. The base url is
-            <a href="https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/">https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/</a>. All endpoints are relative to this path</div>
-
-        <div class="api-endpoint-block">
-            <div class="api-method">GET /equationtree</div>
-            <div class="api-method-description">
-                Params:
-                <ul>
-                    <li>equation (required): Root equation to search for</li>
-                    <li>format (required): Format of equation either ascii or latex</li>
-                </ul>
-                Returns: A tree of related equations with the searched for equation at the root
+      <h2>Big Theta API</h2>
+      <p>The Big Theta API is hosted on AWS. The base url is
+        <a href="https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/">https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/</a>. All endpoints are relative to this path</p>
+      
+      <div class="card bg-light mb-3 api-endpoint-card" *ngFor="let endpoint of endpoints">
+          <h4 class="card-header">{{endpoint.name}}</h4>
+          <div class="card-body" *ngFor="let method of endpoint.methods">
+            <h5 class="card-title">{{method.type}}</h5>
+            <h6 class="card-subtitle mb-2">{{method.description}}</h6>
+            <div class="card-text" *ngIf="method.urlParameters.length > 0">
+              <div>URL Parameters:</div>
+              <ul>
+                <li *ngFor="let param of method.urlParameters">{{param.name}} {{param.required ? "(required)" : "(optional)"}}: {{param.description}}</li>
+              </ul>
             </div>
-        </div>
-
-        <div class="api-endpoint-block">
-            <div class="api-method">GET /equations</div>
-            <div class="api-method-description">
-                Params:
+            <div class="card-text" *ngIf="method.bodyParameters.length > 0">
+                <div>Body Parameters:</div>
                 <ul>
-                    <li>topic (optional): Topic of the equations to retrieve</li>
+                  <li *ngFor="let param of method.bodyParameters">{{param.name}} {{param.required ? "(required)" : "(optional)"}}: {{param.description}}</li>
                 </ul>
-                Returns: A list of all equations in the database filtered by topic if requested
+              </div>
+            <div class="card-text">
+              <div>Example Request:</div>
+              <code>{{method.exampleRequest(endpoint.name)}}</code>
             </div>
-        </div>
-
-        <div class="api-endpoint-block">
-            <div class="api-method">POST /equations</div>
-            <div class="api-method-description">
-                Body:
-                <ul>
-                    <li>equation (required): Equation to add</li>
-                    <li>topic (required): Topic of the equation</li>
-                    <li>format (required): Format of equation either ascii or latex</li>
-                </ul>
-                Returns: The equation itself if addition is successful
+            <div class="card-text">
+              <div>Example Response:</div>
+              <pre><code>{{method.exampleResponse}}</code></pre>
             </div>
-        </div>
-
+          </div>
+      </div>
     </div>
 </div>
