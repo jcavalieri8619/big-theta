@@ -21,7 +21,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".container-fluid {\n    padding-top: 10px;\n}\n\n.api-endpoint-card .card-body:not(:first-of-type) {\n    border-top: 1px solid rgba(0, 0, 0, 0.125);\n}\n\n.api-endpoint-card .card-text {\n    margin-bottom: 1em;\n}\n\n.api-endpoint-card .card-text pre {\n    margin-top: 5px;\n}\n\n.api-endpoint-card .card-text > code {\n    margin-left: 15px;\n}", ""]);
+exports.push([module.i, ".container-fluid {\r\n    padding-top: 10px;\r\n}\r\n\r\n.api-endpoint-card .card-body:not(:first-of-type) {\r\n    border-top: 1px solid rgba(0, 0, 0, 0.125);\r\n}\r\n\r\n.api-endpoint-card .card-text {\r\n    margin-bottom: 1em;\r\n}\r\n\r\n.api-endpoint-card .card-text pre {\r\n    margin-top: 5px;\r\n}\r\n\r\n.api-endpoint-card .card-text > code {\r\n    margin-left: 15px;\r\n}", ""]);
 
 // exports
 
@@ -34,7 +34,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/api/api.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home></app-home>\n<div class=\"content-container container-fluid\">\n    <div style=\"margin-top: 20px;\">\n      <h2>Big Theta API</h2>\n      <p>The Big Theta API is hosted on AWS. The base url is\n        <a href=\"https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/\">https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/</a>. All endpoints are relative to this path</p>\n      \n      <div class=\"card bg-light mb-3 api-endpoint-card\" *ngFor=\"let endpoint of endpoints\">\n          <h4 class=\"card-header\">{{endpoint.name}}</h4>\n          <div class=\"card-body\" *ngFor=\"let method of endpoint.methods\">\n            <h5 class=\"card-title\">{{method.type}}</h5>\n            <h6 class=\"card-subtitle mb-2\">{{method.description}}</h6>\n            <div class=\"card-text\" *ngIf=\"method.urlParameters.length > 0\">\n              <div>URL Parameters:</div>\n              <ul>\n                <li *ngFor=\"let param of method.urlParameters\">{{param.name}} {{param.required ? \"(required)\" : \"(optional)\"}}: {{param.description}}</li>\n              </ul>\n            </div>\n            <div class=\"card-text\" *ngIf=\"method.bodyParameters.length > 0\">\n                <div>Body Parameters:</div>\n                <ul>\n                  <li *ngFor=\"let param of method.bodyParameters\">{{param.name}} {{param.required ? \"(required)\" : \"(optional)\"}}: {{param.description}}</li>\n                </ul>\n              </div>\n            <div class=\"card-text\">\n              <div>Example Request:</div>\n              <code>{{method.exampleRequest(endpoint.name)}}</code>\n            </div>\n            <div class=\"card-text\">\n              <div>Example Response:</div>\n              <pre><code>{{method.exampleResponse}}</code></pre>\n            </div>\n          </div>\n      </div>\n    </div>\n</div>\n"
+module.exports = "<app-home></app-home>\r\n<div class=\"content-container container-fluid\">\r\n    <div style=\"margin-top: 20px;\">\r\n      <h2>Big Theta API</h2>\r\n      <p>The Big Theta API is hosted on AWS. The base url is\r\n        <a href=\"https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/\">https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/</a>. All endpoints are relative to this path</p>\r\n      \r\n      <div class=\"card bg-light mb-3 api-endpoint-card\" *ngFor=\"let endpoint of endpoints\">\r\n          <h4 class=\"card-header\">{{endpoint.name}}</h4>\r\n          <div class=\"card-body\" *ngFor=\"let method of endpoint.methods\">\r\n            <h5 class=\"card-title\">{{method.type}}</h5>\r\n            <h6 class=\"card-subtitle mb-2\">{{method.description}}</h6>\r\n            <div class=\"card-text\" *ngIf=\"method.urlParameters.length > 0\">\r\n              <div>URL Parameters:</div>\r\n              <ul>\r\n                <li *ngFor=\"let param of method.urlParameters\">{{param.name}} {{param.required ? \"(required)\" : \"(optional)\"}}: {{param.description}}</li>\r\n              </ul>\r\n            </div>\r\n            <div class=\"card-text\" *ngIf=\"method.bodyParameters.length > 0\">\r\n                <div>Body Parameters:</div>\r\n                <ul>\r\n                  <li *ngFor=\"let param of method.bodyParameters\">{{param.name}} {{param.required ? \"(required)\" : \"(optional)\"}}: {{param.description}}</li>\r\n                </ul>\r\n              </div>\r\n            <div class=\"card-text\">\r\n              <div>Example Request:</div>\r\n              <code>{{method.exampleRequest(endpoint.name)}}</code>\r\n            </div>\r\n            <div class=\"card-text\">\r\n              <div>Example Response:</div>\r\n              <pre><code>{{method.exampleResponse}}</code></pre>\r\n            </div>\r\n          </div>\r\n      </div>\r\n    </div>\r\n</div>\r\n"
 
 /***/ }),
 
@@ -377,7 +377,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#welcomeMessage {\n    margin: 1em;\n}\n\n.container-fluid {\n    padding-top: 10px;\n}\n\n.navbar-nav {\n    width: 100%;\n}\n\n.btn {\n    cursor: pointer;    \n}\n\n.user-name-div {\n    padding-top: 5px;\n    padding-right: 10px;\n    color: #ffffff;\n}\n\n.logout-div {\n    width: 65%;\n    margin-right: 5px;\n}", ""]);
+exports.push([module.i, "#welcomeMessage {\r\n    margin: 1em;\r\n}\r\n\r\n.container-fluid {\r\n    padding-top: 10px;\r\n}\r\n\r\n.navbar-nav {\r\n    width: 100%;\r\n}\r\n\r\n.btn {\r\n    cursor: pointer;    \r\n}\r\n\r\n.user-name-div {\r\n    padding-top: 5px;\r\n    padding-right: 10px;\r\n    color: #ffffff;\r\n}\r\n\r\n.logout-div {\r\n    width: 65%;\r\n    margin-right: 5px;\r\n}", ""]);
 
 // exports
 
@@ -390,7 +390,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"#\">\n        <img src=\"../assets/images/theta_logo.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\"> Big Theta\n    </a>\n    <div class=\"navbar-nav\">\n        <a routerLink=\"/home\" routerLinkActive=\"active\" class=\"nav-item nav-link\">Home</a>\n        <a routerLink=\"/info\" routerLinkActive=\"active\" class=\"nav-item nav-link\">About</a>\n        <a routerLink=\"/api\" routerLinkActive=\"active\" class=\"nav-item nav-link\">API</a>\n    </div>\n    <div class=\"pull-right logout-div\">\n        <button class=\"btn btn-sm btn-danger pull-right\" (click)=\"logout()\">Logout</button>\n        <span class=\"pull-right user-name-div\">Welcome {{ appUser.name }}</span>\n    </div>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-expand navbar-dark bg-dark\">\r\n    <a class=\"navbar-brand\" href=\"#\">\r\n        <img src=\"../assets/images/theta_logo.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\"> Big Theta\r\n    </a>\r\n    <div class=\"navbar-nav\">\r\n        <a routerLink=\"/home\" routerLinkActive=\"active\" class=\"nav-item nav-link\">Home</a>\r\n        <a routerLink=\"/info\" routerLinkActive=\"active\" class=\"nav-item nav-link\">About</a>\r\n        <a routerLink=\"/api\" routerLinkActive=\"active\" class=\"nav-item nav-link\">API</a>\r\n    </div>\r\n    <div class=\"pull-right logout-div\">\r\n        <button class=\"btn btn-sm btn-danger pull-right\" (click)=\"logout()\">Logout</button>\r\n        <span class=\"pull-right user-name-div\">Welcome {{ appUser.name }}</span>\r\n    </div>\r\n</nav>"
 
 /***/ }),
 
@@ -453,7 +453,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".container-fluid {\n    padding-top: 10px;\n}", ""]);
+exports.push([module.i, ".container-fluid {\r\n    padding-top: 10px;\r\n}", ""]);
 
 // exports
 
@@ -466,7 +466,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/info/info.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home></app-home>\n<div class=\"content-container container-fluid\">\n    <div id=\"welcomeMessage\">\n        Welcome to Big Theta! This project allows you to enter an equation and find related equations. Equations are gathered from\n        Wikipedia. Enter an equation below to try it out!\n    </div>\n</div>"
+module.exports = "<app-home></app-home>\r\n<div class=\"content-container container-fluid\">\r\n    <div id=\"welcomeMessage\">\r\n        Welcome to Big Theta! This project allows you to enter an equation and find related equations. Equations are gathered from\r\n        Wikipedia. Enter an equation below to try it out!\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -514,7 +514,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".social-login-btn {\n    margin: 5px;\n    width: 100%;\n    font-size: 200%;\n    padding: 0;\n    cursor: pointer;\n}\n\n.social-google {\n    background-color: #da573b;\n    border-color: #be5238;\n}\n\n.social-google:hover{\n    background-color: #be5238;\n    border-color: #9b4631;\n}", ""]);
+exports.push([module.i, ".social-login-btn {\r\n    margin: 5px;\r\n    width: 100%;\r\n    font-size: 200%;\r\n    padding: 0;\r\n    cursor: pointer;\r\n}\r\n\r\n.social-google {\r\n    background-color: #da573b;\r\n    border-color: #be5238;\r\n}\r\n\r\n.social-google:hover{\r\n    background-color: #be5238;\r\n    border-color: #9b4631;\r\n}", ""]);
 
 // exports
 
@@ -527,7 +527,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/google-login/google-login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<span id=\"googleBtn\" class=\"btn btn-primary social-login-btn social-google\">\n  <i class=\"fa fa-google-plus\"></i> Sign in with Google\n</span>"
+module.exports = "<span id=\"googleBtn\" class=\"btn btn-primary social-login-btn social-google\">\r\n  <i class=\"fa fa-google-plus\"></i> Sign in with Google\r\n</span>"
 
 /***/ }),
 
@@ -617,7 +617,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".container {\n    padding-top: 5%;\n    width: 100%;\n    height: 760px;\n    overflow-y: scroll;\n    background-image: url('http://www.mocaxintelligence.com/wp-content/uploads/2015/02/maths_468250833_20percent.jpg');\n    background-size: 100%;\n}\n\n.form-signin{\n  max-width: 500px;\n  padding: 15px;\n  margin: 0 auto;\n}\n\n.form-signin-heading {\n    color: #fff;\n}\n\n.text-white {\n    color: #fff;\n}\n\n.login-input {\n  margin-bottom: -1px;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n}\n.login-input-pass {\n  margin-bottom: 10px;\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n}\n\n\n.signup-input {\n  margin-bottom: -1px;\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0;\n}\n\n.signup-input-confirm {\n  margin-bottom: 10px;\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n}\n\n.form-signin .form-control {\n  position: relative;\n  font-size: 16px;\n  height: auto;\n  padding: 10px;\n  box-sizing: border-box;\n}\n\n.btn-center{\n  padding-left: 25%;\n  text-align: center;\n  margin: inherit;\n}\n\n.social-login-btn {\n  margin: 5px;\n  width: 100%;\n  font-size: 200%;\n  padding: 0;\n}\n\n.social-login-more {\n  width: 45%;\n}\n\n.social-google {\n  background-color: #da573b;\n  border-color: #be5238;\n}\n\n.social-google:hover{\n  background-color: #be5238;\n  border-color: #9b4631;\n}", ""]);
+exports.push([module.i, ".container {\r\n    padding-top: 5%;\r\n    width: 100%;\r\n    height: 760px;\r\n    overflow-y: scroll;\r\n    background-image: url('http://www.mocaxintelligence.com/wp-content/uploads/2015/02/maths_468250833_20percent.jpg');\r\n    background-size: 100%;\r\n}\r\n\r\n.form-signin{\r\n  max-width: 500px;\r\n  padding: 15px;\r\n  margin: 0 auto;\r\n}\r\n\r\n.form-signin-heading {\r\n    color: #fff;\r\n}\r\n\r\n.text-white {\r\n    color: #fff;\r\n}\r\n\r\n.login-input {\r\n  margin-bottom: -1px;\r\n  border-bottom-left-radius: 0;\r\n  border-bottom-right-radius: 0;\r\n}\r\n.login-input-pass {\r\n  margin-bottom: 10px;\r\n  border-top-left-radius: 0;\r\n  border-top-right-radius: 0;\r\n}\r\n\r\n\r\n.signup-input {\r\n  margin-bottom: -1px;\r\n  border-bottom-left-radius: 0;\r\n  border-bottom-right-radius: 0;\r\n}\r\n\r\n.signup-input-confirm {\r\n  margin-bottom: 10px;\r\n  border-top-left-radius: 0;\r\n  border-top-right-radius: 0;\r\n}\r\n\r\n.form-signin .form-control {\r\n  position: relative;\r\n  font-size: 16px;\r\n  height: auto;\r\n  padding: 10px;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.btn-center{\r\n  padding-left: 25%;\r\n  text-align: center;\r\n  margin: inherit;\r\n}\r\n\r\n.social-login-btn {\r\n  margin: 5px;\r\n  width: 100%;\r\n  font-size: 200%;\r\n  padding: 0;\r\n}\r\n\r\n.social-login-more {\r\n  width: 45%;\r\n}\r\n\r\n.social-google {\r\n  background-color: #da573b;\r\n  border-color: #be5238;\r\n}\r\n\r\n.social-google:hover{\r\n  background-color: #be5238;\r\n  border-color: #9b4631;\r\n}", ""]);
 
 // exports
 
@@ -630,7 +630,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/login/login.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container col-lg-12 col-md-12 col-sm-12 col-xs-12\">\n\n    <div class=\"text-center col-lg-12\">\n        <form class=\"form-signin\">\n            <h1 class=\"form-signin-heading\">Welcome to BigTheta</h1>\n            <p>\n                <app-google-login></app-google-login>\n            </p>\n\n            <small class=\"text-white\">Or sign in with BigTheta service</small>\n            <br>\n            <br>\n\n            <input class=\"form-control login-input\" placeholder=\"Email Address\" type=\"text\">\n            <input class=\"form-control login-input-pass\" placeholder=\"Password\" type=\"password\">\n\n            <div class=\"form-inline btn-center\">\n                <button class=\"btn btn-lg btn-primary btn-block col-md-4\" type=\"submit\">Sign in</button>\n                <button class=\"btn btn-lg btn-info col-md-4\" style=\"margin-left:5px\" type=\"submit\">Sign Up</button>\n            </div>\n        </form>\n    </div>\n</div>"
+module.exports = "<div class=\"container col-lg-12 col-md-12 col-sm-12 col-xs-12\">\r\n\r\n    <div class=\"text-center col-lg-12\">\r\n        <form class=\"form-signin\">\r\n            <h1 class=\"form-signin-heading\">Welcome to BigTheta</h1>\r\n            <p>\r\n                <app-google-login></app-google-login>\r\n            </p>\r\n\r\n            <small class=\"text-white\">Or sign in with BigTheta service</small>\r\n            <br>\r\n            <br>\r\n\r\n            <input class=\"form-control login-input\" placeholder=\"Email Address\" type=\"text\">\r\n            <input class=\"form-control login-input-pass\" placeholder=\"Password\" type=\"password\">\r\n\r\n            <div class=\"form-inline btn-center\">\r\n                <button class=\"btn btn-lg btn-primary btn-block col-md-4\" type=\"submit\">Sign in</button>\r\n                <button class=\"btn btn-lg btn-info col-md-4\" style=\"margin-left:5px\" type=\"submit\">Sign Up</button>\r\n            </div>\r\n        </form>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -676,7 +676,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".container-fluid {\n    padding-top: 10px;\n}", ""]);
+exports.push([module.i, ".container-fluid {\r\n    padding-top: 10px;\r\n}", ""]);
 
 // exports
 
@@ -689,7 +689,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/search/search.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home></app-home>\n<div class=\"content-container container-fluid\">\n  <div class=\"form-group\">\n    <input class=\"form-control\" [(ngModel)]=\"equationSearched\" type=\"text\" placeholder=\"Enter an equation\">\n  </div>\n  <div *ngIf=\"equationSearched\">\n    You entered {{equationSearched}}\n  </div>\n</div>"
+module.exports = "<app-home></app-home>\r\n<div class=\"content-container container-fluid\">\r\n  <div class=\"form-group\">\r\n    <input class=\"form-control\" [(ngModel)]=\"equationSearched\" type=\"text\" placeholder=\"Enter an equation\">\r\n  </div>\r\n  <div *ngIf=\"equationSearched\">\r\n    You entered {{equationSearched}}\r\n  </div>\r\n</div>"
 
 /***/ }),
 
