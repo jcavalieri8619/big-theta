@@ -1,6 +1,6 @@
 import re
 
-start_url_dict = { 'portals': ['https://en.wikipedia.org/wiki/Portal:Science/Categories_and_Main_topics',
+start_url_dict = {'portals': ['https://en.wikipedia.org/wiki/Portal:Science/Categories_and_Main_topics',
                               'https://en.wikipedia.org/wiki/Portal:Computer_science', ],
                   'wikiprojects': [
                       'https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Mathematics/List_of_mathematics_articles_(0%E2%80%939)',
@@ -72,6 +72,5 @@ global_deny = [
     r"https://en[.]wikipedia[.]org/wiki/wikipedia_talk.*",
     r"https://en[.]wikipedia[.]org/wiki/User:.*",
     "https://en[.]wikipedia[.]org/wiki/Template:.*",
-
 
 ]
