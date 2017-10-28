@@ -13,7 +13,7 @@ class WikiEquationSpider(scrapy.Spider):
     def start_requests(self):
         for pageType, urlList in URLs.start_url_dict.items():
             for url in urlList:
-                yield scrapy.Request(url=url,
+                yield scrapy.Request(url=url, meta={'url-from': self.allowed_domains[0]},
                                      callback=getattr(self, f'parse_{pageType}'))
 
     def parser_dispatch(self, response):
@@ -27,11 +27,13 @@ class WikiEquationSpider(scrapy.Spider):
         for article_link in LinkExtractor(allow=r'https://en[.]wikipedia[.]org/wiki/',
                                           deny=URLs.global_deny,
                                           unique=True).extract_links(response):
-            yield scrapy.Request(url=article_link.url, callback=self.parse_articles)
+            yield scrapy.Request(url=article_link.url, meta={'url-from': response.url},
+                                 callback=self.parse_articles)
 
         for category_link in LinkExtractor(allow=r'https://en[.]wikipedia[.]org/wiki/Category:.*',
                                            deny=URLs.global_deny, ).extract_links(response):
-            request = scrapy.Request(url=category_link.url, callback=self.parse_categories)
+            request = scrapy.Request(url=category_link.url, meta={'url-from': response.url},
+                                     callback=self.parse_categories)
             request.meta['category_depth'] = 0
             yield request
 
@@ -39,7 +41,8 @@ class WikiEquationSpider(scrapy.Spider):
 
         for article_link in LinkExtractor(allow=r'https://en[.]wikipedia[.]org/wiki/',
                                           deny=URLs.global_deny).extract_links(response):
-            yield scrapy.Request(url=article_link.url, callback=self.parse_articles)
+            yield scrapy.Request(url=article_link.url, meta={'url-from': response.url},
+                                 callback=self.parse_articles)
 
     def parse_articles(self, response):
 
@@ -82,7 +85,8 @@ class WikiEquationSpider(scrapy.Spider):
         for article_link in LinkExtractor(allow=r'https://en[.]wikipedia[.]org/wiki/',
                                           deny=URLs.global_deny).extract_links(response):
 
-            request = scrapy.Request(url=article_link.url, callback=self.parse_articles)
+            request = scrapy.Request(url=article_link.url, meta={'url-from': response.url},
+                                     callback=self.parse_articles)
 
             # if current page contains no equations then hold onto curr_item from
             # most recent page that did contain equations.
@@ -110,16 +114,18 @@ class WikiEquationSpider(scrapy.Spider):
 
         for article_link in LinkExtractor(allow=r'https://en[.]wikipedia[.]org/wiki/',
                                           deny=URLs.global_deny).extract_links(response):
-            yield scrapy.Request(url=article_link.url, callback=self.parse_articles)
+            yield scrapy.Request(url=article_link.url, meta={'url-from': response.url},
+                                 callback=self.parse_articles)
 
         for category_link in LinkExtractor(allow=r'https://en[.]wikipedia[.]org/wiki/Category:.*',
                                            deny=URLs.global_deny, ).extract_links(response):
 
             if response.meta['category_depth'] > self.settings.getint('WIKI_CATEGORY_DEPTH'):
                 self.log(f'maximum category depth reached on {response.url}')
-                # break
+                pass
 
             # else:
-            request = scrapy.Request(url=category_link.url, callback=self.parse_categories)
+            request = scrapy.Request(url=category_link.url, meta={'url-from': response.url},
+                                     callback=self.parse_categories)
             request.meta['category_depth'] += 1
             yield request
