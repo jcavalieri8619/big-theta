@@ -38,9 +38,9 @@ CONCURRENT_REQUESTS = 60
 # Disable cookies (enabled by default)
 # COOKIES_ENABLED = False
 
-DEPTH_LIMIT = 133
+DEPTH_LIMIT = 41
 # Configure maximum number of successive category links to follow
-WIKI_CATEGORY_DEPTH = 33
+WIKI_CATEGORY_DEPTH = DEPTH_LIMIT
 
 # Export JSON item feed during crawl
 EXPORT_JSON = False
@@ -77,6 +77,9 @@ EXPORT_JSON = False
 ITEM_PIPELINES = {
     'EquationScraper.pipelines.EquationscraperPipeline': 300,
 }
+DUPEFILTER_CLASS = 'EquationScraper.DuplicateLinkFilter.LinkFilter'
+
+DUPEFILTER_DEBUG = True
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See http://doc.scrapy.org/en/latest/topics/autothrottle.html
