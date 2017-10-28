@@ -4,7 +4,7 @@ with open('EquationScraper/latex/equality_commands.txt', 'r') as __f:
     for __line in __f:
         __equality_command_list.append(__line.rstrip())
 
-__MIN_SYMBOLS = 9
+__MIN_SYMBOLS = 16
 
 
 def equality_commands():
