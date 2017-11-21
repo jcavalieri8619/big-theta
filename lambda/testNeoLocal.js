@@ -9,22 +9,41 @@ process.env["neo4jPassword"] = "big-theta-team";
 const driver = neo4j.driver(`bolt://${process.env["neo4jBoltIp"]}/`, neo4j.auth.basic(process.env["neo4jUser"], process.env["neo4jPassword"]));
 const session = driver.session();
 
-let searchTerm = "distribution".toLowerCase();
+let eventsubjectid = "4";
+// let subjectid;
+
+// try {
+//   subjectid = neo4j.int(eventsubjectid);
+// } catch (exception) {
+//   done({message: "Subject ID is invalid"}, null);
+//   return;
+// }
+
+if (!eventsubjectid.match(/\d+/)) {
+  // done({message: "Subject ID is invalid"}, null);
+  console.log("Invalid subject id");
+  return;
+}
+
+let subjectid = neo4j.int(eventsubjectid);
 
 const resultPromise = session.writeTransaction(tx => tx.run(
-  'MATCH (subject:SUBJECT) WHERE (toLower(subject.name) contains {searchTerm} or toLower(subject.title) contains {searchTerm}) and subject.pagerank is not null return subject order by subject.pagerank desc limit 10', {searchTerm: searchTerm}));
+  'MATCH (subject:SUBJECT)-[r:SAME_PAGE_AS]->(eq:EQUATION) \
+  WHERE ID(subject) = {subjectid} \
+  RETURN eq LIMIT 20', {subjectid: subjectid}));
 
 resultPromise.then(result => {
   session.close();
+  let equations = [];
   result.records.forEach(rec => {
-    let subj = rec.get("subject");
-    let returnSubj = {
-      id: subj.identity.toString(),
-      title: subj.properties.title.trim(),
-      url: subj.properties.url
+    let eq = rec.get("eq");
+    let returnEq = {
+      id: eq.identity.toString(),
+      name: eq.properties.name.trim(),
+      equation: eq.properties.equation
     };
-
-    console.log(JSON.stringify(returnSubj, null, 2));
+    equations.push(returnEq);
   });
   driver.close();
+  console.log(JSON.stringify(equations, null, 2));
 });
