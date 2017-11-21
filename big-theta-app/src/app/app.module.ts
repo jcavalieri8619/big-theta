@@ -10,6 +10,10 @@ import { SearchComponent } from './search/search.component';
 import { InfoComponent } from './info/info.component';
 import { ApiComponent } from './api/api.component';
 import { GoogleLoginComponent } from './login/google-login/google-login.component';
+import { MathElementComponent } from './math-element/math-element.component';
+import { MathListComponent } from './math-list/math-list.component';
+import { EquationRankComponent } from './equation-rank/equation-rank.component';
+import { EquationSubjectComponent } from './equation-subject/equation-subject.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { GoogleLoginComponent } from './login/google-login/google-login.componen
     SearchComponent,
     InfoComponent,
     ApiComponent,
-    GoogleLoginComponent
+    GoogleLoginComponent,
+    MathElementComponent,
+    MathListComponent,
+    EquationRankComponent,
+    EquationSubjectComponent,
   ],
   imports: [
     BrowserModule,
