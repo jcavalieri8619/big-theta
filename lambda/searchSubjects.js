@@ -1,6 +1,6 @@
 /*
 
-AWS Lambda function to test neo4j.
+AWS Lambda function to search the graph for subjects. Corresponds to /subject/search/{searchterm}
 
 Add the following environment variables to your Lambda function:
   neo4jBoltIp: The accessibile IP address of your bolt instance
@@ -13,13 +13,24 @@ const neo4j = require('neo4j-driver').v1;
 
 
 exports.handler = (event, context, callback) => {
+  const done = (err, res) => callback(null, {
+    statusCode: err ? '400' : '200',
+    body: err ? JSON.stringify({ message: err.message }) : JSON.stringify(res),
+    headers: {
+        'Content-Type': 'application/json',
+    },
+  });
+
   const driver = neo4j.driver(`bolt://${process.env["neo4jBoltIp"]}/`, neo4j.auth.basic(process.env["neo4jUser"], process.env["neo4jPassword"]));
   const session = driver.session();
 
-  let searchTerm = "distribution".toLowerCase();
+  let searchTerm = event.pathParameters.searchterm.toLowerCase();
   
   const resultPromise = session.writeTransaction(tx => tx.run(
-    'MATCH (subject:SUBJECT) WHERE (toLower(subject.name) contains {searchTerm} or toLower(subject.title) contains {searchTerm}) and subject.pagerank is not null return subject order by subject.pagerank desc limit 10', {searchTerm: searchTerm}));
+    'MATCH (subject:SUBJECT) \
+    WHERE (toLower(subject.name) CONTAINS {searchTerm} OR toLower(subject.title) CONTAINS {searchTerm}) \
+    AND subject.pagerank IS NOT NULL RETURN subject \
+    ORDER BY subject.pagerank DESC LIMIT 10', {searchTerm: searchTerm}));
   
   resultPromise.then(result => {
     session.close();
@@ -35,12 +46,6 @@ exports.handler = (event, context, callback) => {
     });
     driver.close();
 
-    callback(null, {
-      statusCode: "200",
-      body: subjects,
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
+    done(null, subjects);
   });
 };
