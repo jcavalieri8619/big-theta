@@ -14,30 +14,30 @@ const neo4j = require('neo4j-driver').v1;
 
 exports.handler = (event, context, callback) => {
   const driver = neo4j.driver(`bolt://${process.env["neo4jBoltIp"]}/`, neo4j.auth.basic(process.env["neo4jUser"], process.env["neo4jPassword"]));
-  console.log("connected driver");
   const session = driver.session();
-  console.log("connected session");
+
+  let searchTerm = "distribution".toLowerCase();
   
   const resultPromise = session.writeTransaction(tx => tx.run(
-    'MATCH (tom:Person {name: "Tom Hanks"})-[:ACTED_IN]->(tomHanksMovies) RETURN tom,tomHanksMovies'));
+    'MATCH (subject:SUBJECT) WHERE (toLower(subject.name) contains {searchTerm} or toLower(subject.title) contains {searchTerm}) and subject.pagerank is not null return subject order by subject.pagerank desc limit 10', {searchTerm: searchTerm}));
   
   resultPromise.then(result => {
     session.close();
-    // result.records.forEach(rec => {
-    //   console.log(JSON.stringify(rec));
-    // });
-  
-    // const singleRecord = result.records[0];
-    // const greeting = singleRecord.get(0);
-  
-    // console.log(greeting);
-  
-    // on application exit:
+    let subjects = [];
+    result.records.forEach(rec => {
+      let subj = rec.get("subject");
+      let returnSubj = {
+        id: subj.identity.toString(),
+        title: subj.properties.title.trim(),
+        url: subj.properties.url
+      };
+      subjects.push(returnSubj);
+    });
     driver.close();
 
     callback(null, {
       statusCode: "200",
-      body: result.records,
+      body: subjects,
       headers: {
         'Content-Type': 'application/json'
       }
