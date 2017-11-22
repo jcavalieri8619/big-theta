@@ -1,8 +1,8 @@
 
 
-<div class="container">
-<ul class="list-group pre-scrollable">
-<li *ngFor="let eqn of equationList"  class="list-group-item">
+<div >
+<ul>
+<li *ngFor="let eqn of equationList"  >
 
 <app-math-element [latexEquation]="eqn" (OnClick)="emitLatexEquation($event)"></app-math-element>
 

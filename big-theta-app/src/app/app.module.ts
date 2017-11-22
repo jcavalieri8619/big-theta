@@ -14,6 +14,8 @@ import { MathElementComponent } from './math-element/math-element.component';
 import { MathListComponent } from './math-list/math-list.component';
 import { EquationRankComponent } from './equation-rank/equation-rank.component';
 import { EquationSubjectComponent } from './equation-subject/equation-subject.component';
+import {HttpClientModule} from '@angular/common/http';
+import {MathDatabaseService} from './services/math-database/math-database.service';
 
 @NgModule({
   declarations: [
@@ -32,9 +34,10 @@ import { EquationSubjectComponent } from './equation-subject/equation-subject.co
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [MathDatabaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
