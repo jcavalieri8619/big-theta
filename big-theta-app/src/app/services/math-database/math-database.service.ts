@@ -18,36 +18,36 @@ const httpOptions = {
 @Injectable()
 export class MathDatabaseService {
 
-  private latexEquationsUrl = 'api/latexEquations';  // URL to web api
-
-  private equation_prop = 'equation';
-  private id_prop = 'id';
+  private databaseURL = 'https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/';  // URL to web api
 
 
   constructor( private http: HttpClient ) {
 
   }
 
-  getLatexEquationsByRank(): Observable<LatexEquation[]> {
+  fetchRankedEquations(): Observable<LatexEquation[]> {
 
-    this.log( `LatexEquationService: fetched LatexEquation by rank` );
-    const url = `${this.latexEquationsUrl}/?rank=true`;
+    this.log( `fetching LatexEquation by rank` );
+
+    const url = `${this.databaseURL}/?rank=true`;
 
     return this.http.get<LatexEquation[]>( url )
-      .pipe( tap( latexEquation => this.log( 'fetched LatexEquations' + latexEquation ) ),
-        catchError( this.handleError( 'getLatexEquationes', [] ) ) );
+      .pipe( tap( latexEquations => this.log( 'fetched ranked equations:\n' + latexEquations ) ),
+        catchError( this.handleError( 'fetchRankedEquations', [] ) ) );
   }
 
-  getLatexEquationsBySubject( subject: string ): Observable<LatexEquation[]> {
-    const url = `${this.latexEquationsUrl}/?subject=${subject}`;
-    this.log( 'LatexEquationService: feteched LatexEquations' );
+  fetchSubjectEquations( subject_id: number ): Observable<LatexEquation[]> {
+
+    this.log( 'fetching LatexEquations by subject id' );
+
+    const url = `${this.databaseURL}/equations/subject/${subject_id}`;
 
     // .concatAll()
     // .map(res => new LatexEquation( res[ this.equation_prop ], res[ this.id_prop ] ))
 
     return this.http.get<LatexEquation[]>( url )
-      .pipe( tap( latexEquation => this.log( 'fetched LatexEquations' + latexEquation ) ),
-        catchError( this.handleError( 'getLatexEquationes', [] ) ) );
+      .pipe( tap( latexEquations => this.log( 'fetched equations by subject:\n' + latexEquations ) ),
+        catchError( this.handleError( 'fetchSubjectEquations', [] ) ) );
 
   }
 
@@ -58,7 +58,7 @@ export class MathDatabaseService {
       // if not search term, return empty LatexEquation array.
       return of( [] );
     }
-    return this.http.get<LatexEquation[]>( `api/latexEquations/?equation=${term}` ).pipe(
+    return this.http.get<LatexEquation[]>( this.databaseURL ).pipe(
       tap( _ => this.log( `found LatexEquationes matching "${term}"` ) ),
       catchError( this.handleError<LatexEquation[]>( 'searchLatexEquations', [] ) )
     );
@@ -66,7 +66,7 @@ export class MathDatabaseService {
 
 
   private log( message: string ) {
-    console.log( 'LatexEquationService: ' + message );
+    console.log( 'MathDatabaseService: ' + message );
   }
 
 

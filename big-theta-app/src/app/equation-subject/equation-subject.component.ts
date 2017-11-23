@@ -15,7 +15,7 @@ export class EquationSubjectComponent implements OnInit {
   constructor(private apiConnection: MathDatabaseService) { }
 
   ngOnInit() {
-    this.apiConnection.getLatexEquationsBySubject(this.subject).subscribe(eqns => this.equations = eqns);
+    this.apiConnection.fetchSubjectEquations(this.subject).subscribe( eqns => this.equations = eqns);
     console.log( 'EquationRankComponent: fetched equations by subject ' + this.subject );
   }
 

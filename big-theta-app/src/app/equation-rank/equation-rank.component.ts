@@ -14,7 +14,7 @@ export class EquationRankComponent implements OnInit {
   constructor(private apiConnection: MathDatabaseService) { }
 
   ngOnInit() {
-    this.apiConnection.getLatexEquationsByRank().subscribe(eqns => this.equations = eqns);
+    this.apiConnection.fetchRankedEquations().subscribe( eqns => this.equations = eqns);
     console.log( 'EquationRankComponent: fetched equations by rank' );
   }
 
