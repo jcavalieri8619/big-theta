@@ -18,7 +18,7 @@ const httpOptions = {
 @Injectable()
 export class MathDatabaseService {
 
-  private databaseURL = 'https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/';  // URL to web api
+  private databaseURL = 'https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta';  // URL to web api
 
 
   constructor( private http: HttpClient ) {
@@ -52,14 +52,18 @@ export class MathDatabaseService {
   }
 
 
-  /* GET LatexEquations whose name contains search term */
+  /**
+   * For future use--we've decided not to search by equations in current version
+   * @param {string} term
+   * @returns {Observable<LatexEquation[]>}
+   */
   searchLatexEquations( term: string ): Observable<LatexEquation[]> {
     if ( !term.trim() ) {
       // if not search term, return empty LatexEquation array.
       return of( [] );
     }
     return this.http.get<LatexEquation[]>( this.databaseURL ).pipe(
-      tap( _ => this.log( `found LatexEquationes matching "${term}"` ) ),
+      tap( _ => this.log( `found equations matching "${term}"` ) ),
       catchError( this.handleError<LatexEquation[]>( 'searchLatexEquations', [] ) )
     );
   }
