@@ -38,7 +38,7 @@ export class MathDatabaseService {
 
   fetchSubjectEquations( subject_id: number ): Observable<LatexEquation[]> {
 
-    this.log( 'fetching LatexEquations by subject id' );
+    this.log( 'fetching LatexEquations by subjectID id' );
 
     const url = `${this.databaseURL}/equations/subject/${subject_id}`;
 
@@ -46,7 +46,7 @@ export class MathDatabaseService {
     // .map(res => new LatexEquation( res[ this.equation_prop ], res[ this.id_prop ] ))
 
     return this.http.get<LatexEquation[]>( url )
-      .pipe( tap( latexEquations => this.log( 'fetched equations by subject:\n' + latexEquations ) ),
+      .pipe( tap( latexEquations => this.log( 'fetched equations by subjectID:\n' + latexEquations ) ),
         catchError( this.handleError( 'fetchSubjectEquations', [] ) ) );
 
   }

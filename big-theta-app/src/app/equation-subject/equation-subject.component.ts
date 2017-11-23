@@ -9,14 +9,14 @@ import {LatexEquation} from '../latex-equation';
 })
 export class EquationSubjectComponent implements OnInit {
 
-  @Input() subject: string;
+  @Input() subjectID: number;
   equations: LatexEquation[] = [];
 
   constructor(private apiConnection: MathDatabaseService) { }
 
   ngOnInit() {
-    this.apiConnection.fetchSubjectEquations(this.subject).subscribe( eqns => this.equations = eqns);
-    console.log( 'EquationRankComponent: fetched equations by subject ' + this.subject );
+    this.apiConnection.fetchSubjectEquations(this.subjectID).subscribe( eqns => this.equations = eqns);
+    console.log( 'EquationRankComponent: fetched equations by subjectID ' + this.subjectID );
   }
 
   searchEquation(event: LatexEquation): void {

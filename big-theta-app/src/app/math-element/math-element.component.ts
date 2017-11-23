@@ -16,7 +16,6 @@ export class MathElementComponent implements AfterViewInit {
 
   @Input() latexEquation: LatexEquation;
 
-
   @Output() OnClick = new EventEmitter<LatexEquation>();
 
 
@@ -29,13 +28,9 @@ export class MathElementComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
 
-    console.log( 'MathComponenet: equation property ' + this.latexEquation.equation );
-
-
     // noinspection TypeScriptUnresolvedVariable
     // window. MathJax is attached to global window object
     MathJax.Hub.Queue( [ 'Typeset', MathJax.Hub, this.elem.nativeElement ] );
-    console.log( 'MathElementComponent--ngAfterViewInit:  enqueued TypeSet Op into Mathjax Queue' );
   }
 
   emitLatexEquation(): void {
@@ -43,4 +38,8 @@ export class MathElementComponent implements AfterViewInit {
     console.log( 'MathElementComponent--emitLatexEquation: emitted event' );
   }
 
+
+  getDisplayStyleEquation( ): string {
+    return '$$\\bf '.concat( this.latexEquation.equation).concat( ' $$' );
+  }
 }
