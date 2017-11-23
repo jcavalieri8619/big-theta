@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import random
+
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 
@@ -11,9 +13,12 @@ class WikiEquationSpider(scrapy.Spider):
     allowed_domains = ["en.wikipedia.org"]
 
     def start_requests(self):
+        init_url_count = 500
         for pageType, urlList in URLs.start_url_dict.items():
             for url in urlList:
-                yield scrapy.Request(url=url, meta={'url-from': self.allowed_domains[0]},
+                yield scrapy.Request(url=url,
+                                     meta={
+                                         'url-from': self.allowed_domains[0] + str(random.randint(0, init_url_count))},
                                      callback=getattr(self, f'parse_{pageType}'))
 
     def parser_dispatch(self, response):
@@ -54,7 +59,13 @@ class WikiEquationSpider(scrapy.Spider):
 
             curr_item = EquationscraperItem()
             curr_item['url'] = response.url
-            curr_item['title'] = response.css('#firstHeading::text').extract_first()
+
+            h1_title = response.css('#firstHeading::text').extract_first()
+            head_title = response.css('head > title::text').extract_first()
+            head_title = head_title.replace('- Wikipedia', '')
+
+            curr_item['title'] = head_title
+
             curr_item['categories'] = response.css("#mw-normal-catlinks > ul > li > a").css("a::text").extract()
 
             curr_item['maths'] = list(latex_math)
@@ -76,7 +87,12 @@ class WikiEquationSpider(scrapy.Spider):
 
                 # last_item exists --> link_dist exists
 
+                assert response.meta['last_item'] is not None, "ERROR: pipelining an item where last_item is None"
+                assert response.meta['last_item'].get('last_item', None) is None, "ERROR: pipelining item with " \
+                                                                                  "last_item chain "
+
                 curr_item['last_item'] = response.meta['last_item'].copy()
+
                 curr_item['link_dist'] = response.meta['link_dist']
                 curr_item['link_relationship'] = f'{curr_item["last_item"]["url"]} LINKS TO {curr_item["url"]}'
 
@@ -96,6 +112,9 @@ class WikiEquationSpider(scrapy.Spider):
                 # set curr_item[last_item] = None before copying to request
                 # to maintain single-link connections otherwise last_item element
                 # will start to accumulate items
+                if curr_item.get('last_item') is not None:
+                    del curr_item['last_item']
+
                 curr_item['last_item'] = None
                 curr_item['link_relationship'] = None
                 request.meta['link_dist'] = 1
@@ -106,6 +125,7 @@ class WikiEquationSpider(scrapy.Spider):
                 # here we are passing on last_item until we find a page with maths
 
                 request.meta['last_item'] = response.meta['last_item'].copy()
+
                 request.meta['link_dist'] = response.meta.get('link_dist', 0) + 1
 
             yield request
@@ -121,7 +141,7 @@ class WikiEquationSpider(scrapy.Spider):
                                            deny=URLs.global_deny, ).extract_links(response):
 
             if response.meta['category_depth'] > self.settings.getint('WIKI_CATEGORY_DEPTH'):
-                self.log(f'maximum category depth reached on {response.url}')
+                self.log(f'CATEGORY_DEPTH: maximum category depth reached on {response.url}')
                 pass
 
             # else:
