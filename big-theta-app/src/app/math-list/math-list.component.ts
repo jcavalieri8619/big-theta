@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {LatexEquation} from '../latex-equation';
 
-import {EQUATIONS} from '../mock-equations';
 
 
 @Component( {
@@ -11,7 +10,7 @@ import {EQUATIONS} from '../mock-equations';
 } )
 export class MathListComponent implements OnInit {
 
-  @Input() equationList: LatexEquation[] = EQUATIONS;
+  @Input() equationList: LatexEquation[];
 
   @Input() showTitle = false;
 

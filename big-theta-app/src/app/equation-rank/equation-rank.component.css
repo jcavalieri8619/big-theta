@@ -1,4 +1,10 @@
 .equationRank{
+  border: 3px solid blue;
+  max-width: 400px;
+  display: inline-block;
+}
 
+.equationRank_title {
+  margin-bottom: 15px;
 
 }

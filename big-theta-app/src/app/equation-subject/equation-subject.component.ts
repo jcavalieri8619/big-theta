@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {MathDatabaseService} from '../services/math-databse/math-database.service';
+import {MathDatabaseService} from '../services/math-database/math-database.service';
 import {LatexEquation} from '../latex-equation';
 
 @Component({

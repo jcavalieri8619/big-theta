@@ -2,9 +2,6 @@
   "/bigtheta": {
     "target": "https://r3psss9s0a.execute-api.us-east-1.amazonaws.com",
     "secure": false,
-//    "pathRewrite": {
-//      "^/api": ""
-//    },
     "changeOrigin": true
   },
   "logLevel": "debug"

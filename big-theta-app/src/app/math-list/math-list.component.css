@@ -1,19 +1,17 @@
 
 .math-list {
 
-  max-width: 440px;
-  overflow-x: auto;
-  overflow-y: hidden;
+  max-width: 350px;
+
 }
 
 .equationTitle{
-
+  font-weight:bold;
 }
 
 ul {
 
-  overflow-x: auto;
-  overflow-y: hidden;
+
 }
 
 
@@ -28,5 +26,4 @@ li {
 li:hover {
   font-size: small;
   overflow-x: auto;
-  overflow-y: hidden;
 }

@@ -1,6 +1,6 @@
 <ng-container *ngIf="equations">
   <div class='equationRank'>
-    <h5>Equation Rank</h5>
+    <h6 class="equationRank_title">Equation Rank</h6>
     <app-math-list [equationList]="equations" [showTitle]="true" (OnClick)="searchEquation($event)"></app-math-list>
   </div>
 </ng-container>
