@@ -35,7 +35,7 @@ export class MathElementComponent implements AfterViewInit {
 
   emitLatexEquation(): void {
     this.OnClick.emit( this.latexEquation );
-    console.log( 'MathElementComponent--emitLatexEquation: emitted event' );
+    console.log( 'MathElementComponent--emitLatexEquation: emitted click event' );
   }
 
 

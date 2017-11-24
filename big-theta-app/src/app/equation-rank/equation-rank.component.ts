@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {LatexEquation} from '../latex-equation';
-import {MathDatabaseService} from '../services/math-database/math-database.service';
+import {MathDatabaseService} from '../services/math-databse/math-database.service';
 
 @Component({
   selector: 'app-equation-rank',

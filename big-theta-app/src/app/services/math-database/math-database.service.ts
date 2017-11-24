@@ -18,8 +18,10 @@ const httpOptions = {
 @Injectable()
 export class MathDatabaseService {
 
-  private databaseURL = 'https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta';  // URL to web api
 
+  // TESTING redirected to aws backend in proxy.conf.json and ng start in package.json
+  // private databaseURL = 'https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta';
+  private databaseURL = 'http://localhost:4200/bigtheta';
 
   constructor( private http: HttpClient ) {
 
@@ -29,7 +31,7 @@ export class MathDatabaseService {
 
     this.log( `fetching LatexEquation by rank` );
 
-    const url = `${this.databaseURL}/?rank=true`;
+    const url = `${this.databaseURL}/equations/rankings`;
 
     return this.http.get<LatexEquation[]>( url )
       .pipe( tap( latexEquations => this.log( 'fetched ranked equations:\n' + latexEquations ) ),
@@ -38,12 +40,9 @@ export class MathDatabaseService {
 
   fetchSubjectEquations( subject_id: number ): Observable<LatexEquation[]> {
 
-    this.log( 'fetching LatexEquations by subjectID id' );
+    this.log( 'fetching LatexEquations by subjectID: ' + subject_id );
 
     const url = `${this.databaseURL}/equations/subject/${subject_id}`;
-
-    // .concatAll()
-    // .map(res => new LatexEquation( res[ this.equation_prop ], res[ this.id_prop ] ))
 
     return this.http.get<LatexEquation[]>( url )
       .pipe( tap( latexEquations => this.log( 'fetched equations by subjectID:\n' + latexEquations ) ),

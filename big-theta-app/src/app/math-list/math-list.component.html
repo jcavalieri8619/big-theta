@@ -1,10 +1,14 @@
 
 
-<div >
-<ul>
-<li *ngFor="let eqn of equationList"  >
+<div class="container math-list">
+<ul class="list-group">
+<li #listVar *ngFor="let equation of equationList  let i=index" class='list-group-item' (mouseenter)="setListElem_CSS(listVar,'active',true)"
+    (mouseleave)="setListElem_CSS(listVar,'active',false)">
 
-<app-math-element [latexEquation]="eqn" (OnClick)="emitLatexEquation($event)"></app-math-element>
+  <ng-container *ngIf="showTitle">
+    <span class="equationTitle">{{extractTitle(i)}}</span>
+  </ng-container>
+  <app-math-element [latexEquation]="equation" (OnClick)="emitLatexEquation($event)"></app-math-element>
 
 </li>
 </ul>

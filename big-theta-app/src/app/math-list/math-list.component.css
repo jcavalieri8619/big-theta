@@ -1,0 +1,32 @@
+
+.math-list {
+
+  max-width: 440px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.equationTitle{
+
+}
+
+ul {
+
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+
+li {
+  font-size: x-small;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+}
+
+
+li:hover {
+  font-size: small;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
