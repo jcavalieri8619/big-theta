@@ -1,3 +1,18 @@
 .container-fluid {
     padding-top: 10px;
 }
+
+.equation_rank{
+  margin-top: 15vh;
+  float:left;
+}
+
+.main_area{
+  float: right;
+  width: 85%;
+}
+
+.form-group{
+  width: 80%;
+  margin: 0 auto;
+}

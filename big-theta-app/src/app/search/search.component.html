@@ -1,9 +1,25 @@
 <app-home></app-home>
 <div class="content-container container-fluid">
+
+
+
   <div class="form-group">
     <input class="form-control" [(ngModel)]="equationSearched" type="text" placeholder="Enter an equation">
   </div>
-  <div *ngIf="equationSearched">
-    You entered {{equationSearched}}
+
+
+  <div class="equation_rank">
+    <h4>Equation Rank</h4>
+    <app-equation-rank></app-equation-rank>
+  </div>
+
+
+  <div class = main_area>
+
+
+
+    <div *ngIf="equationSearched">
+      You entered {{equationSearched}}
+    </div>
   </div>
 </div>

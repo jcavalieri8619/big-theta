@@ -31,11 +31,15 @@ export class MathDatabaseService {
 
     this.log( `fetching LatexEquation by rank` );
 
-    const url = `${this.databaseURL}/equations/rankings`;
+    // delete this when done testing
+    return this.fetchSubjectEquations( 4 );
 
-    return this.http.get<LatexEquation[]>( url )
-      .pipe( tap( latexEquations => this.log( 'fetched ranked equations:\n' + latexEquations ) ),
-        catchError( this.handleError( 'fetchRankedEquations', [] ) ) );
+    // TESTING--ONCE equations/rankings end point is ready then uncomment this and delete above
+    // const url = `${this.databaseURL}/equations/rankings`;
+    //
+    // return this.http.get<LatexEquation[]>( url )
+    //   .pipe( tap( latexEquations => this.log( 'fetched ranked equations:\n' + latexEquations ) ),
+    //     catchError( this.handleError( 'fetchRankedEquations', [] ) ) );
   }
 
   fetchSubjectEquations( subject_id: number ): Observable<LatexEquation[]> {
