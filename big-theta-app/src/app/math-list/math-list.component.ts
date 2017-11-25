@@ -23,9 +23,15 @@ export class MathListComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  scrollOnMouseWheel(elem: HTMLLIElement):void {
+
+  }
+
   setListElem_CSS( elem: HTMLLIElement, key: string, value: boolean ): void {
     if ( value ) {
       elem.classList.add( key );
+
     } else {
       elem.classList.remove( key );
     }

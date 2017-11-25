@@ -2,8 +2,8 @@
 
 <div class="container math-list">
 <ul class="list-group">
-<li #listVar *ngFor="let equation of equationList  let i=index" class='list-group-item' (mouseenter)="setListElem_CSS(listVar,'active',true)"
-    (mouseleave)="setListElem_CSS(listVar,'active',false)">
+<li #listVar id="style-3" *ngFor="let equation of equationList  let i=index" class='list-group-item' (mouseenter)="setListElem_CSS(listVar,'active',true)"
+    (mouseleave)="setListElem_CSS(listVar,'active',false)"  >
 
   <ng-container *ngIf="showTitle">
     <span class="equationTitle">{{extractTitle(i)}}</span>
