@@ -9,7 +9,24 @@ process.env["neo4jPassword"] = "big-theta-team";
 const driver = neo4j.driver(`bolt://${process.env["neo4jBoltIp"]}/`, neo4j.auth.basic(process.env["neo4jUser"], process.env["neo4jPassword"]));
 const session = driver.session();
 
-let eventsubjectid = "4";
+function getTreeLevel(subjectid, exclusions, callback) {
+  session.readTransaction(tx => tx.run(
+    'MATCH (s:SUBJECT)-[:LINKS_TO]-(s2:SUBJECT) \
+    WHERE ID(s) = {subjectid} \
+    AND NOT ID(s2) IN {exclusions} \
+    RETURN s AS parent, collect(s2)[..5] AS children', {subjectid: subjectid, exclusions: exclusions}))
+    .then(callback);
+}
+
+function graphNodeToTreeNode(graphNode) {
+  return {
+    id: graphNode.identity.toString(),
+    name: graphNode.properties.title.trim(),
+    url: graphNode.properties.url
+  }
+}
+
+let eventsubjectid = "58424";
 // let subjectid;
 
 // try {
@@ -27,25 +44,41 @@ if (!eventsubjectid.match(/\d+/)) {
 
 let subjectid = neo4j.int(eventsubjectid);
 
-const resultPromise = session.writeTransaction(tx => tx.run(
-  'MATCH (subject:SUBJECT)-[r:SAME_PAGE_AS]->(eq:EQUATION) \
-  WHERE ID(subject) = {subjectid} \
-  RETURN eq, subject LIMIT 20', {subjectid: subjectid}));
+let exclusions = [];
 
-resultPromise.then(result => {
-  session.close();
-  let equations = [];
-  result.records.forEach(rec => {
-    let eq = rec.get("eq");
-    let subj = rec.get("subject");
-    let returnEq = {
-      id: eq.identity.toString(),
-      name: subj.properties.title.trim(),
-      equation: eq.properties.equation,
-      url: subj.properties.url
-    };
-    equations.push(returnEq);
-  });
-  driver.close();
-  console.log(JSON.stringify(equations, null, 2));
+const rootQuery = session.readTransaction(tx => tx.run(
+  'MATCH (s:SUBJECT)-[:LINKS_TO]-(s2:SUBJECT) \
+  WHERE ID(s) = {subjectid} \
+  RETURN s AS parent, collect(s2)[..5] AS children', {subjectid: subjectid}));
+
+rootQuery.then(result => {
+  let tree = {};
+  let rec = result.records[0];
+  let parent = rec.get("parent");
+  let children = rec.get("children");
+  tree = graphNodeToTreeNode(parent);
+  tree.children = children.map(graphNodeToTreeNode);
+  let numChildren = tree.children.length;
+  exclusions.concat(children.map(c => c.identity));
+
+  let currentChild = 0;
+
+  function populateChildren() {
+    getTreeLevel(neo4j.int(tree.children[currentChild].id), exclusions, result => {
+      let grandChildren = result.records[0].get("children");
+      tree.children[currentChild].children = grandChildren.map(graphNodeToTreeNode);
+      exclusions.concat(grandChildren.map(c => c.identity));
+      currentChild++;
+      if (currentChild < numChildren) {
+        populateChildren();
+      } else {
+        session.close();
+        driver.close();
+        console.log(JSON.stringify(tree, null, 2));
+      }
+    });
+  }
+
+  populateChildren();
+  
 });
