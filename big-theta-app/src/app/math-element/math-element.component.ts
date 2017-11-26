@@ -1,9 +1,10 @@
 ///<reference path="../../../node_modules/@types/mathjax/index.d.ts"/>
 
 
-import {Component, AfterViewInit, Input, Output, EventEmitter, ElementRef} from '@angular/core';
+import {Component, AfterViewInit, Input, Output, EventEmitter, ElementRef, Inject} from '@angular/core';
 
 import {LatexEquation} from '../latex-equation';
+import {WindowRefService} from '../services/window-ref/window-ref.service';
 
 
 @Component( {
@@ -20,7 +21,7 @@ export class MathElementComponent implements AfterViewInit {
 
 
 
-  constructor( private elem: ElementRef ) {
+  constructor( private elem: ElementRef, private windowRef: WindowRefService ) {
 
 
   }
@@ -28,9 +29,11 @@ export class MathElementComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
 
+
+
     // noinspection TypeScriptUnresolvedVariable
-    // window. MathJax is attached to global window object
-    MathJax.Hub.Queue( [ 'Typeset', MathJax.Hub, this.elem.nativeElement ] );
+    // MathJax is attached to global window object accesssed via WindowRef service
+    this.windowRef.nativeWindow.MathJax.Hub.Queue( [ 'Typeset', MathJax.Hub, this.elem.nativeElement ] );
   }
 
   emitLatexEquation(): void {
