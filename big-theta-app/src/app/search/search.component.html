@@ -2,7 +2,6 @@
 <div class="content-container container-fluid">
 
 
-
   <div class="form-group">
     <input class="form-control" [(ngModel)]="equationSearched" type="text" placeholder="Enter an equation">
   </div>
@@ -14,12 +13,8 @@
   </div>
 
 
-  <div class = main_area>
-
-
-
-    <div *ngIf="equationSearched">
-      You entered {{equationSearched}}
-    </div>
+  <div class=graph_display *ngIf="equationSearched">
+    You entered {{equationSearched}}
   </div>
+
 </div>

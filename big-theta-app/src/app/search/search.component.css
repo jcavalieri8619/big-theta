@@ -3,14 +3,16 @@
 }
 
 .equation_rank{
-  margin-top: 15vh;
+  margin-top: 5vh;
   float:left;
 }
 
-.main_area{
+.graph_display{
   float: right;
-  width: 85%;
+
 }
+
+
 
 .form-group{
   width: 80%;
