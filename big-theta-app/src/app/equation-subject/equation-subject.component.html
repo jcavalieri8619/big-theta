@@ -1,5 +1,16 @@
 <ng-container *ngIf="equations">
+
   <div class='equationSubject'>
-    <app-math-list [equationList]="equations"  (OnClick)="searchEquation($event)"></app-math-list>
+
+    <div id='scrollbar_style5' class="subject_list">
+
+    <app-math-list [equationList]="equations" [showTitle]="false"
+                   (OnClick)="openEquationWikiPage($event)">
+
+    </app-math-list>
+
+    </div>
+
   </div>
+
 </ng-container>
