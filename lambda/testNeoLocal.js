@@ -30,17 +30,19 @@ let subjectid = neo4j.int(eventsubjectid);
 const resultPromise = session.writeTransaction(tx => tx.run(
   'MATCH (subject:SUBJECT)-[r:SAME_PAGE_AS]->(eq:EQUATION) \
   WHERE ID(subject) = {subjectid} \
-  RETURN eq LIMIT 20', {subjectid: subjectid}));
+  RETURN eq, subject LIMIT 20', {subjectid: subjectid}));
 
 resultPromise.then(result => {
   session.close();
   let equations = [];
   result.records.forEach(rec => {
     let eq = rec.get("eq");
+    let subj = rec.get("subject");
     let returnEq = {
       id: eq.identity.toString(),
-      name: eq.properties.name.trim(),
-      equation: eq.properties.equation
+      name: subj.properties.title.trim(),
+      equation: eq.properties.equation,
+      url: subj.properties.url
     };
     equations.push(returnEq);
   });
