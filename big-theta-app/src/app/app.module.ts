@@ -16,6 +16,8 @@ import { EquationRankComponent } from './equation-rank/equation-rank.component';
 import { EquationSubjectComponent } from './equation-subject/equation-subject.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MathDatabaseService} from './services/math-database/math-database.service';
+import {WindowRefService} from './services/window-ref/window-ref.service';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import {MathDatabaseService} from './services/math-database/math-database.servic
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [MathDatabaseService],
+  providers: [MathDatabaseService,
+            WindowRefService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
