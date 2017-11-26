@@ -1,7 +1,7 @@
 ///<reference path="../../../node_modules/@types/mathjax/index.d.ts"/>
 
 
-import {Component, AfterViewInit, Input, Output, EventEmitter, ElementRef, Inject} from '@angular/core';
+import {Component, AfterViewInit, Input, Output, EventEmitter, ElementRef} from '@angular/core';
 
 import {LatexEquation} from '../latex-equation';
 import {WindowRefService} from '../services/window-ref/window-ref.service';
