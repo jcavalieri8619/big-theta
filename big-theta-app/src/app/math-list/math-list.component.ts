@@ -39,9 +39,8 @@ export class MathListComponent implements OnInit {
 
 
   extractTitle( index: number ): string {
-    const titleRegex = new RegExp( /Equation<(.+)>/ );
-    const result = titleRegex.exec( this.equationList[ index ].name );
-    return result[1];
+
+    return this.equationList[ index ].name;
 
 
   }
