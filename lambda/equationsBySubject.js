@@ -31,7 +31,7 @@ exports.handler = (event, context, callback) => {
 
   let subjectid = neo4j.int(event.pathParameters.subjectid);
   
-  const resultPromise = session.writeTransaction(tx => tx.run(
+  const resultPromise = session.readTransaction(tx => tx.run(
     'MATCH (subject:SUBJECT)-[r:SAME_PAGE_AS]->(eq:EQUATION) \
     WHERE ID(subject) = {subjectid} \
     RETURN eq, subject LIMIT 20', {subjectid: subjectid}));

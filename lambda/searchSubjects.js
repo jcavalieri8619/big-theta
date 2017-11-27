@@ -26,7 +26,7 @@ exports.handler = (event, context, callback) => {
 
   let searchTerm = event.pathParameters.searchterm.toLowerCase();
   
-  const resultPromise = session.writeTransaction(tx => tx.run(
+  const resultPromise = session.readTransaction(tx => tx.run(
     'MATCH (subject:SUBJECT) \
     WHERE (toLower(subject.name) CONTAINS {searchTerm} OR toLower(subject.title) CONTAINS {searchTerm}) \
     AND subject.pagerank IS NOT NULL RETURN subject \
