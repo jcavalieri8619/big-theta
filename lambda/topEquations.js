@@ -26,8 +26,9 @@ exports.handler = (event, context, callback) => {
   
   const resultPromise = session.readTransaction(tx => tx.run(
     'MATCH (subject:SUBJECT)-[r:SAME_PAGE_AS]->(eq:EQUATION) \
-    WHERE ID(subject) = {subjectid} \
-    RETURN eq, subject LIMIT 20', {subjectid: neo4j.int("33")}));
+    RETURN subject, collect(eq)[0] as eq \
+    ORDER BY subject.pagerank DESC \
+    LIMIT 10'));
   
   resultPromise.then(result => {
     session.close();
