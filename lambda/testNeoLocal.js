@@ -26,7 +26,7 @@ function graphNodeToTreeNode(graphNode) {
   }
 }
 
-let eventsubjectid = "58424";
+let eventsubjectid = "432";
 // let subjectid;
 
 // try {
@@ -42,32 +42,33 @@ if (!eventsubjectid.match(/\d+/)) {
   return;
 }
 
-let subjectid = neo4j.int(eventsubjectid);
-
 let exclusions = [];
 
-const rootQuery = session.readTransaction(tx => tx.run(
-  'MATCH (s:SUBJECT)-[:LINKS_TO]-(s2:SUBJECT) \
-  WHERE ID(s) = {subjectid} \
-  RETURN s AS parent, collect(s2)[..5] AS children', {subjectid: subjectid}));
-
-rootQuery.then(result => {
+getTreeLevel(neo4j.int(eventsubjectid), exclusions, result => {
   let tree = {};
   let rec = result.records[0];
+  if (result.records == null || result.records.length === 0) {
+    session.close();
+    driver.close();
+    console.log({});
+    return;
+  }
   let parent = rec.get("parent");
   let children = rec.get("children");
   tree = graphNodeToTreeNode(parent);
   tree.children = children.map(graphNodeToTreeNode);
   let numChildren = tree.children.length;
-  exclusions.concat(children.map(c => c.identity));
+  exclusions = exclusions.concat(children.map(c => c.identity));
 
   let currentChild = 0;
 
-  function populateChildren() {
+  (function populateChildren() {
     getTreeLevel(neo4j.int(tree.children[currentChild].id), exclusions, result => {
-      let grandChildren = result.records[0].get("children");
-      tree.children[currentChild].children = grandChildren.map(graphNodeToTreeNode);
-      exclusions.concat(grandChildren.map(c => c.identity));
+      if (result.records != null && result.records.length > 0) {
+        let grandChildren = result.records[0].get("children");
+        tree.children[currentChild].children = grandChildren.map(graphNodeToTreeNode);
+        exclusions = exclusions.concat(grandChildren.map(c => c.identity));
+      }
       currentChild++;
       if (currentChild < numChildren) {
         populateChildren();
@@ -77,8 +78,6 @@ rootQuery.then(result => {
         console.log(JSON.stringify(tree, null, 2));
       }
     });
-  }
-
-  populateChildren();
+  })();
   
 });
