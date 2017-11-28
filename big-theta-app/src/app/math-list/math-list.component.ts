@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {LatexEquation} from '../latex-equation';
 
 
@@ -10,22 +10,45 @@ import {LatexEquation} from '../latex-equation';
 } )
 export class MathListComponent implements OnInit {
 
-  @Input() equationList: LatexEquation[];
+
+  private _equationList: LatexEquation[];
+
+  get equationList(): LatexEquation[] {
+    return this._equationList;
+  }
+
+  @Input() set equationList( value: LatexEquation[] ) {
+    this._equationList = value;
+  }
+
+
+  private finished_count = 0;
 
   @Input() showTitle = false;
 
   @Output() OnClick = new EventEmitter<LatexEquation>();
 
 
-  constructor() {
+  constructor(private elem: ElementRef) {
+
+
   }
 
   ngOnInit() {
+
   }
 
 
   scrollOnMouseWheel(elem: HTMLLIElement):void {
 
+  }
+
+  OnFinishTypesetting( finished: boolean): void {
+    if (this.finished_count++ >= (this._equationList.length-1)){
+      this.elem.nativeElement.querySelector( '.spinner' ).classList.toggle( "no_display" );
+      this.elem.nativeElement.querySelector( '.hidden' ).classList.toggle( "hidden" );
+
+    }
   }
 
   setListElem_CSS( elem: HTMLLIElement, key: string, value: boolean ): void {
