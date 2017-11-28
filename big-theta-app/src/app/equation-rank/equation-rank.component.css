@@ -1,12 +1,9 @@
 .equationRank {
 
-  max-width: 300px;
+  max-width: 250px;
 }
 
-.equationRank_title {
-  margin-bottom: 15px;
 
-}
 
 .rank_list {
   max-height: 80vh;
@@ -23,7 +20,7 @@
 }
 
 #scrollbar_style5::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
   background-color: #F5F5F5;
 }
 
@@ -31,5 +28,6 @@
   background: #0ae -webkit-gradient(linear, 0 0, 0 100%,
   color-stop(.5, rgba(255, 255, 255, .2)),
   color-stop(.5, transparent), to(transparent));
+
 }
 
