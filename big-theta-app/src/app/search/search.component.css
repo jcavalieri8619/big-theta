@@ -3,8 +3,17 @@
 }
 
 .equation_rank{
+  max-width: 250px;
+  min-width: 220px;
   margin-top: 5vh;
   float:left;
+}
+
+.eqn_rank_title{
+  min-width: 220px;
+  max-width: 250px;
+  border-bottom: 3px solid silver;
+  margin-bottom: 15px;
 }
 
 .graph_display{
@@ -15,6 +24,6 @@
 
 
 .form-group{
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
 }
