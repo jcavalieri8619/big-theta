@@ -21,7 +21,7 @@ export class MathDatabaseService {
 
   // TESTING redirected to aws backend in proxy.conf.json and ng start in package.json
   // private databaseURL = 'https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta';
-  private databaseURL = 'http://localhost:4200/bigtheta';
+  private databaseURL = 'http://localhost:8887/bigtheta';
 
   constructor( private http: HttpClient ) {
 
@@ -31,15 +31,11 @@ export class MathDatabaseService {
 
     this.log( `fetching LatexEquation by rank` );
 
-    // delete this when done testing
-    return this.fetchSubjectEquations( 4 );
+    const url = `${this.databaseURL}/equations/top`;
 
-    // TESTING--ONCE equations/rankings end point is ready then uncomment this and delete above
-    // const url = `${this.databaseURL}/equations/rankings`;
-    //
-    // return this.http.get<LatexEquation[]>( url )
-    //   .pipe( tap( latexEquations => this.log( 'fetched ranked equations:\n' + latexEquations ) ),
-    //     catchError( this.handleError( 'fetchRankedEquations', [] ) ) );
+    return this.http.get<LatexEquation[]>( url )
+      .pipe( tap( latexEquations => this.log( 'fetched ranked equations:\n' + latexEquations ) ),
+        catchError( this.handleError( 'fetchRankedEquations', [] ) ) );
   }
 
   fetchSubjectEquations( subject_id: number ): Observable<LatexEquation[]> {
@@ -49,7 +45,7 @@ export class MathDatabaseService {
     const url = `${this.databaseURL}/equations/subject/${subject_id}`;
 
     return this.http.get<LatexEquation[]>( url )
-      .pipe( tap( latexEquations => this.log( 'fetched equations by subjectID:\n' + latexEquations ) ),
+      .pipe( tap( latexEquations => this.log( 'fetched equations by subject:\n' + latexEquations ) ),
         catchError( this.handleError( 'fetchSubjectEquations', [] ) ) );
 
   }
