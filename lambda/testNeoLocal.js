@@ -9,7 +9,7 @@ process.env["neo4jPassword"] = "big-theta-team";
 const driver = neo4j.driver(`bolt://${process.env["neo4jBoltIp"]}/`, neo4j.auth.basic(process.env["neo4jUser"], process.env["neo4jPassword"]));
 const session = driver.session();
 
-let searchTerm = event.pathParameters.searchterm.toLowerCase();
+let searchTerm = "distribution";
 
 const resultPromise = session.readTransaction(tx => tx.run(
   'MATCH (subject:SUBJECT) \
