@@ -36,7 +36,7 @@ exports.handler = (event, context, callback) => {
   function graphNodeToTreeNode(graphNode) {
     return {
       id: graphNode.identity.toString(),
-      name: graphNode.properties.title.trim(),
+      title: graphNode.properties.title.trim(),
       url: graphNode.properties.url
     }
   }
