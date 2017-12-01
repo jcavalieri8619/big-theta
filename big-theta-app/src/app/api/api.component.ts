@@ -3,32 +3,48 @@ import { Component, OnInit } from '@angular/core';
 const BASE_URL = "https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta";
 
 class Equation {
+  id: string;
+  name: string;
   equation: string;
-  format: string;
-  topic: string;
+  url: string;
 
   static sample() : Equation {
     return {
-      equation: "x2",
-      format: "ascii",
-      topic: "Math"
+      id: "3048",
+      name: "Mathematics",
+      equation: "{ p\\Rightarrow q}",
+      url: "https://en.wikipedia.org/wiki/Mathematics"
     };
   }
 }
 
-class EquationTree extends Equation {
-  children: EquationTree[];
+class Subject {
+  id: string;
+  title: string;
+  url: string;
 
-  static sample(): EquationTree {
+  static sample() : Subject {
     return {
-      equation: "x2",
-      format: "ascii",
-      topic: "Math",
+      id: "15787",
+      title: "Fourier series",
+      url: "https://en.wikipedia.org/wiki/Fourier_series"
+    }
+  }
+}
+
+class SubjectTree extends Subject {
+  children: SubjectTree[];
+
+  static sample(): SubjectTree {
+    return {
+      id: "15787",
+      title: "Fourier series",
+      url: "https://en.wikipedia.org/wiki/Fourier_series",
       children: [
         {
-          equation: "x+y=1",
-          format: "ascii",
-          topic: "Physics",
+          id: "6878",
+          title: "Linear algebra",
+          url: "https://en.wikipedia.org/wiki/Linear_algebra",
           children: []
         }
       ]
@@ -48,9 +64,13 @@ class ApiEndpointMethod {
     readonly description: string,
     readonly exampleResponse: string,
     readonly urlParameters: ApiParameter[] = [],
-    readonly bodyParameters: ApiParameter[] = []) {}
+    readonly bodyParameters: ApiParameter[] = [],
+    readonly pathParameters: ApiParameter[] = []) {}
 
-  exampleRequest(endpoint) : string {
+  exampleRequest(endpoint: string) : string {
+    this.pathParameters.forEach(param => {
+      endpoint = endpoint.replace(`{${param.name}}`, param.example);
+    });
     let request = `${this.type} ${BASE_URL}${endpoint}`;
     this.urlParameters.forEach((param, i) => request += `${i === 0 ? "?" : "&"}${param.name}=${param.example}`)
     return request;
@@ -68,27 +88,37 @@ interface ApiEndpoint {
   styleUrls: ['./api.component.css']
 })
 export class ApiComponent implements OnInit {
-  endpoints: ApiEndpoint[] = [{
-    name: "/equationtree",
+  endpoints: ApiEndpoint[] = [
+  {
+    name: "/equations/top",
     methods: [
-      new ApiEndpointMethod("GET", "Get an equation tree of related equations given an equation.", JSON.stringify(EquationTree.sample(), null, 2), [
-        { name: "equation", description: "Root equation to search for", required: true, example: "x2" },
-        { name: "format", description: "Format of equation, either ascii or latex", required: true, example: "ascii" }
+      new ApiEndpointMethod("GET", "Get a list of equations from the highest ranking pages.", JSON.stringify([Equation.sample()], null, 2))
+    ]
+  },
+  {
+    name: "/equations/subject/{subjectId}",
+    methods: [
+      new ApiEndpointMethod("GET", "Get a list of equations present on the subject page requested", JSON.stringify([Equation.sample()], null, 2), [], [], [
+        { name: "subjectId", description: "ID for subject page", required: true, example: "4" }
       ])
     ]
-  },{
-    name: "/equations",
-    methods: [
-      new ApiEndpointMethod("GET", "Get a list of all equations in the tree optionally filtered by topic", JSON.stringify(Equation.sample(), null, 2), [
-        { name: "topic", description: "Topic of the equations to filter by", required: false, example: "Math" }
-      ]),
-      new ApiEndpointMethod("POST", "Add an equation to the tree", JSON.stringify(Equation.sample(), null, 2), [], [
-        { name: "equation", description: "Equation to add", required: true, example: "x2" },
-        { name: "topic", description: "Topic of the equation", required: true, example: "Math" },
-        { name: "format", description: "Format of the equation, either ascii or latex", required: true, example: "ascii" }
-      ])
-    ]
-  }];
+  },
+{
+  name: "/subject/search/{searchTerm}",
+  methods: [
+    new ApiEndpointMethod("GET", "Get a list of subjects that match the search term", JSON.stringify([Subject.sample()], null, 2), [], [], [
+      { name: "searchTerm", description: "Subject search query", required: true, example: "series" }
+    ])
+  ]
+},
+{
+  name: "/subject/tree/{subjectId}",
+  methods: [
+    new ApiEndpointMethod("GET", "Get a tree of related subjects given a specific subject ID", JSON.stringify(SubjectTree.sample(), null, 2), [], [], [
+      { name: "subjectId", description: "ID for subject page", required: true, example: "4" }
+    ])
+  ]
+}];
 
   constructor() { }
 

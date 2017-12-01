@@ -1,0 +1,21 @@
+
+
+<div class="container math-list">
+
+  <mat-spinner class="spinner " mode="indeterminate"></mat-spinner>
+  <!--<mat-progress-bar mode="indeterminate"></mat-progress-bar>-->
+
+  <ul class="list-group hidden">
+
+    <li #listVar id="style-3" *ngFor="let equation of equationList  let i=index" class='list-group-item' (mouseenter)="setListElem_CSS(listVar,'active',true)"
+        (mouseleave)="setListElem_CSS(listVar,'active',false)"  >
+
+      <ng-container *ngIf="showTitle">
+        <span class="equationTitle">{{extractTitle(i)}}</span>
+      </ng-container>
+
+      <app-math-element [latexEquation]="equation" (typesetFinished)="OnFinishTypesetting($event)" (OnClick)="emitLatexEquation($event)"></app-math-element>
+
+    </li>
+  </ul>
+</div>

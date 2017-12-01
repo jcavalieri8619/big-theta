@@ -1,9 +1,11 @@
 import re
 
 start_url_dict = {'portals': ['https://en.wikipedia.org/wiki/Portal:Science/Categories_and_Main_topics',
-                              'https://en.wikipedia.org/wiki/Portal:Computer_science', ],
+                              'https://en.wikipedia.org/wiki/Portal:Computer_science',
+                              'https://en.wikipedia.org/wiki/Portal:Machine_learning'],
                   'wikiprojects': [
-                      'https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Mathematics/List_of_mathematics_articles_(0%E2%80%939)',
+                      'https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Mathematics/List_of_mathematics_articles_('
+                      '0%E2%80%939)',
                       'https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Mathematics/List_of_mathematics_articles_(A)',
                       'https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Mathematics/List_of_mathematics_articles_(B)',
                       'https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Mathematics/List_of_mathematics_articles_(C)',
@@ -32,7 +34,12 @@ start_url_dict = {'portals': ['https://en.wikipedia.org/wiki/Portal:Science/Cate
                       'https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Mathematics/List_of_mathematics_articles_(Z)'
                   ],
                   'articles': ['https://en.wikipedia.org/wiki/List_of_equations',
-                               'https://en.wikipedia.org/wiki/Laws_of_science', ]}
+                               'https://en.wikipedia.org/wiki/Laws_of_science',
+                               'https://en.wikipedia.org/wiki/Bernoulli_polynomials',
+                               'https://en.wikipedia.org/wiki/Euler%E2%80%93Maclaurin_formula',
+                               'https://en.wikipedia.org/wiki/Restricted_Boltzmann_machine',
+                               'https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation',
+                               'https://en.wikipedia.org/wiki/Bayesian_statistics']}
 
 start_urls_list = [url for url_list in start_url_dict.values() for url in url_list]
 
@@ -40,8 +47,9 @@ global_deny = [
     re.escape("https://en.wikipedia.org/wiki/Mathematical_Reviews"),
     re.escape("https://en.wikipedia.org/wiki/Wikipedia:Stub"),
     r"https://en[.]wikipedia[.]org/w/.*",
-    re.escape(
-        "https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License"),
+    r"https://en[.]wikipedia[.]org/wiki/Help:.*",
+    re.escape("https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3"
+              ".0_Unported_License"),
     re.escape("https://en.wikipedia.org/wiki/Wikipedia:About"),
     re.escape("https://en.wikipedia.org/wiki/Wikipedia:General_disclaimer"),
     re.escape("https://en.wikipedia.org/wiki/Wikipedia:Contact_us"),
@@ -71,6 +79,6 @@ global_deny = [
     r"https://en[.]wikipedia[.]org/wiki/Category_talk.*",
     r"https://en[.]wikipedia[.]org/wiki/wikipedia_talk.*",
     r"https://en[.]wikipedia[.]org/wiki/User:.*",
-    "https://en[.]wikipedia[.]org/wiki/Template:.*",
+    r"https://en[.]wikipedia[.]org/wiki/Template:.*",
 
 ]
