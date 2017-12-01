@@ -1,9 +1,6 @@
 <app-home></app-home>
 <div class="content-container container-fluid">
-  <div class="form-group">
-    <input class="form-control" [(ngModel)]="equationSearched" type="text" placeholder="Enter an equation">
-  </div>
-  <div *ngIf="equationSearched">
-    You entered {{equationSearched}}
-  </div>
+    <div class="searchBox">
+      <ng2-completer [(ngModel)]="equationStr" [datasource]="dataService" [minSearchLength]="3" [maxChars]="20" [clearSelected]="false" [placeholder]="searchQuote" (selected)="equSelected($event)"></ng2-completer>
+    </div>
 </div>
