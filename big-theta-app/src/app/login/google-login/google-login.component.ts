@@ -42,7 +42,7 @@ export class GoogleLoginComponent implements AfterViewInit {
         userCredentials.email = profile.getEmail();
 
         this._userService.setUser(JSON.stringify(userCredentials));
-        this.router.navigateByUrl('/');
+        window.location.href = "/home";
 
       }, error => {
         console.log(JSON.stringify(error, undefined, 2));

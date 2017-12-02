@@ -41,7 +41,7 @@ export class FbLoginComponent implements OnInit {
             userCredentials.userDetail = response;            
           });
           this._userService.setUser(JSON.stringify(response));
-          this.router.navigateByUrl('/');
+          window.location.href = "/home";
         }
       }));
       
