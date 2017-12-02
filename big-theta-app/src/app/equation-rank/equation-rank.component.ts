@@ -16,7 +16,6 @@ export class EquationRankComponent implements OnInit {
 
   ngOnInit() {
     this.apiConnection.fetchRankedEquations().subscribe( eqns => this.equations = eqns);
-    console.log( 'EquationRankComponent: fetched equations by rank' );
   }
 
   openEquationWikiPage(event: LatexEquation): void {
