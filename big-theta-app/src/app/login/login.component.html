@@ -3,9 +3,16 @@
     <div class="text-center col-lg-12">
         <form class="form-signin">
             <h1 class="form-signin-heading">Welcome to BigTheta</h1>
-            <p>
-                <app-google-login></app-google-login>
-            </p>
+            <div>
+            <table class="table">
+                <tr class="row">
+                    <app-google-login></app-google-login>
+                </tr>
+                <tr class="row">
+                    <app-fb-login></app-fb-login>
+                </tr>
+            </table>
+            </div>
 
             <small class="text-white">Or sign in with BigTheta service</small>
             <br>

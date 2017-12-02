@@ -15,24 +15,29 @@ import { AuthService } from '../services/auth.service';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'home',
-    component: SearchComponent
+    children: [ 
+      {
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+      },
+      {
+        path: 'home',
+        component: SearchComponent
+      },
+      {
+        path: 'info',
+        component: InfoComponent
+      },
+      {
+        path: 'api',
+        component: ApiComponent
+      }
+      ]
   },
   {
     path: 'login',
     component: LoginComponent
-  },
-  {
-    path: 'info',
-    component: InfoComponent
-  },
-  {
-    path: 'api',
-    component: ApiComponent
   }
 ];
 

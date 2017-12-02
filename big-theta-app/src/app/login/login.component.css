@@ -55,6 +55,17 @@
   box-sizing: border-box;
 }
 
+.table {
+  border-radius: 5px;
+  width: 50%;
+  margin: 0px auto;
+  float: none;
+}
+
+.table .row {
+  margin-top:10px;  
+}
+
 .btn-center{
   padding-left: 25%;
   text-align: center;
