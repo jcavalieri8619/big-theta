@@ -18,6 +18,7 @@ exports.handler = (event, context, callback) => {
     body: err ? JSON.stringify({ message: err.message }) : JSON.stringify(res),
     headers: {
         'Content-Type': 'application/json',
+        "Access-Control-Allow-Origin": "*"
     },
   });
 

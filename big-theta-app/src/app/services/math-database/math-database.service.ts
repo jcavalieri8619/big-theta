@@ -18,10 +18,7 @@ const httpOptions = {
 @Injectable()
 export class MathDatabaseService {
 
-
-  // TESTING redirected to aws backend in proxy.conf.json and ng start in package.json
-  // private databaseURL = 'https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta';
-  private databaseURL = 'http://localhost:8887/bigtheta';
+  private databaseURL = 'https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta';
 
   constructor( private http: HttpClient ) {
 

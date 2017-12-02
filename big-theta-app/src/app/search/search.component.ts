@@ -14,7 +14,7 @@ export class SearchComponent implements OnInit {
   searchQuote = "  Enter your equation here";
  
   constructor(private completerService: CompleterService, private _authService:AuthService) {
-    this.dataService = this.completerService.remote('http://localhost:8887/bigtheta/subject/search/', this.equationStr, 'title').searchFields('title');
+    this.dataService = this.completerService.remote('https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/subject/search/', this.equationStr, 'title').searchFields('title');
   }
   
   equSelected(selected: CompleterItem) {
