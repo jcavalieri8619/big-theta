@@ -23,6 +23,7 @@ import {WindowRefService} from './services/window-ref/window-ref.service';
 
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { GraphComponent } from './graph/graph.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MathListComponent,
     EquationRankComponent,
     EquationSubjectComponent,
+    GraphComponent,
   ],
   imports: [
     BrowserAnimationsModule,
