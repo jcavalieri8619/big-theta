@@ -4,7 +4,7 @@ export class Equation {
     equation: string;
     url: string;
   
-    static sample() : Equation {
+    public static sample() : Equation {
       return {
         id: "3048",
         name: "Mathematics",

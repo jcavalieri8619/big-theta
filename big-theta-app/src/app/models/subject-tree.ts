@@ -3,7 +3,7 @@ import { Subject } from "./subject";
 export class SubjectTree extends Subject {
     children: SubjectTree[];
   
-    static sample(): SubjectTree {
+    public static sample(): SubjectTree {
       return {
         id: "15787",
         title: "Fourier series",

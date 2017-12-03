@@ -3,7 +3,7 @@ export class Subject {
     title: string;
     url: string;
   
-    static sample() : Subject {
+    public static sample() : Subject {
       return {
         id: "15787",
         title: "Fourier series",
