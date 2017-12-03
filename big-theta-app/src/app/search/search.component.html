@@ -7,6 +7,7 @@
     </div>
     <div class="col-md-8 col-xs-12">
         <ng2-completer [(ngModel)]="equationStr" [datasource]="dataService" [minSearchLength]="3" [maxChars]="20" [clearSelected]="false" [placeholder]="searchQuote" (selected)="equSelected($event)"></ng2-completer>
+        <app-graph></app-graph>
     </div>
   </div>
 </div>
