@@ -1,5 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
 html,body {
   height: 100%;
+}
+
+.completer-input {
+    min-width: 300px;
+    min-height: 40px;
+    outline: none;
+    cursor: text;
+    border: 1px solid #A9A9A9;
+    
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    -webkit-box-shadow: 0px 0px 4px #A9A9A9;
+    -moz-box-shadow: 0px 0px 4px #A9A9A9;
+    box-shadow: 0px 0px 4px #A9A9A9;
+}
+
+.completer-dropdown-holder {
+    min-width: 300px;
+}
+
+.completer-dropdown {
+    min-width: 300px;
+    border: 1px solid #A9A9A9;
+    
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+          
+    -webkit-box-shadow: 0px 0px 4px #A9A9A9;
+    -moz-box-shadow: 0px 0px 4px #A9A9A9;
+    box-shadow: 0px 0px 4px #A9A9A9;
 }

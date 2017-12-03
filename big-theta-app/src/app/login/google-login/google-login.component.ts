@@ -33,8 +33,8 @@ export class GoogleLoginComponent implements AfterViewInit {
       googleUser => {
 
         let profile = googleUser.getBasicProfile();
-
-        let userCredentials = {'token': '', 'id': 0, 'name': '', 'image': '', 'email' :''}
+        
+        let userCredentials = {'token': '', 'id': 0, 'name': '', 'image': '', 'email' :'', 'userType':'google'}
         userCredentials.token = googleUser.getAuthResponse().id_token;
         userCredentials.id = profile.getId();
         userCredentials.name = profile.getName();
@@ -42,19 +42,18 @@ export class GoogleLoginComponent implements AfterViewInit {
         userCredentials.email = profile.getEmail();
 
         this._userService.setUser(JSON.stringify(userCredentials));
-        this.router.navigateByUrl('/home');
+        window.location.href = "/home";
 
       }, error => {
         console.log(JSON.stringify(error, undefined, 2));
       });
   }
-
   constructor(
     private element: ElementRef,
     private _userService: UserService,
     private route: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {}
 
   ngAfterViewInit() {
     this.googleInit();

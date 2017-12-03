@@ -18,6 +18,7 @@ exports.handler = (event, context, callback) => {
     body: err ? JSON.stringify({ message: err.message }) : JSON.stringify(res),
     headers: {
         'Content-Type': 'application/json',
+        "Access-Control-Allow-Origin": "*"
     },
   });
 
@@ -28,7 +29,7 @@ exports.handler = (event, context, callback) => {
     'MATCH (subject:SUBJECT)-[r:SAME_PAGE_AS]->(eq:EQUATION) \
     RETURN subject, collect(eq)[0] as eq \
     ORDER BY subject.pagerank DESC \
-    LIMIT 50'));
+    LIMIT 10'));
   
   resultPromise.then(result => {
     session.close();

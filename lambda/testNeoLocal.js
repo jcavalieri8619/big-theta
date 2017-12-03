@@ -9,75 +9,27 @@ process.env["neo4jPassword"] = "big-theta-team";
 const driver = neo4j.driver(`bolt://${process.env["neo4jBoltIp"]}/`, neo4j.auth.basic(process.env["neo4jUser"], process.env["neo4jPassword"]));
 const session = driver.session();
 
-function getTreeLevel(subjectid, exclusions, callback) {
-  session.readTransaction(tx => tx.run(
-    'MATCH (s:SUBJECT)-[:LINKS_TO]-(s2:SUBJECT) \
-    WHERE ID(s) = {subjectid} \
-    AND NOT ID(s2) IN {exclusions} \
-    RETURN s AS parent, collect(s2)[..5] AS children', {subjectid: subjectid, exclusions: exclusions}))
-    .then(callback);
-}
+let searchTerm = "distribution";
 
-function graphNodeToTreeNode(graphNode) {
-  return {
-    id: graphNode.identity.toString(),
-    name: graphNode.properties.title.trim(),
-    url: graphNode.properties.url
-  }
-}
+const resultPromise = session.readTransaction(tx => tx.run(
+  'MATCH (subject:SUBJECT) \
+  WHERE (toLower(subject.name) CONTAINS {searchTerm} OR toLower(subject.title) CONTAINS {searchTerm}) \
+  AND subject.pagerank IS NOT NULL RETURN subject \
+  ORDER BY subject.pagerank DESC LIMIT 10', {searchTerm: searchTerm}));
 
-let eventsubjectid = "432";
-// let subjectid;
+resultPromise.then(result => {
+  session.close();
+  let subjects = [];
+  result.records.forEach(rec => {
+    let subj = rec.get("subject");
+    let returnSubj = {
+      id: subj.identity.toString(),
+      title: subj.properties.title.trim(),
+      url: subj.properties.url
+    };
+    subjects.push(returnSubj);
+  });
+  driver.close();
 
-// try {
-//   subjectid = neo4j.int(eventsubjectid);
-// } catch (exception) {
-//   done({message: "Subject ID is invalid"}, null);
-//   return;
-// }
-
-if (!eventsubjectid.match(/\d+/)) {
-  // done({message: "Subject ID is invalid"}, null);
-  console.log("Invalid subject id");
-  return;
-}
-
-let exclusions = [];
-
-getTreeLevel(neo4j.int(eventsubjectid), exclusions, result => {
-  let tree = {};
-  let rec = result.records[0];
-  if (result.records == null || result.records.length === 0) {
-    session.close();
-    driver.close();
-    console.log({});
-    return;
-  }
-  let parent = rec.get("parent");
-  let children = rec.get("children");
-  tree = graphNodeToTreeNode(parent);
-  tree.children = children.map(graphNodeToTreeNode);
-  let numChildren = tree.children.length;
-  exclusions = exclusions.concat(children.map(c => c.identity));
-
-  let currentChild = 0;
-
-  (function populateChildren() {
-    getTreeLevel(neo4j.int(tree.children[currentChild].id), exclusions, result => {
-      if (result.records != null && result.records.length > 0) {
-        let grandChildren = result.records[0].get("children");
-        tree.children[currentChild].children = grandChildren.map(graphNodeToTreeNode);
-        exclusions = exclusions.concat(grandChildren.map(c => c.identity));
-      }
-      currentChild++;
-      if (currentChild < numChildren) {
-        populateChildren();
-      } else {
-        session.close();
-        driver.close();
-        console.log(JSON.stringify(tree, null, 2));
-      }
-    });
-  })();
-  
+  console.log(subjects, null, 2);
 });

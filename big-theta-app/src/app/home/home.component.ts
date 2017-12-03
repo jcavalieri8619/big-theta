@@ -15,15 +15,15 @@ export class HomeComponent implements OnInit {
     private router:Router,
     private _userService:UserService,
     private _authService:AuthService
-  ) { }
-
-  ngOnInit() {
+  ) {
     this.appUser = this._userService.getUser();
   }
 
+  ngOnInit() {}
+
   logout() {
     this._authService.logout();
-    this.router.navigateByUrl('login');
+    window.location.href = "/login";
   }
 
 }
