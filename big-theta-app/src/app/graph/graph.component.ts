@@ -3,6 +3,7 @@ import { SubjectTree } from '../models/subject-tree';
 import { HttpClient } from '@angular/common/http';
 import * as d3 from 'd3';
 
+
 @Component({
   selector: 'app-graph',
   templateUrl: './graph.component.html',
@@ -27,12 +28,68 @@ export class GraphComponent implements OnInit {
       .attr('width', element.offsetWidth)
       .attr('height', element.offsetHeight);
 
+    let simulation = d3.forceSimulation()
+      .force("link", d3.forceLink().id(d => d.id))
+      .force("collide",d3.forceCollide(d => 35).iterations(16))
+      .force("charge", d3.forceManyBody())
+      .force("center", d3.forceCenter(this.width / 2, this.height / 2))
+      .force("y", d3.forceY(0))
+      .force("x", d3.forceX(0));
 
-    let force = d3.layout.force()
-      .charge(-200).linkDistance(30).size([this.width, this.height]);
+    let link = svg.append("g")
+      .attr("class", "links")
+      .selectAll("line")
+      .data(graphData.links)
+      .enter()
+      .append("line")
+      .attr("stroke", "black")
+  
+    let node = svg.append("g")
+      .attr("class", "nodes")
+      .selectAll("circle")
+      .data(graphData.nodes)
+      .enter().append("circle")
+      .attr("r", d => 15)
+      .call(d3.drag()
+          .on("start", dragstarted)
+          .on("drag", dragged)
+          .on("end", dragended));    
+  
+  
+    let ticked = function() {
+      link
+          .attr("x1", d => d.source.x)
+          .attr("y1", d => d.source.y)
+          .attr("x2", d => d.target.x)
+          .attr("y2", d => d.target.y);
 
+      node
+          .attr("cx", d => d.x)
+          .attr("cy", d => d.y);
+    }
+
+    simulation.nodes(graphData.nodes).on("tick", ticked);
+
+    simulation.force("link").links(graphData.links);
+
+    function dragstarted(d) {
+        if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+    }
+
+    function dragged(d) {
+        d.fx = d3.event.x;
+        d.fy = d3.event.y;
+    }
+
+    function dragended(d) {
+        if (!d3.event.active) simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+    }
     
-  }
+}
 
   getGraphData(treeData: SubjectTree) {
     let nodes = [];
