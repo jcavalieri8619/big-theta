@@ -38,7 +38,8 @@ exports.handler = (event, context, callback) => {
     return {
       id: graphNode.identity.toString(),
       title: graphNode.properties.title.trim(),
-      url: graphNode.properties.url
+      url: graphNode.properties.url,
+      children: []
     }
   }
 

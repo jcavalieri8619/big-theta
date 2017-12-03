@@ -1,56 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from '../models/subject';
+import { Equation } from '../models/equation';
+import { SubjectTree } from '../models/subject-tree';
 
 const BASE_URL = "https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta";
-
-class Equation {
-  id: string;
-  name: string;
-  equation: string;
-  url: string;
-
-  static sample() : Equation {
-    return {
-      id: "3048",
-      name: "Mathematics",
-      equation: "{ p\\Rightarrow q}",
-      url: "https://en.wikipedia.org/wiki/Mathematics"
-    };
-  }
-}
-
-class Subject {
-  id: string;
-  title: string;
-  url: string;
-
-  static sample() : Subject {
-    return {
-      id: "15787",
-      title: "Fourier series",
-      url: "https://en.wikipedia.org/wiki/Fourier_series"
-    }
-  }
-}
-
-class SubjectTree extends Subject {
-  children: SubjectTree[];
-
-  static sample(): SubjectTree {
-    return {
-      id: "15787",
-      title: "Fourier series",
-      url: "https://en.wikipedia.org/wiki/Fourier_series",
-      children: [
-        {
-          id: "6878",
-          title: "Linear algebra",
-          url: "https://en.wikipedia.org/wiki/Linear_algebra",
-          children: []
-        }
-      ]
-    };
-  }
-}
 
 interface ApiParameter {
   name: string;
