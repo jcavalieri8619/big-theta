@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { SubjectTree } from '../models/subject-tree';
 import { HttpClient } from '@angular/common/http';
 import * as d3 from 'd3';
+import { GraphSearchService } from 'app/services/graph-search.service';
 
 
 @Component({
@@ -16,7 +17,9 @@ export class GraphComponent implements OnInit {
   private width: number;
   private height: number;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private graphSearchService: GraphSearchService) {
+    graphSearchService.graphSearch$.subscribe(searchId => console.log("Inside graph id is " + searchId));
+  }
 
   initGraph(graphData) {
     console.log("Got data", graphData);

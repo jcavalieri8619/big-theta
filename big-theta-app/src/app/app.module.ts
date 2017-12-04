@@ -20,6 +20,7 @@ import { EquationSubjectComponent } from './equation-subject/equation-subject.co
 import {HttpClientModule} from '@angular/common/http';
 import {MathDatabaseService} from './services/math-database/math-database.service';
 import {WindowRefService} from './services/window-ref/window-ref.service';
+import {GraphSearchService} from './services/graph-search.service';
 
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
@@ -52,8 +53,11 @@ import { GraphComponent } from './graph/graph.component';
     MatProgressSpinnerModule,
     MatProgressBarModule
   ],
-  providers: [MathDatabaseService,
-            WindowRefService],
+  providers: [
+    MathDatabaseService,
+    WindowRefService,
+    GraphSearchService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
