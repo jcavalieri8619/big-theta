@@ -556,6 +556,7 @@ var GraphComponent = (function () {
             .attr("r", function (d) { return 12; })
             .on("click", function (d) {
             if (__WEBPACK_IMPORTED_MODULE_2_d3__["b" /* event */].altKey) {
+                console.log(d);
                 _this.graphSearchService.newEquationSubject(d);
             }
         });
@@ -611,13 +612,13 @@ var GraphComponent = (function () {
         var nodes = [];
         var links = [];
         // assuming depth = 2 tree for now
-        nodes.push({ id: treeData.id, title: treeData.title, isRoot: true });
+        nodes.push({ id: treeData.id, title: treeData.title, isRoot: true, url: treeData.url });
         treeData.children.forEach(function (child) {
-            nodes.push({ id: child.id, title: child.title });
+            nodes.push({ id: child.id, title: child.title, url: child.url });
             links.push({ source: treeData.id, target: child.id });
             child.children.forEach(function (grandChild) {
                 if (grandChild.id !== treeData.id) {
-                    nodes.push({ id: grandChild.id, title: grandChild.title });
+                    nodes.push({ id: grandChild.id, title: grandChild.title, url: grandChild.url });
                     links.push({ source: child.id, target: grandChild.id });
                 }
             });
@@ -1348,7 +1349,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/search/search.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home></app-home>\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-3 d-none d-md-block\">\n        <h3>Top Equations</h3>\n        <app-equation-rank></app-equation-rank>\n    </div>\n    <div class=\"col-md-6 col-xs-12\">\n      <p>\n          Welcome to Big Theta! This project allows you to enter a topic and find related topics and equations.\n          Topic and equation data are gathered from Wikipedia.\n          After searching for a topic, click on any node while holding\n          alt key in order to search for equations regarding that topic.\n      </p>\n      <p>Enter a topic below to try it out!</p>\n      <ng2-completer [(ngModel)]=\"equationStr\" [datasource]=\"dataService\" [minSearchLength]=\"3\" [maxChars]=\"20\" [clearSelected]=\"false\" [placeholder]=\"searchQuote\" (selected)=\"equSelected($event)\"></ng2-completer>\n      <app-graph></app-graph>\n    </div>\n    <div class=\"col-md-3 d-none d-md-block\">\n      <app-subject-equations></app-subject-equations>\n    </div>\n  </div>\n</div>"
+module.exports = "<app-home></app-home>\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-3 d-none d-md-block\">\n        <h3>Top Equations</h3>\n        <app-equation-rank></app-equation-rank>\n    </div>\n    <div class=\"col-md-6 col-xs-12\">\n      <p>\n          Welcome to Big Theta! This project allows you to enter a topic and find related topics and equations.\n          Topic and equation data are gathered from Wikipedia.\n          After searching for a topic, click on any node while holding\n          alt key in order to search for equations regarding that topic.\n      </p>\n      <p>Enter a topic below to try it out!</p>\n      <ng2-completer [(ngModel)]=\"equationStr\" [datasource]=\"dataService\" [minSearchLength]=\"3\" [maxChars]=\"100\" [clearSelected]=\"false\" [placeholder]=\"searchQuote\" (selected)=\"equSelected($event)\"></ng2-completer>\n      <app-graph></app-graph>\n    </div>\n    <div class=\"col-md-3 d-none d-md-block\">\n      <app-subject-equations></app-subject-equations>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
