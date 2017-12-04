@@ -11,9 +11,10 @@
           Topic and equation data are gathered from Wikipedia.
           After searching for a topic, click on any node while holding
           alt key in order to search for equations regarding that topic.
+          Click on any node while holding the shift key to initiate a new graph search with that as the root.
       </p>
       <p>Enter a topic below to try it out!</p>
-      <ng2-completer [(ngModel)]="equationStr" [datasource]="dataService" [minSearchLength]="3" [maxChars]="100" [clearSelected]="false" [placeholder]="searchQuote" (selected)="equSelected($event)"></ng2-completer>
+      <ng2-completer [(ngModel)]="equationStr" [datasource]="dataService" [minSearchLength]="3" [maxChars]="100" [clearSelected]="true" [placeholder]="searchQuote" (selected)="equSelected($event)"></ng2-completer>
       <app-graph></app-graph>
     </div>
     <div class="col-md-3 d-none d-md-block">

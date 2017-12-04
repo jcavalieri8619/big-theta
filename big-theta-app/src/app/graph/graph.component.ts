@@ -61,7 +61,9 @@ export class GraphComponent implements OnInit {
       .attr("r", d => 12)
       .on("click", d => {
         if (d3.event.altKey) {
-          console.log(d);
+          this.graphSearchService.newEquationSubject(d);
+        } else if (d3.event.shiftKey) {
+          this.graphSearchService.newSearch(d.id);
           this.graphSearchService.newEquationSubject(d);
         }
       });
