@@ -10,7 +10,7 @@ Add the following environment variables to your Lambda function:
 */
 
 const neo4j = require('neo4j-driver').v1;
-
+const querystring = require('querystring');
 
 exports.handler = (event, context, callback) => {
   const done = (err, res) => callback(null, {
@@ -25,7 +25,7 @@ exports.handler = (event, context, callback) => {
   const driver = neo4j.driver(`bolt://${process.env["neo4jBoltIp"]}/`, neo4j.auth.basic(process.env["neo4jUser"], process.env["neo4jPassword"]));
   const session = driver.session();
 
-  let searchTerm = event.pathParameters.searchterm.toLowerCase();
+  let searchTerm = querystring.unescape(event.pathParameters.searchterm).toLowerCase();
   
   const resultPromise = session.readTransaction(tx => tx.run(
     'MATCH (subject:SUBJECT) \
