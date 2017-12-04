@@ -1385,7 +1385,7 @@ var SearchComponent = (function () {
     SearchComponent.prototype.equSelected = function (selected) {
         if (selected) {
             this._graphSearchService.newSearch(selected.originalObject.id);
-            this._graphSearchService.newEquationSubject({ id: selected.originalObject.id, title: selected.originalObject.title });
+            this._graphSearchService.newEquationSubject({ id: selected.originalObject.id, title: selected.originalObject.title, url: selected.originalObject.url });
         }
     };
     SearchComponent.prototype.ngOnInit = function () {
@@ -1668,7 +1668,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/subject-equations/subject-equations.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ng-container *ngIf=\"equations\">\n  <h3>{{chosenSubject}}</h3>\n\n  <div class='equationRank'>\n\n    <div id='scrollbar_style5' class=\"rank_list\">\n\n      <app-math-list [equationList]=\"equations\" [showTitle]=\"false\"></app-math-list>\n\n    </div>\n\n  </div>\n\n</ng-container>\n  "
+module.exports = "<ng-container *ngIf=\"equations\">\n  <h3><a target=\"_blank\" [href]=\"chosenSubjectUrl\">{{chosenSubject}}</a></h3>\n\n  <div class='equationRank'>\n\n    <div id='scrollbar_style5' class=\"rank_list\">\n\n      <app-math-list [equationList]=\"equations\" [showTitle]=\"false\"></app-math-list>\n\n    </div>\n\n  </div>\n\n</ng-container>\n  "
 
 /***/ }),
 
@@ -1699,8 +1699,10 @@ var SubjectEquationsComponent = (function () {
         this.mathDatabaseService = mathDatabaseService;
         this.equations = [];
         this.chosenSubject = "";
+        this.chosenSubjectUrl = "";
         graphSearchService.equationSubjectSource$.subscribe(function (subject) {
             _this.chosenSubject = subject.title;
+            _this.chosenSubjectUrl = subject.url;
             mathDatabaseService.fetchSubjectEquations(subject.id).subscribe(function (equations) {
                 _this.equations = equations;
             });
