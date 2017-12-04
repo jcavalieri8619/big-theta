@@ -1,11 +1,8 @@
-
-
 <div class="container math-list">
 
-  <mat-spinner class="spinner " mode="indeterminate"></mat-spinner>
-  <!--<mat-progress-bar mode="indeterminate"></mat-progress-bar>-->
+  <mat-spinner class="spinner" [ngClass]="{'d-none': !isLoading}" mode="indeterminate"></mat-spinner>
 
-  <ul class="list-group hidden">
+  <ul class="list-group" [ngClass]="{'invisible': isLoading}">
 
     <li #listVar id="style-3" *ngFor="let equation of equationList  let i=index" class='list-group-item' (mouseenter)="setListElem_CSS(listVar,'active',true)"
         (mouseleave)="setListElem_CSS(listVar,'active',false)"  >

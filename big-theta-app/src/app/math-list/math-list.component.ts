@@ -1,8 +1,6 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {LatexEquation} from '../latex-equation';
 
-
-
 @Component( {
   selector: 'app-math-list',
   templateUrl: './math-list.component.html',
@@ -12,6 +10,7 @@ export class MathListComponent implements OnInit {
 
 
   private _equationList: LatexEquation[];
+  private isLoading: boolean;
 
   get equationList(): LatexEquation[] {
     return this._equationList;
@@ -19,7 +18,10 @@ export class MathListComponent implements OnInit {
 
   @Input() set equationList( value: LatexEquation[] ) {
     this._equationList = value;
-    console.log("got equations");
+    if (value.length > 0) {
+      this.finished_count = 0;
+      this.isLoading = true;
+    }
   }
 
 
@@ -46,9 +48,7 @@ export class MathListComponent implements OnInit {
 
   OnFinishTypesetting( finished: boolean): void {
     if (this.finished_count++ >= (this._equationList.length-1)){
-      this.elem.nativeElement.querySelector( '.spinner' ).classList.toggle( "no_display" );
-      this.elem.nativeElement.querySelector( '.hidden' ).classList.toggle( "hidden" );
-
+      this.isLoading = false;
     }
   }
 

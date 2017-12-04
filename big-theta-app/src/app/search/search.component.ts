@@ -21,6 +21,7 @@ export class SearchComponent implements OnInit {
   equSelected(selected: CompleterItem) {
     if (selected) {
       this._graphSearchService.newSearch(selected.originalObject.id);
+      this._graphSearchService.newEquationSubject({ id: selected.originalObject.id, title: selected.originalObject.title });
     }
   }
 
