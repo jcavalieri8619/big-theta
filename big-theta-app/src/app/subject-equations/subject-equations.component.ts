@@ -11,10 +11,12 @@ import { LatexEquation } from 'app/latex-equation';
 export class SubjectEquationsComponent implements OnInit {
   equations: LatexEquation[] = [];
   chosenSubject: string = "";
+  chosenSubjectUrl: string = "";
 
   constructor(private graphSearchService: GraphSearchService, private mathDatabaseService: MathDatabaseService) {
     graphSearchService.equationSubjectSource$.subscribe(subject => {
       this.chosenSubject = subject.title;
+      this.chosenSubjectUrl = subject.url;
       mathDatabaseService.fetchSubjectEquations(subject.id).subscribe(equations => {
         this.equations = equations;
       })
