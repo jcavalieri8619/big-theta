@@ -58,7 +58,7 @@ export class GraphComponent implements OnInit {
     node.append("circle")
       .attr("stroke", "black")
       .attr("fill", d => d.isRoot ? "red" : "blue")
-      .attr("r", d => 15)
+      .attr("r", d => 12)
       .on("click", d => {
         if (d3.event.altKey) {
           this.graphSearchService.newEquationSubject(d);
@@ -69,18 +69,34 @@ export class GraphComponent implements OnInit {
           .on("drag", dragged)
           .on("end", dragended));
     node.append("title").text(d => d.title);
+
+    let label = svg.append("g")
+      .attr("class", "labels")
+      .selectAll(".node-label")
+      .data(graphData.nodes)
+      .enter()
+      .append("text")
+      .text(d => d.title.length < 15 ? d.title : d.title.substring(0, 12) + "...")
+      .style("text-anchor", "middle")
+      .style("fill", "#555")
+      .style("font-family", "Arial")
+      .style("font-size", 12);
   
   
     let ticked = function() {
       link
-          .attr("x1", d => d.source.x)
-          .attr("y1", d => d.source.y)
-          .attr("x2", d => d.target.x)
-          .attr("y2", d => d.target.y);
+        .attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y);
 
-      node.select("circle")
-          .attr("cx", d => d.x)
-          .attr("cy", d => d.y);
+      node.select("circle")  
+        .attr("cx", d => d.x)
+        .attr("cy", d => d.y);
+
+      label
+        .attr("x", d => d.x)
+        .attr("y", d => d.y - 15);
     }
 
     simulation.nodes(graphData.nodes).on("tick", ticked);
