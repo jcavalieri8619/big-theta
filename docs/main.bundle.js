@@ -484,7 +484,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/graph/graph.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"width: 100%; height: 800px;\" class=\"equation-graph\" #graph></div>\n"
+module.exports = "<div style=\"width: 100%; height: 600px;\" class=\"equation-graph\" #graph></div>\n"
 
 /***/ }),
 
@@ -553,7 +553,7 @@ var GraphComponent = (function () {
         node.append("circle")
             .attr("stroke", "black")
             .attr("fill", function (d) { return d.isRoot ? "red" : "blue"; })
-            .attr("r", function (d) { return 15; })
+            .attr("r", function (d) { return 12; })
             .on("click", function (d) {
             if (__WEBPACK_IMPORTED_MODULE_2_d3__["b" /* event */].altKey) {
                 _this.graphSearchService.newEquationSubject(d);
@@ -564,6 +564,17 @@ var GraphComponent = (function () {
             .on("drag", dragged)
             .on("end", dragended));
         node.append("title").text(function (d) { return d.title; });
+        var label = svg.append("g")
+            .attr("class", "labels")
+            .selectAll(".node-label")
+            .data(graphData.nodes)
+            .enter()
+            .append("text")
+            .text(function (d) { return d.title.length < 15 ? d.title : d.title.substring(0, 12) + "..."; })
+            .style("text-anchor", "middle")
+            .style("fill", "#555")
+            .style("font-family", "Arial")
+            .style("font-size", 12);
         var ticked = function () {
             link
                 .attr("x1", function (d) { return d.source.x; })
@@ -573,6 +584,9 @@ var GraphComponent = (function () {
             node.select("circle")
                 .attr("cx", function (d) { return d.x; })
                 .attr("cy", function (d) { return d.y; });
+            label
+                .attr("x", function (d) { return d.x; })
+                .attr("y", function (d) { return d.y - 15; });
         };
         simulation.nodes(graphData.nodes).on("tick", ticked);
         simulation.force("link").links(graphData.links);
@@ -1123,7 +1137,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/math-list/math-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container math-list\">\n\n  <mat-spinner class=\"spinner\" [ngClass]=\"{'d-none': !isLoading}\" mode=\"indeterminate\"></mat-spinner>\n\n  <ul class=\"list-group\" [ngClass]=\"{'invisible': isLoading}\">\n\n    <li #listVar id=\"style-3\" *ngFor=\"let equation of equationList  let i=index\" class='list-group-item' (mouseenter)=\"setListElem_CSS(listVar,'active',true)\"\n        (mouseleave)=\"setListElem_CSS(listVar,'active',false)\"  >\n\n      <ng-container *ngIf=\"showTitle\">\n        <span class=\"equationTitle\">{{extractTitle(i)}}</span>\n      </ng-container>\n\n      <app-math-element [latexEquation]=\"equation\" (typesetFinished)=\"OnFinishTypesetting($event)\" (OnClick)=\"emitLatexEquation($event)\"></app-math-element>\n\n    </li>\n  </ul>\n</div>\n"
+module.exports = "<div class=\"container math-list\">\n\n  <mat-spinner class=\"spinner\" [class.d-none]=\"!isLoading\" mode=\"indeterminate\"></mat-spinner>\n\n  <ul class=\"list-group\" [class.invisible]=\"isLoading\">\n\n    <li #listVar id=\"style-3\" *ngFor=\"let equation of equationList  let i=index\" class='list-group-item' (mouseenter)=\"setListElem_CSS(listVar,'active',true)\"\n        (mouseleave)=\"setListElem_CSS(listVar,'active',false)\"  >\n\n      <ng-container *ngIf=\"showTitle\">\n        <span class=\"equationTitle\">{{extractTitle(i)}}</span>\n      </ng-container>\n\n      <app-math-element [latexEquation]=\"equation\" (typesetFinished)=\"OnFinishTypesetting($event)\" (OnClick)=\"emitLatexEquation($event)\"></app-math-element>\n\n    </li>\n  </ul>\n</div>\n"
 
 /***/ }),
 
@@ -1144,8 +1158,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 var MathListComponent = (function () {
-    function MathListComponent(elem) {
+    function MathListComponent(elem, changeDetectorRef) {
         this.elem = elem;
+        this.changeDetectorRef = changeDetectorRef;
         this.finished_count = 0;
         this.showTitle = false;
         this.OnClick = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
@@ -1159,6 +1174,7 @@ var MathListComponent = (function () {
             if (value.length > 0) {
                 this.finished_count = 0;
                 this.isLoading = true;
+                this.changeDetectorRef.detectChanges();
             }
         },
         enumerable: true,
@@ -1171,6 +1187,7 @@ var MathListComponent = (function () {
     MathListComponent.prototype.OnFinishTypesetting = function (finished) {
         if (this.finished_count++ >= (this._equationList.length - 1)) {
             this.isLoading = false;
+            this.changeDetectorRef.detectChanges();
         }
     };
     MathListComponent.prototype.setListElem_CSS = function (elem, key, value) {
@@ -1212,7 +1229,7 @@ var MathListComponent = (function () {
             template: __webpack_require__("../../../../../src/app/math-list/math-list.component.html"),
             styles: [__webpack_require__("../../../../../src/app/math-list/math-list.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* ChangeDetectorRef */]])
     ], MathListComponent);
     return MathListComponent;
 }());
@@ -1331,7 +1348,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/search/search.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home></app-home>\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-3 d-none d-md-block\">\n        <h3>Top Equations</h3>\n        <app-equation-rank></app-equation-rank>\n    </div>\n    <div class=\"col-md-6 col-xs-12\">\n      <p>\n          Welcome to Big Theta! This project allows you to enter a topic and find related topics and equations.\n          Topic and equation data are gathered from Wikipedia.\n          After searching for a topic, hover over a node in the graph to see the topic name. Click on any node while holding\n          alt key in order to search for equations regarding that topic.\n      </p>\n      <p>Enter a topic below to try it out!</p>\n      <ng2-completer [(ngModel)]=\"equationStr\" [datasource]=\"dataService\" [minSearchLength]=\"3\" [maxChars]=\"20\" [clearSelected]=\"false\" [placeholder]=\"searchQuote\" (selected)=\"equSelected($event)\"></ng2-completer>\n      <app-graph></app-graph>\n    </div>\n    <div class=\"col-md-3 d-none d-md-block\">\n      <app-subject-equations></app-subject-equations>\n    </div>\n  </div>\n</div>"
+module.exports = "<app-home></app-home>\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-3 d-none d-md-block\">\n        <h3>Top Equations</h3>\n        <app-equation-rank></app-equation-rank>\n    </div>\n    <div class=\"col-md-6 col-xs-12\">\n      <p>\n          Welcome to Big Theta! This project allows you to enter a topic and find related topics and equations.\n          Topic and equation data are gathered from Wikipedia.\n          After searching for a topic, click on any node while holding\n          alt key in order to search for equations regarding that topic.\n      </p>\n      <p>Enter a topic below to try it out!</p>\n      <ng2-completer [(ngModel)]=\"equationStr\" [datasource]=\"dataService\" [minSearchLength]=\"3\" [maxChars]=\"20\" [clearSelected]=\"false\" [placeholder]=\"searchQuote\" (selected)=\"equSelected($event)\"></ng2-completer>\n      <app-graph></app-graph>\n    </div>\n    <div class=\"col-md-3 d-none d-md-block\">\n      <app-subject-equations></app-subject-equations>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
