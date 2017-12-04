@@ -61,6 +61,7 @@ export class GraphComponent implements OnInit {
       .attr("r", d => 12)
       .on("click", d => {
         if (d3.event.altKey) {
+          console.log(d);
           this.graphSearchService.newEquationSubject(d);
         }
       });
@@ -127,13 +128,13 @@ export class GraphComponent implements OnInit {
     let links = [];
 
     // assuming depth = 2 tree for now
-    nodes.push({ id: treeData.id, title: treeData.title, isRoot: true });
+    nodes.push({ id: treeData.id, title: treeData.title, isRoot: true, url: treeData.url });
     treeData.children.forEach(child => {
-      nodes.push({ id: child.id, title: child.title });
+      nodes.push({ id: child.id, title: child.title, url: child.url });
       links.push({ source: treeData.id, target: child.id });
       child.children.forEach(grandChild => {
         if (grandChild.id !== treeData.id) {
-          nodes.push({ id: grandChild.id, title: grandChild.title });
+          nodes.push({ id: grandChild.id, title: grandChild.title, url: grandChild.url });
           links.push({ source: child.id, target: grandChild.id });
         }
       })

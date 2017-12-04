@@ -13,7 +13,7 @@
           alt key in order to search for equations regarding that topic.
       </p>
       <p>Enter a topic below to try it out!</p>
-      <ng2-completer [(ngModel)]="equationStr" [datasource]="dataService" [minSearchLength]="3" [maxChars]="20" [clearSelected]="false" [placeholder]="searchQuote" (selected)="equSelected($event)"></ng2-completer>
+      <ng2-completer [(ngModel)]="equationStr" [datasource]="dataService" [minSearchLength]="3" [maxChars]="100" [clearSelected]="false" [placeholder]="searchQuote" (selected)="equSelected($event)"></ng2-completer>
       <app-graph></app-graph>
     </div>
     <div class="col-md-3 d-none d-md-block">
