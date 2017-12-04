@@ -51,7 +51,11 @@ export class GraphComponent implements OnInit {
       .attr("stroke", "black")
       .attr("fill", "blue")
       .attr("r", d => 15)
-      .on("click", d => console.log(d));
+      .on("click", d => {
+        if (d3.event.altKey) {
+          alert("clicked " + d.title);
+        }
+      });
     node.call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
