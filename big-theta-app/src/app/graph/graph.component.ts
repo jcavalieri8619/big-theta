@@ -32,9 +32,7 @@ export class GraphComponent implements OnInit {
       .force("link", d3.forceLink().id(d => d.id))
       .force("collide",d3.forceCollide(d => 35).iterations(16))
       .force("charge", d3.forceManyBody())
-      .force("center", d3.forceCenter(this.width / 2, this.height / 2))
-      .force("y", d3.forceY(0))
-      .force("x", d3.forceX(0));
+      .force("center", d3.forceCenter(this.width / 2, this.height / 2));
 
     let link = svg.append("g")
       .attr("class", "links")
@@ -48,12 +46,17 @@ export class GraphComponent implements OnInit {
       .attr("class", "nodes")
       .selectAll("circle")
       .data(graphData.nodes)
-      .enter().append("circle")
+      .enter().append("g");
+    node.append("circle")
+      .attr("stroke", "black")
+      .attr("fill", "blue")
       .attr("r", d => 15)
-      .call(d3.drag()
+      .on("click", d => console.log(d));
+    node.call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
-          .on("end", dragended));    
+          .on("end", dragended));
+    node.append("title").text(d => d.title);
   
   
     let ticked = function() {
@@ -63,7 +66,7 @@ export class GraphComponent implements OnInit {
           .attr("x2", d => d.target.x)
           .attr("y2", d => d.target.y);
 
-      node
+      node.select("circle")
           .attr("cx", d => d.x)
           .attr("cy", d => d.y);
     }
