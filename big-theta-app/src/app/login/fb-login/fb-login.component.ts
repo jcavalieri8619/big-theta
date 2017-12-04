@@ -42,7 +42,7 @@ export class FbLoginComponent implements OnInit {
             userCredentials.userDetail = response;            
           });
           this._userService.setUser(JSON.stringify(response));
-          window.location.href = this.location.prepareExternalUrl("/home");
+          window.location.href = this.location.prepareExternalUrl("/");
         }
       }));
       

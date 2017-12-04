@@ -691,7 +691,7 @@ var HomeComponent = (function () {
     HomeComponent.prototype.ngOnInit = function () { };
     HomeComponent.prototype.logout = function () {
         this._authService.logout();
-        window.location.href = this.location.prepareExternalUrl("/login");
+        window.location.href = this.location.prepareExternalUrl("/");
     };
     HomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -813,7 +813,7 @@ var FbLoginComponent = (function () {
                         userCredentials_1.userDetail = response;
                     });
                     _this._userService.setUser(JSON.stringify(response));
-                    window.location.href = _this.location.prepareExternalUrl("/home");
+                    window.location.href = _this.location.prepareExternalUrl("/");
                 }
             }));
         };
@@ -920,7 +920,7 @@ var GoogleLoginComponent = (function () {
             userCredentials.image = profile.getImageUrl();
             userCredentials.email = profile.getEmail();
             _this._userService.setUser(JSON.stringify(userCredentials));
-            window.location.href = _this.location.prepareExternalUrl("/home");
+            window.location.href = _this.location.prepareExternalUrl("/");
         }, function (error) {
             console.log(JSON.stringify(error, undefined, 2));
         });
