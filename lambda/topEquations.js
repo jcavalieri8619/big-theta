@@ -27,9 +27,15 @@ exports.handler = (event, context, callback) => {
   
   const resultPromise = session.readTransaction(tx => tx.run(
     'MATCH (subject:SUBJECT)-[r:SAME_PAGE_AS]->(eq:EQUATION) \
-    RETURN subject, collect(eq)[0] as eq \
-    ORDER BY subject.pagerank DESC \
-    LIMIT 10'));
+     WITH collect(eq) AS eqs, subject, COUNT(eq) as eqCount \
+
+     WITH toInteger(floor(rand()*eqCount)) AS eqIndex, eqs, subject \
+
+     RETURN subject, eqs[eqIndex] AS eq \
+
+     ORDER BY subject.pagerank DESC \
+
+     LIMIT 10'));
   
   resultPromise.then(result => {
     session.close();
