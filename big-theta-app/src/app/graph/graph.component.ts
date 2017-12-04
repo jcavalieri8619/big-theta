@@ -18,12 +18,17 @@ export class GraphComponent implements OnInit {
   private height: number;
 
   constructor(private http: HttpClient, private graphSearchService: GraphSearchService) {
-    graphSearchService.graphSearch$.subscribe(searchId => console.log("Inside graph id is " + searchId));
+    graphSearchService.graphSearch$.subscribe(searchId => {
+      http.get<SubjectTree>("https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/subject/tree/" + searchId)
+      .subscribe(data => {
+        let graphData = this.getGraphData(data);
+        d3.select("svg").remove();
+        this.initGraph(graphData);
+      });
+    });
   }
 
   initGraph(graphData) {
-    console.log("Got data", graphData);
-
     const element = this.graphContainer.nativeElement;
     this.width = element.offsetWidth - this.margin.left - this.margin.right;
     this.height = element.offsetHeight - this.margin.top - this.margin.bottom;
@@ -120,11 +125,7 @@ export class GraphComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get<SubjectTree>("https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/subject/tree/4")
-    .subscribe(data => {
-      let graphData = this.getGraphData(data);
-      this.initGraph(graphData);
-    });
+
   }
 
 }

@@ -20,8 +20,6 @@ export class SearchComponent implements OnInit {
   
   equSelected(selected: CompleterItem) {
     if (selected) {
-      // object containing subject string and id
-      console.log(selected.originalObject);
       this._graphSearchService.newSearch(selected.originalObject.id);
     }
   }
