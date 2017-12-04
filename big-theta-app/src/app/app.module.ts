@@ -25,6 +25,7 @@ import {GraphSearchService} from './services/graph-search.service';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { GraphComponent } from './graph/graph.component';
+import { SubjectEquationsComponent } from './subject-equations/subject-equations.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { GraphComponent } from './graph/graph.component';
     EquationRankComponent,
     EquationSubjectComponent,
     GraphComponent,
+    SubjectEquationsComponent,
   ],
   imports: [
     BrowserAnimationsModule,

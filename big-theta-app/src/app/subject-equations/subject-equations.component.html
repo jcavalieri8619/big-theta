@@ -1,0 +1,17 @@
+<ng-container *ngIf="equations">
+  
+  <div class='equationRank'>
+
+    <div id='scrollbar_style5' class="rank_list">
+
+      <app-math-list [equationList]="equations" [showTitle]="true"
+                      (OnClick)="openEquationWikiPage($event)">
+
+      </app-math-list>
+
+    </div>
+
+  </div>
+
+</ng-container>
+  

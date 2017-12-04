@@ -35,7 +35,7 @@ export class MathDatabaseService {
         catchError( this.handleError( 'fetchRankedEquations', [] ) ) );
   }
 
-  fetchSubjectEquations( subject_id: number ): Observable<LatexEquation[]> {
+  fetchSubjectEquations( subject_id: string ): Observable<LatexEquation[]> {
 
     this.log( 'fetching LatexEquations by subjectID: ' + subject_id );
 

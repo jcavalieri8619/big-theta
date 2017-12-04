@@ -1,13 +1,17 @@
 <app-home></app-home>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-4 d-none d-md-block">
+    <div class="col-md-3 d-none d-md-block">
         <h3>Top Equations</h3>
         <app-equation-rank></app-equation-rank>
     </div>
-    <div class="col-md-8 col-xs-12">
+    <div class="col-md-6 col-xs-12">
         <ng2-completer [(ngModel)]="equationStr" [datasource]="dataService" [minSearchLength]="3" [maxChars]="20" [clearSelected]="false" [placeholder]="searchQuote" (selected)="equSelected($event)"></ng2-completer>
         <app-graph></app-graph>
+    </div>
+    <div class="col-md-3 d-none d-md-block">
+      <h3>Subject Equations</h3>
+      <app-subject-equations></app-subject-equations>
     </div>
   </div>
 </div>
