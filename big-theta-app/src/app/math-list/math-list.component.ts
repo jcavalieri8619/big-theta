@@ -1,4 +1,4 @@
-import {Component, ElementRef, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ChangeDetectorRef} from '@angular/core';
 import {LatexEquation} from '../latex-equation';
 
 @Component( {
@@ -21,6 +21,7 @@ export class MathListComponent implements OnInit {
     if (value.length > 0) {
       this.finished_count = 0;
       this.isLoading = true;
+      this.changeDetectorRef.detectChanges();
     }
   }
 
@@ -32,7 +33,7 @@ export class MathListComponent implements OnInit {
   @Output() OnClick = new EventEmitter<LatexEquation>();
 
 
-  constructor(private elem: ElementRef) {
+  constructor(private elem: ElementRef, private changeDetectorRef: ChangeDetectorRef) {
 
 
   }
@@ -49,6 +50,7 @@ export class MathListComponent implements OnInit {
   OnFinishTypesetting( finished: boolean): void {
     if (this.finished_count++ >= (this._equationList.length-1)){
       this.isLoading = false;
+      this.changeDetectorRef.detectChanges();
     }
   }
 
