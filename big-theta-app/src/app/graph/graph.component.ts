@@ -116,8 +116,10 @@ export class GraphComponent implements OnInit {
       nodes.push({ id: child.id, title: child.title });
       links.push({ source: treeData.id, target: child.id });
       child.children.forEach(grandChild => {
-        nodes.push({ id: grandChild.id, title: grandChild.title });
-        links.push({ source: child.id, target: grandChild.id });
+        if (grandChild.id !== treeData.id) {
+          nodes.push({ id: grandChild.id, title: grandChild.title });
+          links.push({ source: child.id, target: grandChild.id });
+        }
       })
     });
 
