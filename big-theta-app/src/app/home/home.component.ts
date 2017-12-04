@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { UserService } from '../services/user.service';
 import { AuthService } from '../services/auth.service';
@@ -14,7 +15,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private router:Router,
     private _userService:UserService,
-    private _authService:AuthService
+    private _authService:AuthService,
+    private location: Location
   ) {
     this.appUser = this._userService.getUser();
   }
@@ -23,7 +25,7 @@ export class HomeComponent implements OnInit {
 
   logout() {
     this._authService.logout();
-    window.location.href = "/login";
+    window.location.href = this.location.prepareExternalUrl("/login");
   }
 
 }

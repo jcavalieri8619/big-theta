@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Http, } from '@angular/http';
+import { Location } from '@angular/common';
 
 import { UserService } from '../../services/user.service';
 declare var window: any;
@@ -13,7 +14,7 @@ declare var FB: any;
 })
 export class FbLoginComponent implements OnInit {
 
-  constructor(private _userService: UserService, private router: Router, private http: Http) {
+  constructor(private _userService: UserService, private router: Router, private http: Http, private location: Location) {
     // This function initializes the FB variable 
     (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -41,7 +42,7 @@ export class FbLoginComponent implements OnInit {
             userCredentials.userDetail = response;            
           });
           this._userService.setUser(JSON.stringify(response));
-          window.location.href = "/home";
+          window.location.href = this.location.prepareExternalUrl("/home");
         }
       }));
       

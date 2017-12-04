@@ -663,8 +663,9 @@ module.exports = "<nav class=\"navbar navbar-expand navbar-dark bg-dark\">\n    
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -678,17 +679,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HomeComponent = (function () {
-    function HomeComponent(router, _userService, _authService) {
+    function HomeComponent(router, _userService, _authService, location) {
         this.router = router;
         this._userService = _userService;
         this._authService = _authService;
+        this.location = location;
         this.appUser = this._userService.getUser();
     }
     HomeComponent.prototype.ngOnInit = function () { };
     HomeComponent.prototype.logout = function () {
         this._authService.logout();
-        window.location.href = "/login";
+        window.location.href = this.location.prepareExternalUrl("/login");
     };
     HomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -697,8 +700,9 @@ var HomeComponent = (function () {
             styles: [__webpack_require__("../../../../../src/app/home/home.component.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
-            __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */],
-            __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */]])
+            __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_4__services_auth_service__["a" /* AuthService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]])
     ], HomeComponent);
     return HomeComponent;
 }());
@@ -759,7 +763,8 @@ module.exports = "<div class=\"fb-login-button\" data-max-rows=\"1\" data-size=\
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -773,12 +778,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var FbLoginComponent = (function () {
-    function FbLoginComponent(_userService, router, http) {
+    function FbLoginComponent(_userService, router, http, location) {
         var _this = this;
         this._userService = _userService;
         this.router = router;
         this.http = http;
+        this.location = location;
         // This function initializes the FB variable 
         (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
@@ -806,7 +813,7 @@ var FbLoginComponent = (function () {
                         userCredentials_1.userDetail = response;
                     });
                     _this._userService.setUser(JSON.stringify(response));
-                    window.location.href = "/home";
+                    window.location.href = _this.location.prepareExternalUrl("/home");
                 }
             }));
         };
@@ -822,7 +829,7 @@ var FbLoginComponent = (function () {
             template: __webpack_require__("../../../../../src/app/login/fb-login/fb-login.component.html"),
             styles: [__webpack_require__("../../../../../src/app/login/fb-login/fb-login.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_3__angular_common__["f" /* Location */]])
     ], FbLoginComponent);
     return FbLoginComponent;
 }());
@@ -863,7 +870,8 @@ module.exports = "<div class=\"g-signin2\" data-width=\"250\" data-height=\"40\"
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GoogleLoginComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -876,12 +884,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var GoogleLoginComponent = (function () {
-    function GoogleLoginComponent(element, _userService, route, router) {
+    function GoogleLoginComponent(element, _userService, route, router, location) {
         this.element = element;
         this._userService = _userService;
         this.route = route;
         this.router = router;
+        this.location = location;
         this.clientId = '363247795181-teko9e6qg8sih971tkl1b68smonb1j79.apps.googleusercontent.com';
         this.scope = [
             'profile',
@@ -910,7 +920,7 @@ var GoogleLoginComponent = (function () {
             userCredentials.image = profile.getImageUrl();
             userCredentials.email = profile.getEmail();
             _this._userService.setUser(JSON.stringify(userCredentials));
-            window.location.href = "/home";
+            window.location.href = _this.location.prepareExternalUrl("/home");
         }, function (error) {
             console.log(JSON.stringify(error, undefined, 2));
         });
@@ -925,9 +935,10 @@ var GoogleLoginComponent = (function () {
             styles: [__webpack_require__("../../../../../src/app/login/google-login/google-login.component.css")]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */],
-            __WEBPACK_IMPORTED_MODULE_2__services_user_service__["a" /* UserService */],
+            __WEBPACK_IMPORTED_MODULE_3__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */],
-            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]])
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]])
     ], GoogleLoginComponent);
     return GoogleLoginComponent;
 }());

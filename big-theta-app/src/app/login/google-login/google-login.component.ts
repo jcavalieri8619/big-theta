@@ -1,5 +1,6 @@
 import { Component, ElementRef, AfterViewInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { UserService } from '../../services/user.service';
 declare const gapi: any;
@@ -42,7 +43,7 @@ export class GoogleLoginComponent implements AfterViewInit {
         userCredentials.email = profile.getEmail();
 
         this._userService.setUser(JSON.stringify(userCredentials));
-        window.location.href = "/home";
+        window.location.href = this.location.prepareExternalUrl("/home");
 
       }, error => {
         console.log(JSON.stringify(error, undefined, 2));
@@ -52,7 +53,8 @@ export class GoogleLoginComponent implements AfterViewInit {
     private element: ElementRef,
     private _userService: UserService,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private location: Location
   ) {}
 
   ngAfterViewInit() {
