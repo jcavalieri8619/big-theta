@@ -57,7 +57,7 @@ export class GraphComponent implements OnInit {
       .enter().append("g");
     node.append("circle")
       .attr("stroke", "black")
-      .attr("fill", "blue")
+      .attr("fill", d => d.isRoot ? "red" : "blue")
       .attr("r", d => 15)
       .on("click", d => {
         if (d3.event.altKey) {
@@ -111,7 +111,7 @@ export class GraphComponent implements OnInit {
     let links = [];
 
     // assuming depth = 2 tree for now
-    nodes.push({ id: treeData.id, title: treeData.title });
+    nodes.push({ id: treeData.id, title: treeData.title, isRoot: true });
     treeData.children.forEach(child => {
       nodes.push({ id: child.id, title: child.title });
       links.push({ source: treeData.id, target: child.id });

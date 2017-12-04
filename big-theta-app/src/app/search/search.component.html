@@ -6,8 +6,12 @@
         <app-equation-rank></app-equation-rank>
     </div>
     <div class="col-md-6 col-xs-12">
-        <ng2-completer [(ngModel)]="equationStr" [datasource]="dataService" [minSearchLength]="3" [maxChars]="20" [clearSelected]="false" [placeholder]="searchQuote" (selected)="equSelected($event)"></ng2-completer>
-        <app-graph></app-graph>
+      <div>
+          Welcome to Big Theta! This project allows you to enter a topic and find related topics and equations. Topic and equation data are gathered from Wikipedia.
+          Enter a topic below to try it out!
+      </div><br>
+      <ng2-completer [(ngModel)]="equationStr" [datasource]="dataService" [minSearchLength]="3" [maxChars]="20" [clearSelected]="false" [placeholder]="searchQuote" (selected)="equSelected($event)"></ng2-completer>
+      <app-graph></app-graph>
     </div>
     <div class="col-md-3 d-none d-md-block">
       <app-subject-equations></app-subject-equations>
