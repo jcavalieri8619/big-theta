@@ -62,7 +62,7 @@ export class GraphComponent implements OnInit {
       .on("click", d => {
         if (d3.event.altKey) {
           console.log("clicked " + d.title);
-          this.graphSearchService.newEquationSubject(d.id);
+          this.graphSearchService.newEquationSubject(d);
         }
       });
     node.call(d3.drag()

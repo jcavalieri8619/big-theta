@@ -19,6 +19,7 @@ export class MathListComponent implements OnInit {
 
   @Input() set equationList( value: LatexEquation[] ) {
     this._equationList = value;
+    console.log("got equations");
   }
 
 

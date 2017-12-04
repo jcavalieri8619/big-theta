@@ -35,7 +35,7 @@ exports.handler = (event, context, callback) => {
   const resultPromise = session.readTransaction(tx => tx.run(
     'MATCH (subject:SUBJECT)-[r:SAME_PAGE_AS]->(eq:EQUATION) \
     WHERE ID(subject) = {subjectid} \
-    RETURN eq, subject LIMIT 20', {subjectid: subjectid}));
+    RETURN eq, subject LIMIT 10', {subjectid: subjectid}));
   
   resultPromise.then(result => {
     session.close();
