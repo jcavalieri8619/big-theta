@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 import { HomeComponent } from '../home/home.component';
 import { LoginComponent } from '../login/login.component';
 import { SearchComponent } from '../search/search.component';
-import { InfoComponent } from '../info/info.component';
 import { ApiComponent } from '../api/api.component';
 
 import { UserService } from '../services/user.service';
@@ -24,10 +23,6 @@ const routes: Routes = [
       {
         path: 'home',
         component: SearchComponent
-      },
-      {
-        path: 'info',
-        component: InfoComponent
       },
       {
         path: 'api',
