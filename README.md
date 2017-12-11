@@ -1,3 +1,5 @@
+### The EC2 instance running the Neo4j database is currently stopped, and so the site will not be fully functioning.
+
 # Big Theta
 Equation search engine based on Wikipedia
 
