@@ -3,6 +3,7 @@
   <div class="row">
     <div class="col-md-3 d-none d-md-block">
         <h3>Top Equations</h3>
+      <h6 class="subtitle">by PageRank</h6>
         <app-equation-rank></app-equation-rank>
     </div>
     <div class="col-md-6 col-xs-12">
@@ -10,11 +11,13 @@
           Welcome to Big Theta! This project allows you to enter a topic and find related topics and equations.
           Topic and equation data are gathered from Wikipedia.
           After searching for a topic, click on any node while holding
-          alt key in order to search for equations regarding that topic.
+        alt key (or windows key & alt together) in order to search for equations regarding that topic.
           Click on any node while holding the shift key to initiate a new graph search with that as the root.
       </p>
       <p>Enter a topic below to try it out!</p>
-      <ng2-completer [(ngModel)]="equationStr" [datasource]="dataService" [minSearchLength]="3" [maxChars]="100" [clearSelected]="true" [placeholder]="searchQuote" (selected)="equSelected($event)"></ng2-completer>
+      <ng2-completer [(ngModel)]="equationStr" [datasource]="dataService" [minSearchLength]="2" [maxChars]="100"
+                     [clearSelected]="true" [placeholder]="searchQuote"
+                     (selected)="equSelected($event)"></ng2-completer>
       <app-graph></app-graph>
     </div>
     <div class="col-md-3 d-none d-md-block">
