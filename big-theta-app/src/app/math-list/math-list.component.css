@@ -8,6 +8,16 @@
 
 }
 
+.clickable {
+
+  cursor: pointer;
+
+}
+
+.not_clickable {
+  cursor: default;
+
+}
 
 .spinner {
   margin: 0 auto;
