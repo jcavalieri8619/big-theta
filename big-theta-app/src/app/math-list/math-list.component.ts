@@ -1,5 +1,5 @@
 import {Component, ElementRef, EventEmitter, Input, OnInit, Output, ChangeDetectorRef} from '@angular/core';
-import {LatexEquation} from '../latex-equation';
+import {Equation} from '../models/equation';
 
 @Component( {
   selector: 'app-math-list',
@@ -9,14 +9,14 @@ import {LatexEquation} from '../latex-equation';
 export class MathListComponent implements OnInit {
 
 
-  private _equationList: LatexEquation[];
+  private _equationList: Equation[];
   private isLoading: boolean;
 
-  get equationList(): LatexEquation[] {
+  get equationList(): Equation[] {
     return this._equationList;
   }
 
-  @Input() set equationList( value: LatexEquation[] ) {
+  @Input() set equationList(value: Equation[]) {
     this._equationList = value;
     if (value.length > 0) {
       this.finished_count = 0;
@@ -30,7 +30,7 @@ export class MathListComponent implements OnInit {
 
   @Input() showTitle = false;
 
-  @Output() OnClick = new EventEmitter<LatexEquation>();
+  @Output() OnClick = new EventEmitter<Equation>();
 
 
   constructor(private elem: ElementRef, private changeDetectorRef: ChangeDetectorRef) {
@@ -54,7 +54,7 @@ export class MathListComponent implements OnInit {
     }
   }
 
-  setListElem_CSS( elem: HTMLLIElement, key: string, value: boolean ): void {
+  static setListElem_CSS(elem: HTMLLIElement, key: string, value: boolean): void {
     if ( value ) {
       elem.classList.add( key );
 
@@ -75,9 +75,9 @@ export class MathListComponent implements OnInit {
   /**
    * bind to app-math-element OnClick event, If user clicks on equation then
    * trigger equation search
-   * @param {LatexEquation} event
+   * @param {Equation} event
    */
-  emitLatexEquation( event: LatexEquation ): void {
+  emitLatexEquation(event: Equation): void {
     this.OnClick.emit( event );
     console.log( `MathListComponent--emitLatexEquation: id: ${event.id},  name: ${event.name}` );
   }
