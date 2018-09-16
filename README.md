@@ -1,4 +1,3 @@
-### The EC2 instance running the Neo4j database is currently stopped, and so the site will not be fully functioning.
 
 # Big Theta
 Equation search engine based on Wikipedia
@@ -9,7 +8,7 @@ The purpose of this project is to provide an interface to search for related top
 
 The site is built using Angular 5 and uses APIs hosted in AWS in order to function.
 
-Site available at: https://pghant.github.io/big-theta/
+Site available at: https://jcavalieri8619.github.io/big-theta/
 
 ## Technologies Used
 1. Neo4j
