@@ -1,51 +1,90 @@
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {of} from 'rxjs/observable/of';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders, HttpResponse} from '@angular/common/http';
 import {catchError, map, tap, concatAll} from 'rxjs/operators';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/concatAll';
 
-import {LatexEquation} from '../../latex-equation';
+import {Equation} from '../../models/equation';
+import {SubjectTree} from "../../models/subject-tree";
+import {Subject} from "../../models/subject";
+
 
 
 const httpOptions = {
   headers: new HttpHeaders( {'Content-Type': 'application/json'} )
 };
 
+interface MathDatabseHttpResponse {
+  statusCode: string;
+  body: any;
+  headers: HttpHeaders;
+
+}
 
 @Injectable()
 export class MathDatabaseService {
 
-  private databaseURL = 'https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta';
+  //fixme
+  // private databaseURL = 'http://localhost:8887/bigtheta';
+
+  private databaseURL = 'http://jcavalieri.ddns.net:3000/bigtheta';
+
 
   constructor( private http: HttpClient ) {
 
   }
 
-  fetchRankedEquations(): Observable<LatexEquation[]> {
+  fetchRankedEquations(): Observable<Equation[]> {
+
 
     this.log( `fetching LatexEquation by rank` );
 
     const url = `${this.databaseURL}/equations/top`;
 
-    return this.http.get<LatexEquation[]>( url )
-      .pipe( tap( latexEquations => this.log( 'fetched ranked equations:\n' + latexEquations ) ),
-        catchError( this.handleError( 'fetchRankedEquations', [] ) ) );
+    return this.http.get<HttpResponse<Equation[]>>(url)
+      .map(value => value.body)
+      .pipe(catchError(this.handleError('fetchRankedEquations', [])));
   }
 
-  fetchSubjectEquations( subject_id: string ): Observable<LatexEquation[]> {
+  fetchSubjectEquations(subject_id: string): Observable<Equation[]> {
 
     this.log( 'fetching LatexEquations by subjectID: ' + subject_id );
 
     const url = `${this.databaseURL}/equations/subject/${subject_id}`;
 
-    return this.http.get<LatexEquation[]>( url )
-      .pipe( tap( latexEquations => this.log( 'fetched equations by subject:\n' + latexEquations ) ),
-        catchError( this.handleError( 'fetchSubjectEquations', [] ) ) );
+    return this.http.get<HttpResponse<Equation[]>>(url)
+      .map(value => value.body)
+      .pipe(catchError(this.handleError('fetchSubjectEquations', [])));
 
   }
+
+  fetchSubjectTree(tree_id: string): Observable<SubjectTree> {
+
+    const url = `${this.databaseURL}/subject/tree/${tree_id}`;
+
+    return this.http.get<HttpResponse<SubjectTree>>(url)
+      .map(value => value.body)
+      .pipe(catchError(this.handleError('fetchSubjectEquations', new SubjectTree())));
+
+  }
+
+
+  searchSubjects(term: string): Observable<Subject[]> {
+    if (!term.trim()) {
+      // if not search term, return empty LatexEquation array.
+      return of([]);
+    }
+    const url = `${this.databaseURL}/subject/tree/${term}`;
+
+
+    return this.http.get<HttpResponse<Subject[]>>(url)
+      .map(value => value.body)
+      .pipe(catchError(this.handleError<Subject[]>('searchSubjects', [])));
+  }
+
 
 
   /**
@@ -53,15 +92,17 @@ export class MathDatabaseService {
    * @param {string} term
    * @returns {Observable<LatexEquation[]>}
    */
-  searchLatexEquations( term: string ): Observable<LatexEquation[]> {
+  searchEquations(term: string): Observable<Equation[]> {
     if ( !term.trim() ) {
       // if not search term, return empty LatexEquation array.
       return of( [] );
     }
-    return this.http.get<LatexEquation[]>( this.databaseURL ).pipe(
-      tap( _ => this.log( `found equations matching "${term}"` ) ),
-      catchError( this.handleError<LatexEquation[]>( 'searchLatexEquations', [] ) )
-    );
+
+    const url = `${this.databaseURL}/equations/search/${term}`;
+
+    return this.http.get<HttpResponse<Equation[]>>(url)
+      .map(value => value.body)
+      .pipe(catchError(this.handleError<Equation[]>('searchEquations', [])));
   }
 
 
