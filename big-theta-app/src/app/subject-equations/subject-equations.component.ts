@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GraphSearchService } from 'app/services/graph-search.service';
 import { MathDatabaseService } from 'app/services/math-database/math-database.service';
-import { LatexEquation } from 'app/latex-equation';
+import {Equation} from 'app/models/equation';
 
 @Component({
   selector: 'app-subject-equations',
@@ -9,7 +9,7 @@ import { LatexEquation } from 'app/latex-equation';
   styleUrls: ['./subject-equations.component.css']
 })
 export class SubjectEquationsComponent implements OnInit {
-  equations: LatexEquation[] = [];
+  equations: Equation[] = [];
   chosenSubject: string = "";
   chosenSubjectUrl: string = "";
 
