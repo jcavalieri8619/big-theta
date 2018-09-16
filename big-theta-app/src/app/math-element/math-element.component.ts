@@ -3,7 +3,7 @@
 
 import {Component, AfterViewInit, Input, Output, EventEmitter, ElementRef} from '@angular/core';
 
-import {LatexEquation} from '../latex-equation';
+import {Equation} from '../models/equation';
 import {WindowRefService} from '../services/window-ref/window-ref.service';
 
 
@@ -15,11 +15,11 @@ import {WindowRefService} from '../services/window-ref/window-ref.service';
 export class MathElementComponent implements AfterViewInit {
 
 
-  @Input() latexEquation: LatexEquation;
+  @Input() equation: Equation;
 
-  @Output() OnClick = new EventEmitter<LatexEquation>();
+  @Output() OnClick = new EventEmitter<Equation>();
 
-  @Output() typesetFinished = new EventEmitter<boolean>()
+  @Output() typesetFinished = new EventEmitter<boolean>();
 
 
 
@@ -47,12 +47,12 @@ export class MathElementComponent implements AfterViewInit {
   }
 
   emitLatexEquation(): void {
-    this.OnClick.emit( this.latexEquation );
+    this.OnClick.emit(this.equation);
     console.log( 'MathElementComponent--emitLatexEquation: emitted click event' );
   }
 
 
   getDisplayStyleEquation( ): string {
-    return '$$\\bf '.concat( this.latexEquation.equation).concat( ' $$' );
+    return '$$\\bf '.concat(this.equation.equation).concat(' $$');
   }
 }
