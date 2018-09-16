@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LatexEquation} from '../latex-equation';
+import {Equation} from '../models/equation';
 import {MathDatabaseService} from '../services/math-database/math-database.service';
 import {WindowRefService} from '../services/window-ref/window-ref.service';
 
@@ -10,7 +10,7 @@ import {WindowRefService} from '../services/window-ref/window-ref.service';
 })
 export class EquationRankComponent implements OnInit {
 
-  equations: LatexEquation[] = [];
+  equations: Equation[] = [];
 
   constructor(private apiConnection: MathDatabaseService, private window_ref: WindowRefService) { }
 
@@ -18,7 +18,7 @@ export class EquationRankComponent implements OnInit {
     this.apiConnection.fetchRankedEquations().subscribe( eqns => this.equations = eqns);
   }
 
-  openEquationWikiPage(event: LatexEquation): void {
+  openEquationWikiPage(event: Equation): void {
     this.window_ref.nativeWindow.open( event.url );
   }
 
