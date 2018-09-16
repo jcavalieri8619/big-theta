@@ -11,8 +11,10 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    if (localStorage.getItem('bigThetaUser') == null) {
-      this.router.navigateByUrl('login');
-    }
+    // no longer using login
+
+    // if (localStorage.getItem('bigThetaUser') == null) {
+    //   this.router.navigateByUrl('login');
+    // }
   }
 }
