@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { SubjectTree } from '../models/subject-tree';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpResponse} from '@angular/common/http';
 import * as d3 from 'd3';
 import { GraphSearchService } from 'app/services/graph-search.service';
+import {MathDatabaseService} from "../services/math-database/math-database.service";
 
 
 @Component({
@@ -17,18 +18,22 @@ export class GraphComponent implements OnInit {
   private width: number;
   private height: number;
 
-  constructor(private http: HttpClient, private graphSearchService: GraphSearchService) {
+
+  constructor(private mathDatabaseService: MathDatabaseService, private graphSearchService: GraphSearchService) {
     graphSearchService.graphSearch$.subscribe(searchId => {
-      http.get<SubjectTree>("https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/subject/tree/" + searchId)
-      .subscribe(data => {
-        let graphData = this.getGraphData(data);
-        d3.select("svg").remove();
-        this.initGraph(graphData);
-      });
+      this.mathDatabaseService.fetchSubjectTree(searchId)
+        .subscribe(data => {
+          let graphData = this.getGraphData(data);
+          d3.select("svg").remove();
+          this.initGraph(graphData);
+        });
     });
   }
 
+
   initGraph(graphData) {
+
+
     const element = this.graphContainer.nativeElement;
     this.width = element.offsetWidth - this.margin.left - this.margin.right;
     this.height = element.offsetHeight - this.margin.top - this.margin.bottom;
@@ -36,8 +41,9 @@ export class GraphComponent implements OnInit {
       .attr('width', element.offsetWidth)
       .attr('height', element.offsetHeight);
 
+
     let simulation = d3.forceSimulation()
-      .force("link", d3.forceLink().id(d => d.id))
+      .force("link", d3.forceLink().id((d: any) => d.id))
       .force("collide",d3.forceCollide(d => 35).iterations(16))
       .force("charge", d3.forceManyBody())
       .force("center", d3.forceCenter(this.width / 2, this.height / 2));
@@ -48,7 +54,7 @@ export class GraphComponent implements OnInit {
       .data(graphData.links)
       .enter()
       .append("line")
-      .attr("stroke", "black")
+      .attr("stroke", "black");
   
     let node = svg.append("g")
       .attr("class", "nodes")
@@ -57,21 +63,25 @@ export class GraphComponent implements OnInit {
       .enter().append("g");
     node.append("circle")
       .attr("stroke", "black")
-      .attr("fill", d => d.isRoot ? "red" : "blue")
+      .attr("fill", (d: any) => d.isRoot ? "red" : "blue")
       .attr("r", d => 12)
       .on("click", d => {
+
         if (d3.event.altKey) {
           this.graphSearchService.newEquationSubject(d);
         } else if (d3.event.shiftKey) {
-          this.graphSearchService.newSearch(d.id);
+          this.graphSearchService.newSearch((<any> d).id);
           this.graphSearchService.newEquationSubject(d);
         }
       });
+
     node.call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended));
-    node.append("title").text(d => d.title);
+
+
+    node.append("title").text((d: any) => d.title);
 
     let label = svg.append("g")
       .attr("class", "labels")
@@ -79,32 +89,32 @@ export class GraphComponent implements OnInit {
       .data(graphData.nodes)
       .enter()
       .append("text")
-      .text(d => d.title.length < 15 ? d.title : d.title.substring(0, 12) + "...")
+      .text((d: any) => d.title.length < 15 ? d.title : d.title.substring(0, 12) + "...")
       .style("text-anchor", "middle")
       .style("fill", "#555")
       .style("font-family", "Arial")
       .style("font-size", 12);
-  
-  
-    let ticked = function() {
-      link
-        .attr("x1", d => d.source.x)
-        .attr("y1", d => d.source.y)
-        .attr("x2", d => d.target.x)
-        .attr("y2", d => d.target.y);
 
-      node.select("circle")  
-        .attr("cx", d => d.x)
-        .attr("cy", d => d.y);
+
+    let ticked = function () {
+      link
+        .attr("x1", (d: any) => d.source.x)
+        .attr("y1", (d: any) => d.source.y)
+        .attr("x2", (d: any) => d.target.x)
+        .attr("y2", (d: any) => d.target.y);
+
+      node.select("circle")
+        .attr("cx", (d: any) => d.x)
+        .attr("cy", (d: any) => d.y);
 
       label
-        .attr("x", d => d.x)
-        .attr("y", d => d.y - 15);
-    }
+        .attr("x", (d: any) => d.x)
+        .attr("y", (d: any) => d.y - 15);
+    };
 
     simulation.nodes(graphData.nodes).on("tick", ticked);
 
-    simulation.force("link").links(graphData.links);
+    (<any> simulation.force("link")).links(graphData.links);
 
     function dragstarted(d) {
         if (!d3.event.active) simulation.alphaTarget(0.3).restart();
