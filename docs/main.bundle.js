@@ -1517,11 +1517,11 @@ var httpOptions = {
     headers: new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' })
 };
 var MathDatabaseService = (function () {
+    // private databaseURL = 'http://jcavalieri.ddns.net:3000/bigtheta';
     function MathDatabaseService(http) {
         this.http = http;
         //fixme
-        // private databaseURL = 'http://localhost:8887/bigtheta';
-        this.databaseURL = 'http://jcavalieri.ddns.net:3000/bigtheta';
+        this.databaseURL = 'http://localhost:8887/bigtheta';
     }
     MathDatabaseService.prototype.fetchRankedEquations = function () {
         this.log("fetching LatexEquation by rank");

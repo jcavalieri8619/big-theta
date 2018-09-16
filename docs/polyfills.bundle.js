@@ -3199,7 +3199,6 @@ var Zone$1 = (function (global) {
 Zone.__load_patch('ZoneAwarePromise', function (global, Zone, api) {
     var ObjectGetOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
     var ObjectDefineProperty = Object.defineProperty;
-
     function readableObjectToString(obj) {
         if (obj && obj.toString === Object.prototype.toString) {
             var className = obj.constructor && obj.constructor.name;
@@ -3475,7 +3474,6 @@ Zone.__load_patch('ZoneAwarePromise', function (global, Zone, api) {
             function onReject(error) {
                 promise && (promise = null || reject(error));
             }
-
             for (var _i = 0, values_1 = values; _i < values_1.length; _i++) {
                 var value = values_1[_i];
                 if (!isThenable(value)) {
@@ -5491,7 +5489,6 @@ Zone.__load_patch('on_property', function (global, Zone, api) {
         function findPendingTask(target) {
             return target[XHR_TASK];
         }
-
         var oriAddListener = XMLHttpRequestPrototype[ZONE_SYMBOL_ADD_EVENT_LISTENER];
         var oriRemoveListener = XMLHttpRequestPrototype[ZONE_SYMBOL_REMOVE_EVENT_LISTENER];
         if (!oriAddListener) {
