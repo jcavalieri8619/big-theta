@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
+    "start": "ng serve --open ",
     "build": "ng build --base-href https://jcavalieri8619.github.io/big-theta/",
     "test": "ng test",
     "lint": "ng lint",
@@ -26,7 +26,7 @@
     "@angular/platform-server": "~5.0.0",
     "@angular/router": "~5.0.0",
     "@angular/upgrade": "~5.0.0",
-    "auth0-js": "^8.11.3",
+    "auth0-js": "^9.7.3",
     "core-js": "^2.4.1",
     "d3": "^4.12.0",
     "jquery": "^3.2.1",
