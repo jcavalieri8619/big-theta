@@ -267,9 +267,10 @@ var AppComponent = (function () {
         this.router = router;
     }
     AppComponent.prototype.ngOnInit = function () {
-        if (localStorage.getItem('bigThetaUser') == null) {
-            this.router.navigateByUrl('login');
-        }
+        // no longer using login
+        // if (localStorage.getItem('bigThetaUser') == null) {
+        //   this.router.navigateByUrl('login');
+        // }
     };
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -494,9 +495,12 @@ module.exports = "<div style=\"width: 100%; height: 600px;\" class=\"equation-gr
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GraphComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_d3__ = __webpack_require__("../../../../d3/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_services_graph_search_service__ = __webpack_require__("../../../../../src/app/services/graph-search.service.ts");
+        /* harmony import */
+        var __WEBPACK_IMPORTED_MODULE_1_d3__ = __webpack_require__("../../../../d3/index.js");
+        /* harmony import */
+        var __WEBPACK_IMPORTED_MODULE_2_app_services_graph_search_service__ = __webpack_require__("../../../../../src/app/services/graph-search.service.ts");
+        /* harmony import */
+        var __WEBPACK_IMPORTED_MODULE_3__services_math_database_math_database_service__ = __webpack_require__("../../../../../src/app/services/math-database/math-database.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -511,16 +515,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var GraphComponent = (function () {
-    function GraphComponent(http, graphSearchService) {
+    function GraphComponent(mathDatabaseService, graphSearchService) {
         var _this = this;
-        this.http = http;
+        this.mathDatabaseService = mathDatabaseService;
         this.graphSearchService = graphSearchService;
         this.margin = { top: 20, bottom: 20, left: 20, right: 20 };
         graphSearchService.graphSearch$.subscribe(function (searchId) {
-            http.get("https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/subject/tree/" + searchId)
+            _this.mathDatabaseService.fetchSubjectTree(searchId)
                 .subscribe(function (data) {
                 var graphData = _this.getGraphData(data);
-                __WEBPACK_IMPORTED_MODULE_2_d3__["h" /* select */]("svg").remove();
+                    __WEBPACK_IMPORTED_MODULE_1_d3__["h" /* select */]("svg").remove();
                 _this.initGraph(graphData);
             });
         });
@@ -530,14 +534,18 @@ var GraphComponent = (function () {
         var element = this.graphContainer.nativeElement;
         this.width = element.offsetWidth - this.margin.left - this.margin.right;
         this.height = element.offsetHeight - this.margin.top - this.margin.bottom;
-        var svg = __WEBPACK_IMPORTED_MODULE_2_d3__["h" /* select */](element).append('svg')
+        var svg = __WEBPACK_IMPORTED_MODULE_1_d3__["h" /* select */](element).append('svg')
             .attr('width', element.offsetWidth)
             .attr('height', element.offsetHeight);
-        var simulation = __WEBPACK_IMPORTED_MODULE_2_d3__["g" /* forceSimulation */]()
-            .force("link", __WEBPACK_IMPORTED_MODULE_2_d3__["e" /* forceLink */]().id(function (d) { return d.id; }))
-            .force("collide", __WEBPACK_IMPORTED_MODULE_2_d3__["d" /* forceCollide */](function (d) { return 35; }).iterations(16))
-            .force("charge", __WEBPACK_IMPORTED_MODULE_2_d3__["f" /* forceManyBody */]())
-            .force("center", __WEBPACK_IMPORTED_MODULE_2_d3__["c" /* forceCenter */](this.width / 2, this.height / 2));
+        var simulation = __WEBPACK_IMPORTED_MODULE_1_d3__["g" /* forceSimulation */]()
+            .force("link", __WEBPACK_IMPORTED_MODULE_1_d3__["e" /* forceLink */]().id(function (d) {
+                return d.id;
+            }))
+            .force("collide", __WEBPACK_IMPORTED_MODULE_1_d3__["d" /* forceCollide */](function (d) {
+                return 35;
+            }).iterations(16))
+            .force("charge", __WEBPACK_IMPORTED_MODULE_1_d3__["f" /* forceManyBody */]())
+            .force("center", __WEBPACK_IMPORTED_MODULE_1_d3__["c" /* forceCenter */](this.width / 2, this.height / 2));
         var link = svg.append("g")
             .attr("class", "links")
             .selectAll("line")
@@ -555,15 +563,15 @@ var GraphComponent = (function () {
             .attr("fill", function (d) { return d.isRoot ? "red" : "blue"; })
             .attr("r", function (d) { return 12; })
             .on("click", function (d) {
-            if (__WEBPACK_IMPORTED_MODULE_2_d3__["b" /* event */].altKey) {
+                if (__WEBPACK_IMPORTED_MODULE_1_d3__["b" /* event */].altKey) {
                 _this.graphSearchService.newEquationSubject(d);
             }
-            else if (__WEBPACK_IMPORTED_MODULE_2_d3__["b" /* event */].shiftKey) {
+                else if (__WEBPACK_IMPORTED_MODULE_1_d3__["b" /* event */].shiftKey) {
                 _this.graphSearchService.newSearch(d.id);
                 _this.graphSearchService.newEquationSubject(d);
             }
         });
-        node.call(__WEBPACK_IMPORTED_MODULE_2_d3__["a" /* drag */]()
+        node.call(__WEBPACK_IMPORTED_MODULE_1_d3__["a" /* drag */]()
             .on("start", dragstarted)
             .on("drag", dragged)
             .on("end", dragended));
@@ -595,17 +603,17 @@ var GraphComponent = (function () {
         simulation.nodes(graphData.nodes).on("tick", ticked);
         simulation.force("link").links(graphData.links);
         function dragstarted(d) {
-            if (!__WEBPACK_IMPORTED_MODULE_2_d3__["b" /* event */].active)
+            if (!__WEBPACK_IMPORTED_MODULE_1_d3__["b" /* event */].active)
                 simulation.alphaTarget(0.3).restart();
             d.fx = d.x;
             d.fy = d.y;
         }
         function dragged(d) {
-            d.fx = __WEBPACK_IMPORTED_MODULE_2_d3__["b" /* event */].x;
-            d.fy = __WEBPACK_IMPORTED_MODULE_2_d3__["b" /* event */].y;
+            d.fx = __WEBPACK_IMPORTED_MODULE_1_d3__["b" /* event */].x;
+            d.fy = __WEBPACK_IMPORTED_MODULE_1_d3__["b" /* event */].y;
         }
         function dragended(d) {
-            if (!__WEBPACK_IMPORTED_MODULE_2_d3__["b" /* event */].active)
+            if (!__WEBPACK_IMPORTED_MODULE_1_d3__["b" /* event */].active)
                 simulation.alphaTarget(0);
             d.fx = null;
             d.fy = null;
@@ -640,7 +648,7 @@ var GraphComponent = (function () {
             template: __webpack_require__("../../../../../src/app/graph/graph.component.html"),
             styles: [__webpack_require__("../../../../../src/app/graph/graph.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_3_app_services_graph_search_service__["a" /* GraphSearchService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__services_math_database_math_database_service__["a" /* MathDatabaseService */], __WEBPACK_IMPORTED_MODULE_2_app_services_graph_search_service__["a" /* GraphSearchService */]])
     ], GraphComponent);
     return GraphComponent;
 }());
@@ -670,7 +678,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"/\">\n        <img src=\"assets/images/theta_logo.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\"> Big Theta\n    </a>\n    <div class=\"navbar-nav\">\n        <a [routerLink]=\"['/home']\" routerLinkActive=\"active\" class=\"nav-item nav-link\">Home</a>\n        <a [routerLink]=\"['/api']\" routerLinkActive=\"active\" class=\"nav-item nav-link\">API</a>\n    </div>\n    <div class=\"pull-right logout-div\">\n        <button class=\"btn btn-sm btn-danger pull-right\" (click)=\"logout()\">Logout</button>\n        <span class=\"pull-right user-name-div\">Welcome {{ appUser.name }}</span>\n    </div>\n</nav>"
+        module.exports = "<nav class=\"navbar navbar-expand navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"/\">\n        <img src=\"assets/images/theta_logo.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\"> Big Theta\n    </a>\n    <div class=\"navbar-nav\">\n        <a [routerLink]=\"['/home']\" routerLinkActive=\"active\" class=\"nav-item nav-link\">Home</a>\n        <a [routerLink]=\"['/api']\" routerLinkActive=\"active\" class=\"nav-item nav-link\">API</a>\n    </div>\n    <div class=\"pull-right logout-div\">\n      <!--<button class=\"btn btn-sm btn-danger pull-right\" (click)=\"logout()\">Logout</button>-->\n      <!--<span class=\"pull-right user-name-div\">Welcome {{ appUser.name }}</span>-->\n    </div>\n</nav>\n"
 
 /***/ }),
 
@@ -723,25 +731,6 @@ var HomeComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_2__angular_common__["f" /* Location */]])
     ], HomeComponent);
     return HomeComponent;
-}());
-
-
-
-/***/ }),
-
-/***/ "../../../../../src/app/latex-equation.ts":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LatexEquation; });
-var LatexEquation = (function () {
-    function LatexEquation() {
-        this.equation = '';
-        this.id = 0;
-        this.name = '';
-        this.url = '';
-    }
-    return LatexEquation;
 }());
 
 
@@ -1045,7 +1034,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/math-element/math-element.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ng-container *ngIf=\"latexEquation\">\n<span (click)=\"emitLatexEquation()\">\n  {{getDisplayStyleEquation()}}\n</span>\n</ng-container>\n"
+        module.exports = "<ng-container *ngIf=\"equation\">\n<span (click)=\"emitLatexEquation()\">\n  {{getDisplayStyleEquation()}}\n</span>\n</ng-container>\n"
 
 /***/ }),
 
@@ -1055,7 +1044,8 @@ module.exports = "<ng-container *ngIf=\"latexEquation\">\n<span (click)=\"emitLa
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MathElementComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__latex_equation__ = __webpack_require__("../../../../../src/app/latex-equation.ts");
+        /* harmony import */
+        var __WEBPACK_IMPORTED_MODULE_1__models_equation__ = __webpack_require__("../../../../../src/app/models/equation.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_window_ref_window_ref_service__ = __webpack_require__("../../../../../src/app/services/window-ref/window-ref.service.ts");
 ///<reference path="../../../node_modules/@types/mathjax/index.d.ts"/>
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -1087,16 +1077,16 @@ var MathElementComponent = (function () {
         this.typesetFinished.emit(true);
     };
     MathElementComponent.prototype.emitLatexEquation = function () {
-        this.OnClick.emit(this.latexEquation);
+        this.OnClick.emit(this.equation);
         console.log('MathElementComponent--emitLatexEquation: emitted click event');
     };
     MathElementComponent.prototype.getDisplayStyleEquation = function () {
-        return '$$\\bf '.concat(this.latexEquation.equation).concat(' $$');
+        return '$$\\bf '.concat(this.equation.equation).concat(' $$');
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__latex_equation__["a" /* LatexEquation */])
-    ], MathElementComponent.prototype, "latexEquation", void 0);
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_equation__["a" /* Equation */])
+    ], MathElementComponent.prototype, "equation", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
         __metadata("design:type", Object)
@@ -1128,7 +1118,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n.math-list {\n\n  padding-left: 0;\n  padding-right: 0;\n\n  min-height: 205px;\n\n}\n\n\n.spinner {\n  margin: 0 auto;\n}\n\n.equationTitle{\n  font-weight:bold;\n}\n\n\nli {\n\n  font-size: x-small;\n  overflow-x: hidden;\n  overflow-y: hidden;\n\n}\n\n\nli:hover {\n  font-size: small;\n  overflow-x: auto;\n}\n\n\n#style-3::-webkit-scrollbar-track\n{\n  /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/\n  background-color: #F5F5F5;\n}\n\n#style-3::-webkit-scrollbar\n{\n  width: 2px;\n  height: 4px;\n  background-color: #F5F5F5;\n}\n\n#style-3::-webkit-scrollbar-thumb\n{\n  background-color: #000000;\n}\n\n", ""]);
+        exports.push([module.i, "\n.math-list {\n\n  padding-left: 0;\n  padding-right: 0;\n\n  min-height: 205px;\n\n}\n\n.clickable {\n\n  cursor: pointer;\n\n}\n\n.not_clickable {\n  cursor: default;\n\n}\n\n.spinner {\n  margin: 0 auto;\n}\n\n.equationTitle{\n  font-weight:bold;\n}\n\n\nli {\n\n  font-size: x-small;\n  overflow-x: hidden;\n  overflow-y: hidden;\n\n}\n\n\nli:hover {\n  font-size: small;\n  overflow-x: auto;\n}\n\n\n#style-3::-webkit-scrollbar-track\n{\n  /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/\n  background-color: #F5F5F5;\n}\n\n#style-3::-webkit-scrollbar\n{\n  width: 2px;\n  height: 4px;\n  background-color: #F5F5F5;\n}\n\n#style-3::-webkit-scrollbar-thumb\n{\n  background-color: #000000;\n}\n\n", ""]);
 
 // exports
 
@@ -1141,7 +1131,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/math-list/math-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container math-list\">\n\n  <mat-spinner class=\"spinner\" [class.d-none]=\"!isLoading\" mode=\"indeterminate\"></mat-spinner>\n\n  <ul class=\"list-group\" [class.invisible]=\"isLoading\">\n\n    <li #listVar id=\"style-3\" *ngFor=\"let equation of equationList  let i=index\" class='list-group-item' (mouseenter)=\"setListElem_CSS(listVar,'active',true)\"\n        (mouseleave)=\"setListElem_CSS(listVar,'active',false)\"  >\n\n      <ng-container *ngIf=\"showTitle\">\n        <span class=\"equationTitle\">{{extractTitle(i)}}</span>\n      </ng-container>\n\n      <app-math-element [latexEquation]=\"equation\" (typesetFinished)=\"OnFinishTypesetting($event)\" (OnClick)=\"emitLatexEquation($event)\"></app-math-element>\n\n    </li>\n  </ul>\n</div>\n"
+        module.exports = "<div class=\"container math-list\">\n\n  <mat-spinner class=\"spinner\" [class.d-none]=\"!isLoading\" mode=\"indeterminate\"></mat-spinner>\n\n  <ul class=\"list-group\" [class.invisible]=\"isLoading\">\n\n    <li #listVar id=\"style-3\" *ngFor=\"let equation of equationList  let i=index\"\n        class='list-group-item'\n        (mouseenter)=\"setListElem_CSS(listVar,'active',true)\"\n        (mouseleave)=\"setListElem_CSS(listVar,'active',false)\">\n\n      <div (click)=\"emitLatexEquation(equation)\" [class.clickable]=\"showTitle\"\n           [class.not_clickable]=\"!showTitle\">\n\n        <ng-container *ngIf=\"showTitle\">\n          <span class=\"equationTitle\">{{extractTitle(i)}}</span>\n        </ng-container>\n\n        <app-math-element [equation]=\"equation\"\n\n\n                          (typesetFinished)=\"OnFinishTypesetting($event)\"\n        ></app-math-element>\n      </div>\n    </li>\n  </ul>\n</div>\n\n<!--(OnClick)=\"emitLatexEquation($event)\"-->\n"
 
 /***/ }),
 
@@ -1194,7 +1184,7 @@ var MathListComponent = (function () {
             this.changeDetectorRef.detectChanges();
         }
     };
-    MathListComponent.prototype.setListElem_CSS = function (elem, key, value) {
+    MathListComponent.setListElem_CSS = function (elem, key, value) {
         if (value) {
             elem.classList.add(key);
         }
@@ -1208,7 +1198,7 @@ var MathListComponent = (function () {
     /**
      * bind to app-math-element OnClick event, If user clicks on equation then
      * trigger equation search
-     * @param {LatexEquation} event
+     * @param {Equation} event
      */
     MathListComponent.prototype.emitLatexEquation = function (event) {
         this.OnClick.emit(event);
@@ -1339,7 +1329,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".container-fluid {\n  padding-top: 15px;\n}\n\n.graph_display{\n  float: right;\n}\n\n.form-group{\n  width: 50%;\n  margin: 0 auto;\n}", ""]);
+        exports.push([module.i, ".container-fluid {\n  padding-top: 15px;\n}\n\n.subtitle {\n  color: #7f7f7f;\n  margin-left: 4px;\n}\n\n.graph_display{\n  float: right;\n}\n\n.form-group{\n  width: 50%;\n  margin: 0 auto;\n}\n", ""]);
 
 // exports
 
@@ -1352,7 +1342,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/search/search.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home></app-home>\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-3 d-none d-md-block\">\n        <h3>Top Equations</h3>\n        <app-equation-rank></app-equation-rank>\n    </div>\n    <div class=\"col-md-6 col-xs-12\">\n      <p>\n          Welcome to Big Theta! This project allows you to enter a topic and find related topics and equations.\n          Topic and equation data are gathered from Wikipedia.\n          After searching for a topic, click on any node while holding\n          alt key in order to search for equations regarding that topic.\n          Click on any node while holding the shift key to initiate a new graph search with that as the root.\n      </p>\n      <p>Enter a topic below to try it out!</p>\n      <ng2-completer [(ngModel)]=\"equationStr\" [datasource]=\"dataService\" [minSearchLength]=\"3\" [maxChars]=\"100\" [clearSelected]=\"true\" [placeholder]=\"searchQuote\" (selected)=\"equSelected($event)\"></ng2-completer>\n      <app-graph></app-graph>\n    </div>\n    <div class=\"col-md-3 d-none d-md-block\">\n      <app-subject-equations></app-subject-equations>\n    </div>\n  </div>\n</div>"
+        module.exports = "<app-home></app-home>\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-3 d-none d-md-block\">\n        <h3>Top Equations</h3>\n      <h6 class=\"subtitle\">by PageRank</h6>\n        <app-equation-rank></app-equation-rank>\n    </div>\n    <div class=\"col-md-6 col-xs-12\">\n      <p>\n          Welcome to Big Theta! This project allows you to enter a topic and find related topics and equations.\n          Topic and equation data are gathered from Wikipedia.\n          After searching for a topic, click on any node while holding\n        alt key (or windows key & alt together) in order to search for equations regarding that topic.\n          Click on any node while holding the shift key to initiate a new graph search with that as the root.\n      </p>\n      <p>Enter a topic below to try it out!</p>\n      <ng2-completer [(ngModel)]=\"equationStr\" [datasource]=\"dataService\" [minSearchLength]=\"2\" [maxChars]=\"100\"\n                     [clearSelected]=\"true\" [placeholder]=\"searchQuote\"\n                     (selected)=\"equSelected($event)\"></ng2-completer>\n      <app-graph></app-graph>\n    </div>\n    <div class=\"col-md-3 d-none d-md-block\">\n      <app-subject-equations></app-subject-equations>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1365,6 +1355,8 @@ module.exports = "<app-home></app-home>\n<div class=\"container-fluid\">\n  <div
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ng2_completer__ = __webpack_require__("../../../../ng2-completer/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_services_graph_search_service__ = __webpack_require__("../../../../../src/app/services/graph-search.service.ts");
+        /* harmony import */
+        var __WEBPACK_IMPORTED_MODULE_4__services_math_database_math_database_service__ = __webpack_require__("../../../../../src/app/services/math-database/math-database.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1378,13 +1370,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SearchComponent = (function () {
-    function SearchComponent(completerService, _authService, _graphSearchService) {
+    function SearchComponent(completerService, _authService, _graphSearchService, mathDatabaseService) {
         this.completerService = completerService;
         this._authService = _authService;
         this._graphSearchService = _graphSearchService;
+        this.mathDatabaseService = mathDatabaseService;
         this.searchQuote = "Enter a topic";
-        this.dataService = this.completerService.remote('https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta/subject/search/', this.equationStr, 'title').searchFields('title');
+        this.databaseURL = 'http://localhost:8887/bigtheta';
+        this.dataService = this.completerService.remote(this.databaseURL + '/subject/search/', "title", 'title');
+        this.dataService.dataField("body");
     }
     SearchComponent.prototype.equSelected = function (selected) {
         if (selected) {
@@ -1400,7 +1396,7 @@ var SearchComponent = (function () {
             template: __webpack_require__("../../../../../src/app/search/search.component.html"),
             styles: [__webpack_require__("../../../../../src/app/search/search.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ng2_completer__["a" /* CompleterService */], __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_3_app_services_graph_search_service__["a" /* GraphSearchService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ng2_completer__["a" /* CompleterService */], __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_3_app_services_graph_search_service__["a" /* GraphSearchService */], __WEBPACK_IMPORTED_MODULE_4__services_math_database_math_database_service__["a" /* MathDatabaseService */]])
     ], SearchComponent);
     return SearchComponent;
 }());
@@ -1493,10 +1489,13 @@ var GraphSearchService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/observable/of.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_operators__ = __webpack_require__("../../../../rxjs/_esm5/operators/index.js");
+        /* harmony import */
+        var __WEBPACK_IMPORTED_MODULE_3_rxjs_operators__ = __webpack_require__("../../../../rxjs/_esm5/operators.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_add_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/add/observable/of.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_concatAll__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/concatAll.js");
+        /* harmony import */
+        var __WEBPACK_IMPORTED_MODULE_7__models_subject_tree__ = __webpack_require__("../../../../../src/app/models/subject-tree.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1513,40 +1512,71 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var httpOptions = {
     headers: new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' })
 };
 var MathDatabaseService = (function () {
     function MathDatabaseService(http) {
         this.http = http;
-        this.databaseURL = 'https://r3psss9s0a.execute-api.us-east-1.amazonaws.com/bigtheta';
+        //fixme
+        // private databaseURL = 'http://localhost:8887/bigtheta';
+        this.databaseURL = 'http://jcavalieri.ddns.net:3000/bigtheta';
     }
     MathDatabaseService.prototype.fetchRankedEquations = function () {
-        var _this = this;
         this.log("fetching LatexEquation by rank");
         var url = this.databaseURL + "/equations/top";
         return this.http.get(url)
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["b" /* tap */])(function (latexEquations) { return _this.log('fetched ranked equations:\n' + latexEquations); }), Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError('fetchRankedEquations', [])));
+            .map(function (value) {
+                return value.body;
+            })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError('fetchRankedEquations', [])));
     };
     MathDatabaseService.prototype.fetchSubjectEquations = function (subject_id) {
-        var _this = this;
         this.log('fetching LatexEquations by subjectID: ' + subject_id);
         var url = this.databaseURL + "/equations/subject/" + subject_id;
         return this.http.get(url)
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["b" /* tap */])(function (latexEquations) { return _this.log('fetched equations by subject:\n' + latexEquations); }), Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError('fetchSubjectEquations', [])));
+            .map(function (value) {
+                return value.body;
+            })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError('fetchSubjectEquations', [])));
+    };
+    MathDatabaseService.prototype.fetchSubjectTree = function (tree_id) {
+        var url = this.databaseURL + "/subject/tree/" + tree_id;
+        return this.http.get(url)
+            .map(function (value) {
+                return value.body;
+            })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError('fetchSubjectEquations', new __WEBPACK_IMPORTED_MODULE_7__models_subject_tree__["a" /* SubjectTree */]())));
+    };
+    MathDatabaseService.prototype.searchSubjects = function (term) {
+        if (!term.trim()) {
+            // if not search term, return empty LatexEquation array.
+            return Object(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__["a" /* of */])([]);
+        }
+        var url = this.databaseURL + "/subject/tree/" + term;
+        return this.http.get(url)
+            .map(function (value) {
+                return value.body;
+            })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError('searchSubjects', [])));
     };
     /**
      * For future use--we've decided not to search by equations in current version
      * @param {string} term
      * @returns {Observable<LatexEquation[]>}
      */
-    MathDatabaseService.prototype.searchLatexEquations = function (term) {
-        var _this = this;
+    MathDatabaseService.prototype.searchEquations = function (term) {
         if (!term.trim()) {
             // if not search term, return empty LatexEquation array.
             return Object(__WEBPACK_IMPORTED_MODULE_1_rxjs_observable_of__["a" /* of */])([]);
         }
-        return this.http.get(this.databaseURL).pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["b" /* tap */])(function (_) { return _this.log("found equations matching \"" + term + "\""); }), Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError('searchLatexEquations', [])));
+        var url = this.databaseURL + "/equations/search/" + term;
+        return this.http.get(url)
+            .map(function (value) {
+                return value.body;
+            })
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_operators__["a" /* catchError */])(this.handleError('searchEquations', [])));
     };
     MathDatabaseService.prototype.log = function (message) {
         console.log('MathDatabaseService: ' + message);
