@@ -2,6 +2,11 @@
   padding-top: 15px;
 }
 
+.subtitle {
+  color: #7f7f7f;
+  margin-left: 4px;
+}
+
 .graph_display{
   float: right;
 }
