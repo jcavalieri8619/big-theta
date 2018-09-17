@@ -4,6 +4,7 @@ import {CompleterService, CompleterData, CompleterItem, RemoteData} from 'ng2-co
 import { AuthService } from '../services/auth.service';
 import { GraphSearchService } from 'app/services/graph-search.service';
 import {MathDatabaseService} from "../services/math-database/math-database.service";
+import {Constants} from "../constants";
 
 @Component({
   selector: 'app-search',
@@ -15,7 +16,7 @@ export class SearchComponent implements OnInit {
   protected dataService: RemoteData;
   searchQuote = "Enter a topic";
 
-  private databaseURL = 'http://localhost:8887/bigtheta';
+  private databaseURL = Constants.databaseUrl;
 
   constructor(private completerService: CompleterService, private _authService: AuthService, private _graphSearchService: GraphSearchService, private mathDatabaseService: MathDatabaseService) {
 
