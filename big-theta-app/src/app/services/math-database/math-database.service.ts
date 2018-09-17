@@ -10,6 +10,7 @@ import 'rxjs/add/operator/concatAll';
 import {Equation} from '../../models/equation';
 import {SubjectTree} from "../../models/subject-tree";
 import {Subject} from "../../models/subject";
+import {Constants} from "../../constants";
 
 
 
@@ -27,10 +28,9 @@ interface MathDatabseHttpResponse {
 @Injectable()
 export class MathDatabaseService {
 
-  //fixme
-  // private databaseURL = 'http://localhost:8887/bigtheta';
 
-  private databaseURL = 'http://jcavalieri.ddns.net:3000/bigtheta';
+  private databaseURL = Constants.databaseUrl;
+
 
 
   constructor( private http: HttpClient ) {
