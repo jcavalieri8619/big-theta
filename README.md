@@ -24,3 +24,10 @@ Site available at: <a href="http://jcavalieri.ddns.net">BigTheta Demo</a>
 2. Prasant Ghantasala
 3. Karthik Hubli
 4. Karansinh Thakor
+
+
+![alt text](https://github.com/jcavalieri8619/big-theta/blob/master/screenshots/graph.png)
+
+
+![alt text](https://github.com/jcavalieri8619/big-theta/blob/master/screenshots/graph_and_autocomplete.png)
+
