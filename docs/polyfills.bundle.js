@@ -694,7 +694,7 @@ module.exports = function (NAME, wrapper, methods, common, IS_MAP, IS_WEAK) {
 /***/ "../../../../core-js/modules/_core.js":
 /***/ (function(module, exports) {
 
-        var core = module.exports = {version: '2.5.7'};
+var core = module.exports = { version: '2.5.7' };
 if (typeof __e == 'number') __e = core; // eslint-disable-line no-undef
 
 
@@ -1104,7 +1104,7 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
       // Set @@toStringTag to native iterators
       setToStringTag(IteratorPrototype, TAG, true);
       // fix for some old engines
-        if (!LIBRARY && typeof IteratorPrototype[ITERATOR] != 'function') hide(IteratorPrototype, ITERATOR, returnThis);
+      if (!LIBRARY && typeof IteratorPrototype[ITERATOR] != 'function') hide(IteratorPrototype, ITERATOR, returnThis);
     }
   }
   // fix Array#{values, @@iterator}.name in V8 / FF
@@ -1716,18 +1716,18 @@ module.exports = function (key) {
 /***/ "../../../../core-js/modules/_shared.js":
 /***/ (function(module, exports, __webpack_require__) {
 
-        var core = __webpack_require__("../../../../core-js/modules/_core.js");
+var core = __webpack_require__("../../../../core-js/modules/_core.js");
 var global = __webpack_require__("../../../../core-js/modules/_global.js");
 var SHARED = '__core-js_shared__';
 var store = global[SHARED] || (global[SHARED] = {});
 
-        (module.exports = function (key, value) {
-            return store[key] || (store[key] = value !== undefined ? value : {});
-        })('versions', []).push({
-            version: core.version,
-            mode: __webpack_require__("../../../../core-js/modules/_library.js") ? 'pure' : 'global',
-            copyright: '© 2018 Denis Pushkarev (zloirock.ru)'
-        });
+(module.exports = function (key, value) {
+  return store[key] || (store[key] = value !== undefined ? value : {});
+})('versions', []).push({
+  version: core.version,
+  mode: __webpack_require__("../../../../core-js/modules/_library.js") ? 'pure' : 'global',
+  copyright: '© 2018 Denis Pushkarev (zloirock.ru)'
+});
 
 
 /***/ }),
@@ -2235,11 +2235,11 @@ function set(target, propertyKey, V /* , receiver */) {
   }
   if (has(ownDesc, 'value')) {
     if (ownDesc.writable === false || !isObject(receiver)) return false;
-      if (existingDescriptor = gOPD.f(receiver, propertyKey)) {
-          if (existingDescriptor.get || existingDescriptor.set || existingDescriptor.writable === false) return false;
-          existingDescriptor.value = V;
-          dP.f(receiver, propertyKey, existingDescriptor);
-      } else dP.f(receiver, propertyKey, createDesc(0, V));
+    if (existingDescriptor = gOPD.f(receiver, propertyKey)) {
+      if (existingDescriptor.get || existingDescriptor.set || existingDescriptor.writable === false) return false;
+      existingDescriptor.value = V;
+      dP.f(receiver, propertyKey, existingDescriptor);
+    } else dP.f(receiver, propertyKey, createDesc(0, V));
     return true;
   }
   return ownDesc.set === undefined ? false : (ownDesc.set.call(receiver, V), true);
@@ -3173,9 +3173,7 @@ var Zone$1 = (function (global) {
         patchEventTarget: function () { return []; },
         patchOnProperties: noop,
         patchMethod: function () { return noop; },
-        bindArguments: function () {
-            return null;
-        },
+        bindArguments: function () { return null; },
         setNativePromise: function (NativePromise) {
             // sometimes NativePromise.resolve static function
             // is not ready yet, (such as core-js/es6.promise)
@@ -3354,12 +3352,7 @@ Zone.__load_patch('ZoneAwarePromise', function (global, Zone, api) {
                         Zone.currentTask.data[creationTrace];
                     if (trace) {
                         // only keep the long stack trace into error when in longStackTraceZone
-                        ObjectDefineProperty(value, CURRENT_TASK_TRACE_SYMBOL, {
-                            configurable: true,
-                            enumerable: false,
-                            writable: true,
-                            value: trace
-                        });
+                        ObjectDefineProperty(value, CURRENT_TASK_TRACE_SYMBOL, { configurable: true, enumerable: false, writable: true, value: trace });
                     }
                 }
                 for (var i = 0; i < queue.length;) {
@@ -3398,7 +3391,7 @@ Zone.__load_patch('ZoneAwarePromise', function (global, Zone, api) {
             try {
                 var handler = Zone[REJECTION_HANDLED_HANDLER];
                 if (handler && typeof handler === 'function') {
-                    handler.call(this, {rejection: promise[symbolValue], promise: promise});
+                    handler.call(this, { rejection: promise[symbolValue], promise: promise });
                 }
             }
             catch (err) {
@@ -3497,15 +3490,13 @@ Zone.__load_patch('ZoneAwarePromise', function (global, Zone, api) {
                 if (!isThenable(value)) {
                     value = this.resolve(value);
                 }
-                value.then((function (index) {
-                    return function (value) {
-                        resolvedValues[index] = value;
-                        count--;
-                        if (!count) {
-                            resolve(resolvedValues);
-                        }
-                    };
-                })(count), reject);
+                value.then((function (index) { return function (value) {
+                    resolvedValues[index] = value;
+                    count--;
+                    if (!count) {
+                        resolve(resolvedValues);
+                    }
+                }; })(count), reject);
                 count++;
             }
             if (!count)
@@ -3643,44 +3634,42 @@ Zone.__load_patch('ZoneAwarePromise', function (global, Zone, api) {
  * @suppress {undefinedVars,globalThis,missingRequire}
  */
 // issue #989, to reduce bundle size, use short name
-    /** Object.getOwnPropertyDescriptor */
-    var ObjectGetOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
-    /** Object.defineProperty */
-    var ObjectDefineProperty = Object.defineProperty;
-    /** Object.getPrototypeOf */
-    var ObjectGetPrototypeOf = Object.getPrototypeOf;
-    /** Object.create */
-    var ObjectCreate = Object.create;
-    /** Array.prototype.slice */
-    var ArraySlice = Array.prototype.slice;
-    /** addEventListener string const */
-    var ADD_EVENT_LISTENER_STR = 'addEventListener';
-    /** removeEventListener string const */
-    var REMOVE_EVENT_LISTENER_STR = 'removeEventListener';
-    /** zoneSymbol addEventListener */
-    var ZONE_SYMBOL_ADD_EVENT_LISTENER = Zone.__symbol__(ADD_EVENT_LISTENER_STR);
-    /** zoneSymbol removeEventListener */
-    var ZONE_SYMBOL_REMOVE_EVENT_LISTENER = Zone.__symbol__(REMOVE_EVENT_LISTENER_STR);
-    /** true string const */
-    var TRUE_STR = 'true';
-    /** false string const */
-    var FALSE_STR = 'false';
-    /** __zone_symbol__ string const */
-    var ZONE_SYMBOL_PREFIX = '__zone_symbol__';
-
-    function wrapWithCurrentZone(callback, source) {
-        return Zone.current.wrap(callback, source);
-    }
-
-    function scheduleMacroTaskWithCurrentZone(source, callback, data, customSchedule, customCancel) {
-        return Zone.current.scheduleMacroTask(source, callback, data, customSchedule, customCancel);
-    }
+/** Object.getOwnPropertyDescriptor */
+var ObjectGetOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
+/** Object.defineProperty */
+var ObjectDefineProperty = Object.defineProperty;
+/** Object.getPrototypeOf */
+var ObjectGetPrototypeOf = Object.getPrototypeOf;
+/** Object.create */
+var ObjectCreate = Object.create;
+/** Array.prototype.slice */
+var ArraySlice = Array.prototype.slice;
+/** addEventListener string const */
+var ADD_EVENT_LISTENER_STR = 'addEventListener';
+/** removeEventListener string const */
+var REMOVE_EVENT_LISTENER_STR = 'removeEventListener';
+/** zoneSymbol addEventListener */
+var ZONE_SYMBOL_ADD_EVENT_LISTENER = Zone.__symbol__(ADD_EVENT_LISTENER_STR);
+/** zoneSymbol removeEventListener */
+var ZONE_SYMBOL_REMOVE_EVENT_LISTENER = Zone.__symbol__(REMOVE_EVENT_LISTENER_STR);
+/** true string const */
+var TRUE_STR = 'true';
+/** false string const */
+var FALSE_STR = 'false';
+/** __zone_symbol__ string const */
+var ZONE_SYMBOL_PREFIX = '__zone_symbol__';
+function wrapWithCurrentZone(callback, source) {
+    return Zone.current.wrap(callback, source);
+}
+function scheduleMacroTaskWithCurrentZone(source, callback, data, customSchedule, customCancel) {
+    return Zone.current.scheduleMacroTask(source, callback, data, customSchedule, customCancel);
+}
 var zoneSymbol = Zone.__symbol__;
-    var isWindowExists = typeof window !== 'undefined';
-    var internalWindow = isWindowExists ? window : undefined;
-    var _global = isWindowExists && internalWindow || typeof self === 'object' && self || global;
+var isWindowExists = typeof window !== 'undefined';
+var internalWindow = isWindowExists ? window : undefined;
+var _global = isWindowExists && internalWindow || typeof self === 'object' && self || global;
 var REMOVE_ATTRIBUTE = 'removeAttribute';
-    var NULL_ON_PROP_VALUE = [null];
+var NULL_ON_PROP_VALUE = [null];
 function bindArguments(args, source) {
     for (var i = args.length - 1; i >= 0; i--) {
         if (typeof args[i] === 'function') {
@@ -3726,7 +3715,7 @@ var isWebWorker = (typeof WorkerGlobalScope !== 'undefined' && self instanceof W
 // this code.
 var isNode = (!('nw' in _global) && typeof _global.process !== 'undefined' &&
     {}.toString.call(_global.process) === '[object process]');
-    var isBrowser = !isNode && !isWebWorker && !!(isWindowExists && internalWindow['HTMLElement']);
+var isBrowser = !isNode && !isWebWorker && !!(isWindowExists && internalWindow['HTMLElement']);
 // we are in electron of nw, so we are both browser and nodejs
 // Make sure to access `process` through `_global` so that WebPack does not accidentally browserify
 // this code.
@@ -4013,14 +4002,14 @@ function isIEOrEdge() {
  */
 // override Function.prototype.toString to make zone.js patched function
 // look like native function
-    Zone.__load_patch('toString', function (global) {
+Zone.__load_patch('toString', function (global) {
     // patch Func.prototype.toString to let them look like native
-        var originalFunctionToString = Function.prototype.toString;
+    var originalFunctionToString = Function.prototype.toString;
     var ORIGINAL_DELEGATE_SYMBOL = zoneSymbol('OriginalDelegate');
     var PROMISE_SYMBOL = zoneSymbol('Promise');
     var ERROR_SYMBOL = zoneSymbol('Error');
-        var newFunctionToString = function toString() {
-            if (typeof this === 'function') {
+    var newFunctionToString = function toString() {
+        if (typeof this === 'function') {
             var originalDelegate = this[ORIGINAL_DELEGATE_SYMBOL];
             if (originalDelegate) {
                 if (typeof originalDelegate === 'function') {
@@ -4045,8 +4034,8 @@ function isIEOrEdge() {
         }
         return originalFunctionToString.apply(this, arguments);
     };
-        newFunctionToString[ORIGINAL_DELEGATE_SYMBOL] = originalFunctionToString;
-        Function.prototype.toString = newFunctionToString;
+    newFunctionToString[ORIGINAL_DELEGATE_SYMBOL] = originalFunctionToString;
+    Function.prototype.toString = newFunctionToString;
     // patch Object.prototype.toString to let them look like native
     var originalObjectToString = Object.prototype.toString;
     var PROMISE_OBJECT_TO_STRING = '[object Promise]';
@@ -4071,7 +4060,7 @@ function isIEOrEdge() {
  */
 // an identifier to tell ZoneTask do not create a new invoke closure
 var OPTIMIZED_ZONE_EVENT_TASK_DATA = {
-        useG: true
+    useG: true
 };
 var zoneSymbolEventNames$1 = {};
 var globalSources = {};
@@ -4840,12 +4829,12 @@ function apply(api, _global) {
     if (!_global.EventTarget) {
         patchEventTarget(_global, [WS.prototype]);
     }
-        _global.WebSocket = function (x, y) {
-            var socket = arguments.length > 1 ? new WS(x, y) : new WS(x);
+    _global.WebSocket = function (x, y) {
+        var socket = arguments.length > 1 ? new WS(x, y) : new WS(x);
         var proxySocket;
         var proxySocketProto;
         // Safari 7.0 has non-configurable own 'onmessage' and friends properties on the socket instance
-            var onmessageDesc = ObjectGetOwnPropertyDescriptor(socket, 'onmessage');
+        var onmessageDesc = ObjectGetOwnPropertyDescriptor(socket, 'onmessage');
         if (onmessageDesc && onmessageDesc.configurable === false) {
             proxySocket = ObjectCreate(socket);
             // socket have own property descriptor 'onopen', 'onmessage', 'onclose', 'onerror'
@@ -5359,7 +5348,7 @@ function eventTargetPatch(_global, api) {
     }
     // vh is validateHandler to check event handler
     // is valid or not(for security check)
-    patchEventTarget(_global, apiTypes, {vh: checkIEAndCrossContext});
+    patchEventTarget(_global, apiTypes, { vh: checkIEAndCrossContext });
     api.patchEventTarget = patchEventTarget;
     return true;
 }
@@ -5421,19 +5410,19 @@ Zone.__load_patch('util', function (global, Zone, api) {
     api.patchMethod = patchMethod;
     api.bindArguments = bindArguments;
 });
-    Zone.__load_patch('timers', function (global) {
+Zone.__load_patch('timers', function (global) {
     var set = 'set';
     var clear = 'clear';
     patchTimer(global, set, clear, 'Timeout');
     patchTimer(global, set, clear, 'Interval');
     patchTimer(global, set, clear, 'Immediate');
 });
-    Zone.__load_patch('requestAnimationFrame', function (global) {
+Zone.__load_patch('requestAnimationFrame', function (global) {
     patchTimer(global, 'request', 'cancel', 'AnimationFrame');
     patchTimer(global, 'mozRequest', 'mozCancel', 'AnimationFrame');
     patchTimer(global, 'webkitRequest', 'webkitCancel', 'AnimationFrame');
 });
-    Zone.__load_patch('blocking', function (global, Zone) {
+Zone.__load_patch('blocking', function (global, Zone) {
     var blockingMethods = ['alert', 'prompt', 'confirm'];
     for (var i = 0; i < blockingMethods.length; i++) {
         var name_1 = blockingMethods[i];
@@ -5467,17 +5456,17 @@ Zone.__load_patch('on_property', function (global, Zone, api) {
     propertyPatch();
     registerElementPatch(global);
 });
-    Zone.__load_patch('canvas', function (global) {
+Zone.__load_patch('canvas', function (global) {
     var HTMLCanvasElement = global['HTMLCanvasElement'];
     if (typeof HTMLCanvasElement !== 'undefined' && HTMLCanvasElement.prototype &&
         HTMLCanvasElement.prototype.toBlob) {
         patchMacroTask(HTMLCanvasElement.prototype, 'toBlob', function (self, args) {
-            return {name: 'HTMLCanvasElement.toBlob', target: self, cbIdx: 0, args: args};
+            return { name: 'HTMLCanvasElement.toBlob', target: self, cbIdx: 0, args: args };
         });
     }
 });
-    Zone.__load_patch('XHR', function (global, Zone) {
-        // Treat XMLHttpRequest as a macrotask.
+Zone.__load_patch('XHR', function (global, Zone) {
+    // Treat XMLHttpRequest as a macrotask.
     patchXHR(global);
     var XHR_TASK = zoneSymbol('xhrTask');
     var XHR_SYNC = zoneSymbol('xhrSync');
@@ -5540,16 +5529,13 @@ Zone.__load_patch('on_property', function (global, Zone, api) {
             data.aborted = true;
             return abortNative.apply(data.target, data.args);
         }
-
-        var openNative = patchMethod(XMLHttpRequestPrototype, 'open', function () {
-            return function (self, args) {
+        var openNative = patchMethod(XMLHttpRequestPrototype, 'open', function () { return function (self, args) {
             self[XHR_SYNC] = args[2] == false;
             self[XHR_URL] = args[1];
             return openNative.apply(self, args);
         }; });
         var XMLHTTPREQUEST_SOURCE = 'XMLHttpRequest.send';
-        var sendNative = patchMethod(XMLHttpRequestPrototype, 'send', function () {
-            return function (self, args) {
+        var sendNative = patchMethod(XMLHttpRequestPrototype, 'send', function () { return function (self, args) {
             if (self[XHR_SYNC]) {
                 // if the XHR is sync there is no task to schedule, just execute the code.
                 return sendNative.apply(self, args);
@@ -5566,10 +5552,9 @@ Zone.__load_patch('on_property', function (global, Zone, api) {
                 return scheduleMacroTaskWithCurrentZone(XMLHTTPREQUEST_SOURCE, placeholderCallback, options, scheduleTask, clearTask);
             }
         }; });
-        var abortNative = patchMethod(XMLHttpRequestPrototype, 'abort', function () {
-            return function (self) {
+        var abortNative = patchMethod(XMLHttpRequestPrototype, 'abort', function () { return function (self) {
             var task = findPendingTask(self);
-                if (task && typeof task.type == 'string') {
+            if (task && typeof task.type == 'string') {
                 // If the XHR has already completed, do nothing.
                 // If the XHR has already been aborted, do nothing.
                 // Fix #569, call abort multiple times before done will cause
@@ -5585,13 +5570,13 @@ Zone.__load_patch('on_property', function (global, Zone, api) {
         }; });
     }
 });
-    Zone.__load_patch('geolocation', function (global) {
+Zone.__load_patch('geolocation', function (global) {
     /// GEO_LOCATION
     if (global['navigator'] && global['navigator'].geolocation) {
         patchPrototype(global['navigator'].geolocation, ['getCurrentPosition', 'watchPosition']);
     }
 });
-    Zone.__load_patch('PromiseRejectionEvent', function (global, Zone) {
+Zone.__load_patch('PromiseRejectionEvent', function (global, Zone) {
     // handle unhandled promise rejection
     function findPromiseRejectionHandler(evtName) {
         return function (e) {
