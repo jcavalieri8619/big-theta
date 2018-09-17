@@ -54,7 +54,7 @@ export class MathListComponent implements OnInit {
     }
   }
 
-  static setListElem_CSS(elem: HTMLLIElement, key: string, value: boolean): void {
+  setListElem_CSS(elem: HTMLLIElement, key: string, value: boolean): void {
     if ( value ) {
       elem.classList.add( key );
 
