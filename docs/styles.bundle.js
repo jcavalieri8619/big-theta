@@ -62,7 +62,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 exports.i(__webpack_require__("../../../../css-loader/index.js?{\"sourceMap\":false,\"importLoaders\":1}!../../../../postcss-loader/index.js?{\"ident\":\"postcss\"}!../../../material/prebuilt-themes/deeppurple-amber.css"), "");
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\nhtml,body {\n  height: 100%;\n}\n\n.completer-input {\n    min-width: 300px;\n    min-height: 40px;\n    outline: none;\n    cursor: text;\n    border: 1px solid #A9A9A9;\n    border-radius: 4px;\n    box-shadow: 0px 0px 4px #A9A9A9;\n}\n\n.completer-dropdown-holder {\n    min-width: 300px;\n}\n\n.completer-dropdown {\n    min-width: 300px;\n    border: 1px solid #A9A9A9;\n    border-radius: 4px;\n    box-shadow: 0px 0px 4px #A9A9A9;\n}\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\nhtml,body {\n  height: 100vh;\n}\n\n\napp-root{\n  height: 100vh;\n\n}\n.completer-input {\n    min-width: 300px;\n    min-height: 40px;\n    outline: none;\n    cursor: text;\n    border: 1px solid #A9A9A9;\n    border-radius: 4px;\n    box-shadow: 0px 0px 4px #A9A9A9;\n}\n\n.completer-dropdown-holder {\n    min-width: 300px;\n}\n\n.completer-dropdown {\n    min-width: 300px;\n    border: 1px solid #A9A9A9;\n    border-radius: 4px;\n    box-shadow: 0px 0px 4px #A9A9A9;\n}\n", ""]);
 
 // exports
 

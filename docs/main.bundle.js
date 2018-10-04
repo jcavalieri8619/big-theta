@@ -391,6 +391,22 @@ var AppModule = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/constants.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Constants; });
+var Constants = (function () {
+    function Constants() {
+    }
+    Constants.databaseUrl = 'http://10.0.0.12:3000/bigtheta';
+    return Constants;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/equation-rank/equation-rank.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -399,7 +415,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\n.rank_list {\n  max-height: 80vh;\n  overflow-y: auto;\n\n}\n\n\n\n#scrollbar_style5::-webkit-scrollbar-track {\n  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\n  background-color: #F5F5F5;\n\n}\n\n#scrollbar_style5::-webkit-scrollbar {\n  width: 6px;\n  background-color: #F5F5F5;\n}\n\n#scrollbar_style5::-webkit-scrollbar-thumb {\n  background: #0ae -webkit-gradient(linear, 0 0, 0 100%,\n  color-stop(.5, rgba(255, 255, 255, .2)),\n  color-stop(.5, transparent), to(transparent));\n\n}\n\n", ""]);
+exports.push([module.i, "\n.rank_list {\n  max-height: 100vh;\n  overflow-y: auto;\n\n}\n\n\n\n#scrollbar_style5::-webkit-scrollbar-track {\n  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\n  background-color: #F5F5F5;\n\n}\n\n#scrollbar_style5::-webkit-scrollbar {\n  width: 6px;\n  background-color: #F5F5F5;\n}\n\n#scrollbar_style5::-webkit-scrollbar-thumb {\n  background: #0ae -webkit-gradient(linear, 0 0, 0 100%,\n  color-stop(.5, rgba(255, 255, 255, .2)),\n  color-stop(.5, transparent), to(transparent));\n\n}\n\n", ""]);
 
 // exports
 
@@ -485,7 +501,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/graph/graph.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"width: 100%; height: 600px;\" class=\"equation-graph\" #graph></div>\n"
+module.exports = "<div style=\"width: 100%; height: 100%;\" class=\"equation-graph\" #graph></div>\n"
 
 /***/ }),
 
@@ -671,7 +687,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"/\">\n        <img src=\"assets/images/theta_logo.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\"> Big Theta\n    </a>\n    <div class=\"navbar-nav\">\n        <a [routerLink]=\"['/home']\" routerLinkActive=\"active\" class=\"nav-item nav-link\">Home</a>\n        <a [routerLink]=\"['/api']\" routerLinkActive=\"active\" class=\"nav-item nav-link\">API</a>\n    </div>\n    <div class=\"pull-right logout-div\">\n      <!--<button class=\"btn btn-sm btn-danger pull-right\" (click)=\"logout()\">Logout</button>-->\n      <!--<span class=\"pull-right user-name-div\">Welcome {{ appUser.name }}</span>-->\n    </div>\n</nav>\n"
+module.exports = "<nav class=\"navbar navbar-expand navbar-dark bg-dark\">\n    <a class=\"navbar-brand\" href=\"/\">\n        <img src=\"./../../assets/images/theta_logo.png\" width=\"30\" height=\"30\" class=\"d-inline-block align-top\" alt=\"\"> Big Theta\n    </a>\n    <div class=\"navbar-nav\">\n        <a [routerLink]=\"['/home']\" routerLinkActive=\"active\" class=\"nav-item nav-link\">Home</a>\n        <a [routerLink]=\"['/api']\" routerLinkActive=\"active\" class=\"nav-item nav-link\">API</a>\n    </div>\n    <div class=\"pull-right logout-div\">\n      <!--<button class=\"btn btn-sm btn-danger pull-right\" (click)=\"logout()\">Logout</button>-->\n      <!--<span class=\"pull-right user-name-div\">Welcome {{ appUser.name }}</span>-->\n    </div>\n</nav>\n"
 
 /***/ }),
 
@@ -1334,7 +1350,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/search/search.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-home></app-home>\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-3 d-none d-md-block\">\n        <h3>Top Equations</h3>\n      <h6 class=\"subtitle\">by PageRank</h6>\n        <app-equation-rank></app-equation-rank>\n    </div>\n    <div class=\"col-md-6 col-xs-12\">\n      <p>\n          Welcome to Big Theta! This project allows you to enter a topic and find related topics and equations.\n          Topic and equation data are gathered from Wikipedia.\n          After searching for a topic, click on any node while holding\n        alt key (or windows key & alt together) in order to search for equations regarding that topic.\n          Click on any node while holding the shift key to initiate a new graph search with that as the root.\n      </p>\n      <p>Enter a topic below to try it out!</p>\n      <ng2-completer [(ngModel)]=\"equationStr\" [datasource]=\"dataService\" [minSearchLength]=\"2\" [maxChars]=\"100\"\n                     [clearSelected]=\"true\" [placeholder]=\"searchQuote\"\n                     (selected)=\"equSelected($event)\"></ng2-completer>\n      <app-graph></app-graph>\n    </div>\n    <div class=\"col-md-3 d-none d-md-block\">\n      <app-subject-equations></app-subject-equations>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<app-home></app-home>\n<div class=\"container-fluid\">\n  <div class=\"row\">\n    <div class=\"col-md-3 d-none d-md-block\">\n      <h3>Top Equations</h3>\n      <h6 class=\"subtitle\">by PageRank</h6>\n      <app-equation-rank></app-equation-rank>\n    </div>\n    <div class=\"col-md-6 col-xs-12\">\n      <p>\n        Welcome to Big Theta! This project allows you to enter a topic and find related topics and equations.\n        Topic and equation data are gathered from Wikipedia.\n        After searching for a topic, click on any node while holding\n        alt key (or windows key & alt together) in order to search for equations regarding that topic.\n        Click on any node while holding the shift key to initiate a new graph search rooted at that node.\n      </p>\n      <ng2-completer [(ngModel)]=\"equationStr\" [datasource]=\"dataService\" [minSearchLength]=\"2\" [maxChars]=\"100\"\n                     [clearSelected]=\"true\" [placeholder]=\"searchQuote\"\n                     (selected)=\"equSelected($event)\"></ng2-completer>\n      <app-graph></app-graph>\n    </div>\n    <div class=\"col-md-3 d-none d-md-block\">\n      <app-subject-equations></app-subject-equations>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -1348,6 +1364,7 @@ module.exports = "<app-home></app-home>\n<div class=\"container-fluid\">\n  <div
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_app_services_graph_search_service__ = __webpack_require__("../../../../../src/app/services/graph-search.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_math_database_math_database_service__ = __webpack_require__("../../../../../src/app/services/math-database/math-database.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__constants__ = __webpack_require__("../../../../../src/app/constants.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1362,6 +1379,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SearchComponent = (function () {
     function SearchComponent(completerService, _authService, _graphSearchService, mathDatabaseService) {
         this.completerService = completerService;
@@ -1369,7 +1387,7 @@ var SearchComponent = (function () {
         this._graphSearchService = _graphSearchService;
         this.mathDatabaseService = mathDatabaseService;
         this.searchQuote = "Enter a topic";
-        this.databaseURL = 'http://localhost:8887/bigtheta';
+        this.databaseURL = __WEBPACK_IMPORTED_MODULE_5__constants__["a" /* Constants */].databaseUrl;
         this.dataService = this.completerService.remote(this.databaseURL + '/subject/search/', "title", 'title');
         this.dataService.dataField("body");
     }
@@ -1485,6 +1503,7 @@ var GraphSearchService = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_add_operator_concatAll__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/concatAll.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_subject_tree__ = __webpack_require__("../../../../../src/app/models/subject-tree.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__constants__ = __webpack_require__("../../../../../src/app/constants.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1502,15 +1521,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var httpOptions = {
     headers: new __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' })
 };
 var MathDatabaseService = (function () {
     function MathDatabaseService(http) {
         this.http = http;
-        //fixme
-        // private databaseURL = 'http://localhost:8887/bigtheta';
-        this.databaseURL = 'http://jcavalieri.ddns.net:3000/bigtheta';
+        this.databaseURL = __WEBPACK_IMPORTED_MODULE_8__constants__["a" /* Constants */].databaseUrl;
     }
     MathDatabaseService.prototype.fetchRankedEquations = function () {
         this.log("fetching LatexEquation by rank");
@@ -1668,7 +1686,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\n.rank_list {\n  max-height: 100vh;\n  overflow-y: auto;\n\n}\n\n\n\n#scrollbar_style5::-webkit-scrollbar-track {\n  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);\n  background-color: #F5F5F5;\n\n}\n\n#scrollbar_style5::-webkit-scrollbar {\n  width: 6px;\n  background-color: #F5F5F5;\n}\n\n#scrollbar_style5::-webkit-scrollbar-thumb {\n  background: #0ae -webkit-gradient(linear, 0 0, 0 100%,\n  color-stop(.5, rgba(255, 255, 255, .2)),\n  color-stop(.5, transparent), to(transparent));\n\n}\n", ""]);
 
 // exports
 
