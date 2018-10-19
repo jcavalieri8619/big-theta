@@ -8,7 +8,7 @@ The purpose of this project is to provide an interface to search for related top
 
 The site is built using Angular 5 and uses APIs hosted in AWS in order to function.
 
-Site available at: <a href="http://jcavalieri.ddns.net">BigTheta Demo</a>
+Site available at: <a href="http://jcavalieri.ddns.net">BigTheta Demo</a>  ; initial load takes a few seconds
 
 ## Technologies Used
 1. Neo4j
